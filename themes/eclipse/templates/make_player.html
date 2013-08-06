@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			html,body,#player{width:100%;height:100%;overflow:hidden;padding:0;margin:0;}
+		</style>
+		<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js">
+			[onload;block=script;when [var.eclipse_player]='pmplayer']
+		</script>
+	</head>
+	<body>
+		<div id="player">[onload;block=div;when [var.eclipse_player]!='flowplayer']
+			<a href="http://adobe.com/go/getflashplayer">
+				<img src="http://adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Flash" width="116" height="33" />
+			</a>
+		</div>
+		<script type="text/javascript">[onload;block=script;when [var.eclipse_player]='pmplayer']
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+			flashvars.player_mode = "normal";
+			flashvars.playlist = "no";
+			flashvars.logo = "top_right";
+			flashvars.floating_navbar = "false";
+			flashvars.color_nav_bar_top = "0x478dc2";
+			flashvars.color_nav_bar_bottom = "0xE7EBEC";
+			flashvars.ads_background_color = "0x00CCFF";
+			flashvars.ads_border_color = "0xCCCCCC";
+			flashvars.scrubber_position_color = "0x6AA1CE";
+			flashvars.scrubber_load_color = "0x888888";
+			flashvars.scrubber_background_color = "0xBBBBBB";
+			flashvars.volume_bar_color = "0xBBBBBB";
+			flashvars.aspect_ratio="stretch";
+			params.allowfullscreen = "true";
+			params.allowscriptaccess = "sameDomain";
+			params.wmode = "transparent";
+			flashvars.flvsource = "[var.base_url]/uploads/[var.video_play]";
+			flashvars.preview_image = "[var.base_url]/[var.thumb_file]";
+			flashvars.url_logo = "[var.base_url]/addons/mw_eclipse/logos/logo_player.png";
+			flashvars.buffering_time = [var.video_buffer_time];
+			flashvars.autoplay = "[var.auto_play_vid]";
+			flashvars.display_ads = "[var.player_defaults_ads]";
+			[var.player_defaults_ads_xml]
+			swfobject.embedSWF("[var.base_url]/addons/mw_eclipse/players/pmplayer/player.swf","player","100%","100%","9.0.0",false,flashvars,params,attributes);
+		</script>
+		<div>[onload;block=div;when [var.eclipse_player]='jwplayer']
+			<h2>Invalid player selection.</h2>
+		</div>
+		
+		<div>[onload;block=div;when [var.eclipse_player]='flowplayer']
+			<h2>Invalid player selection.</h2>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,159 @@
+#wrapper { width: 1190px; }
+
+img { border: none; }
+
+/* == Admin Header == */
+#admin-header {
+	width: 1190px; height: 50px; color: #fff; background: transparent url(http://phpmotionwiz.com/images/eclipse/siteadmin/header-bg.png);
+	padding: 0 5px; border-bottom: 2px solid #ff0000;
+}
+
+#ec_logo { float: left; }
+#pw_logo { margin: 5px 0; float: right; }
+
+/* =======================
+ * = Navigation         ==
+ * ======================= */
+#ec_nav { width: 1190px; border-bottom: 6px solid #d1d1d1; margin: 15px 0; padding: 0 5px; text-align: left; }
+
+#ec_nav ul li { list-style: none; display: inline-block; }
+
+#ec_nav a {
+	color: #3e7ccb; font-size: 12px; font-weight: bold; text-decoration: none; display: block; padding: 5px; margin: 0 2px;
+	background: #f2f2f2; border: 1px solid #3e7ccb;	border-bottom: none; border-top-left-radius: 5px; border-top-right-radius: 5px;
+}
+
+#ec_nav a:hover { color: #fff; background: #b2cff0; }
+
+#page {
+	width: 1153px; padding: 5px 15px; float: left; text-align: left; margin: 0 15px 5px 15px; background: #f4f4f4; border: 1px solid #d1d1d1;
+	border-radius: 5px; float: left; 
+}
+
+.info {
+	width: 1153px; padding: 5px 15px; float: left; text-align: left; margin: 0 15px 5px 15px; color: #6187b3;
+	background: #e8eff7; border: 1px solid #6187b3; border-radius: 5px;
+}
+.info h2 {
+	width: 100%; margin: 5px 0; color: #6187b3; font-size: 14px; border-bottom: 1px solid #6187b3;
+}
+
+.info p { margin: 10px 0; }
+
+.info ul li { margin: 0 0 0 25px; }
+
+.alert {
+	width: 1153px; color: #8b0000; padding: 5px 15px; margin: 0 15px 5px 15px; border: 1px solid #8b0000; border-radius: 5px; background: #ffcdcd;
+}
+
+.alert p { margin: 5px 0; }
+
+.important {
+	color: #5793da; font-size: 11px; font-weight: normal; margin: 10px 0; font-style: italic;
+}
+
+.insert_ads_code {
+	color: #999; width: 595px; text-align: right; float:left; clear: both; margin: 35px 0; padding: 5px 0; border-top: 1px solid #666666;
+}
+
+td { margin: 0; }
+
+
+.form { width: 90%; margin: 14px; }
+
+.form div { width: 700px; padding: 5px; background: #eaeaea; border: 1px solid #d1d1d1; }
+
+.form h1 {
+    color: #555; font-size: 16px; border-bottom: 1px solid #555;
+}
+
+.form h2 {
+    color: #555; font-size: 12px; border-bottom: 1px solid #555;
+}
+
+.form li {
+    color: #555; list-style: none;
+}
+
+.form {
+    width: 99%; float: left; padding: 5px;
+}
+
+.form ul { margin: 10px 5px; }
+.form li { margin: 20px 0; }
+
+
+.setting_row {
+	width: 90%; float: left; margin: 1px 0; padding: 5px; background: #e8eff7; border: 1px solid #d0d0d0; border-radius: 4px;
+}
+
+input.text {
+	color: #555; padding: 2px; background: #f1f1f1; border: 1px solid #999; border-radius: 2px;
+}
+
+input.text:focus { color: #ccc; background: #222; border: 1px solid #ff0000; }
+
+/* == RSS Feed Styles == */
+.ec_rss {
+	width: 1153px; height: 450px; overflow-y: scroll; padding: 5px 15px; float: left; text-align: left; margin: 0 15px 25px 15px; border: 1px solid #d1d1d1;
+}
+
+.ec_rss h4 { font-size: 14px; margin: 0; }
+.ec_rss span { color: #999; font-size: 10px; }
+
+.ec_rss ul li { list-style: none; }
+
+.separator { width: 990px; margin: 10px 0 20px 0; border-bottom: 2px solid #d1d1d1; }
+
+.order-button {
+	float: left; width: 100%; margin: 10px 0 10px -10px;
+}
+.order {
+    float: left; color: #fff !important; text-decoration: none; margin: 0 10px; padding: 2px 5px; background: #3779bb; border-radius: 5px;
+}
+
+.order:hover { color: #fff; background: #3d8ede; }
+
+
+/* == Settings Form == */
+#settings_form {
+	width: 1000px; margin: -15px 0 0 -15px; padding: 10px;
+}
+
+#settings_form li {
+	width: 800px; margin: 10px 0; padding: 10px 15px; border: 1px solid #d1d1d1; border-radius: 5px; background: #fff; list-style-type: none; float: left;
+}
+
+#settings_form strong {
+	color: #3e7ccb; font-size: 14px;
+}
+#settings_form b {
+	color: #555; font-size: 12px;
+}
+
+.help {
+	margin: 0 10px 0 0;
+}
+
+.settings_info { margin: 10px 0 0 30px; float: left; clear: both; }
+
+.left { width: 40%; float: left; }
+.right { width: 60%; float: left; }
+
+.submit {
+	width: 800px; margin: 10px 0 10px -5px; padding: 5px 15px; text-align: right; background: #e7e7e7; border: 1px solid #d1d1d1;
+	border-radius: 5px; float: left; 
+}
+.submit input { padding: 4px; }
+
+select { background: #fff; padding-left: 4px; border: 1px solid #d1d1d1; }
+
+.url { color: #555; font-size: 12px; }
+
+
+/* == Basic Styles == */
+p { margin: 10px 0; }
+
+h2 {
+	color: #999; font-size: 16px; width: 90%; margin: 0 0 10px 0;  padding-left: 2px; border-bottom: 1px solid #d0d0d0;
+}

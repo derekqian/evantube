@@ -6,8 +6,8 @@
 }
 .star-rating{
 	position:relative;
-	width:125px;
-	height:25px;
+	width:82px;
+	height:16px;
 	overflow:hidden;
 	list-style:none;
 	margin:0;
@@ -23,14 +23,14 @@
 	top:0;
 	left:0;
 	text-indent:-1000em;
-	height:25px;
+	height:16px;
 	line-height:25px;
 	outline:none;
 	overflow:hidden;
 	border: none;
 }
 .star-rating a:hover{
-	background-position: left bottom;
+	background-position: left -16px;
 }
 .star-rating a.one-star{
 	width:20%;
@@ -67,8 +67,8 @@
 }
 .star-rating2{
 	position:relative;
-	width:125px;
-	height:25px;
+	width:82px;
+	height:16px;
 	overflow:hidden;
 	list-style:none;
 	margin:0;
@@ -84,8 +84,8 @@
 	top:0;
 	left:0;
 	text-indent:-1000em;
-	height:25px;
-	line-height:25px;
+	height:16px;
+	line-height:16px;
 	outline:none;
 	overflow:hidden;
 	border: none;
@@ -170,4 +170,3 @@
 .topRatedList li {
 	list-style-type:none;
 	}
-

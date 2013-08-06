@@ -1,0 +1,126 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<script type="text/javascript" src="javascripts/people_ahah.js"></script>
+
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<div class="title_wide">
+  	  	<h1>[var.lang_search_members]</h1></div>
+  	  	
+  	<div id="members-search">
+        
+    <!--Begin Search Members Form-->
+    <form class="FormGeneric" method="post" action="people.php">
+        <input value="yes" name="submitted" type="hidden" />
+        <ul>
+          <li>[var.lang_first_name]&nbsp;<input name="firstname" type="text" id="firstname" size="12" /></li>
+          <li>[var.lang_last_name]&nbsp;<input name="surname" type="text" id="surname" size="12" /></li>
+          <li>[var.lang_user_name]&nbsp;<input name="username" type="text" id="username" size="12" /></li>   
+        <li style="float:right;"><input value="[var.lang_find_member]" name="B3" type="submit" /></li>
+      </ul>
+    </form>
+    <div class="clear-fix"></div>
+  </div>
+  <!--End Search Members Form-->
+  	
+  	<!--Begin Browse Members-->
+  	 <div class="title_wide">
+  	  	<h1>[var.lang_browse_members]</h1></div>
+  	  <div class="browse_media">        
+
+  <div id="videos-ajax">
+        <div id="videoajax">[mp;block=(div);serial]
+        <ul>
+          <li>
+        <ul>
+          <li class="thumb">
+          <a class="popup-info" href="members/[mp_1.user_name;block=div]">
+
+          <!--Thumb Overlay Title-->
+            <div class="browse_media_title"><!--[mp_1.user_name;block=div;ope=max:25;comm]--></div>
+            <div class="v_title2"><!--[mp_1.user_name;block=div;ope=max:25;comm]--></div>
+
+
+          <!--Begin Popup-Info-->
+            <span>
+               <div class="popup-info_tmb">
+                 <img alt="<!--[mp_1.user_name;block=div;ope=max:25;comm]-->" src="[mp_1.picture;block=div;comm]" style="width: 93px; height: 70px;" />
+               </div>
+               
+               <div class="popup-info_title"><!--[mp_1.user_name;block=div;ope=max:25;comm]--></div>
+               
+               <div class="popup-info_stats">
+                 <strong>[var.lang_joined]:</strong>&nbsp;<!--[mp_1.date_created;block=div;comm;frm=mm-dd-yy]--><br />
+               </div>
+
+			   <div class="popup-info_rating">Member Info
+			    </div>
+
+			   <div class="popup-info_description"><br />
+                 <strong>[var.lang_videos_uploaded]:</strong>&nbsp;<!--[mp_1.membersvideos;block=div;comm]--><br />
+               </div>
+            </span>
+             <img alt="<!--[mp_1.user_name;block=div;ope=max:25;comm]-->" src="[mp_1.picture;block=div;comm]" /></a></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- no members found-->
+  <div class="font5_15">
+    <div align="center"><br />
+      <br />
+      <br />
+      <br />
+      [var.lang_no_members]
+      <!--[onload_316;block=div;when [var.show_v]=1]-->
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      </div>
+    </div>
+    <!-- end non found-->
+  	  	
+  	  	<!-- Pagination start -->
+          <div id="pagination">
+          	<ul>[var.show_pages;htmlconv=no]</ul>
+          </div>
+        <!-- Pagination end -->
+  	  	
+  	  </div><!--End Browse Members-->
+  	
+  </div><!--End Left Column-->
+  
+  
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+  <div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

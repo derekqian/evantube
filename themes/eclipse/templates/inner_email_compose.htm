@@ -1,0 +1,64 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Browse Videos-->
+  	  <div class="title_wide">
+  	  	<h1>[var.lang_compose_new]
+  	  		
+  	  		<span>
+  	  			<a href="emailinbox.php">[var.lang_word_inbox]</a>&nbsp;|&nbsp;
+                <a href="emailsentitems.php">[var.lang_sent]</a>&nbsp;|&nbsp;
+                <a href="emailcompose.php">[var.lang_compose_new]</a>&nbsp;|&nbsp;
+                <a href="inviteread.php">[var.lang_received_invites]</a>
+            </span>
+  	  		
+  	  		</h1></div>
+  	  		
+  	  <div class="browse_media">
+        
+    <div class="email-list">
+    <form name="email" action="emailcompose.php" method="post">
+    <ul>
+        <input type="hidden" name="submitted" value="yes" />
+        <input type="hidden" name="update_token" value="[var.update_token]" />
+        <li class="email-heading"><strong>[var.lang_to]:</strong> ([var.lang_user_name])<br />
+        <input type="text" class="input" name="member_username" size="27" value="[var.member_username]" /></li>
+
+        <li class="email-heading" style="border-top: none;"><strong>[var.lang_subject]:</strong><br />
+        <input type="text" class="input" name="subject" size="60" value="[var.subject]" /></li>
+
+        <li class="email-heading" style="border-top: none;"><strong>[var.lang_message]:</strong>
+        [var.my_edit;htmlconv=no;]</li>
+        <li class="email-heading" style="border-top: none; text-align: right;"><input type="submit" class="button-form" value="[var.lang_send_message]" name="send_message" /></li>
+    </ul>
+	</form>
+	<!--[onload_1;block=div;when [var.show_form]=1;comm]-->
+    </div>
+        
+      </div>
+      
+  </div><!--End Left Column-->
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

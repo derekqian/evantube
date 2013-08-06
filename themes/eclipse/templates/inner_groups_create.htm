@@ -1,0 +1,65 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Group Admin Menu-->
+  	  <div class="browse_media2">
+  	  	<div class="browse_media_nav">
+        <h1>[var.lang_create_group]</h1></div>
+            <div style="font-size:10px; margin: 2px 0 20px 5px;">[var.lang_fill_in_all_fields]</div>
+        
+        <form name="add_group" action="addgroup.php" method ="post" class="CreateGroupForm">
+        	<ul>
+              <li>[var.lang_group_name]:<br /><input type="text" name="group_name" size="40" value="[var.group_name]" /></li>
+              <li>[var.lang_description]:<br /><textarea rows="8" name="group_description" cols="34">[var.group_description]</textarea></li>
+              
+              <li style="width:100%;">&nbsp;</li>
+              <li>[var.lang_private_pub]:&nbsp;
+                <select size="1" name="public_private">
+                  <option value="[var.lang_public]" selected="selected">[var.lang_public]</option>
+                  <option value="[var.lang_private]">[var.lang_private]</option>
+                </select>
+              </li>
+              <li><input type="submit" class="button-form" value="[var.lang_create_group]" name="B1" /></li>
+            <input type="hidden" name="submitted" value="yes" />
+            </ul>
+        </form>
+        [onload;block=div;when [var.show_form]=1;]
+        
+      </div>
+    
+  </div><!--End Left Column-->
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Browse Menu-->
+  	  <div class="block_narrow">
+  	  	<div class="related_media_header">[var.lang_groups]</div>
+  	  	
+  	  	<ul class="block_menu">
+        <li><a href="groups">[var.lang_all_groups]</a></li>
+        <li><a href="groups_more.php?type=1">[var.lang_my_groups]</a></li>
+        <li><a href="groups.php?load=featured">[var.lang_featured]</a></li>
+        <li><a href="addgroup.php">[var.lang_create_group]</a></li>
+      </ul>
+  	  </div><!--End Browse Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

@@ -1,0 +1,125 @@
+<script type="text/javascript">
+<!--
+function setUse(){
+	if (document.album_cover.upload_album_cover[0].checked){
+      	document.album_cover.userfile.disabled = false;
+      	document.album_cover.upload_image.disabled = false;
+      	document.album_cover.cancel.disabled = true;
+      }
+      if (document.album_cover.upload_album_cover[1].checked){
+      	document.album_cover.userfile.disabled = true;
+      	document.album_cover.upload_image.disabled = true;
+      	document.album_cover.cancel.disabled = false;
+      }
+}
+//-->
+</script>
+
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Upload Video-->
+  	  <div class="title_wide">
+  	  	<h1>[var.lang_upload_audio] - [[var.lang_finish]]</h1></div>
+  	  <div class="form">
+        
+          <ul>
+          	<li>[var.lang_your_upload_complete]</li>
+          </ul>
+          
+          <div>
+          	<span>
+          <!-- no need to delete this, its auto set by script -->
+            <span class="font5_12">[var.lang_all_uploads-approval]</span>
+          <!--[onload_328;block=span;when [var.auto_approve]='no';comm]-->
+          </span>
+        [onload;block=div;when [var.show_audio_done]=1;]
+        </div>
+        
+        <div id="UploadAudio">
+        	<span id="showalbumcover">
+      <!-- Start album cover image upload -->
+        <span class="font5_14">[var.lang_change_album_cover].</span>
+        <br />
+        <br />
+        <form name="album_cover" method="post" enctype="multipart/form-data"  action="audio_uploader_finished.php">
+          <b>[var.lang_upload_album_cover]</b>
+          &nbsp;&nbsp;
+          <input type="radio" name="upload_album_cover" value="yes" onClick="setUse()" /><b>&nbsp;[var.lang_yes]</b>
+          &nbsp;&nbsp;
+          <input type="radio" name="upload_album_cover" value="no" checked="checked" onClick="setUse()" /><b>&nbsp;[var.lang_no]</b>
+          <br />
+          <!--
+          <input type="submit" name="cancel" value="Finish" />
+          //-->
+          <br />
+          <font size="1" color="#EE0000">
+            <b>[var.lang_image_file_types]</b>
+          </font>
+          <br />
+          <input disabled type="file" name="userfile" size="42" />
+          <input type="hidden" name="audio_image_upload" value="yes" />
+          <input type="hidden" name="album_id" value="[var.use_album_id]" />
+          <br />
+          <br />
+          <input type="submit" name="upload_image" value="Finish" />
+        </form>
+        <br />
+      <br />
+      </span>
+            
+      [onload;block=div;when [var.change_album_cover]=1;]
+    </div>
+
+    <div id="UploadAudio">
+      <br />
+        <span class="font5_14">[var.album_image_message]</span>
+      <br />
+      <br />
+	<br />
+      [onload;block=div;when [var.show_image_done]=1;]
+    </div>
+
+  <div style="width:400px; height: 244px;">[onload;block=div;when [var.show_image_done]=0;]</div>
+</div>
+
+      </div>
+
+  </div><!--End Upload Video-->
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	<!--Begin Browse Menu-->
+  	<div class="title_narrow"><h1>[var.lang_main_menu]</h1></div>
+  	  <div class="block_narrow">
+  	  	
+  	  	<ul class="block_menu">
+          <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+          <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	      <li><a href="image_uploader.php">[var.lang_upload_image]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+        </ul>
+      
+  	  </div><!--End Browse Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- ahah -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"></script>
+<!-- ahah -->
+
+<!-- GreyBox -->
+	<script type="text/javascript">
+		var GB_ROOT_DIR = "[var.base_url]/greybox/";
+	</script>
+	<script type="text/javascript" src="[var.base_url]/greybox/AJS.js"></script>
+	<script type="text/javascript" src="[var.base_url]/greybox/AJS_fx.js"></script>
+	<script type="text/javascript" src="[var.base_url]/greybox/gb_scripts.js"></script>
+	<link href="[var.base_url]/greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Greybox -->
+
+</head>
+
+<body>
+
+<!--NOTES: This is the pagination code for members profile content  -->
+<!--NOTES: code for this section is identical to that found in /inner_member_profile. Copy and Paste  -->
+
+
+
+        <!------------------------------------------------------------------- Start of My Video -->
+      <div>        
+        <div style="float:left;">
+          <!--[onload_801;block=div;when [var.load_media]=1;comm]-->
+      	<ul>
+              <li class="related_media_thumb">
+                  <a class="popup-info_flipped" href="[var.base_url]/videos/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]">
+
+                  <!--Thumb Overlay Title-->
+                    <div class="related_media_title"><!--[membersmedia.title;block=div;ope=max:10;comm]--></div>
+
+                  <!--Thumb Overlay Duration-->
+                    <div class="related_media_duration">[membersmedia.video_length;block=span;com]</div>
+
+                    <span>
+                    	<div class="popup-info_flipped_tmb">
+                          <img src="[var.base_url]/uploads/thumbs/[membersmedia.video_id;block=div].jpg" title="<!--[blk1.title;comm]-->" style="width:93px;height:70px;" />
+                        </div>
+                        
+                        <div class="popup-info_flipped_title"><!--[membersmedia.title;comm;ope=max:20;comm]--></div>
+                        
+                        <div class="popup-info_stats">
+                          <strong>[var.lang_category]:</strong> [membersmedia.channel;block=span;ope=max:20;com]<br />
+                        </div>
+                        
+                        <div class="popup-info_flipped_rating">[var.lang_more_from] [var.user_name;ope=max:10]</div>
+
+						<div class="popup-info_flipped_description"><!--[membersmedia.description;block=((li));htmlconv=no;ope=max:520;comm]--></div>
+
+                    </span>
+                     <img src="[var.base_url]/uploads/thumbs/[membersmedia.video_id;block=div].jpg" />
+                     
+                     <div class="related_description">
+               	    <div class="related_view_count"><!--[membersmedia.number_of_views;comm]--> Views</div>               	   
+               	    
+               	<!--[membersmedia.description;block=((div));ope=max:100;htmlconv=no;comm]-->
+               </div></a>
+             </li>
+	  </ul>
+	 </div>
+	 
+	 <!-- Media Pagination start -->
+
+        <div id="pagination_2">
+ 		<!--[onload_802;block=div;when [var.load_media]=1;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+    </div>
+        <!------------------------------------------------------------------- End of My Videos -->
+
+
+
+
+        <!------------------------------------------------------------------- Start of My Images -->
+        <div>        
+        <div style="float:left;">
+          <!--[onload_805;block=div;when [var.load_media]=2;comm]-->
+      	<ul>
+              <li class="related_media_thumb">
+                  <a class="popup-info_flipped" href="[var.base_url]/view-image/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]">
+
+                  <!--Thumb Overlay Title-->
+                    <div class="related_media_title"><!--[membersmedia.title;block=div;ope=max:10;comm]--></div>
+
+                    <span>
+                    	<div class="popup-info_flipped_tmb">
+                          <img src="[var.base_url]/addons/albums/thumbs/[membersmedia.image_id;block=div]" title="<!--[blk1.title;comm]-->" style="width:93px;height:70px;" />
+                        </div>
+                        
+                        <div class="popup-info_flipped_title"><!--[membersmedia.title;comm;ope=max:20;comm]--></div>
+                        
+                        <div class="popup-info_stats">
+                          <strong>[var.lang_category]:</strong> [membersmedia.channel;block=span;ope=max:20;com]<br />
+                        </div>
+                        
+                        <div class="popup-info_flipped_rating">[var.lang_more_from] [var.user_name;ope=max:10]</div>
+
+						<div class="popup-info_flipped_description"><!--[membersmedia.description;block=((li));htmlconv=no;ope=max:520;comm]--></div>
+
+                    </span>
+                    
+                     <img src="[var.base_url]/addons/albums/thumbs/[membersmedia.image_id;block=div]" />
+                     
+                    <div class="related_description">
+               	    <div class="related_view_count"><!--[membersmedia.number_of_views;comm]--> Views</div>               	   
+               	    
+               	<!--[membersmedia.description;block=((div));ope=max:100;htmlconv=no;comm]-->
+               </div></a>
+             </li>
+	  </ul>
+	 </div>
+	 
+	 <!-- Media Pagination start -->
+
+        <div id="pagination_2">
+ 		<!--[onload_806;block=div;when [var.load_media]=2;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+    </div>
+        <!------------------------------------------------------------------- End of My Images -->
+
+
+        <!------------------------------------------------------------------- Start of My Blogs-->
+        <div class="profile_my-media">
+          <!--[onload_807;block=div;when [var.load_media]=3;comm]-->
+          <div class="MyMedia_2">
+            <ul>
+              <li>
+                <img src="[var.base_url]/themes/[var.user_theme]/images/icons/blog_small.png" width="14" height="19" />
+                   <a href="read_blog/[membersmedia.indexer]/[membersmedia.title_seo;block=div;htmlconv=no]">
+                     <!--[membersmedia.title;block=div;ope=max:36;comm]-->
+                  </a>
+              </li>
+       <!--//////// PERMISSIONS CHECK - VIDEO START \\\\\\\\-->
+      <li>
+        <a href="edit/editblogs.php?id=[membersmedia.indexer;block=div]"  onclick="return parent.GB_show('[var.lang_edit]', this.href, 450, 750)" title="[var.lang_edit]">
+       <img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="edit" width="14" height="14" border="0" />
+        </a> &nbsp;
+        <a href="edit/delete.php?type=[var.delete_code]&id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('var.lang_delete_general', this.href, 250, 750)"  title="[var.lang_delete_general]">
+        <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+        </a><!--[onload_835;block=li;when [var.show_edit_delete]=1;comm]-->
+      </li>
+        <!--//////// PERMISSIONS CHECK - VIDEO END \\\\\\\\-->
+             </ul>
+          </div>
+
+        </div>
+        <!-- Media Pagination start -->
+        <div class="MP_pagination">
+ 		<!--[onload_808;block=div;when [var.load_media]=3;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+        <!------------------------------------------------------------------- End of My Blogs -->
+
+
+
+        <!------------------------------------------------------------------- Start of My Audio-->
+        <div>
+        
+        <div style="float:left;">
+          <!--[onload_809;block=div;when [var.load_media]=4;comm]-->
+      	<ul>
+              <li class="related_media_thumb">
+                  <a class="popup-info_flipped" href="audio/[membersmedia.indexer]/[membersmedia.title_seo;block=div;htmlconv=no]">
+
+                  <!--Thumb Overlay Title-->
+                    <div class="related_media_title"><!--[membersmedia.title;block=div;ope=max:10;comm]--></div>
+                    
+                    <span>
+                    	<div class="popup-info_flipped_tmb">
+                          <img src="[var.base_url]/addons/audio/images/featured_mp3.png" title="<!--[blk1.title;comm]-->" style="width:93px;height:70px;" />
+                        </div>
+                        
+                        <div class="popup-info_flipped_title"><!--[membersmedia.title;comm;ope=max:20;comm]--></div>
+                        
+                        <div class="popup-info_stats">
+                          <strong>[var.lang_category]:</strong> [membersmedia.channel;block=span;ope=max:20;com]<br />
+                        </div>
+                        
+                        <div class="popup-info_flipped_rating">[var.lang_more_from] [var.user_name;ope=max:10]</div>
+
+						<div class="popup-info_flipped_description"><!--[membersmedia.description;block=((li));htmlconv=no;ope=max:520;comm]--></div>
+
+                    </span>
+
+                     <img src="[var.base_url]/addons/audio/images/featured_mp3.png" />
+                     
+                   <div class="related_description">
+               	    <div class="related_view_count"><!--[membersmedia.number_of_views;comm]--> Plays</div>               	   
+               	    
+               	<!--[membersmedia.description;block=((div));ope=max:100;htmlconv=no;comm]-->
+               </div></a>
+             </li>
+	  </ul>
+	 </div>
+	 
+	 <!-- Media Pagination start -->
+
+        <div id="pagination_2">
+ 		<!--[onload_810;block=div;when [var.load_media]=4;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+    </div>
+        <!------------------------------------------------------------------- End of My Audio-->
+
+
+
+</body>

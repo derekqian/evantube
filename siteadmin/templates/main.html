@@ -8,6 +8,8 @@
 
 <title>PHPmotion Site Administration</title>
 
+<link href="css/eclipse_admin.css" rel="stylesheet" type="text/css" />
+
 <link href="css/main.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="[var.base_url]/javascripts/ahah.js" ></script>
@@ -116,6 +118,13 @@ menu6[2]='<a href="stats.php?type=3">[var.lang_blogs]</a>'
 menu6[3]='<a href="stats.php?type=4">[var.lang_pictures]</a>'
 menu6[4]='<a href="stats.php?type=5">[var.lang_members]</a>'
 menu6[5]='<a href="stats_compare.php">[var.lang_compare]</a>'
+
+
+var menu7=new Array()
+
+menu7[1]='<a href="eclipse-admin_comments.php">Manage Comments</a>'
+menu7[2]='<a href="http://phpmotionwiz.com/forum/index.php/board,20.0.html" target="_blank">Eclipse Documentation</a>'
+menu7[3]='<a href="http://phpmotionwiz.com/forum/index.php/board,21.0.html" target="_blank">Eclipse Support</a>'
 
 
 var menuwidth='165px' //default menu width
@@ -503,6 +512,8 @@ background: #A4A4A4;
         <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu4, '150px')" onmouseout="delayhidemenu()">[var.lang_manage]</a></li>
 
                 <li><a href="http://phpmotion.com/content/view/39/183/" target="_blank">[var.lang_powertools]</a></li>
+                
+                <li><a href="eclipse-admin.php">Eclipse Admin</a></li>
       </ul>
 
       <!-- top menu end-->
@@ -729,9 +740,9 @@ background: #A4A4A4;
 
             </table></td>
 
-            <td width="800" align="center" valign="top" bgcolor="#FFFFFF" style="border-right: 1px solid #cccccc">
+            <td width="1200" valign="top" bgcolor="#FFFFFF" style="border-right: 1px solid #cccccc">
 
-            <table width="800" border="0" id="SubMenuTable">
+            <table width="1200" border="0" id="SubMenuTable">
 
                 <tr>
 
@@ -761,7 +772,7 @@ background: #A4A4A4;
 
               <!-- dynamic middle content container start-->
 
-              <table width="800" border="0" id="MainContentBoxTable">
+              <table width="1200" border="0" id="MainContentBoxTable">
 
                 <tr>
 
@@ -771,7 +782,7 @@ background: #A4A4A4;
 
                       <!-- start innner top message table -->
 
-                      <div align="center">
+                      <div align="left">
 
                         <table border="0" width="760" id="table1" style="border: 1px solid #CCCCCC; text-align:left" cellspacing="0" cellpadding="0">
 
@@ -815,7 +826,7 @@ background: #A4A4A4;
 
                     <div align="center">
 
-                      <table border="0" width="760" cellspacing="0" cellpadding="0" id="ExampleVideosList">
+                      <table border="0" width="1160" cellspacing="0" cellpadding="0" id="ExampleVideosList">
 
                         <!-- Dynamic contnet box menu sart-->
 
@@ -843,7 +854,7 @@ background: #A4A4A4;
 
                           <!-- Dynamic contnet box menu end-->
 
-                          <td style="border: 1px solid #E1E1E1"><p>
+                          <td style="border: 1px solid #E1E1E1; float: left;"><p>
 
                               <!--Load Inner Body -->
 

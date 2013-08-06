@@ -1,0 +1,24 @@
+/* = ============================================================================= =
+   = !!DO NOT DELETE THIS FILE!!
+   =
+   = This file is included with the free version of Eclipse to insure the thumbs
+   = display correctly without Popup-Info.  If you wish to use the Popup-Info mod,
+   = you must purchase the Popup Info mod for Eclipse or purchase Eclipse Pro.
+   = ============================================================================= = */
+
+/* == Popup-Info == */
+.popup-info span {
+    display: none;
+}
+
+/* == Popup-Info Flipped == */
+.popup-info_flipped span {
+    display: none;
+}
+
+/* == Popup-Info Gallery == */
+.popup-info_gallery span {
+   display: none;
+}
+
+/**/

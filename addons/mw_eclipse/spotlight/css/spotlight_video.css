@@ -1,0 +1,44 @@
+/* = ================================================================================================ =
+   = Spotlight Video and FlowPlayer Integration Mods by: Shawn Padgett  http://www.phpmotionwiz.com   =
+   = ================================================================================================ = */
+
+#sv_container {
+    color: #fff; width: 990px; height: 380px; margin: 0 auto; overflow: hidden; position: relative; text-align: left; z-index: 1;
+}
+
+#sv_container-bg img {
+    width: 100%; display: block; position: relative; z-index: 1;
+}
+
+#sv_bg-overlay {
+    width: 990px; height: 440px; display: block; position: absolute; z-index: 2; background: transparent url(../images/background-overlay.png) repeat;
+}
+
+#sv_info {
+    width: 300px; height: 360px; display: block; position: absolute; top: 10px; z-index: 3;
+    background: transparent url(../images/info-overlay.png) repeat;
+}
+
+#sv_info_title {
+    width: 280px; font-size: 20px; font-weight: bold; margin-top: 10px; padding-left: 5px; border-bottom: 1px solid #fff;
+}
+
+#sv_video_title {
+    font-size: 16px; margin: 15px 0 0 10px;
+}
+#sv_video_title a { color: #fff; }
+
+/*--Watch Now Button--*/
+#sv_watch_now a {
+	width: 87px; height: 20px; display: block; position: absolute; right: 15px; z-index: 98;
+	background: transparent url(../images/button_watch-now.png) no-repeat;
+}
+#sv_watch_now a:hover { background-position: 0px -20px; }
+
+#sv_video_description {
+    width: 250px; max-height: 220px; overflow: hidden;  margin: 15px 0 15px 10px;
+}
+
+#sv_player {
+    width: 600px; height: 360px; display: block; position: absolute; z-index: 99; top: 10px; right: 10px;
+}

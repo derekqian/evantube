@@ -1,0 +1,164 @@
+<div id="admin-header">
+	<span id="ec_logo"><a href="http://phpmotionwiz.com"><img src="http://phpmotionwiz.com/images/eclipse/siteadmin/eclipse_logo.png" /></a></span>
+	<span id="pw_logo"><a href="http://phpmotionwiz.com"><img src="http://phpmotionwiz.com/images/eclipse/siteadmin/phpmotionwiz_logo.png" /></a></span>
+</div>
+
+<div id="ec_nav">
+	<ul>
+		<li><a href="eclipse-admin.php">News</a></li>
+		<li><a href="eclipse-updates.php">Updates</a></li>
+		<li><a href="eclipse-admin_settings.php">Settings</a></li>
+		<li><a href="eclipse-admin_comments.php">Manage Comments</a></li>
+		<li><a href="eclipse-admin_admanagement.php">Manage Ads</a></li>
+		<li><a href="eclipse-skins.php">Eclipse Skins</a></li>
+		<li><a href="eclipse-mm-mods.php">MotionMods</a></li>
+		<li><a href="http://phpmotionwiz.com/forum/index.php/board,20.0.html" target="_blank">Documentation</a></li>
+		<li><a href="http://phpmotionwiz.com/forum" target="_blank">Support</a></li>
+	</ul>
+</div>
+
+
+<div class="info">
+    <h2>[var.lang_eclipse] [var.lang_settings]</h2>
+	<p></p>
+</div>
+
+<!--Begin General Settings-->
+<div id="page">
+	<p class="message">[var.notice;htmlconv=no]</p>
+	
+		<form action="eclipse-admin_settings.php" method="post">
+		<ul id="settings_form">
+			<li>
+				<div class="left">
+					<span class="help">
+						<a href="#" title="[var.lang_select_skin_desc]">
+							<img src="images/help.png" /></a></span>
+					<strong>[var.lang_select_skin]:</strong></div>
+				<div class="right">
+					<b>Installed Skins:</b>&nbsp;[var.eclipse_skins;htmlconv=no]
+				</div>
+				<p class="settings_info"><a href="eclipse-skins.php">Click Here</a> to get more skins</p>
+			</li>
+			<li>
+				<div class="left">
+					<span class="help">
+						<a href="#" title="[var.lang_select_player_desc]">
+							<img src="images/help.png" /></a></span>
+					<strong>[var.lang_select_player]:</strong></div>
+				<div class="right">
+					<b>Installed Players:</b>&nbsp;[var.eclipse_players;htmlconv=no]
+				</div>
+			</li>
+			<li>
+				<div class="left">
+					<span class="help">
+					<a href="#" title="[var.lang_dq_desc]">
+							<img src="images/help.png" /></a></span>
+					 <strong>[var.lang_dq_shortname]:</strong></div>
+				<input type="text" class="text" name="dq_shortname" size="25" value="[var.dq_shortname]" />
+				
+				<p class="settings_info">[var.lang_dq_no_account]&nbsp;&nbsp;<a href="http://disqus.com/admin/register/" target="_blank">[var.lang_click_here]</a> [var.lang_to_get_one]</p>
+			</li>
+			
+			<li>
+				<h2>eBar Settings</h2>
+				
+				<div class="setting_row">
+				<div class="left">
+					<span class="help">
+					<a href="#" title="[var.lang_fbdesc]">
+							<img src="images/help.png" /></a></span>
+					 <strong>[var.lang_fbuser]:</strong></div>
+				<span class="url">http://facebook.com/</span> <input type="text" class="text" name="soc_fburl" size="25" value="[var.soc_fburl]" />
+				</div>
+				
+				
+				<div class="setting_row">
+				<div class="left">
+					<span class="help">
+					<a href="#" title="[var.lang_twdesc]">
+							<img src="images/help.png" /></a></span>
+					 <strong>[var.lang_twuser]:</strong></div>
+				<span class="url">http://twitter.com/</span> <input type="text" class="text" name="soc_twurl" size="25" value="[var.soc_twurl]" />
+				</div>
+				
+				
+				<div class="setting_row">
+				<div class="left">
+					<span class="help">
+					<a href="#" title="[var.lang_gpdesc]">
+							<img src="images/help.png" /></a></span>
+					 <strong>[var.lang_gpuser]:</strong></div>
+				<span class="url">http://plus.google.com/communities/</span> <input type="text" class="text" name="soc_gpurl" size="25" value="[var.soc_gpurl]" />
+				</div>
+				
+			</li>
+			
+<!--			<li>
+				<div class="left">
+					<span class="help">
+					<a href="#" title="[var.lang_thumb_display_desc]">
+							<img src="images/help.png" /></a></span>
+				<strong>[var.lang_thumb_display]:</strong></div>
+				<b>Width:</b><input type="text" name="theme_thumbnail_width" size="4" value="[var.theme_thumbnail_width]" />px&nbsp;&nbsp;&nbsp;&nbsp;
+				<b>Height:</b><input type="text" name="theme_thumbnail_height" size="4" value="[var.theme_thumbnail_height]" />px
+			</li>
+
+			<li>
+				<strong>Theme Blog Width:</strong>
+				<input type="text" name="theme_blog_width" size="45" value="[var.theme_blog_width]" />
+			</li>
+
+			<li>
+				<strong>Create Thumbnail Width:</strong>
+				<input type="text" name="create_thumbnail_width" size="45" value="[var.create_thumbnail_width]" />
+			</li>
+			<li>
+				<strong>Create Video Thumb Width:</strong>
+				<input type="text" name="create_video_thumb_width" size="45" value="[var.create_video_thumb_width]" />
+			</li>
+			<li>
+				<strong>Create Album Thumb Width:</strong>
+				<input type="text" name="create_album_thumb_width" size="45" value="[var.create_album_thumb_width]" />
+			</li>
+			<li>
+				<strong>Display Audio Album Thumb Width:</strong>
+				<input type="text" name="display_audio_album_thumb_width" size="45" value="[var.display_audio_album_thumb_width]" />
+			</li>
+			<li>
+				<strong>Index Display Video Thumb Width:</strong>
+				<input type="text" name="index_display_video_thumb_width" size="45" value="[var.index_display_video_thumb_width]" />
+			</li>
+			<li>
+				<strong>General Large Thumb Width:</strong>
+				<input type="text" name="general_large_thumb_width" size="45" value="[var.general_large_thumb_width]" />
+			</li>
+			<li>
+				<strong>General Medium Thumb Width:</strong>
+				<input type="text" name="general_medium_thumb_width" size="45" value="[var.general_medium_thumb_width]" />
+			</li>
+			<li>
+				<strong>General Small Thumb Width:</strong>
+				<input type="text" name="general_small_thumb_width" size="45" value="[var.general_small_thumb_width]" />
+			</li>
+			<li>
+				<strong>Display Member Picture Width:</strong>
+				<input type="text" name="display_member_picture_width" size="45" value="[var.display_member_picture_width]" />
+			</li>
+			<li>
+				<strong>Show Member Videos:</strong>
+				<input type="text" name="show_member_videos" size="45" value="[var.show_member_videos]" />
+			</li>
+-->
+
+		</ul>
+		
+		<div class="submit">
+			<input type="hidden" name="settings" value="valid" />
+		    <input type="submit" value=" Save Changes " />
+		</div>
+		
+	</form>
+</div>
+<!--End General Settings-->

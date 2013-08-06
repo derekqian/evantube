@@ -41,6 +41,7 @@ background: #A4A4A4;
 
 <div align="center">
 	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		
 		<!-- start of search box -->
 	<tr>
 <!-- end of search box -->
@@ -55,9 +56,30 @@ background: #A4A4A4;
               &nbsp;[var.lang_ads]</b></font></p>
             </td>
           </tr>
+          
         <center>
+        
           <tr>
-            <td width="100%" height="21"><div align="center">[var.lang_insert_ads_code]</div></td>
+            <td width="100%" height="21">
+            	
+                        	
+            	<div align="left">
+            		
+            	<div class="info">
+            		<h2>V-Ads In-Video Ads</span></h2>
+            		If you wish to use V-Ads in-video advertising, you must purchase Eclipse Pro from <a href="http://phpmotionwiz.com">PHPmotionWiz.com</a>
+            		
+            		</div>
+            			
+            	<div class="info">
+            		<h2>Background Ads</h2>
+            		If you wish to use Background Ads, you must purchase Eclipse Pro from <a href="http://phpmotionwiz.com">PHPmotionWiz.com</a></div>
+            		
+            		
+            		<div class="insert_ads_code">[var.lang_insert_ads_code]</div></div>
+            	
+            	
+            </td>
           </tr>
         </center>
           <tr>
@@ -78,7 +100,8 @@ background: #A4A4A4;
 			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table19" height="522">
 			<form id="update_ads" action ="ads.php" method ="post">
 				<tr>
-					<td width="391" height="144" align="right">[var.lang_top_ad]&nbsp;&nbsp;&nbsp; 					</td>
+					<td style="width:391px; height:144px; text-align:right; padding-right: 10px;">[var.lang_top_ad]<br />
+					<div style="color:#555; font-style: italic;">Leave blank if you are using background ads.</div></td>
 					<td height="134">
 					<textarea rows="7" name="ads_top" cols="45">[var.ads_top;htmlconv=no]</textarea></td>
 				</tr>
@@ -88,15 +111,24 @@ background: #A4A4A4;
 					<textarea rows="7" name="ads_bottom" cols="45">[var.ads_bottom;htmlconv=no]</textarea></td>
 				</tr>
 				<tr>
-					<td width="391" height="144" align="right">[var.lang_left_ad]&nbsp;&nbsp;&nbsp;  </td>
+					<td style="width:391px; height:144px; text-align:right; padding-right: 10px;">[var.lang_right_ad] - 1<br />
+					<div style="color:#555; font-style: italic;">(Recommended ad size: 300x250)<br />
+						This ad is placed as the first element in the right column if enabled.  (insert ad code to enable)
+					</div>
+					</td>
 					<td height="6">
 					<textarea rows="7" name="ads_left" cols="45">[var.ads_left;htmlconv=no]</textarea></td>
 				</tr>
 				<tr>
-					<td width="391" height="144" align="right"> [var.lang_right_ad]&nbsp;&nbsp;&nbsp;  </td>
+					<td style="width:391px; height:144px; text-align:right; padding-right: 10px;">[var.lang_right_ad] - 2<br />
+					<div style="color:#555; font-style: italic;">(Recommended ad size(s): 300x250)<br />
+						This ad is placed as the last element in the right column if enabled.  (insert ad code to enable)
+					</div>
 					<td height="5">
 					<textarea rows="7" name="ads_right" cols="45">[var.ads_right;htmlconv=no]</textarea></td>
 				</tr>
+			
+				
 				<tr>
 					<td width="391" height="5" align="right"> </td>
 					<td height="5">					</td>

@@ -1,0 +1,74 @@
+/* =================================================================
+   = Eclipse Template by Shawn Padgett                             =
+   = http://phpmotionwiz.com                                       =
+   = Copyright 2011 phpMotionWiz.com All rights reserved           =
+   =                                                               =
+   = You may NOT redistribute this file modified or unmodified     =
+   ================================================================= */
+
+#welcome {
+	max-width: 200px;
+}
+/* == Search == */
+#search { margin: 18px 0 0 40px; }
+
+/* == Main Navigation == */
+#nav_main {
+    width: 500px; clear: left; text-align: left; margin: 35px 0 0 0;
+}
+
+#nav_main ul li { display: inline; }
+
+.title_wide h1 span { margin-top: -10px; }
+
+.browse_media_title { margin: 1px 0 0 -161px; }
+.v_title2 { margin: 1px 0 0 -161px; }
+
+.browse_media_duration { margin: 77px 0 0 -60px; }
+
+.related_media_title { margin: 1px 0 0 -154px; }
+
+.related_media_duration { margin: 73px 0 0 -63px; }
+
+
+/* == User Panel == */
+#member_media ul { display: inline; }
+
+.browse_button {
+    width: 60px;
+}
+
+#member_media ul li { width: 160px; margin: 0 -10px; }
+
+#media_title h1 span { margin-top: -15px; }
+
+.media_info h1 span { margin: -12px 4px 0 0; }
+
+#media_details { clear: left; margin-top:-20px; }
+
+#media_details li { display: inline; }
+
+#media_description { margin: 27px 0 0 -300px; }
+
+#media_buttons li { display: inline; }
+
+
+.related_media ul, .related_media li { display: inline; }
+
+.related_media_2 ul, related_media li { display: inline; }
+
+#profile_rating {
+	float: right; margin: -5px -15px 0 0;
+}
+
+#profile_menu li { margin-top: 15px; }
+
+.member_info li span { margin: -15px 0 0 0; }
+
+.related_media_header span { margin: -12px 2px 0 0; }
+
+#pagination_2 li { display: inline; }
+
+.related_media_2 ul, .related_media_2 li { display: inline; }
+
+.notification-message { position: relative; z-index: 199; }

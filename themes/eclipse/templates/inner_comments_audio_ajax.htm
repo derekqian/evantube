@@ -1,0 +1,99 @@
+<!-- ========================================= Begin Comments and Video Responces ========================================= -->
+      <features_comments>
+        <!--Begin Comments Ajax-->
+        <div id="commentajax">
+
+        <!--Begin Comments and Responces-->
+        <div id="responces">
+        	<div id="responces_title">
+        		[var.lang_comments]&nbsp;([var.see_limit]&nbsp;[var.lang_of]&nbsp;[var.text_comments])
+        	</div>
+
+        	<!--Begin Comments Form-->
+        	<div id="comm_form">
+        		<form id="commentsform" action="javascript:ahahscript.likeSubmit('comments_audio.php', 'post', 'commentsform', 'commentsdiv');">
+
+                  <textarea name="comments" cols="" rows="" id="comments_textarea" onclick="clickclear(this, '[var.lang_comment_audio]')" onblur="clickrecall(this,'[var.lang_comment_audio]')">[var.lang_comment_audio]</textarea>
+
+	              <input type="submit" value="[var.lang_post]" name="B3" />
+                  <input type="hidden" value="[var.audio]" name="vid" />
+                </form>
+        	</div><!--End Comments Form-->
+        	<div id="commentsdiv"></div>
+        	<div>[var.text_alert_msg]</div>
+
+           	<!--Begin Comments-->
+           	  <div class="comment">
+           		<span class="comm_tmb">
+           			<a href="members/<!--[blk3.by_username;block=div;comm]-->"><img src="<!--[blk3.poster_picture;block=div;comm]-->" /></a>
+           		</span>
+
+        		<div class="comm_usr_info">
+        			<div class="comm_usr_name"><a href="members/[blk3.by_username]"><!--[blk3.by_username;block=((div));comm]--></a></div>
+
+        			<div class="comm_rating" id="rating_vote_[blk3.indexer]">[var.lang_rated]:&nbsp;<!--[blk3.rating;block=div;comm]--></div>
+
+        			<div class="comm_date">[var.lang_posted]:&nbsp;<!--[blk3.todays_date;block=((div));comm;frm=mm-dd-yy]--></div>
+
+        			<div class="comm_edit">[blk3.video_comment_edit;block=((div));htmlconv=no;]&nbsp;&nbsp;[blk3.video_comment_delete;block=((div));htmlconv=no;]</div>
+        		</div>
+
+        		<div class="comm_body">
+        			<!--[blk3.comments;block=div;comm;htmlconv=no]-->
+        		</div>
+
+        		<div class="comm_buttons">
+
+        			<!--Begin Comment Vote Buttons-->
+        			<div style="float:left;" id="vote_enabled_[blk3.indexer]">
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/rate_comments_ajax.php?type=audio&amp;comment_id=[blk3.indexer;block=((div))]&amp;value=[blk3.rating]&amp;rate=up&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this);
+                      showBlock('drop_block_[blk3.indexer]');
+                      end_vote('vote_enabled_[blk3.indexer]', 'vote_disabled_[blk3.indexer]')"
+                      onMouseOver="over_image_up('rate_up_one_[blk3.indexer]')" onMouseOut="off_image_up('rate_up_one_[blk3.indexer]')">
+                      <img name="rate_up_one_[blk3.indexer]" src="[var.base_url]/themes/[var.user_theme]/images/thumbs_up.png" width="15" height="15" border="0" alt="Thumbs Up" title="Good Comment" /></a>
+
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/rate_comments_ajax.php?type=audio&amp;comment_id=[blk3.indexer;block=((div))]&amp;value=[blk3.rating]&amp;rate=down&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this);
+                      showBlock('drop_block_[blk3.indexer]');
+                      end_vote('vote_enabled_[blk3.indexer]', 'vote_disabled_[blk3.indexer]')"
+                      onMouseOver="over_image_down('rate_down_one_[blk3.indexer]')" onMouseOut="off_image_down('rate_down_one_[blk3.indexer]')">
+                      <img name="rate_down_one_[blk3.indexer]" src="[var.base_url]/themes/[var.user_theme]/images/thumbs_down.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" /></a>
+                    </div>
+
+                    <div style="float:right; display:none;" id="vote_disabled_[blk3.indexer]">
+                	    <img name="rate_up_one_[blk3.indexer]" src="[var.base_url]/themes/[var.user_theme]/images/thumbs_up_voted.png" width="15" height="15" border="0" alt="Thumbs Up" title="Good Comment" /></a>
+                	    <img name="rate_down_one_[blk3.indexer]" src="[var.base_url]/themes/[var.user_theme]/images/thumbs_down_voted.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment"/></a>
+                    </div>
+
+                    <div style="display:none; float:left;">
+                	    <img name="rate_up_one_[blk3.indexer]" src="[var.base_url]/themes/[var.user_theme]/images/thumbs_up_voted.png" width="15" height="15" border="0" alt="Thumbs Up" title="Thanks for voting" />
+                	    <img name="rate_down_one_[blk3.indexer]" src="[var.base_url]/themes/[var.user_theme]/images/thumbs_down_voted.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" />
+                	</div><!--End Comment Vote Buttons-->
+
+        			<!--Reply to Comment-->
+        			<a onClick="javascript:ahahscript.ahah('[var.base_url]/reply_comments_ajax.php?type=audio&amp;media_id=[var.vid]&amp;id=[blk3.indexer;block=((div))]&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">[var.lang_reply]</a>
+        			&nbsp;|&nbsp;
+
+        			<!--Comment Report Link-->
+        			<a onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[blk3.indexer;block=((div))]&flag_type=audiocomments', 'drop_block_[blk3.indexer]', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">[var.lang_report]</a>
+
+        		    <!--Begin Comment Reply Box-->
+        		    <div class="comm_reply">
+        		    	[blk3.drop_block;block=((div));htmlconv=no;]
+                        [blk3.reply_block;block=((div));htmlconv=no;]
+                    </div><!--End Comment Reply Box-->
+
+        		</div>
+        	</div><!--End Comments-->
+
+        	<div id="pagination"><!-- Pagination start must be in comments ajax div-->
+              <span>
+                <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.pagenext]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.ajax_page_next;htmlconv=no;]</a>
+              </span>
+            </div><!-- Pagination end -->
+
+        </div><!--End Comments and Responces-->
+
+
+        </div><!--End Comments Ajax-->
+      </features_comments>
+      <!-- ========================================= End Comments and Video Responces ========================================= -->

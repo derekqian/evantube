@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>[var.user_name]'s [var.lang_profile] [var.lang_on] [var.site_name]</title>
+	<link rel="icon" type="image/png" href="[var.base_url]/themes/[var.user_theme]/images/icons/favicon.png">
+
+	<base href="[var.base_url]/">
+	
+	<!-- PHPmotionWiz..com - Eclipse Skin CSS File -->
+	  <link href="[var.base_url]/addons/mw_eclipse/skin/css/[var.eclipse_skin].css" rel="stylesheet" type="text/css" media="all">
+	<!-- End Eclipse Skin -->
+
+    <!-- PHPmotionWiz.com - Popup-Info CSS -->
+	 <link href="[var.base_url]/addons/mw_eclipse/popup-info/css/popup_info.css" rel="stylesheet" type="text/css" media="all">
+	 
+	 <!--[if IE 7]>
+	 <link href="[var.base_url]/addons/mw_eclipse/popup-info/css/popup_info_ie7.css" rel="stylesheet" type="text/css" media="all">
+	 <![endif]-->
+    <!-- End FlowPlayer Integration CSS -->
+    
+    <!-- PHPmotionWiz.com - Suckerfish -->
+	 <link href="[var.base_url]/addons/mw_eclipse/skin/css/suckerfish.css" rel="stylesheet" type="text/css" media="all">
+	 <!--[if IE 7]><script type="text/javascript" src="[var.base_url]/addons/mw_eclipse/js/suckerfish.js"></script><![endif]-->
+    <!-- End Suckerfish CSS -->
+
+	<link href="[var.base_url]/themes/[var.user_theme]/css/main.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--[if lte IE 6]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie6.css" type="text/css">
+	<![endif]-->
+
+	<!--[if IE 7]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie7.css" type="text/css">
+	<![endif]-->
+
+	<!-- thick box -->
+	<link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+	<!-- thick box -->
+
+	<!-- ahah -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"></script>
+	<!-- ahah -->
+
+	<!-- GreyBox -->
+	<script type="text/javascript">
+		var GB_ROOT_DIR = "[var.base_url]/greybox/";
+	</script>
+	<script type="text/javascript" src="greybox/AJS.js"></script>
+	<script type="text/javascript" src="greybox/AJS_fx.js"></script>
+	<script type="text/javascript" src="greybox/gb_scripts.js"></script>
+	<link href="[var.base_url]/greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Greybox -->
+
+	<!-- ajax rating -->
+	<link href="[var.base_url]/css/rating_style.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="[var.base_url]/javascripts/rating_update.js"></script>
+	<!-- end rating -->
+
+	<script type="text/javascript">
+		function clickclear(thisfield, defaulttext)
+		{
+			if (thisfield.value == defaulttext) {
+				thisfield.value = '';
+			}
+		}
+		function clickrecall(thisfield, defaulttext) {
+			if (thisfield.value == "") {
+				thisfield.value = defaulttext;
+			}
+		}
+	</script>
+<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"></script>
+</head>
+
+<body>
+
+    <!--Begin eBar-->
+        <div id="ebar">
+
+        <!--Begin eBar Wrap-->
+            <div id="ebar_wrap">
+
+        <!--Begin logo-->
+            <div id="ebar_logo">
+              <a href="[var.base_url]">
+                <img src="addons/mw_eclipse/logos/logo_main.png" title="[var.lang_home]" alt="[var.site_name]" />
+              </a>
+            </div><!--End Logo-->
+            
+         <!--eBar Navigation-->
+           <div id="ebar_nav">
+
+            <ul id="mynav" class="ebar_nav">
+              <li><a class="ebar_browse" href="[var.base_url]">browse &nbsp;</a>
+                  <ul>              
+                    <li><a href="videos/load/recent">[var.lang_word_videos]</a></li>
+                    <li><a href="audios/load/recent">[var.lang_word_audios]</a><!--[onload;block=li;when [var.enable_audio]=1;comm]--></li>
+                    <li><a href="albums/load/recent">[var.lang_word_images]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+                    <li><a href="blogs/load/recent">[var.lang_blogs]</a><!--[onload;block=li;when [var.enable_blogs]=1;comm]--></li>
+                    <li><a href="groups">[var.lang_groups]</a></li>
+                    <li><a href="people">[var.lang_members]</a></li>
+                    <li><a href="news.php">[var.lang_news]</a><!-- just a space filler in top menu when images are off--><!--[onload;block=li;when [var.enable_images]=0;comm]--></li>
+                 </ul>
+              
+              <li class="ebar_button"><a href="forum">[var.lang_forum]</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+              
+              </li> 
+            </ul>
+
+           </div><!--End eBar Navigation-->
+           
+         <!--eBar Search-->
+            <div id="ebar_search">
+
+              <form method="get" action="search.php" autocomplete="off" name="form_search">
+
+            <div class="ebar_select_button">
+                <select id="ebar_search-select" name="type" />
+              <option value="videos">[var.lang_word_videos]</option>
+              <option value="audios">[var.lang_word_audios]<!--[onload;block=option;when [var.enable_audio]=1;comm]--></option>
+              <option value="images">[var.lang_word_images]<!--[onload;block=option;when [var.enable_images]=1;comm]--></option>
+              <option value="groups">[var.lang_groups]</option>
+              <option value="blogs">[var.lang_blogs]<!--[onload;block=option;when [var.enable_blogs]=1;comm]--></option>
+            </select>
+            </div>
+
+            <input id="ebar_search-field" autocomplete="off" id="keyword" name="keyword" value="Search [var.site_name]" onclick="clickclear(this, 'Search [var.site_name]')" onblur="clickrecall(this,'Search [var.site_name]')" />
+            <input id="ebar_search-button" type="submit" value="" />
+            <div id="searchBoxSuggestions"></div>
+          </form>
+
+            </div><!--End eBar SearchSearch-->
+            
+        <!--Upload Button-->
+                 <div id="ebar_upload">
+                    <a href="[var.base_url]/uploader.php">[var.lang_upload]</a>
+                 </div><!--End Upload Button-->            
+
+        <!--eBar Member Panel-->
+            <div id="ebar_mp">
+                <div id="ebar_mm">
+                	<ul id="mynav" class="ebar_mm">
+                		<li><a href="members/[var.user_name]"><span><!--[var.welcome_avatar;htmlconv=no;comm]--></span>
+                		    
+                			<span id="ebar_user"><!--[var.user_name;ope=max:18;comm]--></span>
+
+				              <ul>
+                                <li><a href="members/[var.user_name]">[var.lang_my_profile]</a></li>
+                                <li><a href="emailinbox.php">[var.lang_word_email]&nbsp;<b>[var.number_of_emails]</b></a>
+                            	    <!--[onload;block=li;when [var.show_email_count]=1;comm]--></li>
+                                <li><a href="inviteread.php">[var.lang_invites]&nbsp;<b>[var.number_of_invites]</b></a>
+                                    <!--[onload;block=span;when [var.show_invites_count]=1;comm]--></li>
+					          </ul>
+					      <!--[onload;block=li;when [var.loggedin]=1;comm]-->
+					    </li>
+					    
+					    <li><div class="reg"><a href="[var.register_menu_link]">[var.lang_register_today]</a></div>
+                            <!--[onload;block=li;when [var.show_register]=1;comm]--></li>
+                        
+                        <li><div class="loginout"><a href="[var.login_out_link]">[var.login_out]</a></div></li>
+					</ul>
+				</div>
+
+            </div><!--End eBar Member Panel-->
+            
+            
+            
+          <!--eBar Social-->
+              <div id="ebar_soc">
+                  
+                  <div id="ebar_fb">
+                      <a href="http://facebook.com" target="_blank" title="Like [var.site_name]"></a></div>
+                          
+                  <div id="ebar_tw">
+                      <a href="http://twitter.com" target="_blank" title="Follow [var.site_name]"></a></div>
+                      
+                  <div id="ebar_gp">
+                      <a href="http://plus.google.com" target="_blank" title="+1 [var.site_name]"></a></div>
+              
+              </div><!--End eBar Social-->
+            
+            </div><!--End eBar Wrap-->
+        </div><!--End eBar-->
+        
+      <!--Begin Sub Header -->
+           <div id="sub_header">
+               <div id="sub_header_wrap"></div>
+           </div><!--End Sub Header-->
+
+        <!--Begin Notiications-->
+          <div class="notification-message">[var.message_type] - [var.error_message]<!--[onload;block=div;when [var.blk_notification]=1;comm]--></div>
+        <!--End Notiications-->
+        
+        <!--Begin IE7 and Older Compatibility Warning-->
+          <!--[if lte IE 7]>
+          	<div class="notification-message">
+          		Your browser is not supported.  Many of this site's features may not work or display properly on older browsers.<br /> Please upgrade to one of the following modern browsers.
+          		
+          		<p>
+          			<a href="http://getfirefox.com" target="_blank">Mozilla Firefox</a> &nbsp;|&nbsp; <a href="http://chrome.google.com" target="_blank">Google Chrome</a>
+          			&nbsp;|&nbsp <a href="http://opera.com" target="_blank">Opera</a> &nbsp;|&nbsp;
+          			<a href="http://www.discover.msn.com/get/download-ie8-optimized-for-bing-and-msn-3/?form=MFEHPG&publ=MSCOM&crea=STND_MFEHPG_OIE8_mscom_wohp_1x1" target="_blank">Internet Explorer 8 (or newer)</a>
+          		</p>
+          	</div>
+        	
+          <![endif]-->
+        <!--End IE7 and Older Compatibility Warning-->
+
+
+       <!--Begin Top Ad Spot-->
+         <div id="ad_top">
+         	<!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+         
+
+         <!--Begin Inner Templates Container.  This is where all of the other template files are displayed.-->
+          <div id="inner-templates-container">
+            <!--[onload;file=[var.inner_template];getbody;comm]-->
+          </div><!--End Inner Templates Container-->
+
+
+
+       <!--Begin Bottom Ad Spot-->
+         <div id="ad_bottom">
+            <!--[var.ads_bottom;htmlconv=no;comm]-->
+         </div><!--End Bottom Ad Spot-->
+
+
+    <!--Begin Footer-->
+        <div id="footer">
+
+        <!--Begin Footer Wrap-->
+          <div id="footer-wrap">
+
+          <!--Begin Site Info Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_site]</span> [var.lang_info]</div>
+
+                <ul>
+                   <li><a href="page.php?page=1#about">[var.lang_about_us]</a></li>
+                   <li><a href="news.php">[var.lang_site_news]</a></li>
+                   <li><a href="page.php?page=11#faq">[var.lang_faq]</a></li>
+                   <li><a href="page.php?page=2#contact">[var.lang_contact_us]</a></li>
+			       <li><a href="page.php?page=4#advertise">[var.lang_advertise]</a></li>
+			    </ul>
+            </div><!--End Site Info Menu-->
+
+          <!--Begin Legal Info Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_legal]</span> [var.lang_stuff]</div>
+
+                <ul>
+                   <li><a href="page.php?page=3#terms">[var.lang_terms] of Use</a></li>
+                   <li><a href="page.php?page=12#privacy">[var.lang_privacy_policy]</a></li>
+		           <li><a href="page.php?page=13#copyright">[var.lang_copyright_info]</a></li>
+			    </ul>
+            </div><!--End Legal Info Menu-->
+
+          <!--Begin Help Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_help]</span> [var.lang_info]</div>
+
+                <ul>
+                   <li><a href="forum">[var.lang_support_forum]</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+                   <li><a href="page.php?page=11#faq">[var.lang_faq]</a></li>
+                   <li><a href="page.php?page=2#contact">[var.lang_contact_us]</a></li>
+			    </ul>
+            </div><!--End Help Menu-->
+
+          <!--Begin Community Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_comm]</span>[var.lang_unity]</div>
+
+                <ul>
+                   <li><a href="people">[var.lang_member_list]</a></li>
+                   <li><a href="forum">[var.lang_community_forum]</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+                   <li><a href="videos/load/recent">[var.lang_watch_videos]</a></li>
+                   <li><a href="audios/load/recent">[var.lang_listen_audios]</a><!--[onload;block=li;when [var.enable_audio]=1;comm]--></li>
+                   <li><a href="albums/load/recent">[var.lang_view_images]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+                   <li><a href="blogs/load/recent">[var.lang_read_blogs]</a><!--[onload;block=li;when [var.enable_blogs]=1;comm]--></li>
+			    </ul>
+            </div><!--End Community Menu-->
+
+          <!--Begin Social Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_soc]</span>[var.lang_ial]</div>
+
+                <ul>
+                   <li id="footer_fb"><a href="http://facebook.com" title="Follow [var.site_name] on Facebook" target="_blank">Facebook</a></li>
+                   <li id="footer_twitter"><a href="http://twitter.com" title="Follow [var.site_name] on Twitter" target="_blank">Twitter</a></li>
+                   <li id="footer_rss"><a href="rss.php" title="RSS FEED" target="_blank">RSS Feed</a></li>
+			    </ul>
+            </div><!--End Social Menu-->
+
+
+
+
+
+          </div><!--End Footer Wrap-->
+        </div><!--End Footer-->
+
+    <script type="text/javascript" src="[var.base_url]/addons/mw_eclipse/js/showdesc.js" ></script>
+  </body>
+</html>

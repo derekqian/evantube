@@ -1,0 +1,274 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Upload Audio-->
+  	 <div class="title_wide">
+  	  	<h1>[var.lang_upload_audio] - [[var.lang_finish]]</h1></div>
+  	  <div class="form">
+        
+        <form name="form_upload" action="audio_uploader_finished.php" method="post">
+        	<ul>
+        		<li>[var.lang_add_music_to_albums].</li>
+        		<li>[var.lang_add_audio_album_question]?&nbsp;&nbsp;
+        			<input type="radio" name="use_album" value="yes" onClick="setUse()" /><b>&nbsp;[var.lang_yes]</b>
+                     &nbsp;&nbsp;
+                    <input type="radio" name="use_album" value="no" checked="checked" onClick="setUse()" /><b>&nbsp;[var.lang_no]</b></li>
+                
+                <li>[var.lang_select_create_album]</li>
+                
+                <li>[var.lang_your_albums]:<br />
+                	<select class="input" name="audio_album" disabled>[var.albums_all;htmlconv=no]</select></li>
+                
+                <li>[var.lang_new_album_name]:<br />
+                	<input class="input" type="text" name="new_audio_album" disabled /></li>
+                	
+                <li>[var.lang_album_type]:&nbsp;&nbsp;
+                	<input type="radio" disabled name="album_type" value="[var.lang_public]" checked="checked" />[var.lang_public]
+                	&nbsp;&nbsp;<input type="radio" disabled name="album_type" value="[var.lang_private]" />[var.lang_private] -
+                	<strong>[var.lang_only_visible]</strong></li>
+                	
+                <li style="width: 100%; border-bottom:1px solid #555;">&nbsp;</li>
+                
+                <li style="color:#ff0000;">[var.lang_errors_found_audio]</li>
+                
+                <li><strong>[var.lang_title]:</strong><br />
+                	<input class="input" type="text" name="title" value="[var.title]" /></li>
+                
+                <li><strong>[var.lang_artist]:</strong><br />
+                	<input class="input" type="text" name="artist" value="[var.artist]" /></li>
+                	
+                <li><strong>[var.lang_description]</strong><br />
+                	<textarea class="input" type="text" name="description" value="[var.description;htmlconv=no]">[var.artist] - [var.title]</textarea></li>
+                
+                <li><strong>[var.lang_tags]:</strong><br />
+                	<input class="input" type="text" name="tags" value="[var.artist] [var.title]" /><br />
+                	 <strong>[var.lang_enter_tags].</strong><br />
+                             [var.lang_enter_tags_description].</li>
+                             
+                <li><strong>[var.lang_play_length]:</strong><br />
+                	<input class="input" type="text" name="length" value="[var.length]" /></li>
+                	
+                <li><strong>[var.lang_genre]:</strong><br />
+                	
+                	<select class="input" name="category">
+                		
+                		<option value="[var.category]">[var.category]</option>
+                		<option value="Other">Other</option>
+                		<option value="Acapella">Acapella</option>
+                		<option value="Acid">Acid</option>
+                		<option value="Acid Jazz">Acid Jazz</option>
+                		<option value="Acid Punk">Acid Punk</option>
+                		<option value="Acoustic">Acoustic</option>
+                		<option value="Alternative">Alternative</option>
+                		<option value="AlternRock">AlternRock</option>
+                		<option value="Ambient">Ambient</option>
+                		<option value="Avantgarde">Avantgarde</option>
+                		<option value="Ballad">Ballad</option>
+                		<option value="Bass">Bass</option>
+                		<option value="Bebob">Bebob</option>
+                		<option value="Big Band">Big Band</option>
+                		<option value="Bluegrass">Bluegrass</option>
+                		<option value="Blues">Blues</option>
+                		<option value="Booty Bass">Booty Bass</option>
+                		<option value="Cabaret">Cabaret</option>
+                		<option value="Celtic">Celtic</option>
+                		<option value="Chamber Music">Chamber Music</option>
+                		<option value="Chanson">Chanson</option>
+                		<option value="Chorus">Chorus</option>
+                		<option value="Christian Rap">Christian Rap</option>
+                		<option value="Classic Rock">Classic Rock</option>
+                		<option value="Classical">Classical</option>
+                		<option value="Club">Club</option>
+                		<option value="Comedy">Comedy</option>
+                		<option value="Country">Country</option>
+                		<option value="Cult">Cult</option>
+                		<option value="Dance">Dance</option>
+                		<option value="Dance Hall">Dance Hall</option>
+                		<option value="Darkwave">Darkwave</option>
+                		<option value="Death Metal">Death Metal</option>
+                		<option value="Disco">Disco</option>
+                		<option value="Dream">Dream</option>
+                		<option value="Drum Solo">Drum Solo</option>
+                		<option value="Duet">Duet</option>
+                		<option value="Easy Listening">Easy Listening</option>
+                		<option value="Electronic">Electronic</option>
+                		<option value="Ethnic">Ethnic</option>
+                		<option value="Euro-House">Euro-House</option>
+                		<option value="Euro-Techno">Euro-Techno</option>
+                		<option value="Eurodance">Eurodance</option>
+                		<option value="Fast Fusion">Fast Fusion</option>
+                		<option value="Folk">Folk</option>
+                		<option value="Folk-Rock">Folk-Rock</option>
+                		<option value="Folklore">Folklore</option>
+                		<option value="Freestyle">Freestyle</option>
+                		<option value="Funk">Funk</option>
+                		<option value="Fusion">Fusion</option>
+                		<option value="Game">Game</option>
+                		<option value="Gansta">Gansta</option>
+                		<option value="Gospel">Gospel</option>
+                		<option value="Gothic">Gothic</option>
+                		<option value="Gothic Rock">Gothic Rock</option>
+                		<option value="Grunge">Grunge</option>
+                		<option value="Hard Rock">Hard Rock</option>
+                		<option value="Hip-Hop">Hip-Hop</option>
+                		<option value="House">House</option>
+                		<option value="Humour">Humour</option>
+                		<option value="Industrial">Industrial</option>
+                		<option value="Instumental">Instumental</option>
+                		<option value="Instrumental Pop">Instumental Pop</option>
+                		<option value="Instumental Rock">Instumental Rock</option>
+                		<option value="Jazz">Jazz</option>
+                		<option value="Jazz+Funk">Jazz+Funk</option>
+                		<option value="Jungle">Jungle</option>
+                		<option value="Latin">Latin</option>
+                		<option value="Lo-Fi">Lo-Fi</option>
+                		<option value="Meditative">Meditative</option>
+                		<option value="Metal">Metal</option>
+                		<option value="National Folk">National Funk</option>
+                		<option value="Native American">Native American</option>
+                		<option value="New Age">New Age</option>
+                		<option value="New Wave">New Wave</option>
+                		<option value="Noise">Noise</option>
+                		<option value="Oldies">Oldies</option>
+                		<option value="Opera">Opera</option>
+                		<option value="Polka">Polka</option>
+                		<option value="Pop">Pop</option>
+                		<option value="Pop-Folk">Pop-Folk</option>
+                		<option value="Pop/Funk">Pop/Funk</option>
+                		<option value="Power Ballad">Power Ballad</option>
+                		<option value="Pranks">Pranks</option>
+                		<option value="Progressive Rock">Progressive Rock</option>
+                		<option value="Psychadelic">Psychadelic</option>
+                		<option value="Punk">Punk</option>
+                		<option value="Punk Rock">Punk Rock</option>
+                		<option value="R&amp;B">R&amp;B</option>
+                		<option value="Rap">Rap</option>
+                		<option value="Rave">Rave</option>
+                		<option value="Reggae">Reggae</option>
+                		<option value="Retro">Retro</option>
+                		<option value="Revival">Revival</option>
+                		<option value="Rhythmic Soul">Rhythmic Soul</option>
+                		<option value="Rock">Rock</option>
+                		<option value="Rock &amp; Roll">Rock &amp; Roll</option>
+                		<option value="Samba">Samba</option>
+                		<option value="Satire">Satire</option>
+                		<option value="Showtunes">Showtunes</option>
+                		<option value="Ska">Ska</option>
+                		<option value="Slow Jam">Slow Jam</option>
+                		<option value="Slow Rock">Slow Rock</option>
+                		<option value="Sonata">Sonata</option>
+                		<option value="Soul">Soul</option>
+                		<option value="Sound Clip">Sound Clip</option>
+                		<option value="Soundtrack">Soundtrack</option>
+                		<option value="Southern Rock">Southern Rock</option>
+                		<option value="Space">Space</option>
+                		<option value="Speech">Speech</option>
+                		<option value="Swing">Swing</option>
+                		<option value="Symphonic Rock">Symphonic Rock</option>
+                		<option value="Symphony">Symphony</option>
+                		<option value="Tango">Tango</option>
+                		<option value="Techno">Techno</option>
+                		<option value="Techno-Industrial">Techno-Industrial</option>
+                		<option value="Top 40">Top 40</option>
+                		<option value="Trailer">Trailer</option>
+                		<option value="Trance">Trance</option>
+                		<option value="Tribal">Tribal</option>
+                		<option value="Trip-Hop">Trip-Hop</option>
+                		<option value="Vocal">Vocal</option>
+                	                		
+                    </select></li>
+                	
+                <li><strong>[var.lang_album_source]:</strong><br />
+                	<input class="input" type="text" name="album" value="[var.album]" /></li>
+                	
+                <li><strong>[var.lang_year]:</strong>(Optional)<br />
+                	<input class="input" type="text" name="year" value="[var.year]" /></li>
+                	
+                <li><strong>[var.lang_allow_comm]:</strong><br />
+                	<select size="1" name="allow_comments">
+                      <option value="yes" selected="selected">yes</option>
+                      <option value="no">no</option>
+                    </select></li>
+                    
+                <li><strong>[var.lang_allow_embed]:</strong><br />
+                	<select size="1" name="allow_embedding">
+                      <option value="yes" selected="selected">yes</option>
+                      <option value="no">no</option>
+                    </select></li>
+                    
+                <li><strong>[var.lang_private_pub]:</strong><br />
+                	<select size="1" name="public_private">
+                      <option value="public" selected="selected">[var.lang_public]</option>
+                      <option value="private">[var.lang_private]</option>
+                    </select></li>
+                    
+                <li class="submit">
+                	<input type="submit" value="Finish Audio Upload" name="B3" /><br />
+                	<input type="hidden" name="uploaded_file_name" size="30" value="[var.uploaded_file_name]" readonly />
+                    <input type="hidden" name="form_submitted" value="yes" />
+                </li>
+                
+        	</ul>
+        
+      </div><!--End Upload Audio-->
+  </div><!--End Left Columnt-->
+  
+<script type="text/javascript">
+<!--
+function setUse(){
+	if (document.form_upload.use_album[0].checked){
+      	document.form_upload.audio_album.disabled = false;
+      	document.form_upload.new_audio_album.disabled = false;
+      	document.form_upload.album_type[0].disabled = false;
+      	document.form_upload.album_type[1].disabled = false;
+      }
+      if (document.form_upload.use_album[1].checked){
+      	document.form_upload.audio_album.disabled = true;
+      	document.form_upload.new_audio_album.disabled = true;
+      	document.form_upload.album_type[0].disabled = true;
+      	document.form_upload.album_type[1].disabled = true;
+      }
+}
+//-->
+</script>
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	<!--Begin Browse Menu-->
+  	 <div class="title_narrow"><h1>[var.lang_main_menu]</h1></div>
+  	  <div class="block_narrow">
+  	  	
+  	  	<ul class="block_menu">
+          <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+          <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	      <li><a href="image_uploader.php">[var.lang_upload_image]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+        </ul>
+      
+  	  </div><!--End Browse Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

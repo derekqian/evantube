@@ -1,0 +1,102 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Browse Images-->
+  	  <div class="title_wide">
+  	  	<h1>[var.lang_browse_images]
+  	  		
+  	  		<span>
+  	  			<a href="albums/load/featured">[var.lang_featured]</a>&nbsp;|&nbsp;
+                <a href="albums/load/viewed">[var.lang_most_viewed]</a>&nbsp;|&nbsp;
+                <a href="albums/load/recent">[var.lang_most_recent]</a>
+            </span>
+  	  		
+  	  		</h1></div>
+  	  		
+  	  <div class="browse_media">
+      <div>[mp;block=(div);serial]
+      	<ul><li>
+        <ul>
+           <li class="thumb">
+             <a class="popup-info" href="view-album/[mp_1.gallery_id;]/[mp_1.gallery_name_seo;block=li;htmlconv=no;]">
+             	
+             	<!--Thumb Overlay Title-->
+                  <div class="browse_media_title">[mp_1.gallery_name;block=div;htmlconv=no;]</div>
+                  <div class="v_title2">[mp_1.gallery_name;block=div;htmlconv=no;]</div>
+             	
+                <span>
+                  <div class="popup-info_tmb">
+                    <img src="addons/albums/thumbs/[mp_1.gallery_picture;]" style="width: 93px; height: 70px;" />
+                  </div>
+                  
+                  <div class="popup-info_title">[mp_1.gallery_name;block=div;htmlconv=no;]</div>
+                  
+                  <div class="popup-info_stats">
+                    <strong>[var.lang_views]:</strong> [mp_1.number_of_views;block=span;htmlconv=no;]<br />
+                  </div>
+
+                  <div class="popup-info_rating">
+                    [var.lang_gallery]
+                  </div>
+
+                  <div class="popup-info_description">
+                    [mp_1.gallery_description;block=span;ope=max:520;htmlconv=no;]
+                  </div>
+
+                </span>
+             <img src="addons/albums/thumbs/[mp_1.gallery_picture;]" /></a>
+
+            </li>
+          </ul>
+          </li></ul>
+	    [onload;block=div;when [var.show_v]=2]
+	  </div>
+	  
+	  <!-- Pagination start -->
+          <div id="pagination">
+          	<ul>[var.show_pages;htmlconv=no]</ul>
+          </div>
+        <!-- Pagination end -->
+	  
+	  </div><!--End Browse Images-->
+  	
+  </div><!--End Left Column-->
+  
+  
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->  	
+  	  
+  	  <!--Begin Album Menu-->
+  	  <div class="title_narrow"><h1>[var.lang_member_albums]</h1></div>
+  	  <div class="block_narrow">
+  	  	
+  	  	<ul class="block_menu">
+        <li><a href="view-album/[blk1.gallery_id]/[blk1.gallery_name_seo;block=li]"><!--[blk1.gallery_name;block=li;ope=max:18;comm]-->&nbsp;-&nbsp;(<!--[blk1.img_count;comm]-->)</a></li>
+      </ul>
+      
+  	  </div><!--End Album Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->	
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

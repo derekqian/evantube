@@ -1,0 +1,234 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!--Begin User Panel-->
+  <div id="user_panel">
+
+  <div id="member_info_profile">
+  	  <div id="group_thumb"><a href="videos/[blkfeatured.group_video_id;block=div]/[blkfeatured.group_video_seo;block=div]">
+  	  	                        <img src="uploads/thumbs/[blkfeatured.video_picture;block=div].jpg" alt="pic" /></a></div>
+  	<ul>
+      <li id="member_name"><a href="members/[var.user_name]">[var.group_name;ope=max:20;]</a></li>
+      <li style="width:200px;font-size:9px;"><a href="joingroup.php?gid=[var.group_id]">[var.lang_join_group]</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[var.group_id]&flag_type=group_profile', 'abuse_div', '', 'GET', '', this);">[var.lang_report_abuse]</a></li>
+    </ul>
+  </div>
+
+  <div id="member_media_profile">
+  	
+  <!--Begin User Panel Stats-->	
+  	<ul>
+  		<li><strong>[var.lang_group_status]:</strong><!--[var.public_private;comm]--></li>
+  		<li><strong>[var.lang_total_comments]:</strong><!--[var.comments_count;comm]--></li>
+
+  	</ul><!--End User Panel Stats-->
+  	
+  <!--Begin Profile Menu-->
+    <div id="member_media">
+    	<ul>
+    	<li>
+    		<form action="memberprofile.php" method ="get">
+              <span class="font4_12">[var.lang_members]</span>
+              <select size="1" name="user" style="margin:0px 5px;">
+                [var.member_list2;htmlconv=no]
+              </select>
+              <input type="submit" class="button-form" value="[var.lang_view_profile]" name="submit" />
+            </form>
+    	</li>
+    	
+    	<li><input class="input" type="text" name="group_url" value="[var.group_url]" readonly="readonly" /></li>        	
+       
+    </ul><!--End Profile Menu-->
+    </div>
+    
+    <div id="profile_rating">
+        [var.ajax_rating;htmlconv=no]
+    </div>
+    
+  </div>
+
+  </div><!--End User Panel-->
+  
+
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Group Admin Menu-->
+  	  <div class="browse_media">
+  	  	<!--[onload_12;block=div;when [var.admin_mode]=1]-->
+  	  	<div class="browse_media_nav">
+        <h1>[var.lang_you_are_viewing_group_admin]</h1></div>
+        <br /><br />
+        <div style="margin:12px;">
+          <a onclick="javascript:ahahscript.ahah('group_admin.php?action=public&amp;gid=[var.group_id]&amp;action_id=0', 'adminsdiv', '', 'GET', '', this);"><strong>[var.lang_make_group_public]</strong></a>
+            &nbsp;&bull;&nbsp;
+          <a onclick="javascript:ahahscript.ahah('group_admin.php?action=private&amp;gid=[var.group_id]&amp;action_id=0', 'adminsdiv', '', 'GET', '', this);"><strong>[var.lang_make_group_private]</strong></a>
+        </div>
+          <div id="adminsdiv"></div>
+          
+      <!-- admin - delete members form -->
+        <form id="delmemberform" action="javascript:ahahscript.likeSubmit('group_admin2.php', 'post', 'delmemberform', 'adminsdiv');">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          [var.lang_existing_member]
+        <select size="1" name="action_id">
+          [var.member_list;htmlconv=no]
+        </select>
+          &nbsp;
+        <input type="hidden" value="[var.group_id]" name="gid" />
+        <input type="hidden" value="del_member" name="action" />
+        <input type="submit" class="button-form" value="[var.lang_del_member]" name="action0"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))" />
+        </form>
+      <!-- admin delete memeber - end -->        
+      </div><!--End Group Admin Menu-->
+      
+    <!--Begin Group Menu-->
+      <div class="browse_media2">
+      	<!--[onload_13;block=div;when [var.show_v_selector]=1;comm]-->
+      	<div class="browse_media_nav">
+        <h1>[var.lang_add_delete_group_videos]</h1></div>
+          <div style="font-size:10px; margin: 2px 0 20px 5px;">[var.lang_message_group_video_list]</div>
+          
+          <form id="addvideoform" action="javascript:ahahscript.likeSubmit('groups_add_video_ajax.php', 'post', 'addvideoform', 'Ajax-Group');">
+      <strong>[var.lang_my_videos]</strong>&nbsp;
+      <!-- list my videos -->
+      <select size="1" name="vid">
+        [var.my_videos;htmlconv=no]
+      </select>
+      <!--list video end-->
+      <input type="hidden" name="group_id" value="[var.group_id]" />
+      <span>
+      <input type="submit" class="button-form" value="[var.lang_add_video]" name="B9" />
+      <!-- hide add button -->
+      <!--[onload_307;block=span;when [var.add_button]=1]-->
+      </span>
+    </form>
+    <form id="deletevideoform" action="javascript:ahahscript.likeSubmit('groups_remove_video_ajax.php', 'post', 'deletevideoform', 'Ajax-Group');">
+      <b>[var.lang_currently_in_group]</b>&nbsp;
+      <!-- list my videos already added to group-->
+      <select size="1" name="vid">
+        [var.my_videos_already;htmlconv=no]
+      </select>
+      <!--list video end-->
+      <input type="hidden" name="gid" value="[var.group_id]" />
+      <span>
+      <input type="submit" class="button-form" value="[var.lang_remove_video]" name="B10"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))" />
+      <!-- hide delete button -->
+      <!--[onload_308;block=span;when [var.delete_button]=1]-->
+      </span>
+    </form>      
+      </div><!--End Group Menu-->
+      
+       <!--Begin Browse Group Videos-->
+      <div class="browse_media">
+      	<div class="browse_media_nav">
+        <h1>[var.lang_browse_videos]
+        <span><a href="joingroup.php?gid=[var.group_id]">[var.lang_join_group]</a> &bull; <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[var.group_id]&flag_type=group_profile', 'abuse_div', '', 'GET', '', this);">[var.lang_report_abuse]</a></span></h1></div>
+        
+        <div>[mp;block=(div);serial]
+        <ul>
+          <li>
+        <ul>
+          <li class="thumb">
+          <a class="popup-info" href="videos/[mp_1.indexer;block=div]/[mp_1.title_seo;block=div;comm]">
+
+          <!--Thumb Overlay Title-->
+            <div class="browse_media_title"><!--[mp_1.title;block=div;ope=max:25;comm]--></div>
+            <div class="v_title2"><!--[mp_1.title;block=div;ope=max:25;comm]--></div>
+
+          <!--Thumb Overlay Duration-->
+            <div class="browse_media_duration"><!--[mp_1.video_length;block=div;comm]--></div>
+
+          <!--Begin Popup-Info-->
+            <span>
+               <div class="popup-info_tmb">
+                 <img alt="<!--[mp_1.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="uploads/thumbs/[mp_1.video_id;block=div].jpg" style="width: 93px; height: 70px;" />
+               </div>
+               
+               <div class="popup-info_title"><!--[mp_1.title;block=div;ope=max:20;comm]--></div>
+               
+               <div class="popup-info_stats">
+                 <strong>[var.lang_category]:</strong> [mp_1.channel;block=span;ope=max:20;com]<br />
+               </div>
+
+			   <div class="popup-info_rating">
+			    <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[mp_1.star1;block=div]" width="12" height="12" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[mp_1.star2;block=div]" width="12" height="12" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[mp_1.star3;block=div]" width="12" height="12" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[mp_1.star4;block=div]" width="12" height="12" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[mp_1.star5;block=div]" width="12" height="12" alt="1 Star" />
+			   </div>
+
+			   <div class="popup-info_description">[mp_1.description;htmlconv=no;block=span;ope=max:520;comm]</div>
+            </span>
+             <img alt="<!--[mp_1.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="uploads/thumbs/[mp_1.video_id;block=div].jpg" /></a></li>
+             
+             <li class="v_display2">
+
+             	<div class="v_title">
+             		<a href="videos/[mp_1.indexer;block=div]/[mp_1.title_seo;block=div;comm]">
+             			<!--[mp_1.title;block=div;ope=max:40;comm]--></a>
+             	</div>
+             	
+             	<div class="v_description">[mp_1.description;htmlconv=no;block=span;ope=max:250;comm]</div>
+
+             	</li>
+             	
+        </ul>
+        </li>
+        </ul>
+        </div>
+        
+        
+        <div id="pagination">
+          <a href="seemore.php?load=groupsvideos&amp;gid=[var.group_id]">[var.lang_see_more_videos] From This Group</a>
+          <!--[onload_309;block=div;when [var.show_v]=2;comm]-->
+        </div>
+      </div><!--End Browse Group Videos-->
+      <div id="Ajax-Group"></div>
+      
+      <!--DO NOT DELETE ME-->
+  <div><!--[mp;block=span;serial;comm]--><!--[mp_0;block=div+div;comm]--></div>
+  <!-- DO NOT DELETE ME - end -->
+  
+    
+  <div><span class="font4_14">[var.lang_no_vidoes_added]<br /><br /><br /></span><!--[onload_309;block=div;when [var.show_v]=1;comm]--></div>
+  
+  </div><!--End Left Column-->
+  
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	<!--Begin Browse Menu-->
+  	  <div class="block_narrow">
+  	  	<div class="related_media_header">[var.lang_groups]</div>
+  	  	
+  	  	<ul class="block_menu">
+        <li><a href="groups">[var.lang_all_groups]</a></li>
+        <li><a href="groups_more.php?type=1">[var.lang_my_groups]</a></li>
+        <li><a href="groups.php?load=featured">[var.lang_featured]</a></li>
+        <li><a href="addgroup.php">[var.lang_create_group]</a></li>
+      </ul>
+  	  </div><!--End Browse Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->
