@@ -75,7 +75,15 @@ if ( isset($_GET['code']) ) $codes = (int) mysql_real_escape_string($_GET['code'
 if ( $enable_promoted == true ) {
 	// Get PROMOTED videos
 	$recent = array();
-	$sql = "SELECT indexer, video_id, title, title_seo, date_uploaded FROM videos WHERE promoted='yes' AND public_private = 'public' AND approved='yes' ORDER BY RAND() DESC LIMIT 4";
+
+	// $sql = "SELECT indexer, video_id, title, title_seo, date_uploaded FROM videos WHERE promoted='yes' AND public_private = 'public' AND approved='yes' ORDER BY RAND() DESC LIMIT 4";
+
+// PHPmotionWiz - Begin Promoted Videos SQL
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+     $sql = "SELECT * FROM videos WHERE promoted='yes' AND public_private = 'public' AND approved='yes' ORDER BY RAND() DESC LIMIT 3";
+// PHPmotionWiz - End Promoted Videos SQL
+
 	$query = @mysql_query($sql);
 
 	while ($result			= @mysql_fetch_array($query))
@@ -106,7 +114,13 @@ if ( $enable_promoted == true ) {
 $browse_videos = array();
 
 if ( $featured_display == 'random' )
-	$sql = "SELECT indexer, video_id, title, title_seo, date_uploaded, user_id, video_length, featured, approved, public_private FROM videos WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+	// $sql = "SELECT indexer, video_id, title, title_seo, date_uploaded, user_id, video_length, featured, approved, public_private FROM videos WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+
+// PHPmotionWiz - Begin Browse Videos SQL
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+   $sql = "SELECT * FROM videos WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+// PHPmotionWiz - End Browse Videos SQL
 else
 	$sql = "SELECT indexer, video_id, title, title_seo, date_uploaded, user_id, video_length, featured, approved, public_private FROM videos WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY indexer DESC LIMIT $limit";
 
@@ -157,7 +171,13 @@ while ($result_videos = @mysql_fetch_array($query)) {
 $browse_audios = array();
 
 if ( $featured_display == 'random' )
-	$sql = "SELECT indexer, audio_id, album_id, title, title_seo, date_uploaded, audio_length, public_private, approved, user_id, featured FROM audios WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+	// $sql = "SELECT indexer, audio_id, album_id, title, title_seo, date_uploaded, audio_length, public_private, approved, user_id, featured FROM audios WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+
+// PHPmotionWiz - Begin Browse Audios SQL
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+	$sql = "SELECT * FROM audios WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+// PHPmotionWiz - End Browse Audios SQL
 else
 	$sql = "SELECT indexer, audio_id, album_id, title, title_seo, date_uploaded, audio_length, public_private, approved, user_id, featured FROM audios WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY indexer DESC LIMIT $limit";
 
@@ -276,7 +296,13 @@ $browse_images = array();
 
 if ( $featured_display == 'random' )
 
-	$sql = "SELECT indexer, image_id, gallery_id, user_id, title, title_seo, date_uploaded, public_private, approved, featured FROM images WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+	// $sql = "SELECT indexer, image_id, gallery_id, user_id, title, title_seo, date_uploaded, public_private, approved, featured FROM images WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+
+// PHPmotionWiz - Begin Browse Images SQL
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+   $sql = "SELECT * FROM images WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY RAND() DESC LIMIT $limit";
+// PHPmotionWiz - End Browse Images SQL
 else
 
 	$sql = "SELECT indexer, image_id, gallery_id, user_id, title, title_seo, date_uploaded, public_private, approved, featured FROM images WHERE featured = 'yes' AND approved='yes' AND public_private = 'public' ORDER BY indexer DESC LIMIT $limit";
@@ -376,14 +402,31 @@ while ( $result_images = @mysql_fetch_array($query) ) {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // get random video to play if needed in any template designs
 
-if ( $random_video == 'yes' ) {
+/*if ( $random_video == 'yes' ) {
 
 	$sql			= "SELECT video_id FROM videos WHERE approved = 'yes' AND public_private = 'public' ORDER BY RAND() LIMIT 1";
 	$query		= @mysql_query($sql);
 	$result		= @mysql_fetch_array($query);
 	$video_play		= $result['video_id'].'.flv';
 	$video_thumb	= $result['video_id'].'.jpg';
-}
+}*/
+
+// PHPmotionWiz - Begin Spotlight Video
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+$sql            = "SELECT * FROM videos WHERE promoted='yes' AND public_private = 'public' AND video_type = 'uploaded' ORDER BY RAND() LIMIT 1";
+
+$query        = @mysql_query($sql);
+
+$result        = @mysql_fetch_array($query);
+$video_play        = $result['video_id'].'.flv';
+$video_thumb    = $result['video_id'].'.jpg';
+$video_id       = $result['indexer'].'';
+$video_title    = $result['title'].'';
+$video_title_link    = $result['title_seo'].'';
+$video_description   = $result['description'].'';
+$video_length        = $result['video_length'].'';
+// PHPmotionWiz - End Random Videos SQL
 
 // end random video
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

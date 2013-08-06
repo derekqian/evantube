@@ -59,7 +59,7 @@ if ($type == 1 || $type == 5 || $type == 6 || $type == 3 || $type == 2 || $type 
             $ahah_div = 'Ajax-Media';
             break;
 
-        //members fav videos
+        /*//members fav videos
         case 2:
             $table = 'favorites';
             $table2 = 'videos';
@@ -68,7 +68,21 @@ if ($type == 1 || $type == 5 || $type == 6 || $type == 3 || $type == 2 || $type 
             $delete_code = 9; //used in html & /edit/delete.php
             $extrasql = '';
             $ahah_div = 'Ajax-Aboutme';
+            break;*/
+
+// PHPmotionWiz - Begin Favorite Videos
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+        case 2:
+            $table = 'favorites';
+            $table2 = 'videos';
+            $members_limit = 6;
+            $load_media = 1; //used in html
+            $delete_code = 9; //used in html & /edit/delete.php
+            $extrasql = '';
+            $ahah_div = 'Ajax-Favorites';
             break;
+// PHPmotionWiz - End Favorite Videos
 
         //members images
         case 3:
@@ -81,7 +95,7 @@ if ($type == 1 || $type == 5 || $type == 6 || $type == 3 || $type == 2 || $type 
             $ahah_div = 'Ajax-Media';
             break;
 
-        //members fav images
+        /*//members fav images
         case 4:
             $table = 'image_favorites';
             $table2 = 'images';
@@ -90,7 +104,21 @@ if ($type == 1 || $type == 5 || $type == 6 || $type == 3 || $type == 2 || $type 
             $delete_code = 10; //used in html & /edit/delete.php
             $extrasql = '';
             $ahah_div = 'Ajax-Aboutme';
+            break;*/
+
+// PHPmotionWiz - Begin Favorite Images
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+        case 4:
+            $table = 'image_favorites';
+            $table2 = 'images';
+            $members_limit = 6;
+            $load_media = 2; //used in html
+            $delete_code = 10; //used in html & /edit/delete.php
+            $extrasql = '';
+            $ahah_div = 'Ajax-Favorites';
             break;
+// PHPmotionWiz - End Favorite Images
 
         //members blogs
         case 5:
@@ -114,7 +142,7 @@ if ($type == 1 || $type == 5 || $type == 6 || $type == 3 || $type == 2 || $type 
             $ahah_div = 'Ajax-Media';
             break;
 
-        //members fav audio
+        /*//members fav audio
         case 7:
             $table = 'audio_favorites';
             $table2 = 'audios';
@@ -123,7 +151,21 @@ if ($type == 1 || $type == 5 || $type == 6 || $type == 3 || $type == 2 || $type 
             $delete_code = 12; //used in html & /edit/delete.php
             $extrasql = '';
             $ahah_div = 'Ajax-Aboutme';
+            break;*/
+
+// PHPmotionWiz - Begin Favorite Audios
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+        case 7:
+            $table = 'audio_favorites';
+            $table2 = 'audios';
+            $members_limit = 6;
+            $load_media = 4; //used in html
+            $delete_code = 12; //used in html & /edit/delete.php
+            $extrasql = '';
+            $ahah_div = 'Ajax-Favorites';
             break;
+//PHPmotionWiz - End Favorite Audios
     }
 
 

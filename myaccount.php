@@ -47,8 +47,16 @@ $result = $outcome["account_status"];
 
 //display page
 ///////////////////////
-$template = "themes/$user_theme/templates/main_1.htm";
-$inner_template1 = "themes/$user_theme/templates/inner_welcome.htm";//middle of page
+// $template = "themes/$user_theme/templates/main_1.htm";
+// $inner_template1 = "themes/$user_theme/templates/inner_welcome.htm";//middle of page
+
+// PHPmotionWiz - Stop Using Main_1 Template File
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+// $template = "themes/$user_theme/templates/main_1.htm";
+$template = "themes/$user_theme/templates/inner_welcome.htm";//middle of page
+// PHPmotionWiz - My Account Template
+
 $TBS = new clsTinyButStrong;
 $TBS->NoErr = true;// no more error message displayed.
 $TBS->LoadTemplate("$template");

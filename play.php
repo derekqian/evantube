@@ -196,7 +196,14 @@ $search_tags_array 	= explode(' ', $search_tags);
 if ( $member_id != "" ) {
 
 	foreach ($search_tags_array as $tag_word) {
-		$sql		= "SELECT indexer FROM videos WHERE indexer != '$vid' AND approved='yes' AND public_private = 'public' AND title LIKE '%$tag_word%' LIMIT 4";
+		// $sql		= "SELECT indexer FROM videos WHERE indexer != '$vid' AND approved='yes' AND public_private = 'public' AND title LIKE '%$tag_word%' LIMIT 4";
+
+// PHPmotionWiz - Begin Related Videos SQL
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+        $sql = "SELECT indexer FROM videos WHERE indexer != '$vid' AND approved='yes' AND public_private = 'public' AND channel = '$channel' LIMIT 6";
+// PHPmotionWiz - End Promoted Videos SQL
+
 		$query 	= @mysql_query($sql);
 		while ($result1 = @mysql_fetch_array($query)) $tmp_result_search[] = $result1['indexer'];
 	}

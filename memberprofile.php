@@ -12,8 +12,21 @@ include_once ('classes/sessions.php');
 include_once ('classes/permissions.php');
 include_once ('online.php');
 
+// PHPmotionWiz - Display logged in member's name.
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+$my_user_name	= $user_name;
+$my_user_id	= $user_id;
+// PHPmotionWiz - End display logged in member's name
+
 $member_id	= '';
 $proceed	= true;
+
+// PHPmotionWiz - Show message if member has no uploaded media.
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+$membersmedia = 0;
+// PHPmotionWiz - End Nothing Found
 
 $user = mysql_real_escape_string($_GET['user']);
 
@@ -44,6 +57,12 @@ if ( $proceed == true ) {
 	}else{
 		$ajax_rating = pullRating($media,$member_id,true,false,false,$user_id);
 	}
+
+// PHPmotionWiz - get members overall site ranking for badge display
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+    	$member_badge	= member_site_ranking($member_id);
+// PHPmotionWiz - End Member Rank
 
 	// Check if viewer is owner
 	if( $user_id == $member_id ) {
@@ -155,6 +174,21 @@ if ( $proceed == true ) {
 	// Members Videos
 	$load_media = 1;							//used in html
 	$members_vids_limit = 6;					//set in both (memberprofile.php and memberprofile_ajax.php)
+
+// PHPmotionWiz - Begin Get Random Video of Member to Play
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+    $sql = "SELECT * FROM videos WHERE user_id = $member_id AND approved = 'yes' AND public_private = 'public' AND video_type = 'uploaded' ORDER BY RAND()";
+    $query = @mysql_query($sql);
+    $result = @mysql_fetch_array($query);
+    $video_play = $result['video_id'].'.flv';
+    $video_thumb = $result['video_id'].'.jpg';
+    $title = $result['title'];
+    $indexer = $result['indexer'];
+    $title_seo = $result['title_seo'];
+
+if ( $result ) $membersmedia = 1;
+// PHPmotionWiz - End Get Random Video of Member to Play
 
 	//Pagination
 	$pagination = pagination("SELECT * FROM videos WHERE user_id = $member_id AND approved = 'yes' AND public_private = 'public'", $members_vids_limit);

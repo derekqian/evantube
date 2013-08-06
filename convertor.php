@@ -272,7 +272,7 @@ while($result = @mysql_fetch_array($query)) {
     	$player_output_file = $base_path.'/uploads/player_thumbs/'.$file_name_no_extension.'.jpg';
 
 	//__create standard thumb_______
-    	$cmd = "$config[path_to_ffmpeg] -i $new_flv -ss $thumb_position -vframes 1 -s 120x90 -r 1 -f mjpeg $output_file";
+    	$cmd = "$config[path_to_ffmpeg] -i $new_flv -ss $thumb_position -vframes 1 -s 160x120 -r 1 -f mjpeg $output_file";
     	$output = '';
     	@exec("$cmd 2>&1",$output);
    	capture_output($output,$cmd);
@@ -286,7 +286,7 @@ while($result = @mysql_fetch_array($query)) {
 	//__check if thumbnail was created_______
     	if(!file_exists($output_file)) {
 
-      	$cmd = "$config[path_to_ffmpeg] -i $new_flv -ss $thumb_position -vframes 1 -s 120x90 -r 1 -f image2 $output_file";
+      	$cmd = "$config[path_to_ffmpeg] -i $new_flv -ss $thumb_position -vframes 1 -s 160x120 -r 1 -f image2 $output_file";
         	$output = '';
        	@exec("$cmd 2>&1",$output);
         	capture_output($output,$cmd);
@@ -295,7 +295,7 @@ while($result = @mysql_fetch_array($query)) {
 	//__check if thumbnail is 0 bytes_________
     	if(filesize($output_file) == 0) {
       	$second = '00:00:04';
-        	$cmd = "$config[path_to_ffmpeg] -i $new_flv -deinterlace -an -ss $second -vframes 1 -s 120x90 -r 1 -y -vcodec mjpeg -f mjpeg $output_file";
+        	$cmd = "$config[path_to_ffmpeg] -i $new_flv -deinterlace -an -ss $second -vframes 1 -s 160x120 -r 1 -y -vcodec mjpeg -f mjpeg $output_file";
         	$output = '';
         	@exec("$cmd 2>&1",$output);
         	capture_output($output,$cmd);

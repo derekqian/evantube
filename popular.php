@@ -179,7 +179,7 @@ while ($result = @mysql_fetch_array($query)) {
     	// dont push array if empty and show is turned off
     	if ( $show_empty == 'yes' ) {
 
-    		if ( $count_videos == '' ) {
+    		/* if ( $count_videos == '' ) {
     			$count_videos = 0;
     			$popular_categories .= "
 				<div>
@@ -200,7 +200,29 @@ while ($result = @mysql_fetch_array($query)) {
 			    	    $count_videos&nbsp;Videos
 			    	  </div>
 			    	</div><br>";
+		} */
+
+// PHPmotionWiz
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+// dont push array if empty and show is turned off
+    		if ( $count_videos == '' ) {
+    			$count_videos = 0;
+    			$popular_categories .= "
+				<div>
+				  <div style=\"margin-left:3px; float:left;\">
+			    	    <a href=\"category/$channel_name_seo\">$channel_name</a>
+			    	  </div>
+			    	</div><br>";
+    		} else {
+    			$popular_categories .= "
+				<div>
+				  <div style=\"margin-left:3px; float:left;\">
+			    	    <a href=\"category/$channel_name_seo\">$channel_name</a>
+			    	  </div>
+			    	</div><br>";
 		}
+// PHPmotionWiz - End PHPmotionWiz edit
 
 	} else {
 

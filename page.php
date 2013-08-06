@@ -42,6 +42,19 @@ switch ($page)
     		$which_page = 'site_ranking_info.htm';
     	break;
 
+// PHPmotionWiz - Begin Additional Pages	
+    	case 11:
+    		$which_page = 'generic_faq.htm';
+    	break;  	
+
+    	case 12:
+    		$which_page = 'generic_privacy.htm';
+    	break;   	
+
+    	case 13:
+    		$which_page = 'generic_copyright.htm';
+    	break;
+    // PHPmotionWiz - End Additional Pages
 
     	default:
     		header( 'Location: index.php' ) ;

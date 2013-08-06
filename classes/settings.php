@@ -77,7 +77,7 @@ $config["enabled_features_confirmation_email"] = "yes";
 $config["enabled_features_custome_profile"] = "no";
 
 //Theme setting
-$config["user_theme"] = "default";
+$config["user_theme"] = "eclipse";
 $config["language"] = "english";
 
 

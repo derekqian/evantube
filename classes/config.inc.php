@@ -70,8 +70,8 @@ $config['theme_thumbnail_height']			= '90';			// default theme thumbnail height
 $config['theme_blog_width']				= '700';			// default V3 theme editor width
 
 //Embedder THEME SIZE
-$config['theme_embed_width']				= '560';			// default V3 theme width
-$config['theme_embed_height']				= '420';			// default V3 theme height
+$config['theme_embed_width']				= '640';			// default V3 theme width
+$config['theme_embed_height']				= '385';			// default V3 theme height
 
 // Thumbnails upload settings
 $config['create_thumbnail_width']			= '150';			// create max thumbnail width
@@ -93,7 +93,7 @@ $config['general_small_thumb_width']		= '30';			// max display width of any gene
 $config['display_member_picture_width']		= '80';			// max display width member picture
 
 // Various
-$config['show_member_videos']				= 12;				// member videos shown on play page right side
+$config['show_member_videos']				= 4;				// member videos shown on play page right side
 $config['color_tellafriend']				= '#F0F6F9';		// back color for reply boxes and tell a friend
 $config['default_album_pic']				= 'featured_mp3.png';	// default audio image if album image is none
 $config['popular_show_limit']				= 3;				// items shown on in popular boxes

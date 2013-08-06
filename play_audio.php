@@ -83,6 +83,22 @@ else
 	$show_embed = 1;//show
 
 if ( $proceed == true ) {
+
+// PHPmotionWiz - Begin Grab Audio Thumb
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+$aid = $result['album_id'];
+    $aSQL = "SELECT album_picture FROM audio_albums WHERE album_id = '$aid' LIMIT 1";
+    $aResult = @mysql_query($aSQL);
+    $row = mysql_fetch_array($aResult);
+    $ap = $row['album_picture'];
+    if($ap != ""){
+        $album_cover = 'addons/audio/images/album_images/'.$ap;
+    }else{
+        $album_cover = 'addons/audio/images/featured_mp3.png'.$ap;
+    }
+// PHPmotionWiz - End Grab Audio Thumb
+
 	$title 		= $result['title'];
 	$title_seo		= $result['title_seo'];
 	$artist 		= $result['artist'];
@@ -157,7 +173,14 @@ $result_search 		= array();
 
 if ( $member_id != "" ) {
 
-	$sql1 = "SELECT * FROM audios WHERE indexer != '$audio' AND approved='yes' AND public_private = 'public' and (title like '%$search_title_terms%' or tags like '%$search_tags_terms%' or description like '%$search_tags_terms%') LIMIT 6";
+	// $sql1 = "SELECT * FROM audios WHERE indexer != '$audio' AND approved='yes' AND public_private = 'public' and (title like '%$search_title_terms%' or tags like '%$search_tags_terms%' or description like '%$search_tags_terms%') LIMIT 6";
+
+// PHPmotionWiz - Begin Related Audio Fix
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+	$sql1 = "SELECT * FROM audios WHERE indexer != '$audio' AND approved='yes' AND public_private = 'public' AND channel = '$channel' ORDER BY indexer DESC LIMIT 12";
+// PHPmotionWiz - End Related Audio Fix
+
 	$query1 = @mysql_query($sql1);
 
 	if(!$query1) {
@@ -197,7 +220,14 @@ if ( $member_id != "" ) {
 
 	$more_user = 0;
 
-	$sql = "SELECT * FROM audios WHERE indexer != '$audio' AND user_id = $member_id AND approved='yes' AND public_private = 'public' ORDER BY number_of_views DESC LIMIT 6";
+	// $sql = "SELECT * FROM audios WHERE indexer != '$audio' AND user_id = $member_id AND approved='yes' AND public_private = 'public' ORDER BY number_of_views DESC LIMIT 6";
+
+// PHPmotionWiz - Change More by Member limit
+// (This code was edited following instructions provided by PHPmotionWiz.com.
+// No PHPmotion core code is distributed with our mods.)
+$sql = "SELECT * FROM audios WHERE indexer != '$audio' AND user_id = $member_id AND approved='yes' AND public_private = 'public' ORDER BY number_of_views DESC LIMIT 4";
+// PHPmotionWiz - End Change More by Member Limit
+
     	$query = @mysql_query($sql);
     	while ($result2 = @mysql_fetch_array($query)) {
 
