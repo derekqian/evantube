@@ -164,6 +164,8 @@ function checkMODULES($check) {
 	$check_results = str_replace("$check: ", '', $check_results);
 	$check_results = @trim($check_results);
 
+	$check_results = "/home/derek/software/lamp/".$check."/bin/".$check;
+
     //check if the test failed
     $check_fail = ($check_results == '' || !eregi("$check",$check_results))?1 : 0;
 
