@@ -365,12 +365,14 @@
   <!--
   function refresh_security_image() {
 
-  	var new_url = new String("[var.base_url]/includes/captcha.php?width=132&amp;height=36&charcators=");
+  	var new_url = new String("[var.base_url]/includes/captcha.php?width=132&height=36&characters=");
 	new_url = new_url.substr(0, new_url.indexOf("width=") + 37);
 	// we need a random new url so this refreshes
 	var chr_str = "123456789";
 	for(var i=0; i < 6; i++)
 	new_url = new_url + chr_str.substr(Math.floor(Math.random() * 2), 1);
+        //alert(new_url);
+        var new_url = new String("[var.base_url]/includes/captcha.php?width=132&height=36&characters=6");
 	document.getElementById("verificiation_image").src = new_url;
   }
   -->
