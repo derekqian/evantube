@@ -35,7 +35,7 @@ RewriteEngine On
 # EXAMPLE => RewriteBase /your sub-directory name
 # EXAMPLE => RewriteBase /videos
 
-RewriteBase /
+RewriteBase /evantube
 
 #------------------------------- do not edit below --------------------------------------#
 
