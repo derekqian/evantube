@@ -115,11 +115,11 @@
     		
     		<h1>[var.title]
     			<span>
-        		<a href="edit/editvideo.php?id=[var.vid]" rel="gb_page_center[720, 500]">[var.lang_edit]
-                  <!--[onload_15;block=a;when [var.edit_video]=1;comm]-->&nbsp;|&nbsp;</a>
-                  <a href="edit/delete.php?type=1&id=[var.vid]" rel="gb_page_center[620, 300]">[var.lang_delete]
-                  <!--[onload_16;block=a;when [var.delete_video]=1;comm]--></a>
-		          <!--[onload_17;block=li;when [var.edit_video]=1;comm]-->
+        		<a href="edit/editimage.php?id=[var.image_id]" rel="gb_page_center[850, 450]"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="delete" width="14" height="14" border="0" />
+          [var.lang_edit]<!--[onload_15;block=a;when [var.edit_image]=1;comm]--></a>
+          &nbsp;
+          <a href="edit/delete.php?type=2&id=[var.image_id]" rel="gb_page_center[850, 450]"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+          [var.lang_delete]<!--[onload_16;block=a;when [var.delete_image]=1;comm]--></a>
         	    </span>
         	</h1>
     </div>
