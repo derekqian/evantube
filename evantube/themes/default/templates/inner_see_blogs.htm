@@ -1,0 +1,206 @@
+<script type="text/javascript" src="javascripts/people_ahah.js"></script>
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Blogs Menu-->
+  <div class="header-narrow"><h3><!--[var.see_more_title;comm]-->&nbsp;[var.lang_blogs]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="blogs/load/featured">[var.lang_featured]</a></li>
+      <li><a href="blogs/load/viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="blogs/load/recent">[var.lang_most_recent]</a></li>
+      <li><a href="blogs/load/comments">[var.lang_most_comments]</a></li>
+    </ul>
+    <br />
+    <p><span class="font4_14">&nbsp;[var.lang_blog_menu]:</span></p>
+    <ul>
+      <li><a href="blogs/load/myblogs">[var.lang_my_blogs]</a></li>
+      <li><a href="blogs.php?action=write">[var.lang_create_blog]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Blogs Menu-->
+
+  <!--Begin Blog Categories Menu-->
+  <div class="header-narrow"><h3>[var.lang_view_blog_category]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="blogs/category/[blk1.category_id]/[blk1.category_name_seo;block=li]"><!--[blk1.category_name;block=li;ope=max:25;maxhtml;comm]-->&nbsp;-&nbsp;(<!--[blk1.category_count;block=tr;comm]-->)</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Blog Categories Menu-->
+
+  <!--Begin Popular Blog Tag Cloud-->
+  <div class="header-narrow"><h3>[var.lang_tags_popular_blogs]</h3></div>
+  <div class="whats-showing"><!--[var.tag_cloud_block;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Popular Blog Tag Cloud-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <!--Begin Content List-->
+  <div id="content-list">
+    <ul class="blog-content-list-thumb">
+      <li><a href="members/<!--[blkfeatured.blog_owner;block=div;comm]-->"><img src="<!--[blkfeatured.poster_picture;block=div;comm]-->" width="[blkfeatured.thumb_new_width]" height="[blkfeatured.thumb_new_height]" border="0" /></a></li>
+    </ul>
+    <ul class="content-list-info">
+      <li><b>[var.lang_by]:&nbsp;&nbsp;</b><b><!--[blkfeatured.blog_owner;block=div;ope=max:24;maxhtml;htmlconv=no;comm]--></b></li>
+      <li><h4>[var.lang_title]:&nbsp;&nbsp;<a href="read_blog/[blkfeatured.indexer]/[blkfeatured.title_seo;block=div;htmlconv=no]"><!--[blkfeatured.title;block=div;ope=max:80;maxhtml;block=div;htmlconv=no;comm]--></a></h4></li>
+      <li><b>[var.lang_description]:&nbsp;&nbsp;</b><!--[blkfeatured.description;block=div;ope=max:68;maxhtml;htmlconv=no;comm]--></li>
+      <li><b>[var.lang_views]:&nbsp;&nbsp;</b><!--[blkfeatured.number_of_views;block=div;comm]--> &nbsp;&nbsp; <b>[var.lang_added]:&nbsp;</b>[blkfeatured.date_created;block=div;comm;]</li>
+      <li><b>[var.lang_tags]:&nbsp;</b><!--[blkfeatured.tags;block=div;ope=max:60;maxhtml;comm]--></li>
+      <li>
+        <b>[var.lang_category]:&nbsp;</b><!--[blkfeatured.category;block=div;ope=max:60;maxhtml;comm]-->&nbsp;&nbsp;<b>[var.lang_replies]:&nbsp;</b><!--[blkfeatured.replies;block=div;comm]-->
+        &nbsp;&nbsp;<b>[var.lang_rating]&nbsp;&nbsp;&nbsp;</b>
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="14" height="14" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="14" height="14" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="14" height="14" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="14" height="14" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="14" height="14" alt="1 Star" />
+      </li>
+    </ul>
+  </div>
+  <!--End Content List-->
+
+  <!-- nothing found div -->
+  <div>
+    <span class="font4_14">No Blogs Found</span><!--[onload_305;block=div;when [var.show_v]=1;comm]-->
+  </div>
+  <!-- nothing found end -->
+
+  <!-- members own nothing found div -->
+  <div>
+    <span class="font4_14">
+      [var.lang_have_no_blog_record],
+      <br />[var.lang_number_allowed_blogs]&nbsp;[var.blog_max_limits]&nbsp;[var.lang_blogs]
+      <br />[var.lang_create_blog_question]?
+      <br />
+      <a href="blogs.php?action=write"><b>[var.lang_yes]</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="blogs/load/recent">[var.lang_no_thanks]</a>
+    </span>
+    <!--[onload_305;block=div;when [var.show_m]=0;comm]-->
+  </div>
+  <!-- members own nothing found end -->
+
+  <!-- Pagination start -->
+  <br />
+  <div id="pagination">
+    <ul>[var.show_pages;htmlconv=no]</ul>
+  </div>
+  <!-- Pagination end -->
+
+  <!--[onload;block=div;when [var.show_block]=1;comm]-->
+</div>
+<!--End Right Column-->
+
+<div id="column-right-2">
+  <p align="center">[var.error_message;htmlconv=no]<!--[onload;block=div;when [var.blog_errors]=1;comm]--></p>
+</div>
+
+
+<!--Begin Blog Write Block-->
+<div id="column-right-2">
+  <h1>[var.lang_create_blog]&nbsp;&nbsp;[var.member_blog_total]&nbsp;of&nbsp;[var.blog_max_limits]</h1>
+  <div id="blog-form">
+    <form method="post" name="blog_form" id="blog_form" action="blogs.php?action=write">
+      <ul>
+        <li style="width:150px;">[var.lang_title]:</li>
+        <li style="width:550px;"><input type="text" name="title" value="[var.form_title]" size="32" /></li>
+        <li style="width:700px;">&nbsp;</li>
+
+        <li style="width:150px;">[var.lang_description]:</li>
+        <li style="width:550px;"><input type="text" name="description" value="[var.form_description]" size="64" /></li>
+        <li style="width:700px;">&nbsp;</li>
+
+        <li style="width:150px;">[var.lang_tags]:</li>
+        <li style="width:550px;"><input type="text" name="tags" value="[var.form_tags]" size="64" /></li>
+
+
+        <li style="width:150px;">&nbsp;</li>
+        <li style="width:550px;"><font size="1" color="#ED0000"><b>[var.lang_enter_tags]</b></font></li>
+
+        <li style="width:700px;">&nbsp;</li>
+        <li style="width:150px;">[var.lang_category]:</li>
+        <li style="width:550px;">
+          <select name="category">
+            [var.fields_all;htmlconv=no]
+          </select>
+        </li>
+        <li style="width:700px;">&nbsp;</li>
+        <li style="width:150px;">[var.lang_allow_replies]:</li>
+        <li style="width:550px;">
+          <select name="allow_replies">
+            <option value="no">[var.lang_no]</option>
+            <option value="yes" selected="selected">[var.lang_yes]</option>
+          </select>
+        </li>
+        <li style="width:700px;">&nbsp;</li>
+        <li style="width:150px;">[var.lang_allow_ratings]:</li>
+        <li style="width:550px;">
+          <select name="allow_rating">
+            <option value="no">[var.lang_no]</option>
+            <option value="yes" selected="selected">[var.lang_yes]</option>
+          </select>
+        </li>
+        <li style="width:700px;">&nbsp;</li>
+        <li style="width:150px;">[var.lang_private_pub]:</li>
+        <li style="width:550px;">
+          <select name="type">
+            <option value="private">[var.lang_private]</option>
+            <option value="public" selected="selected">[var.lang_public]</option>
+          </select>
+        </li>
+        <br />
+        <li style="width:700px;">&nbsp;</li>
+
+        <li style="width:700px; margin-bottom:5px;">[var.my_edit;htmlconv=no;]</li>
+
+
+        <!--
+        <li style="width:700px; border:1px solid #666666; margin-bottom:5px;">
+          <script type="text/javascript">
+
+	      var sBasePath = '[var.base_url]/fckeditor/';
+	      var oFCKeditor = new FCKeditor('FCKeditor1');
+	      oFCKeditor.BasePath = sBasePath;
+	      oFCKeditor.ToolbarSet = 'Basic';
+	      oFCKeditor.Config['SkinPath'] = sBasePath + 'editor/skins/silver/';
+	      oFCKeditor.Height = 150;
+	      oFCKeditor.Value = '[var.blog_story]';
+	      oFCKeditor.Create();
+
+	    </script>
+	  </li>
+	  -->
+
+        <li>
+          <input type="submit" class="button-form" value="Submit Article" name="B3" />
+          <input type="hidden" value="yes" name="article_submit" />
+        </li>
+      </ul>
+    </form>
+    <div class="clear-fix"></div>
+  </div>
+  <!--[onload;block=div;when [var.show_block]=2;comm]-->
+</div>
+<!--End Blog Write Block-->
+
+<div>
+  <div id="ContentSplitContainer_right_2">
+    <span class="font5_14">
+      <div style="margin-left:12px; float:left;">[var.lang_you_have]&nbsp;[var.member_blog_total]&nbsp;of&nbsp;[var.blog_max_limits]&nbsp;[var.lang_allowed_blogs]</div>
+      <br />
+      <div style="margin-left:12px; float:left;">[var.lang_you_must_delete_blogs].....</div>
+    </span>
+    <br />
+  </div>
+  <!--[onload;block=div;when [var.show_block]=3;comm]-->
+</div>
+<!-- end limits messge //-->

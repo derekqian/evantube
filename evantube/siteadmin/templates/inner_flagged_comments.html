@@ -1,0 +1,177 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>PhpMotion System Manager</title>
+	<link href="[var.base_url]/css/styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script>
+
+//Check all radio/check buttons script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+
+function checkall(thestate){
+var el_collection = document.forms['form_results'].elements['list[]'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+var el_collection = document.forms['form_results'].elements['list[]1'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+}
+
+</script>
+<style type="text/css">
+
+td.off {
+background: #A4A4A4;
+}
+
+</style>
+<!-- addnon - start of thickbox -->
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+<!-- addnon - end of thickbox -->
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+<form id="form_results" action="flagged_comments.php" method="post">
+
+	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		<!-- start of search box -->
+	<tr>
+		<!--[onload_8;block=tr;when [var.show_t]=4;comm]-->
+	</tr>
+	<tr>
+<!-- end of search box -->
+	<tr>
+
+
+	<td bgcolor="#FFFFFF">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" id="table8" height="206">
+
+	<tr>
+	<td style="border-style: solid; border-width: 0px; " bordercolor="#4B87C2" width="97%" bgcolor="#ffffff">
+	<table border="0" width="100%" id="table9" cellspacing="0" cellpadding="0">
+	<tr>
+	<td>
+<div align="center">
+<table border="0" width="100%" id="table10" cellspacing="0" cellpadding="0" height="216">
+	<input type ="hidden" name="type" value="[var.show_t]">
+	<input type="hidden" name="submitted" value="yes">
+	<tr>
+	<!--[onload_9;block=tr;when [var.show]=2;comm]-->
+	<td width="62" height="25" bgcolor="#BBD7F2" align="center" class="default_text_blue">
+	<!--[var.lang_select;comm]--></td>
+	<td width="484" height="25" bgcolor="#BBD7F2" align="left" class="default_text_blue">
+</td>
+	<td width="97" height="25" bgcolor="#BBD7F2" align="center" class="default_text_blue">
+</td>
+	<td width="57" height="25" bgcolor="#BBD7F2" align="center" class="default_text_blue">
+    <a href="flagged_comments.php?type=[var.show_t]&action=0&sort=[var.order_by_flags]&page=[var.current_page]"><font color="#000000">
+	<!--[var.lang_flags;comm]--></font></a>
+	</td>
+	<td width="44" height="25" bgcolor="#BBD7F2" align="center" class="default_text_blue">
+    <font color="#000000"><!--[var.lang_action;comm]--></font></td>
+	</tr>
+	<tr>
+	<td width="62" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<font color="#3366CC" face="Arial">
+	<input type="checkbox" name="list[]" value="[blkallflagged.indexer;block=tr]"></font></td>
+	<td width="484" bgcolor="#FFFFFF" height="60" align="left" class="default_text">
+	<a href="[var.base_url]/edit/editcomments.php?type=[blkallflagged.edit_type;block=tr]&id=[blkallflagged.indexer;block=tr]" rel="gb_page_center[850, 450]">
+	<!--[blkallflagged.comment_stripped;block=tr;comm;htmlconv=no]--></a></td>
+	<td width="97" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<!--[blkallflagged.todays_date;block=tr;comm]--></td>
+	<td width="57" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<!--[blkallflagged.flag_counter;block=tr;comm]--></td>
+	<td width="44" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+    <a href="flagged_comments.php?type=[var.type]&action=0&sort=[var.order_by]&page=[var.current_page]&delid=[blkallflagged.indexer;block=tr]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img border="0" src="images/icon_delete.gif" width="16" height="14"></a></td>
+	</tr>
+	<tr>
+	<td width="62" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<font color="#3366CC" face="Arial">
+	<input type="checkbox" name="list[]" value="[blkallflagged.indexer;block=tr]"></font></td>
+	<td width="484" height="60" bgcolor="#F9F9F9" align="left" class="default_text">
+	<a href="[var.base_url]/edit/editcomments.php?type=[blkallflagged.edit_type;block=tr]&id=[blkallflagged.indexer;block=tr]" rel="gb_page_center[850, 450]">
+	<!--[blkallflagged.comment_stripped;block=tr;comm;htmlconv=no]--></a></td>
+	<td width="97" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallflagged.todays_date;block=tr;comm]--></td>
+	<td width="57" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallflagged.flag_counter;block=tr;comm]--></td>
+	<td width="44" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+    <a href="flagged_comments.php?type=[var.type]&action=0&sort=[var.order_by]&page=[var.current_page]&delid=[blkallflagged.indexer;block=tr]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img border="0" src="images/icon_delete.gif" width="16" height="14"></a></td>
+	</tr>
+	<tr>
+	<!--[onload_10;block=tr;when [var.show]=2;comm]-->
+	  <td width="548" height="7" bgcolor="#FFFFFF" align="left" colspan="2" class="default_text">
+	    &nbsp;&nbsp; <b><a href="javascript:checkall(true)"><font face="Arial" color="#333333">[var.lang_check_all]</font></a><font face="Arial"><font face="Arial" color="#333333"> | </font>
+        <a href="javascript:checkall(false)"><font color="#333333">[var.lang_uncheck_all]</font></a></font></b>
+	  </td>
+	  <td width="97" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	  <td width="57" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+	  <td width="44" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	</tr>
+
+	<tr>
+	  <td width="706" height="60" bgcolor="#FFFFFF" colspan="4" class="default_menu_blue">
+	  <div id="pagination">
+<ul>
+<b>&nbsp;&nbsp;&nbsp; </b>[var.show_pages;htmlconv=no] <!--[onload_11;block=tr;when [var.show]=2;comm]--><b>
+    &nbsp; </b>
+</ul>
+</div></td>
+	</tr>
+	<tr>
+	<td width="706" height="50" bgcolor="#FFFFFF" colspan="4" valign="bottom" class="default_text">
+	<p align="center">[onload_12;block=tr;when [var.show]=1]<b>
+    [var.lang_no_results_found]&nbsp; </b>
+	<p align="center">&nbsp;</td>
+	</tr>
+	<tr>
+	<!--[onload_12;block=tr;when [var.show]=2;comm]-->
+	<td width="706" height="6" colspan="4" class="default_text" bgcolor="#FFFFFF">
+    <p align="left"><font face="Arial">
+	<input type="hidden" name="submitted" value="yes">
+	<input type ="hidden" name="type" value="[var.show_t]">
+    &nbsp;</font><input type="submit" value="[var.lang_delete_general]" name="delete" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #c31c23; border: 1px solid #c31c23; background-color: #FFFFFF" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><font face="Arial">&nbsp;&nbsp;
+    <input type="submit" value="[var.lang_reset_flags]" name="reset_flags"></font></td>
+	</tr>
+	<tr>
+	<td width="706" height="19" colspan="4" bgcolor="#FFFFFF">&nbsp;
+	</td>
+	</tr>
+	</form>
+</table>
+	</div>
+	</td>
+	</tr>
+</table>
+
+	</tr>
+	</table>
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+	<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

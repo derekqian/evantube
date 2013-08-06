@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>PhpMotion System Manager</title>
+
+	<link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+
+	<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js"></script>
+
+<script>
+
+//Check all radio/check buttons script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+
+function checkall(thestate){
+var el_collection = document.forms['form_results'].elements['list[]'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+var el_collection = document.forms['form_results'].elements['list[]1'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+}
+
+</script>
+<style type="text/css">
+
+td.off {
+background: #A4A4A4;
+}
+
+</style>
+<!-- addnon - start of thickbox -->
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+<!-- addnon - end of thickbox -->
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		<!-- start of search box -->
+	<tr>
+<!-- end of search box -->
+	<!-- admin password -->
+	<tr>
+	<td bgcolor="#FFFFFF">
+      <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" height="170">
+          <tr>
+            <td width="100%" height="32" background="images/right_table_header.png">
+              <p align="left"><font face="Arial" size="2"><b>&nbsp;
+              &nbsp; [var.lang_latest_news]&nbsp;&nbsp; </b></font>
+<a href="editnews.php?id=" title="[var.lang_edit]"  rel="gb_page_center[800, 450]">
+				<font face="Arial" size="2" color="#4B87C2">[var.lang_write_new_article]</font></a><font face="Arial" size="2" color="#4B87C2"></font></p>
+            </td>
+          </tr>
+        <center>
+          <tr>
+            <td width="100%" height="21">&nbsp;</td>
+          </tr>
+        </center>
+          <tr>
+            <td width="100%">
+				<table border="0" width="100%" id="table2" cellspacing="0" cellpadding="3" height="278">
+      <form id="newsletter" action="newsletter.php" method ="post" >
+										    <input type="hidden" name="main_category_on_edit" value="[var.channel_id]">
+
+						<tr>
+										<!--[onload_5;block=tr;when [var.show_list]=1;comm]-->
+					<td height="94" style="line-height: 200%" valign="top">
+						<div align="center">
+						<table border="0" width="99%" id="table3" cellspacing="0" cellpadding="4">
+							<tr>
+								<td bgcolor="#F0F0F0" height="20" width="83%">
+								<b><font face="Arial" size="2" color="#666666">&nbsp;Date :
+								<!--[adminnews.date_created;block=table;comm]--></font></b></td>
+								<td bgcolor="#F0F0F0" height="30" width="1%">&nbsp;</td>
+								<td bgcolor="#F0F0F0" height="30" width="13%">
+    <a href="news.php?type=99&id=[adminnews.news_id;block=table]" title="[var.lang_publish_unpublish]">
+    <font color="#666666">
+    <img border="0" src="images/publish_[adminnews.publish;block=table].png"></font></a><font color="#666666">&nbsp;
+    </font>
+	<a href="editnews.php?id=[adminnews.news_id;block=table]" title="[var.lang_edit]" rel="gb_page_center[800, 450]">
+	<font color="#666666">
+    <img border="0" src="images/icon_edit_small_gray.png" width="17" height="18"></font></a><font color="#666666">&nbsp;
+								</font>
+								<a href="news.php?id=[adminnews.news_id;block=table]" title="[var.lang_delete_general]">
+
+								<font color="#666666">
+
+								<img border="0" src="images/icon_delete_gray.png" width="16" height="14"></font></a></td>
+							</tr>
+							<tr>
+								<td style="border: 1px dotted #C3C3C3" bgcolor="#FFFFFF" colspan="3">
+								<font face="Arial" size="2"><!--[adminnews.news_headline;block=table;htmlconv=no;;ope=max:350;comm]--></font></td>
+							</tr>
+							<tr>
+								<td style="border: 0px dotted #C3C3C3" height="20" colspan="3">&nbsp;</td>
+							</tr>
+						</table>
+
+						</div>
+
+						</td>
+				</tr>
+						<tr>
+										<!--[onload_6;block=tr;when [var.show_list]=2;comm]-->
+					<td bgcolor="#F0F0F0" height="147" style="line-height: 200%">
+                        <p align="center">
+                        &nbsp;<b><font color="#4B87C2">[var.lang_no_news_articles]</font></b></p>
+
+						</td>
+				</tr>
+
+									</form>
+
+				</table>
+			</td>
+        <center>
+          </tr>
+        </center>
+          </table>
+      </div>
+    </td>
+	</tr>
+	<!-- admin password end -->
+	<!-- other-->
+	<!-- other end-->
+
+	</table>
+</div>
+
+</body>
+
+</html>

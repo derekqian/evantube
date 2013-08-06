@@ -1,0 +1,110 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Images Menu-->
+  <div class="header-narrow"><h3>[var.see_more_title;;htmlconv=no;]&nbsp;[var.lang_word_albums]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="albums/load/featured">[var.lang_featured]</a></li>
+      <li><a href="albums/load/viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="albums/load/recent">[var.lang_most_recent]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--Begin Images Categories Menu-->
+  <div class="header-narrow"><h3>[var.lang_member_albums]</h3></div>
+  <div class="whats-showing" id="Ajax-Albums" style="[var.show_height]">
+    <ul>
+      <li><a href="view-album/[blk1.gallery_id]/[blk1.gallery_name_seo;block=li]"><!--[blk1.gallery_name;block=li;ope=max:18;comm]--></a>&nbsp;-&nbsp;(<!--[blk1.img_count;comm]-->)</li>
+      [var.ablums_pagination;htmlconv=no]
+      <!--[onload;block=ul;when [var.show_albums]=1;comm]-->
+    </ul>
+    <ul>
+      <li>[var.lang_no_albums]</li>
+	<li>&nbsp;</li>
+	[onload;block=ul;when [var.show_albums]=0]
+    </ul>
+  </div>
+
+  <!--
+  <div id="CategoryLeftBox1" class="GenericMenuGray220 font4_14_l">
+    <p><span class="font4_14">[var.lang_member_albums]</span></p>
+    <ul>
+      <li>[var.lang_no_albums]</li>
+	<li>&nbsp;</li>
+	[onload;block=div;when [var.show_albums]=0]
+    </ul>
+  </div>
+  <div style="clear:both"></div>
+  <div class="container-narrow-bottom"></div>
+  //-->
+
+  <!--Begin Popular Images Tag Cloud-->
+  <div class="header-narrow"><h3>[var.lang_tags_popular_images]</h3></div>
+  <div class="whats-showing"><!--[var.tag_cloud_block;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Popular Images Tag Cloud-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+
+</div><!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <!-- nothing found div -->
+  <div><span class="font4_14">[var.lang_no_albums]</span>[onload;block=div;when [var.show_v]=1]</div>
+  <!-- nothing found end -->
+
+  <!--Begin Album List-->
+  <div class="container-wide" style="border:none;">
+    <div class="albums_view">[mp;block=(div);serial]
+      <ul>
+        <li>
+          <span class="font4_14"><a href="view-album/[mp_1.gallery_id;]/[mp_1.gallery_name_seo;block=div;htmlconv=no;]">&nbsp;[mp_1.gallery_name;block=div;htmlconv=no;]</a></span>
+          <div><a href="view-album/[mp_1.gallery_id;]/[mp_1.gallery_name_seo;block=div;htmlconv=no;]"><img src="addons/albums/thumbs/[mp_1.gallery_picture;]" alt="thumb" style="border:2px solid #DDDDDD;" onmouseover="this.style.border='2px solid #0099FF'" onmouseout="this.style.border='2px solid #DDDDDD'" /></a></div>
+          <div>[mp_1.gallery_description;block=div;ope=max:64;htmlconv=no;]</div>
+        </li>
+      </ul>
+    </div>
+    <div class="albums_view">[mp;block=(div);serial]
+      <ul>
+        <li>
+          <span class="font4_14"><a href="view-album/[mp_2.gallery_id;]/[mp_2.gallery_name_seo;block=div;htmlconv=no;]">&nbsp;[mp_2.gallery_name;block=div;htmlconv=no;]</a></span>
+          <div style="height: 88px;"><a href="view-album/[mp_2.gallery_id;]/[mp_2.gallery_name_seo;block=div;htmlconv=no;]"><img src="addons/albums/thumbs/[mp_2.gallery_picture;]" alt="thumb" style="border:2px solid #DDDDDD;" onmouseover="this.style.border='2px solid #0099FF'" onmouseout="this.style.border='2px solid #DDDDDD'" /></a></div>
+          <div style="vertical-align: bottom; margin-top:5px;">[mp_2.gallery_description;block=div;ope=max:64;htmlconv=no;]</div>
+        </li>
+      </ul>
+    </div>
+    <div class="albums_view">[mp;block=(div);serial]
+      <ul>
+        <li>
+          <span class="font4_14"><a href="view-album/[mp_3.gallery_id;]/[mp_3.gallery_name_seo;block=div;htmlconv=no;]">&nbsp;[mp_3.gallery_name;block=div;htmlconv=no;]</a></span>
+          <div style="height: 88px;"><a href="view-album/[mp_3.gallery_id;]/[mp_3.gallery_name_seo;block=div;htmlconv=no;]"><img src="addons/albums/thumbs/[mp_3.gallery_picture;]" alt="thumb" style="border:2px solid #DDDDDD;" onmouseover="this.style.border='2px solid #0099FF'" onmouseout="this.style.border='2px solid #DDDDDD'" /></a></div>
+          <div style="vertical-align: bottom; margin-top:5px;">[mp_3.gallery_description;block=div;ope=max:64;htmlconv=no;]</div>
+        </li>
+      </ul>
+    </div>
+    [onload;block=div;when [var.show_v]=2]
+  </div><!--End Album List-->
+
+  <!-- DO NOT DELETE ME -->
+  <span>
+    <div id ="noname2">
+      <div class="CategoryBoxHorizontal" style="border:none; background-color:transparent;"><!--[mp;block=(div);serial;comm]--><br /><!--[mp_0;block=div+div;comm]--></div>
+      <div class="clear-fix"></div>
+    </div>
+  </span>
+  <!-- DO NOT DELETE ME - end -->
+
+  <!-- nothing found div -->
+  <div><!-- <span class="font4_14">No Albums have been created</span>[onload_304;block=div;when [var.show_v]=1] //--></div>
+  <!-- nothing found end -->
+
+  <!-- Pagination start -->
+  <div id="pagination"><ul>[var.show_pages;htmlconv=no]</ul></div>
+  <!-- Pagination end -->
+
+</div><!--End Right Column-->

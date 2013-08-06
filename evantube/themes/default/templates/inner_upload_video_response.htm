@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>[var.lang_upload_video_response]</title>
+
+	<link href="themes/[var.user_theme]/css/main.css" rel="stylesheet" type="text/css" media="all" />
+
+	<style type="text/css">
+   	   .info {font:18px Arial;}
+  	   .data {background-color:#b3b3b3; border:1px solid #0099FF; width:40%;}
+  	   .data tr td {background-color:#ffffff; font:13px Arial; width:35%;}
+  	   .bar1 {background-color:#b3b3b3; position:relative; text-align:left; height:20px; width:[var.progress_bar_width]px; border:1px solid #0099FF;}
+  	   .bar2 {background-color:#EAB90E; position:relative; text-align:left; height:20px; width:0%;}
+	</style>
+
+	<script language="javascript" type="text/javascript">
+  		var disallow_extensions = [var.disallow_extensions];
+  		var allow_extensions = [var.allow_extensions];
+  		var path_to_ini_status_script = "[var.path_to_ini_status_script]";
+  		var check_file_name_format = [var.check_file_name_format];
+  		var check_disallow_extensions = [var.check_disallow_extensions];
+  		var check_allow_extensions = [var.check_allow_extensions];
+  		var check_null_file_count = [var.check_null_file_count];
+  		var check_duplicate_file_count = [var.check_duplicate_file_count];
+  		var max_upload_slots = [var.max_upload_slots];
+  		var progress_bar_width = [var.progress_bar_width];
+	</script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/uploader_bar.js"></script>
+
+</head>
+
+<body>
+<div id="UploadVideo">
+  <table border="0" width="98%" cellspacing="0">
+    <tr>
+      <td width="100%" height="135" align="right" valign="top">
+        <!-- START OF UPLOADER -->
+        <div align="center">
+          <br>
+          <!-- Start Progress Bar -->
+          <div class="info" id="progress_info"></div>
+          <div id="progress_bar" style="display:none">
+            <div class="bar1" id="upload_status_wrap" align="center">
+            <div class="bar2" id="upload_status"></div>
+          </div>
+          <br>
+
+          <table cellpadding="3" cellspacing="0" style="border: 1px solid #666666" width="253">
+            <tr>
+              <td align="left" height="25">
+			<font face="Arial" size="2">&nbsp;[var.lang_percent_complete]:</font></td>
+              <td align="center" height="25"><font face="Arial" size="2"><span id="percent">0%</span></font></td>
+            </tr>
+            <tr>
+              <td height="25"><font face="Arial" size="2">&nbsp;[var.lang_files_uploaded]:</font></td>
+              <td align="center" height="25"><font face="Arial" size="2"><span id="uploaded_files">0</span> of
+			</font> <span id="total_uploads"></span></td>
+            </tr>
+            <tr>
+              <td align="left" height="25">
+		 	<font face="Arial" size="2">&nbsp;[var.lang_current_position]:</font></td>
+              <td align="center" height="25"><font face="Arial" size="2"><span id="current">0</span> /
+			</font> <span id="total_kbytes"></span> <font face="Arial" size="2">KBytes</font></td>
+            </tr>
+            <tr>
+              <td align="left" height="25">
+			<font face="Arial" size="2">&nbsp;[var.lang_elapsed_time]:</font></td>
+              <td align="center" height="25"><font face="Arial" size="2"><span id="time">0</span></font></td>
+            </tr>
+            <tr>
+              <td align="left" height="25">
+			<font face="Arial" size="2">&nbsp;[var.lang_est_time_left]:</font></td>
+              <td align="center" height="25"><font face="Arial" size="2"><span id="remain">0</span></font></td>
+            </tr>
+            <tr>
+              <td align="left" height="25">
+			<font face="Arial" size="2">&nbsp;[var.lang_est_speed]:</font></td>
+              <td align="center" height="25"><font face="Arial" size="2"><span id="speed">0</span> KB/s.</font></td>
+            </tr>
+          </table>
+        </div>
+
+        <div align="center">
+          <div id="upload_div" style="display:none; width:805; height:205; overflow:auto;">
+	      <iframe name="upload_iframe" frameborder=1 width="743" height="175"></iframe>
+	    </div>
+	    <br />
+
+	    <!-- Start Upload Form -->
+	    <form name="form_upload" method="post" enctype="multipart/form-data"  action="[var.path_to_upload_script]" style="margin: 0px; padding: 0px;">
+	      <noscript><input type="hidden" name="no_script" value="1"></noscript>
+	      <input type="hidden" name="title" value="[var.title]" />
+	      <input type="hidden" name="description" value="[var.description]" />
+	      <input type="hidden" name="tags" value="[var.tags]" />
+	      <input type="hidden" name="location_recorded" value="Video Response" />
+	      <input type="hidden" name="allow_comments" value="yes" />
+	      <input type="hidden" name="allow_embedding" value="yes" />
+	      <input type="hidden" name="public_private" value="public" />
+
+	      <input type="hidden" name="vid_response" value="vid_response" />
+	      <input type="hidden" name="response_id" value="[var.response_id]" />
+	      <input type="hidden" name="of_channel_id" value="[var.channel_id]" />
+	      <input type="hidden" name="of_channel" value="[var.channel]" />
+
+	      <div id="upload_slots">
+	        <b><span class="font5_16">[var.lang-please_upload]</span></b>
+	        <br />
+	        <input type="file" name="upfile_0" size="71" value="">
+	      </div>
+	      <noscript><br><input type="reset" name="no_script_reset" value="Reset">&nbsp;&nbsp;&nbsp;<input type="submit" name="no_script_submit" value="Upload"></noscript>
+	    </form>
+	    <!-- End Upload Form -->
+	    <br />
+	    <script language="javascript" type="text/javascript">
+	      <!--
+              document.writeln('<input type="button" name="reset_button" value="Reset" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #666666; border: 1px solid #cccccc; background-color: #F2F2F2" onClick="resetForm();">&nbsp;&nbsp;&nbsp;<input type="button" id="upload_button" name="upload_button" value="Upload" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #666666; border: 1px solid #cccccc; background-color: #F2F2F2" onClick="uploadFiles();">');
+            //-->
+          </script>
+        </div>
+        <br>
+        <!-- END OF UPLOADER -->
+      </td>
+    </tr>
+  </table>
+</body>
+<html>
+

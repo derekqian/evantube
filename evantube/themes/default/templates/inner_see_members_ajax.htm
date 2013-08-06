@@ -1,0 +1,44 @@
+<br />
+<!--Begin Members List-->
+<div class="members_horizontal_box">[mp;block=(div);serial]
+  <ul>
+    <li style="height:80px; text-align: center;">
+      <a href="members/[mp_1.user_name;block=div]"><img border="0" src="[mp_1.picture;block=div;comm]" width="[mp_1.thumb_new_width]" height="[mp_1.thumb_new_height]" alt="thumb" /></a>
+    </li>
+    <li style="text-align: center"><a href="members/[mp_1.user_name;block=div]"><span class="font5_14"><!--[mp_1.user_name;block=div;ope=max:25;comm]--></span></a></li>
+    <li style="margin-left:12px; float:left;"><strong>[var.lang_joined]:</strong>&nbsp;<!--[mp_1.date_created;block=div;comm;frm=mm-dd-yy]--></li>
+    <li style="margin-left:12px; float:left;"><strong>[var.lang_last_seen]:</strong>&nbsp;<!--[mp_1.member_last_seen;block=div;comm;]--></li>
+    <li style="margin-left:12px; float:left;"><strong>[var.lang_videos_uploaded]:</strong>&nbsp;<!--[mp_1.membersvideos;block=div;comm]--></li>
+    <li style="margin-left:12px; float:left;"><strong>[var.lang_members_favorites]:</strong>&nbsp;<!--[mp_1.membersfavs;block=div;comm]--></li>
+    <li style="margin-left:12px; float:left;"><strong>[var.lang_my_friends]:</strong>&nbsp;<!--[mp_1.membersfriends;block=div;comm]--></li>
+    <li style="margin-left:12px; float:left;">Comments:</strong>&nbsp;<!--[mp_1.member_comments;block=div;comm]--><!--[onload;block=li;when [var.show_m_c]=1]--></li>
+    <li>&nbsp;</li>
+  </ul>
+</div>
+<!--End Members List-->
+
+<!-- no members found-->
+<div class="font5_15">
+  <div align="center">
+    <br />
+    <br />
+    <br />
+    <br />
+    [var.lang_no_members]
+    <!--[onload;block=div;when [var.show_v]=1]-->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</div>
+<!-- end non found-->
+
+  <!-- Pagination Start -->
+  <div id="pagination"><ul>[var.show_pages;htmlconv=no]</ul></div>
+  <!-- Pagination End -->
+
+  <div class="clear-fix"></div>

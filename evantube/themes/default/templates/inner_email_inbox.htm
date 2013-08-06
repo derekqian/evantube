@@ -1,0 +1,104 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Email Menu-->
+  <div class="header-narrow"><h3>[var.lang_email_menu]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="emailinbox.php">[var.lang_word_inbox]</a></li>
+      <li><a href="emailsentitems.php">[var.lang_sent]</a></li>
+      <li><a href="emailcompose.php">[var.lang_compose_new]</a></li>
+      <li><a href="inviteread.php">[var.lang_received_invites]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Email Menu-->
+
+  <!--Begin What's Showing Menu-->
+  <div class="header-narrow">What's Showing</div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="seemore.php?load=featured">[var.lang_featured]</a></li>
+      <li><a href="seemore.php?load=viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="seemore.php?load=recent">[var.lang_most_recent]</a></li>
+      <li><a href="seemore.php?load=comments">[var.lang_most_commented]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End What's Showing Menu-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <h1>[var.lang_word_inbox]</h1>
+  <form name="reply" action="emailinbox.php" method="post" class="FormGeneric">
+    <input type="hidden" name="submitted" value="yes" />
+    <table style="width:710px; border:1px solid #dddcdc;" cellpadding="0" cellspacing="0">
+      <tr style="background:#e5e4e4; border-bottom:1px solid #666666; height:20px; text-align:center;">
+        <td style="width:7%; border-right:1px inset #666666">[var.lang_select]</td>
+        <td style="width:14%; border-right:1px inset #666666">[var.lang_from]</td>
+        <td style="width:63%; border-right:1px inset #666666"><p align="center">[var.lang_subject]</p></td>
+        <td style="width:16%;">[var.lang_date_sent]</td>
+      </tr>
+      <tr style="height:20px; background:#f2f2f2; text-algin:center;">
+        <td align="center" style="width:7%;"><input type="checkbox" name="list[]1" value="[blk1.indexer;block=tr]" /></td>
+        <td align="center" style="width:14%;"><!--[blk1.from_username;block=tr;ope=max:10;comm]--></td>
+        <td align="center" style="width:63%;"><a href="emailread.php?msg=[blk1.indexer;block=tr]&type=1" style="font-weight:[blk1.font_style;block=tr]">[blk1.subject;block=tr;ope=max:35]</a></td>
+        <td align="center" style="width:16%;"> [blk1.todays_date;block=tr]</td>
+      </tr>
+      <tr style="height:30px; text-align:center;">
+        <td align="center" style="width:7%;"><input type="checkbox" name="list[]" value="[blk1.indexer;block=tr]" /></td>
+        <td align="center" style="width:14%;"><!--[blk1.from_username;block=tr;ope=max:10;comm]--></td>
+        <td align="center" style="width:63%;"><a href="emailread.php?msg=[blk1.indexer;block=tr]&type=1" style="font-weight:[blk1.font_style;block=tr]">[blk1.subject;block=tr;ope=max:35]</a></td>
+        <td align="center" style="width:16%;"> [blk1.todays_date;block=tr]</td>
+      </tr>
+      <tr style="height: 7px; text-align:center;">
+        <td style="width:7%;">&nbsp;</td>
+        <td style="width:14%;">&nbsp;</td>
+        <td style="width:63%;">&nbsp;</td>
+        <td style="width:16%;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="100%" height="22" colspan="4">
+          <p style="text-align:left; margin:0px 0px 0px 10px;">
+            <input type="submit" class="button-form" value="Delete Selected" name="invite_fr" />
+            <!--[onload_1;block=tr;when [var.show]=2;comm]-->
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="7" colspan="4">
+          <!-- Pagination start -->
+          <div id="pagination">
+            <ul>[var.show_pages;htmlconv=no]</ul>
+          </div>
+          <!-- Pagination end -->
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="50" colspan="4" valign="bottom">
+          <p align="center" class="font4_18"><!--[onload_1;block=tr;when [var.show]=1;comm]--><span class="font4_16">[var.lang_no_messages]</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="22" colspan="4">&nbsp;</td>
+      </tr>
+    </table>
+  </form>
+  <!-- End of email table -->
+</div>
+<!--End Right Column-->

@@ -1,0 +1,240 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Upload Menu-->
+  <div class="header-narrow"><span class="font5_12">[var.lang_main_menu]</span></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+      <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+      <li><a href="image_uploader.php">[var.lang_upload_image]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Upload Menu-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="header-wide"><h2>[var.lang_upload_image]</h2></div>
+  <div class="container-wide">
+
+    <!--Begin Upload Video Form-->
+    <form name="picture_form_upload" method="post" enctype="multipart/form-data" action="image_uploader.php">
+      <div id="upload-video">
+        <ul>
+          <li style="width:700px; text-align:center;"><span class="font5_12">[var.lang_step] 1: [var.lang_select_photo_album]</span></li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_your_albums]:</strong></li>
+          <li style="width:400px; text-align:left;"><select name="album_id" size="1" tabindex="1" class="upload-video-form-input">[var.albums_all;htmlconv=no]</select></li>
+          <li style="width:700px; text-align:center; margin-top:15px;"><span class="font5_12">[var.lang_or] [var.lang_create_new_album]</span></li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_new_album_name]:</strong></li>
+          <li style="width:400px; text-align:left;"><input type="text" name="new_photo_album" size="24" value="[var.new_photo_album]" class="upload-video-form-input" tabindex="2" /></li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_description]:</strong></li>
+          <li style="width:400px; text-align:left;">
+            <textarea name="photo_album_desc" rows="3" cols="32" tabindex="3"  class="upload-video-form-input">[var.photo_album_desc]</textarea>
+            <br /><font size="1">&nbsp;&nbsp;([var.lang_bbc_html_not_allowed])</font>
+          </li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_tags]:</strong></li>
+          <li style="width:400px; text-align:left;"><input type="text" name="album_tags" size="44" value="[var.album_tags]" class="upload-video-form-input" tabindex="4" /></li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_album_type]:</strong></li>
+          <li style="width:400px; text-align:left;">
+            <input type="radio" name="albumtype" value="public" id="album_public" checked="checked" tabindex="5" style="margin:0px 5px;" />[var.lang_public]
+            <br />
+            <input type="radio" name="albumtype" value="private" id="album_private" tabindex="6" style="margin:0px 5px;" />[var.lang_private] - <font size="1">[var.lang_only_visible]</font></li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_allow_ratings]:</strong></li>
+          <li style="width:400px; text-align:left;">
+            <input type="radio" name="album_ratings" value="yes" checked="checked" tabindex="7" style="margin:0px 5px;" />[var.lang_yes]
+            <br />
+            <input type="radio" name="album_ratings" value="no" tabindex="8" style="margin:0px 5px;" />[var.lang_no]</li>
+          <li style="width:240px; text-align:right;"><strong>[var.lang_allow_comm]:</strong></li>
+          <li style="width:400px; text-align:left;">
+            <input type="radio" name="album_cmts" value="yes" checked="checked" tabindex="9" style="margin:0px 5px;" />[var.lang_yes]
+            <br />
+            <input type="radio" name="album_cmts" value="no" tabindex="10" style="margin:0px 5px;" />[var.lang_no]</li>
+          <li style="width:700px; border-bottom:1px solid #dddcdc;">&nbsp;</li>
+          <li style="width:700px; text-align:center;"><span class="font5_12">[var.lang_step] 2: [var.lang_select_image_files]</span></li>
+          <li style="width:700px; text-align:center;"><h1>[var.lang_pictures_to_upload]</h1>
+
+            <div style="font-size:11px; color:#ee0000; margin-top:-10px;">[var.lang_image_file_types]&nbsp;[var.show_maxuploadsize]kb's
+              <br />
+              <b>[var.lang_maximum_dimensions]:&nbsp;[var.allowed_maxwidth]&nbsp;[var.lang_by]&nbsp;[var.allowed_maxheight]&nbsp;[var.lang_pixels]</b>
+              <br />
+              <b>[var.lang_minimum_dimensions]:&nbsp;[var.allowed_minwidth]&nbsp;[var.lang_by]&nbsp;[var.allowed_minheight]&nbsp;[var.lang_pixels]</b>
+            </div>
+
+          <li style="width:700px; text-align:center;">
+            <input type="file" name="img_file[]" size="50" tabindex="11" class="special_file" /><br />
+            <input type="file" name="img_file[]" size="50" tabindex="11" class="special_file" /><br />
+            <input type="file" name="img_file[]" size="50" tabindex="11" class="special_file" />
+          </li>
+          <li style="width:700px; border-bottom:1px solid #dddcdc;">
+            <input type="hidden" name="security_token" value="[var.security_token]" />
+            <input type="hidden" name="form_submitted" value="yes" />
+            <input type="hidden" name="v3" value="upload_pictures" />
+            <input type="hidden" name="MAX_FILE_SIZE" value="[var.allowed_maxuploadsize]" />
+          </li>
+          <li style="width:700px; text-align:center;"><span class="font5_12">[var.lang_your_restrictions]</span></li>
+          <li style="width:300px; text-align:right;"><strong>[var.lang_albums_used]</strong></li>
+          <li style="width:100px;">&nbsp;</li>
+          <li style="width:300px; text-align:left;">[var.count_albums]&nbsp;[var.lang_of]&nbsp;[var.member_max_albums]</li>
+          <li style="width:700px; text-align:center;">
+            [var.lang_pictures_resized_fit;htmlconv=no].
+          </li>
+
+          <div id="show_upload" style="visibility:hidden"><p align="center">[var.lang_please_wait]...&nbsp;&nbsp;<img src="themes/[var.user_theme]/images/icons/images_loading.gif" /></p></div>
+
+          <li style="width:700px; text-align:center;">
+            <input type="button" name="reset_button" value="[var.lang_reset]" tabindex="14" class="button-form" >
+            &nbsp;&nbsp;&nbsp;
+            <input type="submit" id="upload_button" name="upload_button" value="[var.lang_upload_image]" accesskey="[var.access_code]" tabindex="15" onClick="showBlock('show_upload');" class="button-form"  />
+          </li>
+        </ul>
+        <!--[onload;block=div;when [var.show_upload]=1;comm]-->
+      </div>
+    </form>
+
+
+   <!-- start image upload success and finish -->
+   <div>
+
+   <script type="text/javascript">
+        <!--
+        function confirm(picture_form_upload_finish) {
+
+        	var upload_count = [var.img_file_tmp_count];
+      	var tt, td, it, x;
+      	x = 1;
+
+      	for(var i = 0; i < upload_count; i++) {
+	      	tt = picture_form_upload_finish.elements['thumb_title_' + x].value
+      		td = picture_form_upload_finish.elements['thumb_desc_' + x].value
+      		it = picture_form_upload_finish.elements['image_tags_' + x].value
+
+			if ( tt == "" ) {
+				alert("Please fill in all of the image fields !");
+				document.picture_form_upload_finish.elements['thumb_title_' + x].focus();
+				document.picture_form_upload_finish.elements['thumb_title_' + x].select();
+				return false;
+			}
+			else if ( td == "" ) {
+				alert("Please fill in all of the image fields !");
+				document.picture_form_upload_finish.elements['thumb_desc_' + x].focus();
+				document.picture_form_upload_finish.elements['thumb_desc_' + x].select();
+				return false;
+			}
+			else if ( it == "" ) {
+				alert("Please fill in all of the image fields !");
+				document.picture_form_upload_finish.elements['image_tags_' + x].focus();
+				document.picture_form_upload_finish.elements['image_tags_' + x].select();
+				return false;
+			}
+			else if ( tt.length < 6 ) {
+				alert("The title must be at least 6 chrs !");
+				document.picture_form_upload_finish.elements['thumb_title_' + x].focus();
+				document.picture_form_upload_finish.elements['thumb_title_' + x].select();
+				return false;
+			}
+			else if ( td.length < 6 ) {
+				alert("The description must be at least 6 chrs !");
+				document.picture_form_upload_finish.elements['thumb_desc_' + x].focus();
+				document.picture_form_upload_finish.elements['thumb_desc_' + x].select();
+				return false;
+			}
+			else if ( it.length < 6 ) {
+				alert("Tags must be at least 6 chrs !");
+				document.picture_form_upload_finish.elements['image_tags_' + x].focus();
+				document.picture_form_upload_finish.elements['image_tags_' + x].select();
+				return false;
+			}
+			var check_spaces = it.indexOf(" ");
+			if ( it.length > 44 || check_spaces == -1 ) {
+				alert("Tags must be separated by spaces !");
+				document.picture_form_upload_finish.elements['image_tags_' + x].focus();
+				document.picture_form_upload_finish.elements['image_tags_' + x].select();
+				return false;
+			}
+			x++;
+      	}
+        }
+        //-->
+    </script>
+
+      <form name="picture_form_upload_finish" id="picture_form_upload_finish" method="post" action="image_uploader.php" onSubmit="return confirm(this);">
+    <div id="UploadImage" align="center">
+      <br />
+      <h2>[var.lang_upload_complete]</h2>
+      <br />
+      [var.image_notice;htmlconv=no]
+      <table border="0" width="580" cellspacing="2" cellpadding="2" style="border: 1px solid #DFDCDC;">
+        <tr>
+          <td width="120" rowspan="7">
+            <p align="center"><img src="addons/albums/thumbs/[blkfinished.new_thumbs;block=table]" alt="Thumbnail" />&nbsp;&nbsp;</p>
+          </td>
+          <td width="62%" colspan="2">
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td width="24%"><div align="right"><b>[var.lang_title]:&nbsp;&nbsp;</b></div></td>
+          <td width="62%">
+            <input type="text" name="thumb_title_[blkfinished.upload_slot]" size="30" class="image_form" />
+            <input type="hidden" name="img_name_[blkfinished.upload_slot]" value="[blkfinished.new_thumbs]" />
+          </td>
+        </tr>
+        <tr>
+          <td width="24%"><div align="right"><b>[var.lang_description]:&nbsp;&nbsp;</b></div></td>
+          <td width="62%"><input type="text" name="thumb_desc_[blkfinished.upload_slot]" size="30" class="image_form" /></td>
+        </tr>
+        <tr>
+          <td width="24%"><div align="right"><b>[var.lang_tags]:&nbsp;&nbsp;</b></div></td>
+          <td width="62%"><input type="text" name="image_tags_[blkfinished.upload_slot]" size="30" class="image_form" /></td>
+        </tr>
+        <tr>
+          <td width="24%"><div align="right"><font color="#ED0000" size="2"><b>*&nbsp;[var.lang_note]:&nbsp;&nbsp;</b></font></div></td>
+          <td width="62%"><font color="#ED0000" size="1"><b>[var.lang_enter_tags]</b></font></td>
+        </tr>
+        <tr>
+          <td width="24%"><div align="right"><b>[var.lang_use_album_cover]:&nbsp;&nbsp;</b></div></td>
+          <td width="62%"><input type="radio" name="album_default" value="[blkfinished.new_thumbs]" /></td>
+         </tr>
+      </table>
+      <table>
+        <tr>
+          <td colspan="2">
+            <div align="center">
+              <br />
+              <script language="javascript" type="text/javascript">
+                <!--
+                  document.writeln('<input type="submit" name="upload_complete" value="Finish Upload" class="button-form" tabindex="5" />');
+                //-->
+              </script>
+              <noscript>
+                <br><font color="#DD0000" size="2"><b>[var.lang_javascript_enabled]!</b></font>
+              </noscript>
+
+              <input type="hidden" name="album_id" value="[var.album_id]" />
+              <input type="hidden" name="new_photo_album" value="[var.new_photo_album]" />
+              <input type="hidden" name="img_uploaded" value="[var.img_file_tmp_count]" />
+              <input type="hidden" name="album_type" value="[var.album_type]" />
+              <input type="hidden" name="album_cmts" value="[var.allow_comments]" />
+              <input type="hidden" name="album_ratings" value="[var.allow_ratings]" />
+              <input type="hidden" name="v3" value="upload_pictures_finish" />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+      <!--[onload;block=div;when [var.show_finish]=1;comm]-->
+    </div>
+    <!-- end image upload success and finish -->
+    <div class="clear-fix"></div>
+  </div>
+  <div class="container-wide-footer"></div>
+</div><!--End Right Column-->

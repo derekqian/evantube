@@ -1,0 +1,115 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Upload Menu-->
+  <div class="header-narrow"><span class="font5_12">[var.lang_main_menu]</span></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+      <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	<!--[var.image_inner_upload_form;htmlconv=no;comm]-->
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div><!--End Upload Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+    <div id="advert-left">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="header-wide"><h2>[var.lang_upload_video] - [[var.lang_start]]</h2></div>
+  <div class="container-wide" style="width:700px; text-align:left; padding: 5px;">
+    <div id="UploadAudio">
+      <table border="0" width="98%" cellspacing="0">
+        <tr>
+          <td width="100%" align="right" valign="top">
+            <!-- START OF UPLOADER -->
+            <div align="center">
+              <br>
+              <!-- Start Progress Bar -->
+              <div class="info" id="progress_info"></div>
+              <div id="progress_bar" style="display:none">
+                <div class="bar1" id="upload_status_wrap" align="center">
+                  <div class="bar2" id="upload_status"></div>
+                </div>
+                <br>
+                <table cellpadding='2' cellspacing='2' style="border: 1px solid #EBE8E8;" width="428">
+                  <tr>
+                    <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_percent_complete]:</font></td>
+                    <td align="center" height="25"><font face="Arial" size="2"><span id="percent">0%</span></font></td>
+                  </tr>
+                  <tr>
+                    <td height="25"><font face="Arial" size="2">&nbsp;[var.lang_files_uploaded]:</font></td>
+                    <td align="center" height="25"><font face="Arial" size="2">
+                      <span id="uploaded_files">0</span>&nbsp;of&nbsp;</font><span id="total_uploads"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_current_position]:</font></td>
+                    <td align="center" height="25"><font face="Arial" size="2">
+                      <span id="current">0</span>&nbsp;/&nbsp;</font><span id="total_kbytes"></span><font face="Arial" size="2">KBytes</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_elapsed_time]:</font></td>
+                    <td align="center" height="25"><font face="Arial" size="2"><span id="time">0</span></font></td>
+                  </tr>
+                  <tr>
+                    <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_est_time_left]:</font></td>
+                    <td align="center" height="25"><font face="Arial" size="2"><span id="remain">0</span></font></td>
+                  </tr>
+                  <tr>
+                    <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_est_speed]:</font></td>
+                    <td align="center" height="25"><font face="Arial" size="2"><span id="speed">0</span>&nbsp;KB/s</font></td>
+                  </tr>
+                </table>
+              </div>
+              
+             <!--upload bar chrome fix-->
+             <div id="progress_info_2" style="display:none">
+             <div align="center"><span class="font5_16">[var.lang_please_wait]</span><br /><img src="[var.base_url]/images/upload-loading.gif" width="128" height="15" alt="....loading...." /></div>
+             </div>
+             <!--upload bar chrome fix end-->
+             
+              <div align="center">
+                <div id="upload_div" style="display:none; width:600; height:205; overflow:auto;"><iframe name="upload_iframe" frameborder=0 width="743" height="175"></iframe></div>
+                <br>
+                <!-- Start Upload Form -->
+                <form name="form_upload" method="post" enctype="multipart/form-data"  action="[var.path_to_upload_script]" style="margin: 0px; padding: 0px;">
+                  <noscript><input type="hidden" name="no_script" value="1" /></noscript>
+                  <input type="hidden" name="title" value="[var.title]" />
+      		<input type="hidden" name="description" value="[var.description]" />
+      		<input type="hidden" name="tags" value="[var.tags]" />
+      		<input type="hidden" name="location_recorded" value="[var.location_recorded]" />
+      		<input type="hidden" name="allow_comments" value="[var.allow_comments]" />
+      		<input type="hidden" name="allow_embedding" value="[var.allow_embedding]" />
+      		<input type="hidden" name="public_private" value="[var.public_private]" />
+      		<input type="hidden" name="channel" value="[var.channel]" />
+      		<input type="hidden" name="channel_name" value="[var.channel_name]" />
+      		<input type="hidden" name="sub_cat" value="[var.sub_cat]" />
+      		<input type="hidden" name="form_submitted" value="yes" />
+
+      		<div id="upload_slots"><span class="font5_16"><b>[var.lang_please_upload]</b></span><input type="file" name="upfile_0" size="71" value="" /></div>
+
+      		<noscript><br><input type="reset" name="no_script_reset" value="Reset" />&nbsp;&nbsp;&nbsp;<input type="submit" name="no_script_submit" value="Upload" /></noscript>
+      	    </form>
+      	    <!-- End Upload Form -->
+      	    <br>
+      	    <script language="javascript" type="text/javascript">
+      	    	<!--
+        		document.writeln('<input type="button" name="reset_button" value="Reset" onClick="resetForm();">&nbsp;&nbsp;&nbsp;<input type="button" id="upload_button" name="upload_button" value="Upload" onClick="uploadFiles();">');
+    			//-->
+    		    </script>
+    		  </td>
+    		</tr>
+          </table>
+        </div>
+      </div>
+      <div class="container-wide-footer"></div>
+    </div>
+  </div>
+</div>

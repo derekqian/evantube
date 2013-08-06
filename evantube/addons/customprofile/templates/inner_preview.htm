@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>|</title>
+
+<style type="text/css">
+<!--
+.style2 {
+	color: #4B90C4;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+#message{
+	border: 1px solid #7DC1EB;
+	margin-bottom: 7px;
+	font-weight: bold;
+	color: #666666;
+	width: 760px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url([var.base_url]/images/icon_info.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 25px;
+	line-height: 25px;
+
+}
+
+.form1{
+	padding: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+}
+
+.mainbody_image{
+	background-image: url([var.base_url]/addons/customprofile/member_images/[var.background_image]);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.mainbody_color{
+	width: 50px;
+	height: 20px;
+	background-color: [var.background_color];
+	border: 1px dotted #CCCCCC;
+
+}
+
+.mainbody_font{
+	width: 50px;
+	height: 20px;
+	background-color: [var.font_color];
+	border: 1px dotted #CCCCCC;
+
+}
+
+.box_top{
+	background-image: url([var.base_url]/addons/customprofile/member_images/[var.top_image]);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+
+.sub_menu{
+	background-image: url([var.base_url]/addons/customprofile/member_images/[var.submenu_image]);
+	background-position: left center;
+}
+
+.box_bottom{
+	background-image: url([var.base_url]/addons/customprofile/member_images/[var.bottom_image]);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.border_left{
+	width: 3px;
+	height: 20px;
+	background-color: [var.content_border_left];
+	border: 1px dotted #CCCCCC;
+
+}
+
+.border_right{
+	width: 3px;
+	height: 20px;
+	background-color: [var.content_border_right];
+	border: 1px dotted #CCCCCC;
+
+}
+
+.box_background{
+	width: 50px;
+	height: 20px;
+	background-color: [var.content_background_color];
+	border: 1px dotted #CCCCCC;
+
+}
+
+.box_topcolor{
+	width: 50px;
+	height: 20px;
+	background-color: [var.top_color];
+	border: 1px dotted #CCCCCC;
+
+}
+
+.box_linkcolor{
+	width: 50px;
+	height: 20px;
+	background-color: [var.content_link_color];
+	border: 1px dotted #0000cc;
+
+}
+
+
+.box_fontcolor{
+	width: 50px;
+	height: 20px;
+	background-color: [var.content_font_color];
+	border: 1px dotted #CCCCCC;
+
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+.show_hide{
+visibility:hidden;
+}
+
+-->
+</style>
+<!--jscolor-->
+<script type="text/javascript" src="[var.base_url]/javascripts/jscolor/jscolor.js"></script>
+<!--jscolor end-->
+</head>
+<body>
+  <!-- Notifications table -->
+<div align="center">
+  <center>
+<table width="761" border="0" height="23">
+  <tr>
+    <td width="762" height="19"><!-- notifications div -->
+      <!--[onload_1;block=tr;when [var.show_notification]=1;comm]-->
+  </center>
+      <div id="message">
+        <div align="center">
+          <p align="center">[var.message] </div>
+      </div>
+  <center>
+      <!-- notifications end -->
+    </center>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- End of notification -->
+
+<!-- Editing selector -->
+<form method="POST"action="index.php" class="form1">
+  <div align="center">
+	<table border="0" width="843" id="table2" cellspacing="0">
+		<tr>
+			<td bgcolor="#EBEBEB">
+			<p align="left"><b><font color="#4B90C4">&nbsp;[var.title]</font></b></td>
+			<td width="349" bgcolor="#EBEBEB">
+			<p align="right">
+  <span class="style2">Select item to modify&nbsp;&nbsp; </span>
+			<select name="type" id="select" size="1">
+    <option value="1" [var.selected1]>Summary</option>
+    <option value="2" [var.selected2]>Friends</option>
+    <option value="3" [var.selected3]>Ads</option>
+    <option value="4" [var.selected4]>Stats</option>
+    <option value="5" [var.selected5]>My Content</option>
+    <option value="6" [var.selected6]>About Me</option>
+    <option value="7" [var.selected7]>Comments</option>
+    <option value="8" [var.selected8]>Main Body</option>
+
+  </select>&nbsp;
+  <input type="hidden" name="uid" value="[var.owners_id]">
+  <input type="submit" value="Submit" name="submit_select" style="background-color: #DDDDDD; font-size: 8pt; color: #333333; border: 1px solid #666666">&nbsp;&nbsp;
+			</td>
+		</tr>
+	</table>
+	</div>
+</form>
+<!-- Editing selector end -->
+
+<!-- SECTION FOR EDITING EACH ELEMENT -->
+<div align="center">
+      <!--[onload_5;block=div;when [var.loaded]=1;comm]-->
+<form method="POST" enctype="multipart/form-data" action="index.php" class="form1">
+  <table width="843" height="230" border="0" cellspacing="0" id="table1" style="border: 1px solid #DFDFDF">
+    <tr>
+      <td width="150" bgcolor="#F4F4F4" height="38"><font face="Arial" size="2">&nbsp;Header image</font></td>
+      <td width="39" bgcolor="#F4F4F4" height="38">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&id=1&uid=[var.owners_id]"><font size="2">reset</font></a>
+      </td>
+      <td width="4" bgcolor="#FFFFFF" height="38">&nbsp;</td>
+      <td width="315" height="38" class="box_top"></td>
+      <td width="323" height="38" valign="middle" bgcolor="#F4F4F4">
+          &nbsp;&nbsp;
+          <input type="file" name="ufile[]" id="ufile[]" size="20" class ="form1" >
+          &nbsp;
+</td>
+    </tr>
+    <tr>
+      <td height="38" bgcolor="#F4F4F4" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">&nbsp;Border Left
+		color</font></td>
+      <td height="38" bgcolor="#F4F4F4" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="39">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=2&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="4" height="38">&nbsp;</td>
+      <td style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="315" height="38"><div class="border_left"></div></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">
+        &nbsp;&nbsp; <input type="text" class="color {hash:true,required:false}" name="content_border_left" size="20" value="[var.content_border_left]">&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">&nbsp;Border Right
+		color</font></td>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="39">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=3&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-bottom: 1px solid #DDDDDD" width="4" height="38">&nbsp;</td>
+      <td style="border-bottom: 1px solid #DDDDDD" width="315" height="38"><div class="border_right"></div></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">
+      &nbsp;&nbsp; <input type="text" class="color {hash:true,required:false}" name="content_border_right" size="20" value="[var.content_border_right]">&nbsp;&nbsp;
+        </td>
+    </tr>
+    <tr>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">&nbsp;Background color</font> </td>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="39"><a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=4&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-bottom: 1px solid #DDDDDD" width="4" height="38">&nbsp;</td>
+      <td style="border-bottom: 1px solid #DDDDDD" width="315" height="38"><div class="box_background"></div></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">
+              &nbsp;&nbsp; <input type="text" class="color {hash:true,required:false}" name="content_background_color" size="20" value="[var.content_background_color]">&nbsp;&nbsp;
+        </td>
+    </tr>
+    <tr>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">
+		&nbsp;Title text
+        color</font> </td>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="39">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=11&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-bottom: 1px solid #DDDDDD" width="4" height="38">&nbsp;</td>
+      <td style="border-bottom: 1px solid #DDDDDD" width="315" height="38"><div class="box_topcolor"></div></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">
+              &nbsp;&nbsp;
+				<input type="text" class="color {hash:true,required:false}" name="top_color0" size="20" value="[var.top_color]">&nbsp;&nbsp;
+        </td>
+    </tr>
+    <tr>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">
+		&nbsp;Hyperlink
+        color</font> </td>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="39"><font size="2">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&id=12&uid=[var.owners_id]">reset</a></font> </td>
+      <td bgcolor="#FFFFFF" style="border-bottom: 1px solid #DDDDDD" width="4" height="38">&nbsp;</td>
+      <td style="border-bottom: 1px solid #DDDDDD" width="315" height="38"><div class="box_linkcolor"></div></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">
+              &nbsp;&nbsp;
+				<input type="text" class="color {hash:true,required:false}" name="content_link_color" size="20" value="[var.content_link_color]">&nbsp;&nbsp;
+        </td>
+    </tr>
+    <tr>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">&nbsp;Main
+        text
+        color</font> </td>
+      <td height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD" width="39">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=10&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-bottom: 1px solid #DDDDDD" width="4" height="38">&nbsp;</td>
+      <td style="border-bottom: 1px solid #DDDDDD" width="315" height="38"><div class="box_fontcolor"></div></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">
+              &nbsp;&nbsp; <input type="text" class="color {hash:true,required:false}" name="content_font_color" size="20" value="[var.content_font_color]">&nbsp;&nbsp;
+        </td>
+    </tr>
+    <!-- submenu image start (to hide/show)-->
+    <tr class="[var.show_hide_submenuimage]">
+      <td width="150" height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD"><font face="Arial" size="2">&nbsp;Submenu
+        image</font></td>
+      <td width="39" height="38" bgcolor="#F4F4F4" style="border-bottom: 1px solid #DDDDDD">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=5&uid=[var.owners_id]"><font size="2">reset</font></a></td>
+      <td width="4" bgcolor="#FFFFFF" style="border-bottom: 1px solid #DDDDDD" height="38">&nbsp;</td>
+      <td width="315" class="sub_menu" style="border-bottom: 1px solid #DDDDDD" height="38"></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">&nbsp;&nbsp;
+          <input type="file" name="ufile[]" id="ufile[]" size="20" class ="form1" >
+        &nbsp;
+          </td>
+    </tr>
+       <!-- submenu image end-->
+    <tr>
+      <td width="150" height="38" bgcolor="#F4F4F4"><font face="Arial" size="2">&nbsp;Footer image</font></td>
+      <td width="39" height="38" bgcolor="#F4F4F4">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=6&uid=[var.owners_id]"><font size="2">reset</font></a></td>
+      <td width="4" bgcolor="#FFFFFF" height="38">&nbsp;</td>
+      <td width="315" class="box_bottom" height="38"></td>
+      <td bgcolor="#F4F4F4" width="323" height="38">&nbsp;&nbsp;
+          <input type="file" name="ufile[]" id="ufile[]" size="20" class ="form1" >&nbsp;&nbsp;
+          <input type ="hidden" name="type" value="[var.type]">
+            <input type ="hidden" name="uid" value="[var.owners_id]">
+          <input type="submit" value="Submit" name="submit_form" style="background-color: #DDDDDD; font-size: 8pt; color: #333333; border: 1px solid #666666">
+      </td>
+    </tr>
+  </table>
+  </form>
+</div>
+<!-- SECTION FOR EDITING EACH ELEMENT END-->
+
+<!-- SECTION FOR EDITING EACH ELEMENT END-->
+<div align="center">
+      <!--[onload_6;block=div;when [var.loaded]=2;comm]-->
+<form method="POST" enctype="multipart/form-data" action="index.php" class="form1">
+          <input type ="hidden" name="type0" value="[var.type]">
+  <table width="843" height="102" border="0" cellspacing="0" id="table3" style="border: 1px solid #DFDFDF">
+    <tr>
+      <td width="150" bgcolor="#F4F4F4" height="33"><font face="Arial" size="2">
+		&nbsp;Background Image&nbsp;</font></td>
+      <td width="39" bgcolor="#F4F4F4" height="33">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&id=7&uid=[var.owners_id]"><font size="2">reset</font></a>
+      </td>
+      <td width="4" bgcolor="#FFFFFF" height="33">&nbsp;</td>
+      <td width="315" height="33" class="mainbody_image"></td>
+      <td width="324" height="33" valign="middle" bgcolor="#F4F4F4">
+          &nbsp;&nbsp;
+          <input type="file" name="ufile[]" id="ufile[]" size="20" class ="form1" >
+          &nbsp;
+</td>
+    </tr>
+    <tr>
+      <td height="33" bgcolor="#F4F4F4" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">&nbsp;Body
+		Color</font> </td>
+      <td height="33" bgcolor="#F4F4F4" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="39">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=8&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="4" height="33">&nbsp;</td>
+      <td style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="315" height="33"><div class="mainbody_color"></div></td>
+      <td bgcolor="#F4F4F4" width="324" height="33">
+        &nbsp;&nbsp;
+		<input type="text" class="color {hash:true,required:false}" name="background_color" size="20" value="[var.background_color]">&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td height="33" bgcolor="#F4F4F4" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="150"><font face="Arial" size="2">&nbsp;Font
+		Color</font> </td>
+      <td height="33" bgcolor="#F4F4F4" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="39">
+		<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=9&uid=[var.owners_id]"><font size="2">reset</font></a> </td>
+      <td bgcolor="#FFFFFF" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="4" height="33">&nbsp;</td>
+      <td style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD" width="315" height="33"><div class="mainbody_font"></div></td>
+      <td bgcolor="#F4F4F4" width="324" height="33">
+        &nbsp;&nbsp;
+		<input type="text" class="color {hash:true,required:false}" name="font_color" size="20" value="[var.font_color]">&nbsp;&nbsp;
+		<input type ="hidden" name="type" value="[var.type]">
+        <input type ="hidden" name="uid" value="[var.owners_id]">
+      	<input type="submit" value="Submit" name="submit_form" style="background-color: #DDDDDD; font-size: 8pt; color: #333333; border: 1px solid #666666"></td>
+    </tr>
+    <!-- submenu image start (to hide/show)-->
+       <!-- submenu image end-->
+    </table>
+  </form>
+</div>
+<!-- SECTION FOR EDITING EACH ELEMENT END-->
+
+  <p align="center">&nbsp;</p>
+	<p align="center">
+	<a href="[var.base_url]/addons/customprofile/index.php?type=[var.type]&amp;id=0&uid=[var.owners_id]">
+	<font size="2">Reset
+  Whole Page</font></a></p>
+
+</body>
+</html>

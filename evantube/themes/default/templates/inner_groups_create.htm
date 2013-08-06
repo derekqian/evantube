@@ -1,0 +1,73 @@
+<!--Begin Left Column-->
+    <div id="column-left-2">
+
+    <!--Begin Groups Menu-->
+      <div class="header-narrow">[var.lang_groups]: (<!--[var.which_type;comm]-->)</div>
+
+      <div class="whats-showing">
+        <ul>
+          <li><a href="groups">[var.lang_all_groups]</a></li>
+          <li><a href="groups_more.php?type=1">[var.lang_my_groups]</a></li>
+          <li><a href="groups.php?load=featured">[var.lang_featured]</a></li>
+          <li><a href="addgroup.php">[var.lang_create_group]</a></li>
+        </ul>
+      </div>
+    <div class="container-narrow-bottom"></div><!--End Groups Menu-->
+
+    <!--Begin What's Showing Menu-->
+    <div class="header-narrow">[var.lang_whats_on]</div>
+    <div class="whats-showing">
+      <ul>
+        <li><a href="videos/load/featured">[var.lang_featured]</a></li>
+        <li><a href="videos/load/viewed">[var.lang_most_viewed]</a></li>
+        <li><a href="videos/load/recent">[var.lang_most_recent]</a></li>
+        <li><a href="videos/load/comments">[var.lang_most_comments]</a></li>
+      </ul>
+    </div>
+    <div class="container-narrow-bottom"></div><!--End What's Showing Menu-->
+
+   <!--Begin Left Advert-->
+      <div class="container-narrow-top"></div>
+        <div id="advert-left">
+          <!--[var.ads_left;htmlconv=no;comm]-->
+        </div>
+      <div class="container-narrow-bottom"></div><!--End Left Advert-->
+
+    </div><!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+
+  <!--Begin Group Creation Form-->
+  <div class="groups-form">
+    <h1>[var.lang_create_group]</h1>
+    <form name="add_group" action="addgroup.php" method ="post" class="CreateGroupForm">
+      <h2><em>[var.lang_fill_in_all_fields]</em></h2>
+      <ul>
+        <li>[var.lang_group_name]:<br /><input type="text" name="group_name" size="40" value="[var.group_name]" /></li>
+        <li>[var.lang_description]:<br /><textarea rows="8" name="group_description" cols="34">[var.group_description]</textarea></li>
+        <li>[var.lang_private_pub]:&nbsp;
+          <select size="1" name="public_private">
+            <option value="[var.lang_public]" selected="selected">[var.lang_public]</option>
+            <option value="[var.lang_private]">[var.lang_private]</option>
+          </select>
+        </li>
+        <li><input type="submit" class="button-form" value="[var.lang_create_group]" name="B1" /></li>
+        <input type="hidden" name="submitted" value="yes" />
+      </ul>
+    </form>
+    [onload;block=div;when [var.show_form]=1;]
+  </div>
+  <!--End Group Creation Form-->
+
+  <div class="groups-form">
+    <h1>[var.lang_thank_you]</h1>
+    [onload;block=div;when [var.show_form]=0;]
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+
+
+</div><!--End Right Column-->

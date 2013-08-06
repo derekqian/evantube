@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>View Members</title>
+
+</head>
+
+<body topmargin="0">
+  <div align="center">
+    <table border="0" cellpadding="0" cellspacing="0" width="758" bgcolor="#FFFFFF">
+      <tr>
+        <td style="border-style: solid; border-width: 0px; " bordercolor="#4B87C2" width="97%" bgcolor="#9FBFDF">
+          <table border="0" width="100%" id="table12" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <div align="center">
+                  <table border="0" width="100%" id="table13" cellspacing="0" cellpadding="0" height="222">
+                    <form id="form_results" action="members.php" method="post">
+                      <tr>
+                      <!-- start of search box -->
+                      <!--[onload_15;block=tr;when [var.show_t]=6;comm]-->
+                        <td width="99%" height="31" bgcolor="#FFFFFF" align="center" class="default_text_blue" colspan="9">
+                          <div align="center">
+                            <table border="0" cellpadding="0" cellspacing="0" width="101%" height="162">
+                              <tr>
+                                <td width="100%" colspan="3" bgcolor="#F2F2F2" height="30">
+                                  <p align="center"><b><font size="3" color="#3366CC">[var.lang_search]</font></b>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="20%" bgcolor="#F2F2F2" align="right" height="25">
+                                  &nbsp;[var.lang_user_name]&nbsp;<input type="text" name="user_name" size="20">
+                                </td>
+                                <td width="10%" bgcolor="#F2F2F2" align="right" height="25">
+                                  [var.lang_name]&nbsp;&nbsp;
+                                </td>
+                                <td width="15%" bgcolor="#F2F2F2" height="25"><input type="text" name="first_name" size="20"></td>
+                              </tr>
+                              <tr>
+                              <td width="20%" bgcolor="#F2F2F2" align="right" height="25">
+                                &nbsp;[var.lang_email_address]&nbsp;<input type="text" name="email_address" size="20">
+                              </td>
+                                <td width="10%" bgcolor="#F2F2F2" align="right" height="25">[var.lang_surname]&nbsp;&nbsp;</td>
+                                <td width="15%" bgcolor="#F2F2F2" height="25"><input type="text" name="last_name" size="20"></td>
+                              </tr>
+                              <tr>
+                                <td width="49%" bgcolor="#F2F2F2" height="35">&nbsp;</td>
+                                <td width="51%" bgcolor="#F2F2F2" height="35" colspan="2">
+                                  <font face="Arial">&nbsp;<input type="submit" value="[var.lang_search]" name="search"></font>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="49%" bgcolor="#F2F2F2" height="26">&nbsp;</td>
+                                <td width="51%" bgcolor="#F2F2F2" colspan="2" height="26">&nbsp;</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- end of search box -->
+                      <tr>
+                        <!--[onload_23;block=tr;when [var.show]=2;comm]-->
+                        <td width="6%" height="33" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle"><!--[var.lang_select;comm]--></td>
+                        <td width="32%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle">
+                          <a href="members.php?type=[var.show_t]&action=0&sort=[var.order_by_username]&page=[var.current_page]"><font color="#000000"><!--[var.lang_user_name;comm]--></font></a>
+                        </td>
+                        <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle"><!--[var.lang_status;comm]--></td>
+                        <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle"><!--[var.lang_moderator;comm]--></td>
+                        <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle">
+                          <a href="members.php?type=[var.show_t]&action=0&sort=[var.order_videos]&page=[var.current_page]"><font color="#000000"><!--[var.lang_word_videos;comm]--></font></a>
+                        </td>
+                        <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle">
+                          <a href="members.php?type=[var.show_t]&action=0&sort=[var.order_audio]&page=[var.current_page]"><font color="#000000"><!--[var.lang_word_audio;comm]--></font></a>
+                        </td>
+                        <td width="9%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle">
+                          <a href="members.php?type=[var.show_t]&action=0&sort=[var.order_pictures]&page=[var.current_page]"><font color="#000000"><!--[var.lang_pictures;comm]--></font></a>
+                        </td>
+                        <td width="8%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle">
+                          <a href="members.php?type=[var.show_t]&action=0&sort=[var.order_by_flags]&page=[var.current_page]"><font color="#000000"><!--[var.lang_flags;comm]--></font></a>
+                        </td>
+                        <td width="8%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue" background="images/background_tables.png" valign="middle">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td width="6%" height="30" bgcolor="#FFFFFF" align="center" class="default_text">
+                          <input type="checkbox" name="list[]1" value="[blk1.user_id;block=tr]">
+                        </td>
+                        <td width="32%" height="30" bgcolor="#FFFFFF" align="center" class="default_text">
+                          <a href="[var.base_url]/edit/editprofile.php?id=[blk1.user_id;block=tr]&keepThis=true&TB_iframe=true&height=580&width=830" class="thickbox">
+                          <font color="#3366CC"><!--[blk1.user_name;block=tr;ope=max:25;comm]--></font></a>&nbsp;&nbsp;<!--[blk1.moderator_icon;block=tr;htmlconv=no;comm]-->
+                        </td>
+                        <td width="10%" height="30" bgcolor="#FFFFFF" align="center" class="default_text"><!--[blk1.account_status;block=tr;comm]--></td>
+                        <td width="10%" height="30" bgcolor="#FFFFFF" align="center" class="default_text"><!--[blk1.moderator_status;block=tr;comm]--></td>
+                        <td width="10%" height="30" bgcolor="#FFFFFF" align="center" class="default_text"><!--[blk1.videos_count;block=tr;comm]--></td>
+                        <td width="10%" height="30" bgcolor="#FFFFFF" align="center" class="default_text"><!--[blk1.audio_count;block=tr;comm]--></td>
+                        <td width="9%" height="30" bgcolor="#FFFFFF" align="center" class="default_text"><!--[blk1.videos_count;block=tr;comm]--></td>
+                        <td width="8%" height="30" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                        <td width="8%" height="30" bgcolor="#FFFFFF" align="center" class="default_text">
+                          <a href="[var.base_url]/edit/editprofile.php?id=[blk1.user_id;block=tr]&keepThis=true&TB_iframe=true&height=580&width=830" class="thickbox" title="[var.lang_edit]">
+                          <img border="0" src="images/icon_edit_small.gif" width="17" height="18"></a>&nbsp;<a href="members.php?type=[var.type]&amp;action=0&amp;sort=[var.order_by]&amp;page=[var.current_page]&amp;delid=[blk1.user_id;block=tr]" title="[var.lang_delete_general]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img border="0" src="images/icon_delete.gif" width="16" height="14"></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="6%" height="30" bgcolor="#F9F9F9" align="center" class="default_text">
+                        <input type="checkbox" name="list[]" value="[blk1.user_id;block=tr]">
+                      </td>
+                      <td width="32%" height="30" bgcolor="#F9F9F9" align="center" class="default_text">
+                        <a href="[var.base_url]/edit/editprofile.php?id=[blk1.user_id;block=tr]&keepThis=true&TB_iframe=true&height=580&width=830" class="thickbox">
+                        <font color="#3366CC"><!--[blk1.user_name;block=tr;ope=max:25;comm]--></font></a>&nbsp;&nbsp;<!--[blk1.moderator_icon;block=tr;htmlconv=no;comm]-->
+                      </td>
+                      <td width="10%" height="30" bgcolor="#F9F9F9" align="center" class="default_text"><!--[blk1.account_status;block=tr;comm]--></td>
+                      <td width="10%" height="30" bgcolor="#F9F9F9" align="center" class="default_text"><!--[blk1.moderator_status;block=tr;comm]--></td>
+                      <td width="10%" height="30" bgcolor="#F9F9F9" align="center" class="default_text"><!--[blk1.videos_count;block=tr;comm]--></td>
+                      <td width="10%" height="30" bgcolor="#F9F9F9" align="center" class="default_text"><!--[blk1.audio_count;block=tr;comm]--></td>
+                      <td width="9%" height="30" bgcolor="#F9F9F9" align="center" class="default_text"><!--[blk1.videos_count;block=tr;comm]--></td>
+                      <td width="8%" height="30" bgcolor="#F9F9F9" align="center" class="default_text">&nbsp;</td>
+                      <td width="8%" height="30" bgcolor="#F9F9F9" align="center" class="default_text">
+                        <a href="[var.base_url]/edit/editprofile.php?id=[blk1.user_id;block=tr]&keepThis=true&TB_iframe=true&height=580&width=830" class="thickbox" title="[var.lang_edit]">
+                        <img border="0" src="images/icon_edit_small.gif" width="17" height="18"></a>&nbsp;<a href="members.php?type=[var.type]&amp;action=0&amp;sort=[var.order_by]&amp;page=[var.current_page]&amp;delid=[blk1.user_id;block=tr]" title="[var.lang_delete_general]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img border="0" src="images/icon_delete.gif" width="16" height="14"></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!--[onload_16;block=tr;when [var.show]=2;comm]-->
+                      <td width="38%" height="25" bgcolor="#FFFFFF" align="center" class="default_text" colspan="2">
+                        <p align="left">
+                          <a href="javascript:checkall(true)"><font face="Arial" color="#333333"><b>[var.lang_check_all]</font></a>
+                          <font face="Arial" color="#333333">&nbsp;|&nbsp;</font>
+                          <a href="javascript:checkall(false)"><font color="#333333">[var.lang_uncheck_all]</b></font></a>
+                        </p>
+                      </td>
+                      <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                      <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                      <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                      <td width="10%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                      <td width="9%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                      <td width="8%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                      <td width="8%" height="25" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td width="758" height="60" bgcolor="#FFFFFF" colspan="10" class="default_menu_blue">
+                        <div id="pagination">
+                          <ul>
+                            <b>&nbsp;&nbsp;&nbsp;Page[var.total_pages]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>[var.show_pages;htmlconv=no]<!--[onload;block=tr;when [var.show]=2;comm]-->
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td width="115%" height="50" bgcolor="#FFFFFF" colspan="9" valign="bottom" class="default_text">
+                        <p align="center">[onload_18;block=tr;when [var.show]=1]<b>[var.lang_no_results_found]&nbsp;</b>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!--[onload_19;block=tr;when [var.show]=2;comm]-->
+                      <td width="115%" height="30" colspan="9" class="default_text" bgcolor="#FFFFFF">
+                        <div align="center">
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td width="61%" height="30" class="default_text" bgcolor="#FFFFFF">
+                                <p align="left">
+                                  <!--future control
+                                  <select size="1" name="action_level">
+                                    <option value="2">[var.lang_member_only]</option>
+                                    <option value="1">[var.lang_member_and_content]</option>
+                                  </select>
+                                  end //-->
+                                  &nbsp;
+                                  <input type="submit" value="[var.lang_delete_general]" name="delete" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #c31c23; border: 1px solid #c31c23; background-color: #FFFFFF" onClick="return(window.confirm('[var.confirm_popup_javascript]'))">
+                                  &nbsp;&nbsp;
+                                  <input type="submit" value="[var.lang_suspended]" name="suspend" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #3366CC; border: 1px solid #3366CC; background-color: #FFFFFF">
+                                  &nbsp;&nbsp;
+                                  <input type="submit" value="[var.lang_activate]" name="activate" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #3366CC; border: 1px solid #3366CC; background-color: #FFFFFF">
+                                </p>
+                              </td>
+                              <td width="54%" height="30" class="default_text" bgcolor="#3366CC">
+                                <font face="Arial" color="#FFFFFF"><!--[var.lang_make_moderator;comm]--></font>
+                                <select size="1" name="moderator_level">
+                                  <option value="standard_mod">[var.lang_standard]</option>
+                                  <option value="global_mod">[var.lang_global]</option>
+                                  <option value="member">[var.lang_disable]</option>
+                                </select>
+                                &nbsp;<input type="submit" value="[var.lang_submit]" name="moderator">
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td width="115%" height="19" colspan="9" bgcolor="#FFFFFF">&nbsp;</td>
+                    </tr>
+                    <input type ="hidden" name="type" value="[var.show_t]">
+                  </form>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

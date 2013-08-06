@@ -1,0 +1,64 @@
+/*
+  =============================================================
+  == PHPmotion V3 Default Template http://phpmotion.com      ==
+  == Template coded by Shawn Padgett  http://shawnshouse.com ==
+  == Get more templates at http://phpmotiontemplates.com     ==
+  =============================================================
+*/
+
+#nav-bar {
+  width: 660px;
+  float: right;
+}
+
+#nav-left {
+  float: right;
+  background: transparent url(../images/nav-right.gif) no-repeat;
+}
+
+#nav-right {
+  float: right;
+  background: transparent url(../images/nav-left.gif) no-repeat;
+}
+
+#nav-main {
+  float: right;
+  background: transparent url(../images/nav-main.gif) repeat-x;
+}
+
+#promoted-container {
+  float: left;
+}
+
+.browse-videos ul {
+  clear: none;
+}
+
+.browse-videos li {
+  margin: 5px 22px;
+}
+
+.groups-videos {
+  width: 160px;
+  float: left;
+  display: block;
+}
+
+.albums_view {
+  width: 160px;
+  float: left;
+  display: block;
+}
+
+.member-list {
+  width: 177px;
+  float: left;
+  display: block;
+  margin: 0px 8px;
+}
+
+.howlong { margin: 0px 0px 0px 8px; }
+
+.login-button { margin: 0px 0px 0px 8px; }
+
+#video-info { float: left; }

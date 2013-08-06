@@ -1,0 +1,84 @@
+
+<style type="text/css">
+	td.off { background: #A4A4A4; }
+</style>
+
+<body topmargin="0">
+  <div align="center">
+    <table style="border-style: solid; border-width: 0;" bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#FFFFFF">
+	    <div align="center">
+	      <table border="0" cellpadding="0" cellspacing="0" width="100%" height="170">
+	        <tr>
+	          <td width="100%" height="32" background="images/right_table_header.png">
+	            <p align="left"><font face="Arial" size="2"><b>&nbsp;&nbsp;[var.lang_newsletter]</b></font></p>
+	          </td>
+	        </tr>
+	        <center>
+	          <tr>
+	            <td width="100%" height="21">&nbsp;</td>
+	          </tr>
+	        </center>
+	        <tr>
+	          <td width="100%" height="25">
+	            <table border="0" width="100%" cellspacing="0" cellpadding="3" height="305">
+	              <form id="newsletter" action="newsletter.php" method ="post">
+	                <tr>
+	                  <td bgcolor="#E8E8E8" height="37" style="line-height: 200%">
+	                    <p align="left"><b><font face="Arial" size="2" color="#666666">&nbsp;[var.lang_send_to]&nbsp;
+	                    <select size="1" name="mailgroup">
+	                      <option value="all" selected>[var.lang_all_members]</option>
+	                      <option value="moderators">[var.lang_moderators]</option>
+	                    </select>
+	                    &nbsp;&nbsp;[var.lang_message]
+	                    <select size="1" name="message_type">
+	                      <option selected value="text">Text</option>
+	                      <option value="html">HTML</option>
+	                    </select>
+	                    &nbsp;&nbsp;[var.lang_batch_processing]&nbsp;&nbsp;
+	                    <select size="1" name="seconds">
+	                      <option selected value="10">10</option>
+	                      <option value="30">30</option>
+	                      <option value="60">60</option>
+	                      <option value="120">120</option>
+	                      <option value="150">150</option>
+	                      <option value="180">180</option>
+	                    </select>&nbsp;(seconds)</font></b>
+	                  </td>
+	                </tr>
+	                <tr>
+	                  <!--[onload_5;block=tr;when [var.show_form]=1;comm]-->
+				<td bgcolor="#F0F0F0" height="300" style="line-height: 200%">
+				  <p align="center">
+				    <font face="Arial">
+				      <font size="2" color="#666666">[var.lang_subject]</font>
+				      <font color="#666666"><input type="text" name="subject" size="51" value="[var.subject]"></font>
+				    </font>
+				    <textarea rows="16" name="message_body" cols="82">[var.message_body]</textarea>
+				    <br />
+				    <input type="submit" value="[var.lang_word_send]" name="send">
+				  </p>
+				</td>
+			    </tr>
+			    <tr>
+			      <!--[onload_6;block=tr;when [var.show_form]=2;comm]-->
+				<td bgcolor="#F0F0F0" height="300" style="line-height: 200%">
+				  <p align="center">&nbsp;<b><font color="#4B87C2">[var.message2]</font></b></p>
+				</td>
+			    </tr>
+			    <tr>
+				<td bgcolor="#FFFFFF" height="37" style="line-height: 200%"><p align="center">&nbsp;</p></td>
+			    </tr>
+			  </form>
+			</table>
+		    </td>
+		  </tr>
+		</table>
+	    </div>
+	  </td>
+	</tr>
+    </table>
+  </div>
+</body>
+</html>

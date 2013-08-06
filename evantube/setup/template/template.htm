@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHPmotion Installation Wizard</title>
+<link href="template/css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="template/js/jquery.js" type="text/javascript"></script>
+<script src="template/js/tooltip.js" type="text/javascript"></script>
+
+<!-- GREYBOX -->
+<script type="text/javascript">
+var GB_ROOT_DIR = "../greybox/";
+</script>
+<script type="text/javascript" src="../greybox/AJS.js"></script>
+<script type="text/javascript" src="../greybox/greybox/AJS_fx.js"></script>
+<script type="text/javascript" src="../greybox/gb_scripts.js"></script>
+<link href="../greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" />
+<!-- GREYBOX -->
+</head>
+<body id="Main-Body">
+<div id="Main-Container">
+  <div id="toolTip"> </div>
+  <div id="Main-Container-Left">
+    <div id="Main-Title">
+      <div style="float:left; 700px"> PHPmotion Installation </div>
+      <div style="float:right; 200px" id="Help-Me"> &nbsp;&nbsp;&gt;&nbsp;&nbsp;</div>
+      <div style="clear:both"></div>
+    </div>
+    <div style="clear:both"></div>
+    <!--Notification-->
+    <div id="Notfications">
+      <!--[onload;block=div;when [var.notifications] == 1;comm]-->
+      [var.notice] </div>
+    <!--Notofication End-->
+    <!-- Steps templates-->
+    <div class="Steps">
+      <!--[onload;block=div;when [var.show] == 1;comm]-->
+      <table width="100%" height="269" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td colspan="3"><span id="Step-Title">Welcome</span> </td>
+        </tr>
+        <tr>
+          <td colspan="3">This wizard will guide your through installing PHPmotion. Just remember to take your time with this installation in order to avoid any problems.<br />
+            <br />
+            <textarea rows="7" name="S1" cols="90">Copyright (c) <2010>, <PHPmotion.com> All rights reserved.
+
+By installing PHPmotion software, you are deemed to have agreed to the following terms and conditions. 
+
+Free Use with or without modification, is permitted provided that the following conditions are met:
+
+     1) Redistributions of source code is not allowed
+
+     2) Use on websites of a pornographic nature is not allowed
+
+     3) Neither the name of "PHPmotion" nor the names of its contributors
+        may be used to endorse or promote products derived from this software
+        without specific prior written permission.
+     
+     4) The copyright notice "Powered free by phpmotion" (or similar) should remain visible
+        on all phpmotion pages on your website, except where an appropriate	license 
+		has been purchased from our us.
+
+     5) Where PHPmotion or "PHPmotion Addon" applications and software are used, you agree
+        to use them in a manner that does not violate third parties rights or break any laws.
+
+
+PHPmotion Software includes a "self checking system" to enforce the conditions of this license ( conditions 1 - 5 above)
+Where such enforcement is taken, PHPmotion.com or its Authors are nor liable for any losses, damage that will result due to this action.
+
+Were websites are incorrectly identified to be in breach of the conditions above PHPmotion.com will not be liable for any losses or damage suffered and is not under any obligation to restore or reinstate the affected website in a timely manner.
+
+Privacy Notice: To help us develop PHPmotion further, during the Installation process, the setup wizard will pass to our server debugging information only. No personal information will be sent or stored.
+
+THIS SOFTWARE IS PROVIDED BY PHPmotion.com ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL PHPmotion.com or its developers BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</textarea>
+            <br />
+            <br />
+            <br />
+            <div id="info"><strong><span class="Tip-Title">[ Tip ] </span></strong> Make sure you have read the <a href="http://phpmotion.com/content/view/16/32/" target="_blank">Server Requirements</a>. You can also take a look at our recommended <a href="http://phpmotion.com/content/view/43/189/" target="_blank">Web Hosting Providers</a></div></td>
+        </tr>
+        <tr>
+          <td colspan="3"><div align="right"><a href="index.php?step=2"><img src="template/images/button_continue.png" alt="continue" width="147" height="51" border="0" /></a></div></td>
+        </tr>
+      </table>
+    </div>
+    <!-- Steps templates-->
+    <!-- Steps templates-->
+    <div class="Steps">
+      <!--[onload;block=div;when [var.show] == 2;comm]-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="3"><span id="Step-Title">Pre-Installation Checks (results)</span> </td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Below are the results from the server minimum requirements test. Anything with a red cross has failed and you can  ask your web host to fix it for you. Alternatively, if you have a <strong>dedicated server</strong> or a <strong>vps</strong>, you can use our <a href="http://phpmotion.com/content/view/12/30/" target="_blank">Server Setup Service</a>. You can also use one of our <a href="http://phpmotion.com/content/view/43/189/" target="_blank"><strong>Selected Web Hosts</strong></a> whose servers already have these requirements. Most of them also offer free automatic PHPmotion installation.</td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3"><table width="750" border="0" align="center" cellpadding="5" cellspacing="0">
+              <tr>
+                <td width="370" bgcolor="#D8D8D8"><strong>Item</strong></td>
+                <td width="53" bgcolor="#D8D8D8"><div align="center"><strong>Status</strong></div></td>
+                <td width="297" bgcolor="#D8D8D8"><div align="center"><strong>Notes</strong></div></td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="25" bgcolor="#F5F5F5" class="TD-Underlined"><strong>PHP Settings<a href="ss.com"></a></strong></td>
+                <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="25" bgcolor="#FFFFFF" class="Font-16">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">- PHP Version &amp; PHPmotion Version</td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.display_icon_php]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.display_notes_php;htmlconv=no]</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">- PHP safe_mode
+                  <!--tooltip-->
+                  <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','This PHP setting can be enabled of disabled via the php.ini file. Your web host can make this change for you',event);" onmouseout="hideToolTip();">?</a> </span>
+                  <!--tooltip-->                </td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.display_icon_safe_mode]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.display_notes_safe_mode;htmlconv=no]</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">- PHP enable_dl
+                  <!--tooltip-->
+                  <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','This PHP setting can be enabled of disabled via the php.ini file. Your web host can make this change for you',event);" onmouseout="hideToolTip();">?</a> </span>
+                  <!--tooltip--></td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.display_icon_enable_dl]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.display_notes_enable_dl;htmlconv=no]</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#F5F5F5"><strong>Server Modules</strong></td>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">- FFmpeg
+                  <!--tooltip-->
+                  <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','FFmpeg is needed for converting and manipulating videos uploaded on your website. It is installed directly on the server that your website is hosted on. You will need either a web host that already has this feature OR if you have a dedicated server or a VPS, you can let us install this for you [see our website for details]',event);" onmouseout="hideToolTip();">?</a> </span>
+                  <!--tooltip-->                </td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.display_icon_ffmpeg]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.display_notes_ffmpeg;htmlconv=no]</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF"> - Mencoder
+                  <!--tooltip-->
+                  <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','Mencoder is needed for converting and manipulating videos uploaded on your website. It is installed directly on the server that your website is hosted on. You will need either a web host that already has this feature OR if you have a dedicated server or a VPS, you can let us install this for you [see our website for details]',event);" onmouseout="hideToolTip();">?</a> </span>
+                  <!--tooltip--></td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.display_icon_mencoder]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.display_notes_mencoder;htmlconv=no]</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">- Flvtool2
+                  <!--tooltip-->
+                  <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','Flvtool2 is needed for manipulating videos uploaded on your website. It is installed directly on the server that your website is hosted on. You will need either a web host that already has this feature OR if you have a dedicated server or a VPS, you can let us install this for you [see our website for details]',event);" onmouseout="hideToolTip();">?</a> </span>
+                  <!--tooltip--></td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.display_icon_flvtool2]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.display_notes_flvtool2;htmlconv=no]</td>
+              </tr>
+              <tr>
+                <td height="30" colspan="3" bgcolor="#FFFFFF">
+                <!-- server side failure -->
+                <div id="info">
+                    <!--[onload;block=tr;when [var.display_server_help] ==1;comm]-->
+                    <strong><span class="Tip-Title">Server Modules - Help </span></strong><br />
+                    <br />
+                    The results above show that your server does not have one or more of the applications (server modules) needed to run a video sharing website. PHPmotion needs these server side tools to do various things like (<strong>convert videos</strong>, <strong>resize videos</strong>, <strong>create thumbnails</strong> and more)<br />
+                    <br />
+                    <span style="font-weight:bold; text-decoration:underline">What is the solution?</span><br />
+                    <ol id="PHPshieldList">
+                      <li>
+                      If your website is on a dedicated server or a vps, then we can install all the needed things for you. <a href="http://phpmotion.com/content/view/12/30/" target="_blank">Click this link for details</a></li>
+                      <li>If your website is on standard web hosting, then you will need to move your website to a web host that already has all these needed tools installed on their servers. <strong>The good news</strong> is we have teamed up with some of the leading hosting companies who not only have the needed applications on all their servers, but they will also <strong>install PHPmotion for you free of charge.</strong> <a href="http://phpmotion.com/content/view/43/189/" target="_blank">Click this link to find out more</a></li>
+                    </ol>
+                    <p><strong>Note:</strong> When you move to our recommended webhosts, or if you let us setup your server for you, then any <strong>PHPshield Errors</strong> (if any -below) will also be resolved.</p>
+                </div>
+                  <!-- server side fail - end -->
+                </td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="25" bgcolor="#F5F5F5" class="TD-Underlined"><strong> PHPshield Related Checks
+                  <!--tooltip-->
+                  <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','PHPshield is an application that is needed to run a few files found in PHPmotion. Normally, if you have uploaded everything correctly, it should all work.',event);" onmouseout="hideToolTip();">?</a> </span>
+                  <!--tooltip-->
+                  </strong></td>
+                <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="25" bgcolor="#FFFFFF" class="Font-16">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="30" bgcolor="#FFFFFF">- Checking if PHPshield encoded files are working</td>
+                <td height="30" bgcolor="#FFFFFF" class="[var.phpshield_result_css]">&nbsp;</td>
+                <td height="30" bgcolor="#FFFFFF" class="Font-16">[var.phpshield_result]</td>
+              </tr>
+              <tr>
+                <td height="30" colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="30" colspan="3" bgcolor="#FFFFFF"><!-- PHPshield Info - Help-->
+                  <div id="info">
+                    <!--[onload;block=div;when [var.display_phpshield_help] ==1;comm]-->
+                    <strong><span class="Tip-Title">PHPShield Error - Help </span></strong><br />
+                    <br />
+                    The results above indicate that there is a problem with PHPShield. Below is some useful information, to help you resolve this. If the <strong>server modules test (above)</strong> has also failed, then simply follow the advice given above.<br />
+                    <br />
+                    <span style="font-weight:bold; text-decoration:underline">What is PHPshield?</span><br />
+                    <br />
+                    PHPshield is an application that is needed to run a few files found in PHPmotion. Normally, if you have uploaded everything correctly, it should all work. PHPmotion comes already to run (with its own set of PHPshield loders)...however listed below are some reasons why a problem has been found this time.<br />
+                    <br />
+                    <span style="font-weight:bold; text-decoration:underline">Causes &amp; Solutions</span><br />
+                    <ol id="PHPshieldList">
+                    <!--phpshield reason - php5.3-->
+                      <li>
+                        <!--[onload;block=li;when [var.phpshield_error_list_1] == 1;comm]-->
+Your server is <strong>PHP5.3+</strong> and from this version onwards, PHPshield loaders need to be installed directly on the server (in the php extensions directory).<br />
+<strong><span class="PHPshieldSolution">Solution:</span> </strong>If you have a dedicated server of VPS, you can <a href="http://wiki.phpmotion.com/PHPShield53" target="_blank">view our instructions</a> or let is <a href="http://phpmotion.com/content/view/12/30/" target="_blank">setup your server for you</a></li>
+                        <!--phpshield reason - php5.3 end-->
+                        
+                      <!--phpshield reason - scan error-->
+                      <li>
+                      <!--[onload;block=li;when [var.phpshield_error_list_2] == 1;comm]-->
+                      The setup wizard was unable to complete the test for PHPshield. However <strong>it may  still be ok</strong> and you should continue.<br />
+                        <strong><span class="PHPshieldSolution">Solution:</span></strong> If you get any errors when you load your website or if you just get a blank page, visit our <a href="http://www.phpmotion.com/forum" target="_blank">forum</a> for help or <a href="http://wiki.phpmotion.com/PHPShield" target="_blank">our wiki</a></li>                <!--phpshield reason - scan error end-->
+                      <!--phpshield reason - binary mode -->
+                      <li>
+                      <!--[onload;block=li;when [var.phpshield_error_list_3] == 1;comm]-->
+                      It looks like you did not upload the<strong> /phpshield</strong> folder (found the in download package) in Binary Mode.<br />
+                      <strong><span class="PHPshieldSolution">Solution:</span> </strong>Reupload this folder and make sure your FTP is set to upload in Binary mode. More info on Binary Mode <a href="link.com" target="_blank">here</a></li>
+                      <!--phpshield reason - binary mode end -->
+                      
+                      <!--phpshield reason - 5.2.5 -->
+                      <li>
+                      <!--[onload;block=li;when [var.phpshield_error_list_4] == 1;comm]-->
+                      Your server is <strong>PHP5.2.5+</strong> and from this version onwards, PHPshield loaders need to be installed directly on the server (in the php extensions directory).<br />
+                      <strong><span class="PHPshieldSolution">Solution:</span> </strong>If you have a dedicated server of VPS, you can <a href="http://wiki.phpmotion.com/PHPShield525" target="_blank">view our instructions</a> or let is <a href="http://phpmotion.com/content/view/12/30/" target="_blank">setup your server for you</a></li>
+                      <li>
+                      <!--[onload;block=li;when [var.phpshield_error_list_5] == 1;comm]-->
+                      Your server is <strong>64bit</strong> and you need to use 64bit PHPshield loaders. <br />
+                        <strong><span class="PHPshieldSolution">Solution:</span></strong> You can download the <a href="http://downloads.phpmotion.com/phpshield-loaders/64bit.zip">correct loaders here</a>. Once you have downloaded, you must unzip the file and upload the contents (2 files) into your FTP folder <strong>/phpshield</strong>. Remember to upload in Binary Mode<br />
+                      </li>
+                      <!--phpshield reason - 5.2.5 end-->
+                    </ol>
+                  </div>
+                  <!-- PHPshield Info - Help-->                </td>
+              </tr>
+              <tr>
+                <td height="30" colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td colspan="3"><div align="right"><a href="chmod.php"><img src="template/images/button_continue.png" alt="continue" width="147" height="51" border="0" /></a></div></td>
+        </tr>
+      </table>
+    </div>
+    <!-- Steps templates-->
+    <!-- CHMOD - FTP-->
+    <div class="Steps">
+      <!--[onload;block=div;when [var.show] == 4;comm]-->
+      <form action="chmod.php" method="POST">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td colspan="3"><span id="Step-Title">FILE &amp; DIRECTORY PERMISSIONS</span> </td>
+          </tr>
+          <tr>
+            <td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="406">
+                <tr>
+                  <td bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                  <td align="center" bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                  <td bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                </tr>
+                <span>
+                <!--[onload;block=span;when [var.chmod_ftp] ==1;comm]-->
+                <tr>
+                  <td height="15" colspan="4" bgcolor="#FFFFFF">Setup has detected that some files and folders are not CHMOD
+                    <!--tooltip-->
+                    <span class="tool-info"><a href="#" onmouseover="showToolTip('&nbsp;','CHMODING is applying the right permission settings to files that are uploaded in your FTP. You can CHMOD a file or folder(to a setting of 777) using your FTP program on your computer -OR- if you provide your FTP details below, this wizard will attempt to do if for you.',event);" onmouseout="hideToolTip();">?</a> </span>
+                    <!--tooltip-->
+                    correctly. Enter your FTP logins (provided by your webhost) and the wizard will try to do it for you. A full list of the files and folder that need to be chmod are also listed below.<a href="link.com"></a></td>
+                </tr>
+                <tr>
+                  <td width="32%" bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                  <td width="1%" bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                  <td width="1%" align="center" bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                  <td width="66%" bgcolor="#FFFFFF" height="15">&nbsp;</td>
+                </tr>
+                <tr>
+                  <!--chmod start -->
+                  <td width="32%" height="48" bgcolor="#F0F4F4"><div align="right" class="style27">FTP Host</div></td>
+                  <td width="1%" bgcolor="#F0F4F4"><span class="style28"></span></td>
+                  <td width="1%" bgcolor="#F0F4F4"><span class="style28"></span></td>
+                  <td width="66%" height="48" bgcolor="#F0F4F4"><div align="left" class="style29">
+                      <input name="host" type="text" value="[var.host]" />
+                      &nbsp;(Normally your domain name)</div></td>
+                </tr>
+                <tr>
+                  <td height="36" bgcolor="#F0F4F4"><div align="right" class="style27">FTP Username</div></td>
+                  <td bgcolor="#F0F4F4"><span class="style28"></span></td>
+                  <td bgcolor="#F0F4F4"><span class="style28"></span></td>
+                  <td height="40" bgcolor="#F0F4F4"><div align="left" class="style29">
+                      <input name="username" type="text" value="[var.username]" />
+                    </div></td>
+                </tr>
+                <tr>
+                  <td height="61" bgcolor="#F0F4F4"><div align="right" class="style27">FTP Password</div></td>
+                  <td bgcolor="#F0F4F4"><span class="style28"></span></td>
+                  <td bgcolor="#F0F4F4"><span class="style28"></span></td>
+                  <td height="61" bgcolor="#F0F4F4"><div align="left" class="style29">
+                      <input type="password" name="password" />
+                    </div></td>
+                </tr>
+                <tr>
+                  <td height="89" valign="top" bgcolor="#F0F4F4"><div align="right" class="style5">FTP Base Directory</div></td>
+                  <td bgcolor="#F0F4F4">&nbsp;</td>
+                  <td bgcolor="#F0F4F4">&nbsp;</td>
+                  <td valign="top" bgcolor="#F0F4F4"><div align="left">
+                      <input name="path" type="text" value="[var.path]" />
+                      <!--tooltip-->
+                      <span class="tool-info"><a href="#" onmouseover="showToolTip(' ','This is the folder where you have uploaded PHPmotion files into',event);" onmouseout="hideToolTip();">?</a> </span>
+                      <!--tooltip-->
+                      e.g (<strong><span style="color:#FF0000">public_html</span></strong> <strong>-or-</strong> <strong><span style="color:#FF0000">httpdocs</span></strong> <strong>-or-</strong> <span class="style37"><strong><span style="color:#FF0000">/</span> -or- <span style="color:#FF0000">www</span></strong></span> )<br />
+                      <br />
+                      For subfolder installation this could be(<strong><span style="color:#FF0000">public_html/mysubfolder</span></strong> etc)</div>
+                    <br />
+                    <input type="hidden" name="forms" value="chmod" />
+                    <input type="image" src="template/images/button_connect_ftp.png" height="50" width="239" border="0" alt="continue" />
+                    <br />
+                    <br /></td>
+                  <!-- chmod end -->
+                </tr>
+                <tr>
+                  <td height="19" colspan="4" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="19" colspan="4" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                </span>
+                <tr>
+                  <td height="19" colspan="4" align="center" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="33%" height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons</strong></div></td>
+                        <td width="4%" height="36" class="[var.dir1]"><p>&nbsp;</p></td>
+                        <td width="4%" height="36">&nbsp;</td>
+                        <td width="28%" height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons/albums/images</strong></div></td>
+                        <td width="5%" height="36" class="[var.dir6]"><p>&nbsp;</p></td>
+                        <td width="5%" height="36">&nbsp;</td>
+                        <td width="16%" height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/classes</strong></div></td>
+                        <td width="5%" height="36" class="[var.dir8]"><p>&nbsp;</p></td>
+                      </tr>
+                      <tr>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons/customprofile</strong></div></td>
+                        <td height="36" class="[var.dir2]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/uploads</strong></div></td>
+                        <td height="36" class="[var.dir12]">&nbsp;</td>
+                        <td height="36" >&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC" ><div align="left"><strong>&nbsp;&nbsp;/logs</strong></div></td>
+                        <td height="36" class="[var.dir9]">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons/customprofile/member_css</strong></div></td>
+                        <td height="36" class="[var.dir3]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/uploads/avi</strong></div></td>
+                        <td height="36" class="[var.dir13]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/setup</strong></div></td>
+                        <td height="36" class="[var.dir17]">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons/customprofile/member_images</strong></div></td>
+                        <td height="36" class="[var.dir4]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/uploads/thumbs</strong></div></td>
+                        <td height="36" class="[var.dir14]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/pictures</strong></div></td>
+                        <td height="36" class="[var.dir10]">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons/albums</strong></div></td>
+                        <td height="36" class="[var.dir5]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/uploads/audio</strong></div></td>
+                        <td height="36" class="[var.dir15]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/temp</strong></div></td>
+                        <td height="36" class="[var.dir11]">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/addons/albums/thumbs</strong></div></td>
+                        <td height="36" class="[var.dir7]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"><strong>&nbsp;&nbsp;/uploads/player_thumbs</strong></div></td>
+                        <td height="36" class="[var.dir16]">&nbsp;</td>
+                        <td height="36">&nbsp;</td>
+                        <td height="36" bgcolor="#FFFFCC"><div align="left"></div></td>
+                        <td height="36">&nbsp;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td height="19" colspan="4" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="4" align="center" bgcolor="#FFFFFF" class="style9"><div id="info">
+                      <!--[onload;block=div;when [var.chmod_ftp] ==1;comm]-->
+                      <strong><span class="Tip-Title">[ info ] </span></strong> Above is the list of files and folders. You can also chmod
+                      <!--tooltip-->
+                      <span class="tool-info"><a href="#" onmouseover="showToolTip(' ','CHMODING is applying the right permission settings to files that are uploaded in your FTP. You can CHMOD a file or folder(to a setting of 777) using your FTP program on your computer -OR- if you provide your FTP details below, this wizard will attempt to do if for you.',event);" onmouseout="hideToolTip();">?</a> </span>
+                      <!--tooltip-->
+                      these manually via your FTP, then click <strong>&quot;Try Again&quot;</strong></div>
+                    <div id="info">
+                      <!--[onload;block=div;when [var.chmod_ftp] ==0;comm]-->
+                      <strong><span class="Tip-Title">[ info ] </span></strong>Everything looks OK! - click <strong>Continue. </strong><span style="color:#FF0000">Remember to manually chmod all the files in your <strong>cgi-bin</strong> directory to <strong>755</strong>.</span><br />
+                  </div></td>
+                </tr>
+                <tr>
+                  <td height="24" colspan="4" bgcolor="#FFFFFF" class="style9"><p align="right"> <span>
+                      <!--[onload;block=span;when [var.chmod_ftp] ==1;comm]-->
+                      <a href="chmod.php"><img src="template/images/button_check_again.png" alt="check again" width="163" height="51" border="0" /></a></span> <span>
+                      <!--[onload;block=span;when [var.chmod_ftp] ==0;comm]-->
+                      <a href="mysql.php"><img src="template/images/button_continue.png" alt="continue" width="147" height="51" border="0" /></a></span></p></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <!-- CHMOD - FTP-->
+    <!-- Steps mysql-->
+    <div class="Steps">
+      <!--[onload;block=div;when [var.show] == 5;comm]-->
+      <form action="mysql.php" method="POST">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td colspan="3"><span id="Step-Title">MySQL Database Details</span> </td>
+          </tr>
+          <tr>
+            <td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td width="39%" >&nbsp;</td>
+                  <td width="61%" >&nbsp;</td>
+                </tr>
+                <tr>
+                  <td  align="center" colspan="2"><p align="left">Enter your MySQL database details below. </p></td>
+                </tr>
+                <center>
+                  <tr>
+                    <td width="39%" >&nbsp;</td>
+                    <td width="61%" >&nbsp;</td>
+                  </tr>
+                </center>
+                <tr>
+                  <td width="39%" height="50" bgcolor="#f0f4f4" ><p align="right"> MySQL Host&nbsp;&nbsp;&nbsp;</p></td>
+                  <center>
+                    <td width="61%" height="50" bgcolor="#f0f4f4" ><div align="left">
+                        <input type="text" name="database_host" size="20" value="[var.database_host]" />
+                        (If you dont know this, simply type in the word <b>localhost</b>)</div></td>
+                  </center>
+                </tr>
+                <tr>
+                  <td width="39%" height="50" align="center" bgcolor="#f0f4f4" ><p align="right">Database Name&nbsp;&nbsp;&nbsp;</p></td>
+                  <center>
+                    <td width="61%" height="50" bgcolor="#f0f4f4" ><div align="left">
+                        <input type="text" name="database_name" size="20" value="[var.database_name]" />
+                      </div></td>
+                  </center>
+                </tr>
+                <tr>
+                  <td width="39%" height="50" align="center" bgcolor="#f0f4f4" ><p align="right">Database Username&nbsp;&nbsp;&nbsp;</p></td>
+                  <center>
+                    <td width="61%" height="50" bgcolor="#f0f4f4" ><div align="left">
+                        <input type="text" name="database_username" size="20" value="[var.database_username]" />
+                      </div></td>
+                  </center>
+                </tr>
+                <tr>
+                  <td width="39%" height="50" align="center" bgcolor="#f0f4f4" ><p align="right">Database Password&nbsp;&nbsp;&nbsp;</p></td>
+                  <td width="61%" height="50" bgcolor="#f0f4f4" ><div align="left">
+                      <input type="password" name="database_password" size="20" value="[var.database_password]" />
+                    </div></td>
+                </tr>
+                <tr>
+                  <td width="39%" align="center" >&nbsp;</td>
+                  <td width="61%" >&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center"  colspan="2"><div id="info"> <strong><span class="Tip-Title">[ Help ] </span></strong> You can create a new database in your web hosting control panel (e.g. Cpanel, Plesk etc)</div></td>
+                </tr>
+                <tr>
+                  <td  colspan="2"><p align="right"> </p>
+                    <center>
+                      <!-- end of form -->
+                    </center></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td colspan="3"><div align="right">
+                <input type="hidden" name="forms" value="mysql" />
+                <input type="image" src="template/images/button_continue.png" height="51" width="147" border="0" alt="continue" />
+              </div></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <!-- Steps mysql end-->
+    <!-- Steps details-->
+    <div class="Steps">
+      <!--[onload;block=div;when [var.show] == 6;comm]-->
+      <form action="details.php" method="POST">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td colspan="3"><span id="Step-Title">Website Information</span> </td>
+          </tr>
+          <tr>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="100%"  id="table7">
+                <tr>
+                  <td height="35" colspan="2"><p align="center"></td>
+                <tr>
+                  <td height="19" align="right" bgcolor="#f0f4f4" colspan="2"><p align="center" class="Font-16"><b>Admin Details</b> </td>
+                </tr>
+                <tr>
+                  <td width="275" height="30" align="right" ><div align="right">Username&nbsp;&nbsp; </div></td>
+                  <td width="475" height="30" ><div align="left">
+                      <input type="text" name="admin_username" size="15" value="[var.admin_username]">
+                      &nbsp;
+                      <!--tooltip-->
+                      <span class="tool-info"><a href="#" onmouseover="showToolTip(' ','Enter any username you like. This will be your admin login name',event);" onmouseout="hideToolTip();">?</a> </span>
+                      <!--tooltip-->
+                </div>                </tr>
+                <tr>
+                  <td width="275" height="30" align="right" ><div align="right">Password&nbsp;&nbsp; </div></td>
+                  <td width="475" height="30" ><div align="left">
+                      <input type="password" name="admin_password" size="15">
+                      &nbsp;Confirm Password
+                      <input type="password" name="admin_password_confirm" size="15">
+                </div>                </tr>
+                <tr>
+                  <td width="275" height="30" align="right" ><div align="right">Email Address&nbsp;&nbsp; </div></td>
+                  <td width="475" height="30" ><div align="left">
+                      <input type="text" name="admin_email" size="30" value="[var.admin_email]">
+                </div>                </tr>
+                <tr>
+                  <td height="21" colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="19" colspan="2" bgcolor="#F0F4F4"><p align="center" class="Font-16"><b>General Site Information</b> </td>
+                </tr>
+                <tr>
+                  <td width="275" height="30"><p align="right">Site name&nbsp; </td>
+                  <td width="475" height="30"><div align="left">
+                      <input type="text" name="site_name" size="45" value="[adminblk.site_name;block=table]">
+                </div>                </tr>
+                <tr>
+                  <td width="275" height="30"><p align="right"> Website Url&nbsp; </td>
+                  <td width="475" height="30"><div align="left">
+                      <input type="text" name="site_base_url" size="35" value="[adminblk.site_base_url;block=table]">
+                      <!--tooltip-->
+                      <span class="tool-info"><a href="#" onmouseover="showToolTip(' ','The full url to where tou have installed PHPmotion',event);" onmouseout="hideToolTip();">?</a> </span>
+                <!--tooltip-->(including the <strong>http://</strong> )</div>                </tr>
+                <tr>
+                  <td height="49" colspan="2"><div id="info-yellow"> <strong><span class="Tip-Title-2">[Very Important ] </span></strong> <strong>If</strong> Your website url is a sub-folder (e.g. <strong>www.yourdomain.com/somefolder</strong>) <a href="http://wiki.phpmotion.com/PageNotFound" target="_blank">You must read this</a> to avoid errors</div>                </td>
+                </tr>
+                <tr>
+                  <td width="275" height="30"><p align="right">Date Format&nbsp;&nbsp;</td>
+                  <td width="475" height="30"><div align="left">
+                      <input type="text" name="date_format" size="15" value="[adminblk.date_format;block=table]">
+                      &nbsp; 
+                Do <strong>not</strong> type in an actual date, just the format (e.g. (<b>d-m-y</b>&nbsp; or <b>m-d-y</b>)</div>                </tr>
+                <tr>
+                  <td width="275" height="30"><p align="right">System Email Address&nbsp;&nbsp;</td>
+                  <td width="475" height="30"><div align="left">
+                      <input type="text" name="notifications_from_email" size="30" value="[adminblk.notifications_from_email;block=table]">
+                &nbsp;(used in notification etc)</div>                </tr>
+                <tr>
+                  <td width="275" height="30"><p align="right">Sytem Email (From Name)&nbsp;&nbsp;</td>
+                  <td width="475" height="30"><div align="left">
+                      <input type="text" name="from_system_name" size="45" value="[adminblk.from_system_name;block=table]">
+                      
+                      <!--tooltip-->
+                <span class="tool-info"><a href="#" onmouseover="showToolTip(' ','This is the name that user see when they view their email inbox. Its normally fine to just put your website name e.g. Youtube',event);" onmouseout="hideToolTip();">?</a> </span> (e.g Online Videos Site)</div>                </tr>
+                <tr>
+                  <td height="30">&nbsp;</td>
+                  <td height="30">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="19" colspan="2" bgcolor="#F0F4F4"><div align="center" class="Font-16"><strong>Server Side Settings</strong></div></td>
+                </tr>
+                <tr>
+                  <td height="30" colspan="2" bgcolor="#FAF9D1"> The results below (if any) are what the wizard  managed to detect on your system. You can also <strong>ask your web host</strong> if your are not sure.</td>
+                </tr>
+                <tr>
+                  <td height="30" bgcolor="#F0F4F4"><p align="right">Path to FFmpeg&nbsp; </p></td>
+                  <td height="30" bgcolor="#F0F4F4"><div align="left">
+                      <input type="text" name="path_to_ffmpeg" size="35" value="[var.ffmpeg]" />
+                      &nbsp;(example: <strong>/usr/bin/ffmpeg</strong>)</div></td>
+                </tr>
+                <tr>
+                  <td height="30" bgcolor="#F0F4F4"><p align="right">Path to FLVTool2&nbsp;&nbsp;</p></td>
+                  <td height="30" bgcolor="#F0F4F4"><div align="left">
+                      <input type="text" name="path_to_flvtool2" size="35" value="[var.flvtool2]" />
+                      &nbsp;(example: <strong>/usr/bin/flvtool2</strong>)</div></td>
+                </tr>
+                <tr>
+                  <td height="30" bgcolor="#F0F4F4"><p align="right">Path to Mencoder&nbsp;&nbsp;</p></td>
+                  <td height="30" bgcolor="#F0F4F4"><div align="left">
+                      <input type="text" name="path_to_mencoder" size="35" value="[var.mencoder]" />
+                      &nbsp;(example: <strong>/usr/bin/mencoder</strong>)</div></td>
+                </tr>
+                <tr>
+                  <td height="30" bgcolor="#F0F4F4">&nbsp;</td>
+                  <td height="30" bgcolor="#F0F4F4"><a href="tester.php" title="PHPmotion Testing Tool"
+rel="gb_page_center[750, 500]">check server settings again</a></td>
+                </tr>
+                <tr>
+                  <td height="30" colspan="2"><p align="center">
+                      <input type="hidden" name="forms" value="details">
+                  </td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3"><div align="right">
+                <input type="image" src="template/images/button_continue.png" height="51" width="147" border="0" alt="continue" />
+              </div></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <!-- Steps details end-->
+    <!-- Steps finished-->
+    <div class="Steps">
+      <!--[onload;block=div;when [var.show] == 7;comm]-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><div id="SetupComplete">
+              <div align="center" > <span id="CompleteTitle"> SETUP COMPLETE</span><br />
+                <br />
+                <br />
+                <div id="SetupComplete-Delete">You must now delete the<strong> /setup</strong> folder from your FTP</div>
+                <br />
+                <a href="../siteadmin"><img src="template/images/button_login.png" alt="login" width="237" height="49" border="0" /></a><br />
+                </p>
+              </div>
+            </div>
+              </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><div id="PostInstall">
+              <div align="center"><span id="PostInstallHeader">PHPmotion Addons</span><br />
+                <br />
+                <a href="http://phpmotion.com/content/view/39/183/" target="_blank"><img src="template/images/massvideoembedder.png" alt="Mass Embedder" width="295" height="99" border="0" /></a><a href="http://phpmotion.com/content/view/39/183/" target="_blank"><img src="template/images/massuploader.png" alt="massuploader" width="313" height="99" border="0" /></a><br />
+                <br />
+                <a href="http://phpmotion.com/content/view/39/183/" target="_blank"><img src="template/images/zerobranding.png" alt="zero branding" width="277" height="104" border="0" /></a><br />
+                <br />
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><div align="right"></div></td>
+        </tr>
+      </table>
+    </div>
+    <!-- Steps finished end-->
+  </div>
+  <!--LEFT -END-->
+  <!--RIGHT START-->
+  <div id="Main-Container-Right">
+    <div id="Progress-Title-2">Your Installation Progress</div>
+    <ul id="Install-Progress">
+      <li class="[var.progress_welcome]">Welcome &amp; Terms</li>
+      <li class="[var.progress_preinstall]">System Pre-Installation Checks</li>
+      <li class="[var.progress_chmod]">Chmoding Directories and Files</li>
+      <li class="[var.progress_mysql]">Setting Up MySql Database</li>
+      <li class="[var.progress_details]">Adding Site Information</li>
+      <li class="[var.progress_finished]">Finish</li>
+    </ul>
+    <div id="Progress-Title-2">Additional Information &amp; Help</div>
+    <ul id="MoreHelpList">
+    <li><a href="http://wiki.phpmotion.com/InstallingV3" target="_blank">Installation Instructions</a></li>
+    <li><a href="http://www.phpmotion.com/forum" target="_blank">PHPmotion Community Forum</a></li>
+    <li><a href="http://phpmotion.com/content/view/12/30/" target="_blank"><strong>PHPmoton Installation Service</strong></a></li>
+    <li><a href="http://wiki.phpmotion.com/PHPShield" target="_blank">PHPshield Related Help (wiki)</a></li>
+    </ul>
+    <div align="center"><a href="http://phpmotion.com/content/view/59/200/" target="_blank"><img src="template/images/button_free_installation.png" alt="Get Free Installation" width="198" height="49" border="0" /></a><br />
+      <br />
+      
+      </div>
+  </div>
+  <div style="clear:both"></div>
+</div>
+</body>
+</html>

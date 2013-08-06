@@ -1,0 +1,40 @@
+<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"></script>
+<div id="myAlternativeContent">
+<a href="http://www.adobe.com/go/getflashplayer">
+<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="116" height="33" /></a></div>
+
+<!--start of PHPmotion Player -->
+<script type="text/javascript">
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+			flashvars.player_mode = "normal";
+			flashvars.playlist = "no";
+			flashvars.logo = "top_right";
+			flashvars.floating_navbar = "false";
+			flashvars.color_nav_bar_top = "0x478dc2";
+			flashvars.color_nav_bar_bottom = "0xE7EBEC";
+			flashvars.ads_background_color = "0x00CCFF";
+			flashvars.ads_border_color = "0xCCCCCC";
+			flashvars.scrubber_position_color = "0x6AA1CE";
+			flashvars.scrubber_load_color = "0x888888";
+			flashvars.scrubber_background_color = "0xBBBBBB";
+			flashvars.volume_bar_color = "0xBBBBBB";
+			flashvars.aspect_ratio="stretch";
+			params.allowfullscreen = "true";
+			params.allowscriptaccess = "sameDomain";
+			params.wmode = "transparent";
+
+			//___dynamic settings________
+            flashvars.flvsource = "[var.base_url]/uploads/[var.video_play]";
+			flashvars.preview_image = "[var.base_url]/[var.thumb_file]";
+			flashvars.url_logo = "[var.base_url]/images/playerlogos/logo-player.png";
+			flashvars.buffering_time = [var.video_buffer_time];
+			flashvars.autoplay = "[var.auto_play]";
+			flashvars.display_ads = "[var.player_defaults_ads]";
+			[var.player_defaults_ads_xml]
+			//___dynamic settings end ______
+
+			swfobject.embedSWF("[var.base_url]/player.swf", "myAlternativeContent", "560", "420", "9.0.0", false, flashvars, params, attributes);
+		</script>
+<!--end of PHPmotion Player -->

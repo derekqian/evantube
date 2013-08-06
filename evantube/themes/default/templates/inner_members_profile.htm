@@ -1,0 +1,233 @@
+<body class="MP_MainBody">
+  <!-- Left Main Container -->
+  <div id="Ajax-General-Messages" style="text-align:center; height:35px; clear:both">&nbsp;</div>
+  <div id="MP_Left_Container">
+    <!-- MP Left 1 -->
+    <div id="MP_Left_1">
+      <div id="MP_Left_1_top">&nbsp;&nbsp;&nbsp;[var.user_name;ope=max:27]</div>
+      <div id="MP_Left_1_content">
+        <img border="0" src="[var.result1_mypicture]" width="[var.image_width_profile]" height="[var.image_height_profile]" alt="MP" id="MP_Left_1_content_thumb" />
+        <br />
+        <ul id="MP_Left_1_content_list1" style="top:-12px;">
+          <li><!--[onload_828;block=li;when [var.profile_menu]=2;comm]--><a href="[var.base_url]/emailcompose.php?uid=[var.member_id]">[var.lang_email_me]</a></li>
+          <li><!--[onload_829;block=li;when [var.profile_menu]=2;comm]--><a href="[var.base_url]/invite.php?type=1&uid=[var.member_id]" rel="gb_page_center[850, 250]">[var.lang_add_friends]</a></li>
+          <li><!--[onload_830;block=li;when [var.profile_menu]=2;comm]--><a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?flag_type=member_profile&abuse=[var.member_id]', 'Ajax-General-Messages', '', 'GET', '', this);">[var.lang_flag_profile]</a></li>
+          <li><!--[onload_826;block=li;when [var.custom_profile]=1;comm]--><a href="[var.base_url]/addons/customprofile/index.php?type=1&uid=[var.member_id]"  rel="gb_page_center[870, 450]">[var.lang_customize_profile]</a></li>
+          <li><!--[onload_827;block=li;when [var.profile_menu]=1;comm]--><a href="[var.base_url]/edit/editprofile.php?id=[var.member_id]"  rel="gb_page_center[870, 450]">[var.lang_edit_profile]</a></li>
+          <li><!--[onload_828;block=li;when [var.profile_menu]=1;comm]--><a href="[var.base_url]/edit/editprivacy.php"  rel="gb_page_center[870, 450]">[var.lang_privacy_settings]</a></li>
+          <li><!--[onload_831;block=li;when [var.profile_menu]=1;comm]--><a href="[var.base_url]/emailinbox.php">[var.lang_my_email]</a></li>
+          <li>&nbsp;</li>
+        </ul>
+        <div style="margin-left:8px; clear:both" >[var.ajax_rating;htmlconv=no]</div><br />
+      </div>
+      <div id="MP_Left_1_bottom"></div>
+    </div>
+    <!-- MP Left 1 END -->
+    <!-- MP Left 2 -->
+    <div id="MP_Left_2">
+      <div id="MP_Left_2_top">&nbsp;&nbsp;[var.lang_my_friends]</div>
+      <div id="MP_Left_2_content">
+        <!-- My friends start -->
+        <div class="MyFriends">
+          <!--[onload_803;block=div;when [var.load_friends]=1;comm]-->
+          <div class="MyFriends_1">
+            <ul>
+              <li><a href="[var.base_url]/members/[membersfriends.user_name;block=div]"><img border="0" src="[membersfriends.friends_picture;block=div]" width="[membersfriends.image_width;block=div]" height="[membersfriends.image_height;block=div]" alt="thumb" /></a></li>
+              <li>
+                <a href="edit/delete.php?type=13&id=[membersfriends.user_id]" rel="gb_page_center[850, 450]" title="[var.lang_delete_general]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))">
+                <!--[onload_825;block=a;when [var.show_edit_delete]=1;comm]-->
+                <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="11" height="11" border="0" /></a>
+                <a href="[var.base_url]/members/[membersfriends.user_name;block=div]" title="[membersfriends.user_name;block=div]"><!--[membersfriends.user_name;block=div;ope=max:6;comm]--></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- my friends end -->
+      </div>
+      <div id="MP_Left_2_bottom"></div>
+    </div>
+    <!-- MP Left 2 END -->
+    <!-- MP Left 3 -->
+    <div id="MP_Left_3">
+      <div id="MP_Left_3_top"></div>
+      <div id="MP_Left_3_content">
+        <!-- left ads -->
+        <ul class="AdsLeft_list_members"><li><!--[var.ads_left;htmlconv=no;comm]--></li></ul>
+        <!-- left ads -->
+      </div>
+      <div id="MP_Left_3_bottom"></div>
+    </div>
+    <!-- MP Left 3 END -->
+    <!-- MP Left 4 -->
+    <div id="MP_Left_4">
+      <div id="MP_Left_4_top">&nbsp;[var.lang_my_stats]</div>
+      <div id="MP_Left_4_content">
+        <!-- my stats start -->
+        <ul>
+          <li><img src="[var.base_url]/themes/[var.user_theme]/images/icons/aktion_small.png" alt="videos" width="23" height="23" />&nbsp;[var.lang_word_videos]:&nbsp;<!--[var.my_video_total;comm]--></li>
+          <li><img src="[var.base_url]/themes/[var.user_theme]/images/icons/audio_video_small.png" alt="audio" width="23" height="23" />&nbsp;[var.lang_word_audios]:&nbsp;<!--[var.my_audio_total;comm]--><!--[onload;block=li;when [var.enable_audio]=1]--></li>
+          <li><img src="[var.base_url]/themes/[var.user_theme]/images/icons/editpaste.png" alt="blogs" width="23" height="23" />&nbsp;[var.lang_blogs]:&nbsp;<!--[var.my_blog_total;comm]--><!--[onload;block=li;when [var.enable_blogs]=1]--></li>
+          <li><img src="[var.base_url]/themes/[var.user_theme]/images/icons/images.png" alt="images" width="23" height="23" />&nbsp;[var.lang_pictures]:&nbsp;<!--[var.my_image_total;comm]--><!--[onload;block=li;when [var.enable_images]=1]--></li>
+          <li><img src="[var.base_url]/themes/[var.user_theme]/images/icons/members.png" alt="friends" width="23" height="23" />&nbsp;[var.lang_friends]:&nbsp;<!--[var.my_friends_total;comm]--></li>
+          <li></li>
+          <li></li>
+          <li style="width:160px;"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/look.png" alt="profile views" width="23" height="23" />&nbsp;[var.lang_profile_views]:&nbsp;<!--[var.number_of_views;comm]--></li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+        <!-- my stats end -->
+      </div>
+      <div id="MP_Left_4_bottom"></div>
+      <br />
+      <br />
+    </div>
+    <!-- MP Left 1 END -->
+  </div>
+  <!-- Left Container end -->
+
+  <!-- Right Main Container -->
+  <div id="MP_Right_Container">
+    <!-- MP Right 1 -->
+    <div id="MP_Right_1">
+      <div id="MP_Right_1_top">&nbsp;&nbsp;&nbsp;[var.lang_my_media]</div>
+      <div id="MP_Right_1_content">
+        <div id="MP_Right_1_submenu">
+          <ul id="MP_Right_1_submenu_list1">
+            <li><a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=1&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_word_videos]</a></li>
+            <li>
+              <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=6&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_word_audios]</a>
+              <!--[onload;block=li;when [var.enable_audio]=1]-->
+            </li>
+            <li>
+              <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=3&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_pictures]</a>
+              <!--[onload;block=li;when [var.enable_images]=1]-->
+            </li>
+            <li>
+              <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=5&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_blogs]</a>
+              <!--[onload;block=li;when [var.enable_blogs]=1]-->
+            </li>
+          </ul>
+        </div>
+        <div id ="Ajax-Media">
+          <!------------------------------------------------------------------- Start of My Videos -->
+          <div class="MyMedia">
+            <!--[onload_801;block=div;when [var.load_media]=1;comm]-->
+            <div class="MyMedia_1">
+              <ul>
+                <li><a href="[var.base_url]/videos/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]"  title="[membersmedia.title;block=div]"><img border="0" src="[var.base_url]/uploads/thumbs/[membersmedia.video_id;block=div].jpg" width="85" height="75" alt="thumb" /></a></li>
+                <li>
+                  <a href="[var.base_url]/videos/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]"  title="[membersmedia.title;block=div]">
+                  <!--[membersmedia.title;block=div;ope=max:10;comm]--></a>
+                </li>
+                <!--//////// PERMISSIONS CHECK - VIDEO START \\\\\\\\-->
+                <li>
+                  <a href="edit/editvideo.php?id=[membersmedia.indexer;block=div]" rel="gb_page_center[850, 450]"  title="[var.lang_edit]">
+                  <img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="delete" width="14" height="14" border="0" /></a>
+                  &nbsp;
+                  <a href="edit/delete.php?type=1&id=[membersmedia.indexer;block=div]" rel="gb_page_center[700, 450]"  title="[var.lang_delete_general]"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))">
+                  <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" /></a>
+                  <!--[onload_824;block=li;when [var.show_edit_delete]=1;comm]-->
+                </li>
+                <!--//////// PERMISSIONS CHECK - VIDEO END \\\\\\\\-->
+              </ul>
+            </div>
+          </div>
+          <!-- Media Pagination start -->
+          <div class="MP_pagination">
+            <!--[onload_802;block=div;when [var.load_media]=1;comm]-->
+            <ul><li>[var.show_pages_vids;htmlconv=no]</li></ul>
+          </div>
+          <!-- Media Pagination end -->
+          <!------------------------------------------------------------------- End of My Videos -->
+        </div>
+      </div>
+      <div id="MP_Right_1_bottom"></div>
+    </div>
+    <!-- MP Right 1 END -->
+    <!-- MP Right 2 -->
+    <div id="MP_Right_2">
+      <div id="MP_Right_2_top">&nbsp;&nbsp;[var.lang_about_me]</div>
+        <div id="MP_Right_2_content">
+          <div id="MP_Right_2_submenu">
+            <ul id="MP_Right_2_submenu_list1">
+              <li><a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=8&uid=[var.member_id]&amp;page=1', 'Ajax-Aboutme', '', 'GET', '', this);">[var.lang_my_basics]</a></li>
+              <li><a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=9&uid=[var.member_id]&amp;page=1', 'Ajax-Aboutme', '', 'GET', '', this);">[var.lang_my_location]</a></li>
+              <li><a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=10&uid=[var.member_id]&amp;page=1', 'Ajax-Aboutme', '', 'GET', '', this);">[var.lang_social]</a></li>
+              <li class="style1">|</li>
+              <li><a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=2&uid=[var.member_id]&amp;page=1', 'Ajax-Aboutme', '', 'GET', '', this);">[var.lang_favorites_video]</a></li>
+              <li>
+                <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=7&uid=[var.member_id]&amp;page=1', 'Ajax-Aboutme', '', 'GET', '', this);">[var.lang_favorites_audio]</a>
+                <!--[onload;block=li;when [var.enable_audio]=1]-->
+              </li>
+              <li>
+                <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=4&uid=[var.member_id]&amp;page=1', 'Ajax-Aboutme', '', 'GET', '', this);">[var.lang_favorites_pictures]</a>
+                <!--[onload;block=li;when [var.enable_images]=1]-->
+              </li>
+            </ul>
+          </div>
+          <div id="AboutMeOverflow">
+            <div id="Ajax-Aboutme">
+              <ul id="AboutMe">
+                <li><strong>[var.lang_name]</strong>&nbsp;[var.first_name]</li>
+                <li><strong>[var.lang_surname]</strong>&nbsp;[var.last_name]</li>
+                <li><strong>[var.lang_age]</strong>&nbsp;[var.my_age]</li>
+                <li><strong>[var.lang_gender]</strong>&nbsp;[var.gender]</li>
+                <li><strong>[var.lang_relationship_status]</strong>&nbsp;[var.relationship_status]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="MP_Right_2_bottom"></div>
+      </div>
+      <!-- MP Right 2 END -->
+      <!-- MP Right 3 -->
+      <div id="MP_Right_3">
+        <!--[onload_832;block=div;when [var.privacy_profilecomments]=yes;comm]-->
+        <div id="MP_Right_3_top">&nbsp;&nbsp;[var.lang_leave_comment]</div>
+        <div id="MP_Right_3_content">
+          <!-- Profile comments start -->
+          <div id="MP_comments_header">
+            <br />
+            &nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_comments_ajax.php?uid=[var.member_id]', 'MP_comments_axaj', '', 'GET', '', this);">[var.lang_post_comment]</a>
+          </div>
+          <div id="MP_comments_axaj"></div>
+          <!-- actual comments box -->
+          <div id="MP_comments_individual">
+            <ul id="MP_posters_image">
+              <li><a href="[var.base_url]/members/[profilecomments.by_username;block=div]"><img src="[profilecomments.image_thumb;block=div]" alt="friend" width="[profilecomments.image_width;block=div]" height="[profilecomments.image_height;block=div]" border="0" /></a></li>
+              <li><a href="[var.base_url]/members/[profilecomments.by_username;block=div]"><!--[profilecomments.by_username;block=div;ope=max:1000;comm]--></a></li>
+            </ul>
+            <ul id="MP_posters_comments">
+              <li>
+                <div align="right">
+                  <strong>[var.lang_date]:</strong>
+                  <!--[profilecomments.todays_date;block=div;ope=max:1000;comm]-->
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?flag_type=profilecomments&abuse=[profilecomments.indexer;block=div]', 'Ajax-Profile-Abuse_[profilecomments.indexer;block=div]', '', 'GET', '', this);">[var.lang_report-abuse]</a>
+                  &nbsp;&nbsp;
+                  <!--// PERMISSIONS CHECK - PROFILE COMMENTS START \\-->
+                  <!--[profilecomments.profile_comment_edit;block=div;htmlconv=no;comm]-->
+                  &nbsp;&nbsp;
+                  <!--[profilecomments.profile_comment_delete;block=div;htmlconv=no;comm]-->
+                  <!--// PERMISSIONS CHECK - PROFILE COMMENTS START \\-->
+                </div>
+              </li>
+              <li><!--[profilecomments.comments;block=div;htmlconv=no;ope=max:1000;comm]--></li>
+              <li id="Ajax-Profile-Abuse_[profilecomments.indexer;block=div]"></li>
+            </ul>
+            <div class="MP_fix_clearfix"></div>
+          </div>
+          <!-- actual comments box -->
+          <!-- Profile comments end -->
+        </div>
+        <div id="MP_Right_3_bottom"></div>
+      </div>
+      <!-- MP Right 3 END -->
+      <!-- MP Right 4  (comments container)-->
+      <!-- MP Right 4 END -->
+    </div>
+    <!-- Right Container end -->
+    <div class="MP_fix_clearfix"></div>
+  </div>
+</body>

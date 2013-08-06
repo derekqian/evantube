@@ -1,0 +1,97 @@
+
+
+<head>
+<title></title>
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" width="758" bgcolor="#FFFFFF" id="table4">
+					<tr>
+						<table border="0" cellpadding="0" cellspacing="0" width="761" bgcolor="#FFFFFF" id="table5">
+						
+							<tr>
+								<td colspan="2" height="32" width="754" background="images/right_table_header.png">
+                                <p align="left"><b><font face="Arial" size="2">&nbsp; <font color="#29537C">[var.stats_title]</font></font></b></td>
+							</tr>
+							<tr>
+								<td width="506" height="27">
+                                  &nbsp;
+ </td>
+								<td width="241" height="27"> &nbsp;</tr>
+							<tr>
+								<td width="506" height="35" bgcolor="#EFEFEF">
+                                <b><font size="2">&nbsp;&nbsp;</font></b></td>
+								<td width="241" height="35" bgcolor="#EFEFEF" align="left">
+                                <form method="POST" action="stats_compare.php">
+									<p><select size="1" name="year">
+									<!--[var.yearselect;htmlconv=no;comm]-->
+									</select>
+									<input type="hidden" value="[var.type]" name="type">
+									<input type="submit" value="[var.lang_submit]" name="submit"></p>
+								</form>
+								</tr>
+							<tr>
+								<td width="747" height="35" bgcolor="#EFEFEF" colspan="2">
+                                  <p align="center">
+<!-- start of stats display -->
+<script language="JavaScript" type="text/javascript">
+            <!--[onload_201;block=script;when [var.errors]=0;comm]-->
+<!--
+if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
+	alert("This page requires AC_RunActiveContent.js.");
+} else {
+	var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+	if(hasRightVersion) { 
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,45,0',
+			'width', '760',
+			'height', '500',
+			'scale', 'noscale',
+			'salign', 'TL',
+			'bgcolor', '#ffffff',
+			'wmode', 'opaque',
+			'movie', 'charts',
+			'src', 'charts',
+			'FlashVars', 'library_path=charts_library&xml_source=[var.base_url]/siteadmin/includes/stats_xml.php?feed=2', 
+			'id', 'my_chart',
+			'name', 'my_chart',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'quality', 'high',
+			'align', 'middle',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'play', 'true',
+			'devicefont', 'false'
+			); 
+	} else { 
+		var alternateContent = 'This content requires the Adobe Flash Player. '
+		+ '<u><a href=http://www.macromedia.com/go/getflash/>Get Flash</a></u>.';
+		document.write(alternateContent); 
+	}
+}
+// -->
+</script>
+<noscript>
+	<P>This content requires JavaScript.</P>
+</noscript>
+<!-- end of stats display -->
+                                 
+ </td>
+                            </tr>
+                            <tr>
+								<td width="506" height="35" bgcolor="#FFFFFF">&nbsp;</td>
+								<td width="241" height="35" bgcolor="#FFFFFF" align="left">
+                                &nbsp;</tr>
+							
+							<tr>
+								<td height="8" width="520">
+								&nbsp;</td>
+								<td height="8" width="241">&nbsp;</td>
+							</tr>
+							
+						</table>
+					</tr>
+				</table></div>

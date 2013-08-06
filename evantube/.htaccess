@@ -1,0 +1,123 @@
+#
+#*****************************************************************************************
+# PHPMotion V3 Free Media-Sharing CMS
+# PHPMotion Development Team
+# http://www.phpmotion.com
+# support@phpmotion.com
+#*****************************************************************************************
+#
+#*****************************************************************************************
+# Copyright (c) 2007-2008 phpmotion.com. All rights reserved.
+#*****************************************************************************************
+
+#----------------------------------------------------------------------------------------#
+<Limit GET>
+	order allow,deny
+	allow from all
+</Limit>
+#----------------------------------------------------------------------------------------#
+
+#----------------------------------------------------------------------------------------#
+
+# uncomment this line to enable site wide gzip to increase load times
+# may cause 500 server errors on servers running php in cgi mode
+#---------------------------------------- GZIP BEGIN ------------------------------------#
+#php_value output_handler ob_gzhandler
+#---------------------------------------- GZIP END --------------------------------------#
+
+#--------------------------------------- START SEO --------------------------------------#
+Options +FollowSymlinks
+RewriteEngine On
+
+#----------- this is the directory where phpmotion is install ---------------------------#
+#----- if phpmotion is installed in a sub directory edit the RewriteBase as follows -----#
+
+# EXAMPLE => RewriteBase /your sub-directory name
+# EXAMPLE => RewriteBase /videos
+
+RewriteBase /
+
+#------------------------------- do not edit below --------------------------------------#
+
+RewriteRule \.(css|jpe?g|gif|png|flv|swf)$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Main Menu Links #
+RewriteRule ^videos/load/([^/]*)$ seemore.php?load=$1 [L]
+RewriteRule ^videos/load/([^/]*)/([^/]*)$ seemore.php?load=$1&page=$2 [L]
+
+RewriteRule ^audios/load/([^/]*)$ audio.php?load=$1 [L]
+RewriteRule ^audios/load/([^/]*)/([^/]*)$ audio.php?load=$1&page=$2 [L]
+
+RewriteRule ^audio/album/([^/]*)/([^/]*)$ audio.php?album=$1 [L]
+RewriteRule ^audio/album/([^/]*)/([^/]*)/([^/]*)$ audio.php?album=$1&page=$3 [L]
+
+RewriteRule ^blogs/load/([^/]*)$  blogs.php?load=$1 [L]
+RewriteRule ^blogs/load/([^/]*)/([^/]*)$ blogs.php?load=$1&page=$2 [L]
+
+RewriteRule ^albums/load/([^/]*)$ albums.php?load=$1 [L]
+RewriteRule ^albums/([^/]*)/([^/]*)$ albums.php?load=$1&page=$2 [L]
+
+RewriteRule ^people_ajax people_ajax.php [L]
+RewriteRule ^people/([^/]*)/([^/]*)$ people.php?load=$1&page=$2 [L]
+RewriteRule ^people people.php [L]
+RewriteRule ^upload-media upload.php [L]
+
+RewriteRule ^groups$ groups.php [L]
+RewriteRule ^search search.php [L]
+
+
+# Action Links #
+RewriteRule ^videos/([^/]*)/([^/]*)$ play.php?vid=$1 [L]
+RewriteRule ^audio/([^/]*)/([^/]*)$ play_audio.php?audio=$1
+
+RewriteRule ^category/([^/]*)$ category_home.php?cid=$1 [L]
+RewriteRule ^category/([^/]*)/([^/]*)$ category_home.php?cid=$1&page=$2 [L]
+
+RewriteRule ^subcategory/([^/]*)/([^/]*)$ category_home.php?sub=$1 [L]
+RewriteRule ^subcategory/([^/]*)/([^/]*)/([^/]*)$ category_home.php?sub=$1&page=$3 [L]
+
+RewriteRule ^genre/([^/]*)$ genre_home.php?cid=$1 [L]
+RewriteRule ^genre/([^/]*)/([^/]*)$ genre_home.php?cid=$1&page=$2 [L]
+
+RewriteRule ^view-album/([^/]*)/([^/]*)$ album_view.php?album=$1
+RewriteRule ^view-image/([^/]*)/([^/]*)$ album_view.php?image=$1
+RewriteRule ^read_blog/([^/]*)/([^/]*)$ read_blog.php?id=$1 [L]
+
+RewriteRule ^blogs/category/([^/]*)/([^/]*)$ blogs.php?cat_id=$1 [L]
+RewriteRule ^blogs/category/([^/]*)/([^/]*)/([^/]*)$ blogs.php?cat_id=$1&page=$3 [L]
+
+RewriteRule ^members/([^/]*)$  memberprofile.php?user=$1 [L]
+
+#-------------------------------------------------------------#
+# redirect directory browsing attempts
+RewriteRule ^videos(.?)$ 	seemore.php [L]
+RewriteRule ^audios(.?)$ 	audio.php 	[L]
+RewriteRule ^blogs(.?)$ 	blogs.php 	[L]
+RewriteRule ^members(.?)$	people	[R=301]
+RewriteRule ^albums(.?)$ 	albums.php [L]
+
+#-------------------------------------------------------------#
+
+#--------------------------------------- END SEO ----------------------------------------#
+
+
+#--------------------------------------- SOME SIMPLE BLOCKS -----------------------------#
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteCond %{QUERY_STRING} SELECT(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} UNION(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteRule ^(.*)$ index.php [F,L]
+#--------------------------------------- END BLOCKS -------------------------------------#
+
+Options -Indexes
+
+<IfModule mod_security.c>
+	SecFilterEngine Off
+	SecFilterScanPOST Off
+</IfModule>
+
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php

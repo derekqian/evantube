@@ -1,0 +1,209 @@
+<body topmargin="0">
+  <div align="center">
+    <form action="settings_video.php" method="post">
+      <table border="0" cellpadding="0" cellspacing="0" width="758" bgcolor="#FFFFFF" id="table4">
+        <tr>
+          <td></td>
+        </tr>
+         <tr>
+          <td colspan="3" height="32" background="images/right_table_header.png">
+            <p align="left"><b><font face="Arial" size="2">&nbsp;<font color="#29537C">[var.lang_video_settings]</font></font></b></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right"><b>[var.lang_general_settings]</b></p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC"><font color="#FF0000">These Settings are not yet available in this version.</font></td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right"><font color="#333333">[var.lang_video_watermark]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC">
+            <div align="left">
+              <select size="1" name="video_watermark" disabled>
+                <option value="yes"[var.video_watermark_yes;]>[var.lang_yes]&nbsp;</option>
+                <option value="no"[var.video_watermark_no;]>[var.lang_no]&nbsp;</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right"><font color="#333333">[var.lang_video_watermark_place]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC">
+            <div align="left">
+              <select size="1" name="video_watermark_place" disabled>
+                <option value="right_bottom">Right Bottom of Video&nbsp;&nbsp;</option>
+                <option value="right_top">Right Top of Video&nbsp;&nbsp;</option>
+                <option value="left_bottom">Left Bottom of Video&nbsp;&nbsp;</option>
+                <option value="left_top">Left Top of Video&nbsp;&nbsp;</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right"><font color="#333333">[var.lang_video_convert_pass]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC">
+            <div align="left">
+              <input type="text" name="video_convert_pass" size="9" value="[adminblk.video_convert_pass;block=table]" disabled>
+              &nbsp;
+              <b>1 or 2</b>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#FFFFFF">
+            <p align="right"><b>[var.lang_ffmpeg_setting]</b></p>
+          </td>
+          <td width="12" height="35" bgcolor="#FFFFFF">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#FFFFFF">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#FFFFFF">
+            <p align="right"><font color="#333333">[var.lang_video_resize]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#FFFFFF">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#FFFFFF">
+            <div align="left">
+              <select size="1" name="video_resize">
+                <option value="yes">Yes&nbsp;</option>
+                <option value="no" selected="selected">No&nbsp;</option>
+              </select>
+              &nbsp;Setting this to no can save a lot on final size
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#F7F7F7">
+            <p align="right"><font color="#333333">[var.lang_video_size]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#F7F7F7">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#F7F7F7">
+            <div align="left">
+              <input type="text" name="video_ffmpeg_size" size="9" value="[adminblk.video_ffmpeg_size;block=table]">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35">
+            <p align="right"><font color="#333333">[var.lang_video_bit_rate]</font></p>
+          </td>
+          <td width="12" height="35">&nbsp;</td>
+          <td width="393" height="35">
+            <div align="left"><input type="text" name="video_ffmpeg_bit_rate" size="15" value="[adminblk.video_ffmpeg_bit_rate;block=table]"></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#F7F7F7">
+            <p align="right">[var.lang_audio_rate]</p>
+          </td>
+          <td width="12" height="35" bgcolor="#F7F7F7">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#F7F7F7">
+            <div align="left"><input type="text" name="video_ffmpeg_audio_rate" size="15" value="[adminblk.video_ffmpeg_audio_rate;block=table]"></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35">
+            <p align="right"><font color="#333333">[var.lang_high_quality]</font></p>
+          </td>
+          <td width="12" height="35">&nbsp;</td>
+          <td width="393" height="35">
+            <div align="left"><input type="text" name="video_ffmpeg_high_quality" size="4" value="[adminblk.video_ffmpeg_high_quality;block=table]" disabled>&nbsp;<b>(yes/no)</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#F7F7F7">
+            <p align="right"><font color="#333333">[var.lang_video_ffmpeg_hq]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#F7F7F7">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#F7F7F7">
+            <div align="left"><input type="text" name="video_ffmpeg_hq" size="15" value="[adminblk.video_ffmpeg_hq;block=table]" disabled></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" align="right">[var.lang_ffmpeg_hq_size]</td>
+          <td width="12" height="35" align="right">&nbsp;</td>
+          <td width="393" height="35">
+            <div align="left"><input type="text" name="video_ffmpeg_hq_size" size="15" value="[adminblk.video_ffmpeg_hq_size;block=table]" disabled></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" align="right" bgcolor="#F7F7F7">[var.lang_ffmpeg_qmax]</td>
+          <td width="12" height="35" align="right" bgcolor="#F7F7F7">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#F7F7F7">
+            <div align="left"><input type="text" name="video_ffmpeg_qmax" size="9" value="[adminblk.video_ffmpeg_qmax;block=table]"></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="34" align="right" bgcolor="#CCCCCC">
+            <p align="right"><b>[var.lang_mencoder_details]</b></p>
+          </td>
+          <td width="12" height="34" align="right" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="34" bgcolor="#CCCCCC">
+            <div align="left"><font color="#FF0000">These Settings are not yet available in this version.</font></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="36" align="right" bgcolor="#CCCCCC"><font color="#333333">[var.lang_video_size]</font></td>
+          <td width="12" height="36" align="right" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="36" bgcolor="#CCCCCC">
+            <div align="left"><input type="text" name="video_mencoder_scale" size="15" value="[adminblk.video_mencoder_scale;block=table]" disabled></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right"><font color="#333333">[var.lang_video_bit_rate]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC">
+            <div align="left"><input type="text" name="video_mencoder_vbitrate" size="15" value="[adminblk.video_mencoder_vbitrate;block=table]" disabled></div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right"><font color="#333333">[var.lang_srate]</font></p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC">
+            <div align="left"><input type="text" name="video_mencoder_srate" size="15" value="[adminblk.video_mencoder_srate;block=table]" disabled>
+            &nbsp;Common Settings: 22050 | 44100 | 48000
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="353" height="35" bgcolor="#CCCCCC">
+            <p align="right">[var.lang_audio_rate]</p>
+          </td>
+          <td width="12" height="35" bgcolor="#CCCCCC">&nbsp;</td>
+          <td width="393" height="35" bgcolor="#CCCCCC">
+            <div align="left"><input type="text" name="video_mencoder_audio_rate" size="15" value="[adminblk.video_mencoder_audio_rate;block=table]" disabled></div>
+          </td>
+        </tr>
+        <tr>
+          <td height="35" colspan="3">
+            <p align="center">
+              <input type="hidden" name="type" value="[var.show_t]">
+              <input type="submit" value="[var.lang_update]" name="update">
+              &nbsp;&nbsp;&nbsp;
+              <a href="settings_video.php?id=1">[var.lang_restore_default_settings]</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td height="35" colspan="2">&nbsp;</td>
+          <td height="35">&nbsp;</td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

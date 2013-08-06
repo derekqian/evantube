@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div align="center" id="EditUserPopup">
+    <!-- notification div start -->
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" width="743">
+        <!--[onload_3;block=table;when [var.show_notification]=1;comm]-->
+        <tr>
+          <td width="92%"><div id="message_popup"><div align="center">[var.warning_close]</div></div></td>
+          <!--[onload;block=tr;when [var.show_warning]=1;comm]-->
+        </tr>
+        <tr>
+          <td width="92%"><div id="message_popup"><div align="center">[var.message]</div></div></td>
+        </tr>
+      </table>
+    </div>
+    <!-- notification div end -->
+
+    <table border="0" cellspacing="0" cellpadding="0" style="height:[var.table_height; border: 1px solid #D1D1D1;">
+      <!--[onload;block=table;when [var.show_success]=0;comm]-->
+      <form id="edit_audio" action="editblogs.php" method="post">
+        <tr>
+          <td width="778" height="33" align="center" class="default_text_blue" colspan="4" background="images/background_tables.png">
+            <p align="left"><font size="2" face="Arial">&nbsp;<b>[var.title]</b></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="778" height="7" bgcolor="#FFFFFF" align="right" class="default_text" colspan="4"><p align="center">[var.my_edit;htmlconv=no;]</td>
+        </tr>
+	<tr>
+	  <td width="336" height="7" bgcolor="#FFFFFF" align="right" class="default_text" colspan="2">&nbsp;</td>
+	  <td width="5" height="3" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="3" bgcolor="#FFFFFF" align="left" class="default_text">&nbsp;</td>
+	</tr>
+	<tr>
+	  <td width="336" height="7" bgcolor="#FFFFFF" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_description]</font></td>
+	  <td width="5" height="3" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="3" bgcolor="#FFFFFF" align="left" class="default_text"><input type="text" name="description" size="43" value="[var.description]" /></td>
+	</tr>
+	<tr>
+	  <td width="336" height="7" bgcolor="#FFFFFF" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_title]</font></td>
+	  <td width="5" height="3" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="3" bgcolor="#FFFFFF" align="left" class="default_text"><input type="text" name="title" size="43" value="[var.title]" /></td>
+	</tr>
+	<tr>
+	  <td width="336" height="4" bgcolor="#FFFFFF" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_tags]</font></td>
+	  <td width="5" height="30" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="30" bgcolor="#FFFFFF" align="left" class="default_text"><input type="text" name="tags" size="43" value="[var.tags]" /></td>
+	</tr>
+	<tr>
+	  <td width="336" height="4" bgcolor="#FFFFFF" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_category]</font></td>
+	  <td width="5" height="30" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="30" bgcolor="#FFFFFF" align="left" class="default_text"><select size="1" name="category_id">[var.fields_all;htmlconv=no]</select></td>
+	</tr>
+	<tr>
+	  <td width="336" height="30" bgcolor="#F5F5F5" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_allow_comm]</font></td>
+	  <td width="5" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="30" bgcolor="#F5F5F5" align="left" class="default_text"><font color="#333333">
+	    <select size="1" name="allow_replies">
+	      <option value="yes" [var.allow_replies_yes]>[var.lang_yes]</option>
+	      <option value="no" [var.allow_replies_no]>[var.lang_no]</option>
+	    </select></font>
+	  </td>
+	</tr>
+	<tr>
+	  <td width="336" height="30" bgcolor="#F5F5F5" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_allow_ratings]</font><font color="#333333">&nbsp;</font></td>
+	  <td width="5" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;</td>
+	  <td width="437" height="30" bgcolor="#F5F5F5" align="left" class="default_text"><font color="#333333">
+	    <select size="1" name="allow_ratings">
+	      <option value="yes" [var.allow_ratings_yes]>[var.lang_yes]</option>
+	      <option value="no" [var.allow_ratings_no]>[var.lang_no]</option>
+	    </select></font>
+	  </td>
+	</tr>
+	<tr>
+	  <td width="336" height="30" bgcolor="#F5F5F5" align="right" colspan="2"><font size="2" color="#333333">[var.lang_private_pub]</font></td>
+	  <td width="5" height="30" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+	  <td width="437" height="30" bgcolor="#F5F5F5"><font color="#333333">
+	    <select size="1" name="public_private">
+	      <option value="public" [var.public_private_public]>[var.lang_public]</option>
+	      <option value="private" [var.public_private_private]>[var.lang_private]</option>
+	    </select></font>
+	  </td>
+	</tr>
+	<tr>
+	  <td width="294" height="30" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+	  <td width="42" height="30" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+	  <td width="5" height="30" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+	  <td width="437" height="30" bgcolor="#F5F5F5"><input type="hidden" name="id" value="[var.id]" /><input type="submit" value="[var.lang_submit]" name="submit" /></td>
+	</tr>
+    </form>
+  </table>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

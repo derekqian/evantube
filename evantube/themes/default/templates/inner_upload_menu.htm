@@ -1,0 +1,51 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Upload Menu-->
+  <div class="header-narrow"><h3>[var.lang_main_menu]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+      <li><a href="audio_uploader.php">[var.lang_upload_audio]</a><!--[onload;block=li;when [var.enable_audio]=1]--></li>
+	<li><a href="image_uploader.php">[var.lang_upload_image]</a><!--[onload;block=li;when [var.enable_images]=1]--></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Upload Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div>
+<!--End Left Column-->
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="header-wide"><h2>[var.lang_upload_media]</h2></div>
+  <div class="container-wide">
+    <ul class="menu-list" style="margin-left: 28px;">
+      <li>&nbsp;</li>
+      <li><img src="themes/[var.user_theme]/images/icons/aktion2.png" height="28" width="32" />&nbsp;&nbsp;<a href="uploader.php"><span class="font5_16">[var.lang_upload_video]</span></a>&nbsp;-&nbsp;[var.lang_file_type_video]</li>
+
+
+      <!-- Powertool: VideoGrabber code-->
+      <li><img src="[var.base_url]/addons/videograbber/images/powertool.png" height="32" width="32" />&nbsp;&nbsp;<a href="addons/videograbber/upload.php" rel="gb_page_center[600, 450]"><span class="font5_16">[var.lang_upload_video]</span></a>&nbsp;-&nbsp;Grab videos from Youtube, Dailymotion etc.
+      <!--[onload;block=li;when [var.powertool_videograbber] == 1;comm]-->
+      </li>
+      <!-- Powertool: VideoGrabber Code end-->
+
+
+      <!-- Powertool: VideoEmbedder code-->
+      <li>
+      <!--[onload;block=li;when [var.powertool_videoembedder] == 1;comm]-->
+      <img src="[var.base_url]/addons/videoembedder/images/powertool.png" height="32" width="32" />&nbsp;&nbsp;<a href="addons/videoembedder/upload.php" rel="gb_page_center[650, 450]"><span class="font5_16">[var.lang_upload_video]</span></a>&nbsp;-&nbsp;Embed videos from Youtube</li>
+      <!-- Powertool: VideoEmbedder code end-->
+
+      <li><img src="themes/[var.user_theme]/images/icons/audio_video.png" height="32" width="32" />&nbsp;&nbsp;<a href="audio_uploader.php"><span class="font5_16">[var.lang_upload_audio]</span></a>&nbsp;-&nbsp;[var.lang_file_type_audio]<!--[onload;block=li;when [var.enable_audio]=1]--></li>
+      <li><img src="themes/[var.user_theme]/images/icons/lists.png" height="32" width="32" />&nbsp;&nbsp;<a href="image_uploader.php"><span class="font5_16">[var.lang_upload_photo]</span></a>&nbsp;-&nbsp;[var.lang_file_type_image]<!--[onload;block=li;when [var.enable_images]=1]--></li>
+      <li>&nbsp;</li>
+    </ul>
+    <br />
+  </div>
+  <div class="container-wide-footer"></div>
+</div><!--End Right Column-->
+
+<div style="height:700px;">&nbsp;</div>

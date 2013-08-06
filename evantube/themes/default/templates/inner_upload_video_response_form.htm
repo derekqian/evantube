@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>[var.lang_upload_video_response]</title>
+	<link href="themes/[var.user_theme]/css/main.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+  <div class="warning-message">[var.error_message]<!--[onload;block=div;when [var.blk_notification]=1;comm]--></div>
+  <div>
+    <form action="response_uploader.php" method="post">
+      <div id="UploadVideo_2">
+        <div class="font5_16" style="text-align:center">
+          <br />
+          <b>[var.lang_upload_video_response] ([var.lang_start])</b>
+        </div>
+        <ul>
+          <li style="text-align:right"><strong>[var.lang_title]</strong></li>
+          <li><input type="text" name="title" size="45" value="Re:&nbsp;[var.title]"></li>
+          <li style="text-align:right"><strong>[var.lang_description]</strong></li>
+
+          <li><input type="text" name="description" size="45" value="[var.description;htmlconv=no]"></li>
+
+          <li style="text-align:right"><strong>[var.lang_tags]</strong></li>
+          <li><input type="text" name="tags" size="45" value="[var.tags]"></li>
+
+          <li>&nbsp;</li>
+          <li style="text-align:left; width: 320px;">
+            <b>[var.lang_enter_tags].</b>
+            <br />
+            [var.lang_enter_tags_description]
+          </li>
+          <br />
+          <br />
+
+          <li style="text-align:right">&nbsp;</li>
+          <li><input type="submit" value="Next &gt;&gt;" name="B3"></li>
+
+          <input type="hidden" name="form_submitted" value="yes" />
+          <input type="hidden" name="vid_response" value="vid_response" />
+          <input type="hidden" name="response_id" value="[var.vid]" />
+          <input type="hidden" name="channel_id" value="[var.response_channel_id]" />
+          <input type="hidden" name="channel" value="[var.response_channel]" />
+
+        </ul>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

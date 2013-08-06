@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Upload Avatar</title>
+</head>
+
+<body>
+
+<div align="center">
+ <table border="0" cellpadding="0" cellspacing="0" width="700">
+  <!--[onload_1;block=table;when [var.show_notification]=1;comm]-->
+    <tr>
+      <td width="92%">
+        <div id="message_popup"><div align="center"><font face="Arial" size="3" color="[var.color]"><b>[var.message]</b></font></div></div>
+        <!-- notifications end -->
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div>
+  <p align="center"><font face="Arial" size="2">Upload Avatar</font></p>
+  <form method="POST" enctype="multipart/form-data" action="upload_avatar.php">
+    <input type="hidden" name="security_token" value="[var.security_token]" />
+    <p align="center"><font face="Arial"><input type="file" name="img_file" size="20"></font></p>
+    <p align="center"><font face="Arial"><input type="submit" value="Submit" name="upload">&nbsp;<input type="reset" value="Reset" name="B2"></font></p>
+    <p align="center"><font face="Arial" size="2">Maximum Size:&nbsp;[var.show_max_width]&nbsp;x&nbsp;[var.show_max_height]&nbsp;px's&nbsp;-&nbsp;[var.show_maxuploadsize]&nbsp;Kb's&nbsp;-&nbsp;Minimum Size&nbsp;[var.show_min_width]&nbsp;x&nbsp;[var.show_min_height]&nbsp;px's&nbsp;-&nbsp;[var.show_minuploadsize]&nbsp;Kb's</font></p>
+  </form>
+  <p align="center">&nbsp;</p>
+<!--[onload;block=div;when [var.show]=1;comm]-->
+</div>
+
+</body>
+</html>

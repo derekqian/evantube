@@ -1,0 +1,8 @@
+//////////////////////////////////
+// ERROR CODES AND WHAT THEY MEAN
+//////////////////////////////////
+
+
+100 => The default css file or defaulr images folder could not be found in /addons/pimpmyprofile/*
+101 => Members css not found ...error trying to copy default
+102 => Can't write to file /addons/pimpmyprofile/xyz.css

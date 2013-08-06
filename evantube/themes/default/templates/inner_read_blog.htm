@@ -1,0 +1,139 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Blogs Menu-->
+  <div class="header-narrow"><h3>[var.lang_blogs]</h3></div>
+    <div class="whats-showing">
+      <span class="font4_14">&nbsp;[var.lang_view_blogs]:&nbsp;</span>
+      <ul>
+        <li><a href="blogs/load/featured">[var.lang_featured]</a></li>
+        <li><a href="blogs/load/viewed">[var.lang_most_viewed]</a></li>
+        <li><a href="blogs/load/recent">[var.lang_most_recent]</a></li>
+        <li><a href="blogs/load/comments">[var.lang_most_comments]</a></li>
+      </ul>
+      <br />
+      <p><span class="font4_14">&nbsp;[var.lang_blog_menu]:</span></p>
+      <ul>
+        <li><a href="blogs/load/myblogs">[var.lang_my_blogs]</a></li>
+        <li><a href="blogs.php?action=write">[var.lang_create_blog]</a></li>
+      </ul>
+    </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Blogs Menu-->
+
+  <!--Begin Blog Categories Menu-->
+  <div class="header-narrow"><h3>[var.lang_view_blog_category]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="blogs/category/[blk1.category_id]/[blk1.category_name_seo;block=li]"><!--[blk1.category_name;block=li;ope=max:25;comm]-->&nbsp;-&nbsp;(<!--[blk1.category_count;block=tr;comm]-->)</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Blog Categories Menu-->
+
+  <!--Begin Popular Blog Tag Cloud-->
+  <div class="header-narrow"><h3>[var.lang_tags_popular_blogs]</h3></div>
+  <div class="whats-showing"><!--[var.tag_cloud_block;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Popular Blog Tag Cloud-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+
+  <div id="blog-read">
+    <!--Begin Member Avatar-->
+    <ul class="content-list-thumb" style="border:none;">
+      <li>
+        <a href="members/[blk3.by_username;block=div;]"><img src="<!--[blk3.poster_picture;block=div;comm]-->" width="[blk3.thumb_new_width]" height="[blk3.thumb_new_height]" border="1" /></a><br />
+        [var.lang_online] &nbsp;<!--[var.online_status;htmlconv=no;comm]--><br />
+      </li>
+      <li>
+        <a href="page.php?page=10&amp;keepThis=true&TB_iframe=true&height=240&width=540" class="thickbox" title="[var.site_name] Site Participation Levels"><img src="themes/[var.user_theme]/images/icons/[var.member_badge]" alt="Badge" border="0" title="Click for info"></a>
+      </li>
+      <li><a href="invite.php?uid=[var.member_id]" rel="gb_page_center[750, 200]">[var.lang_add_friends]</a></li>
+    </ul>
+    <!--End Member Avatar-->
+
+    <!--Begin Blog Content-->
+    <ul class="content-list-info" style=" width:578px; padding:5px;">
+      <!--Blog Title-->
+      <li class="blog-title"><h1>[blk3.title]</h1></li>
+      <!--Blog Credits-->
+      <li class="blog-info">
+        [var.lang_by]:&nbsp;<a href="members/[blk3.by_username]"><!--[blk3.by_username;block=((div));comm]--></a>
+        <span style="margin-left:10px;">[var.lang_added]:&nbsp;<!--[blk3.todays_date;block=((div));comm;frm=mm-dd-yy]--></span>
+
+        <!--//////// PERMISSIONS CHECK - BLOG START \\\\\\\\-->
+        <div style="margin-top:-14px; margin-right:10px; float:right;">
+          <a href="edit/delete.php?type=3&id=[blk3.indexer]" rel="gb_page_center[850, 450]"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />[var.lang_delete]
+          <!--[onload_16;block=a;when [var.delete_blog]=1;comm]--></a>
+        </div>
+
+        <div style="margin-top:-14px; margin-right:10px; float:right;">
+          <a href="edit/editblogs.php?id=[blk3.indexer]" rel="gb_page_center[850, 450]"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="delete" width="14" height="14" border="0" />[var.lang_edit]
+          <!--[onload_15;block=a;when [var.edit_blog]=1;comm]--></a>
+        </div>
+        <!--//////// PERMISSIONS CHECK - BLOG END \\\\\\\\-->
+      </li>
+
+      <!-- Blog Body-->
+      <li class="blog-content" style="text-align:left; overflow: hidden; word-wrap: break-word;"><!--[blk3.comments;block=(div);comm;htmlconv=no]--></li>
+      <hr style="border-top: 1px dashed #C0C0C0; border-bottom: 0px;">
+      <!--Blog Rating-->
+      <li><!--[var.ajax_rating;htmlconv=no;comm]--></li>
+      <!--Reply/Report Blog-->
+      <li>
+        <a onClick="javascript:ahahscript.ahah('[var.base_url]/blog_reply_ajax.php?type=blog&amp;id=[blk3.indexer;block=((div))]&amp;indexer=[blk3.indexer;block=((div))]', 'blog-ajax', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');" style="cursor:pointer;">[var.lang_reply]</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?flag_type=blogs&amp;abuse=[blk3.indexer;block=((div))]', 'blog-ajax', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');" style="cursor:pointer;">[var.lang_report_abuse]</a>
+      </li>
+      <!-- start social bookmarks -->
+      <li class="blog-bookmarks">
+        <a target="_blank" href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&amp;Description=[blk3.description]&amp;Url=[var.blog_url][blk3.title]&amp;Title=[blk3.title]&amp;Tag=[blk3.tags]"><img src="themes/[var.user_theme]/images/icons/Blinklist_32x32.png" alt="blink" width="28" height="28" title="Add to BlinkList" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://digg.com/submit?url=[var.blog_url][blk3.title]&amp;Title=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/digg_32x32.png" alt="digg" width="28" height="28" title="Add to Digg" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://www.furl.net/storeIt.jsp?u=[var.blog_url][blk3.title]&amp;t=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/Furl_32x32.png" alt="furl" width="28" height="28" title="Add to Furl" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://reddit.com/submit?url=[var.blog_url][blk3.title]&title=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/Reddit_32x32.png" alt="furl" width="28" height="28" title="Add to Reddit" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://www.newsvine.com/_wine/save?u=[var.blog_url][blk3.title]&h=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/Newsvine_32x32.png" alt="furl" width="28" height="28" title="Add to News Vine" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://www.technorati.com/faves?add=[var.blog_url][blk3.title]"><img src="themes/[var.user_theme]/images/icons/Technorati_32x32.png" alt="furl" width="28" height="28" title="Add to Technorati" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://del.icio.us/post?url=[var.blog_url][blk3.title]"><img src="themes/[var.user_theme]/images/icons/delicious_32x32.png" alt="deli" width="28" height="28" title="Add to del.icio.us" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://blogmarks.net/my/new.php?mini=1&simple=1&url=[var.blog_url][blk3.title]&title=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/BlogMarks_32x32.png" alt="BlogMarks" width="28" height="28" title="Add to BlogMarks" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://ma.gnolia.com/bookmarklet/add?url=[var.blog_url][blk3.title]&title=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/Magnolia_32x32.png" alt="Magnolia" width="28" height="28" title="Add to Magnolia" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://www.stumbleupon.com/submit?url=[var.blog_url][blk3.title]&title=[blk3.title]"><img src="themes/[var.user_theme]/images/icons/StumbleUpon.png" alt="StumbleUpon" width="28" height="28" title="Add to StumbleUpon" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="rss.php?blog=[var.blog_id]"><img src="themes/[var.user_theme]/images/icons/Feeds_32x32.png" alt="RSS Subscribe" width="28" height="28" title="Our RSS Feeds" /></a>
+      </li>
+      <!-- end social bookmarks -->
+      <li id="blog-ajax"></li>
+
+      <li>[blk3.drop_block;block=((div));htmlconv=no;]</li>
+
+      <!-- start blog reply ajax refresh -->
+      <div id="reply_refresh">
+        <li>[blk3.reply_block;block=((div));htmlconv=no;]</li>
+      </div>
+      <!-- end blog reply ajax refresh -->
+
+    </ul>
+    <div class="clear-fix"></div>
+  </div>
+  <!--End Blog Read-->
+
+  <!-- Pagination start -->
+  <div id="pagination">
+    <ul>
+      <li>&nbsp;</li>
+      [var.show_pages;htmlconv=no]
+    </ul>
+  </div>
+  <!-- Pagination end -->
+
+  <!--[onload;block=div;when [var.show_v]=0;comm]-->
+  <!-- nothing found div -->
+  <div><span class="font4_14">[var.lang_no_blogs]</span><!--[onload;block=div;when [var.show_v]=1;comm]--></div>
+  <!-- nothing found end -->
+</div>
+<!--End Right Column-->

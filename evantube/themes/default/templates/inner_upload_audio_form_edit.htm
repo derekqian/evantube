@@ -1,0 +1,181 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Upload Menu-->
+  <div class="header-narrow"><span class="font5_12">[var.lang_main_menu]</span></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+      <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	<!--[var.image_inner_upload_form;htmlconv=no;comm]-->
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div><!--End Upload Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+    <div id="advert-left">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div><!--End Left Column-->
+
+<script type="text/javascript">
+<!--
+function setUse(){
+	if (document.form_upload.use_album[0].checked){
+      	document.form_upload.audio_album.disabled = false;
+      	document.form_upload.new_audio_album.disabled = false;
+      	document.form_upload.album_type[0].disabled = false;
+      	document.form_upload.album_type[1].disabled = false;
+      }
+      if (document.form_upload.use_album[1].checked){
+      	document.form_upload.audio_album.disabled = true;
+      	document.form_upload.new_audio_album.disabled = true;
+      	document.form_upload.album_type[0].disabled = true;
+      	document.form_upload.album_type[1].disabled = true;
+      }
+}
+//-->
+</script>
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="header-wide">[var.lang_upload_audio] - [[var.lang_finish]]</div>
+  <div class="container-wide">
+
+  <form name="form_upload" action="audio_uploader_finished.php" method="post">
+    <div id="UploadVideo">
+      <div class="font5_16" style="text-align:center">
+        <br />
+        <b>[var.lang_upload_audio] - [var.lang_music] [[var.lang_finish]]</b>
+      </div>
+      <br />
+      <div>
+        <div style="margin-left: 98px; float: left;"><h3>[var.lang_add_music_to_albums].</h3></div>
+      </div>
+      <br />
+      <br />
+      <div style="margin-left: 98px; float: left;"><h3>[var.lang_add_audio_album_question]?&nbsp;</h3></div>
+      <div style="margin-left: 12px; float: left;">
+        <input type="radio" name="use_album" value="yes" onClick="setUse()" /><b>&nbsp;[var.lang_yes]</b>
+        &nbsp;&nbsp;
+        <input type="radio" name="use_album" value="no" checked="checked" onClick="setUse()" /><b>&nbsp;[var.lang_no]</b>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div style="margin-left: 98px; float: left;"><h3>[var.lang_select_create_album]</h3></div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div style="margin-left: 98px; float: left;"><b>[var.lang_your_albums]:&nbsp;</b></div>
+	  <div style="margin-left: 38px; float: left;"><select size="1" name="audio_album" disabled>[var.albums_all;htmlconv=no]</select></div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div style="margin-left: 98px; float: left;"><b>[var.lang_new_album_name]:&nbsp;</b></div>
+        <div style="margin-left: 10px; float: left;"><input type="text" name="new_audio_album" size="24" disabled /></div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div style="margin-left: 98px; float: left;"><b>[var.lang_album_type]:&nbsp;</b></div>
+        <div style="margin-left: 10px; float: left;"><input type="radio" disabled name="album_type" value="[var.lang_public]" checked="checked" />[var.lang_public] &nbsp;&nbsp;<input type="radio" disabled name="album_type" value="[var.lang_private]" />[var.lang_private] - <font size="1">[var.lang_only_visible]</font></div>
+      </div>
+      <br />
+      <br />
+      <hr>
+      <div>
+        <div style="margin-left: 98px; float: left;">&nbsp;</div>
+      </div>
+      <br />
+      <div>
+        <div style="margin-left: 12px; float: left;">
+          <font size="2" color="#FF0000"><b>[var.lang_errors_found_data_tags]</b></font>
+        </div>
+      </div>
+      <br />
+      <br />
+      <ul>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_title]</strong></li>
+        <li style="width:400px">
+          <input type="text" name="title" size="40" value="[var.title]" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_artist]</strong></li>
+        <li style="width:400px">
+          <input type="text" name="artist" size="40" value="[var.artist]" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_description]</strong></li>
+        <li style="width:400px">
+	    <input type="text" name="description" value="[var.title]" size="40" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" />[var.description;htmlconv=no]
+	  </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_tags]</strong></li>
+        <li style="width:400px">
+          <input type="text" name="tags" size="40" value="[var.artist] [var.title]" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"></li>
+        <li style="width:380px" class="UploadVideo_Tags">
+          <strong>&nbsp;<b>[var.lang_enter_tags].</b></strong>
+          <br />
+          [var.lang_enter_tags_description].
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_play_length]</strong></li>
+        <li style="width:400px">
+          <input type="text" name="length" value="[var.length]" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_genre]</strong></li>
+        <li style="width:400px">
+          <input type="text" name="category" value="[var.category]" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" readonly />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_album_source]</strong></li>
+        <li style="width:400px">
+          <input type="text" name="album" value="[var.album]" />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000"><strong>[var.lang_year] ([var.lang_optional])</strong></li>
+        <li style="width:400px">
+          <input type="text" name="year" value="[var.year]" />
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000">[var.lang_allow_comm]</li>
+        <li style="width:400px">
+          <select size="1" name="allow_comments">
+            <option value="yes" selected="selected">yes</option>
+            <option value="no">no</option>
+          </select>
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000">[var.lang_allow_embed]</li>
+        <li style="width:400px">
+          <select size="1" name="allow_embedding">
+            <option value="yes" selected="selected">yes</option>
+            <option value="no">no</option>
+          </select>
+        </li>
+        <li style="width:240px; text-align:right; color:#FF0000">[var.lang_private_pub]</li>
+        <li style="width:400px">
+          <select size="1" name="public_private">
+            <option value="public" selected="selected">[var.lang_public]</option>
+            <option value="private">[var.lang_private]</option>
+          </select>
+        </li>
+        <li style="width:240px; text-align:right"></li>
+        <li style="width:400px">
+          <input type="submit" value="Finish Audio Upload" name="B3" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" />
+        </li>
+        <li style="width:240px; text-align:right"></li>
+        <li style="width:400px"></li>
+        <li style="width:240px; text-align:right"></li>
+        <li style="width:400px"></li>
+      </ul>
+    </div>
+    <input type="hidden" name="uploaded_file_name" size="40" value="[var.uploaded_file_name]" readonly />
+    <input type="hidden" name="form_submitted" value="yes" />
+  </form>
+  </div>
+</div>
+
+
+
+
+
+
+

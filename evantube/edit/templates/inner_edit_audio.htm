@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div align="center" id="EditUserPopup">
+<!-- notification div start -->
+<div align="center">
+ <table border="0" cellpadding="0" cellspacing="0" width="700">
+  <!--[onload_3;block=table;when [var.show_notification]=1;comm]-->
+    <tr>
+      <td width="92%">
+              <div id="message_popup">
+                <div align="center">[var.message] </div>
+              </div>
+              <!-- notifications end -->
+        </td>
+    </tr>
+  </table>
+</div>
+<!-- notification div end -->
+<table width="700" height="106" border="0" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #D1D1D1">
+<form id="edit_audio" action="editaudio.php" method="post">
+	<tr>
+		<td width="822" height="33" align="center" class="default_text_blue" colspan="4" background="images/background_tables.png">
+        <p align="left"><font size="2" face="Arial">&nbsp; <b>[var.title]</b></font></p>
+        </td>
+	</tr>
+	<tr>
+		<td width="294" height="19" bgcolor="#FFFFFF" align="right" class="default_text" rowspan="4" valign="top">
+        <p align="center">
+        <!-- preview player -->
+<div id="audio_play"></div>
+      <script type="text/javascript">
+    		var audio = new SWFObject('[var.base_url]/audio.swf','apv','368','44','7');
+    		audio.addVariable('width','368');
+    		audio.addVariable('height','44');
+    		audio.addParam('wmode', 'transparent');
+    		audio.addVariable('file','[var.base_url]/uploads/audio/[var.audio_play]');
+    		audio.addVariable('autostart', 'true');
+		audio.addVariable('showeq', 'true');
+		audio.addVariable('backcolor', '0xF2F2F2');
+		audio.addVariable('screencolor', '0xF2F2F2');
+		audio.addVariable('lightcolor', '0x0099FF');
+		audio.addVariable('frontcolor', '0x0099FF');
+		audio.write('audio_play');
+	</script>
+            <!-- preview player end -->
+        </td>
+		<td width="135" height="3" bgcolor="#FFFFFF" align="right" class="default_text">
+        <font size="2" color="#333333">[var.lang_title]</font></td>
+		<td width="5" height="3" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;
+        </td>
+		<td width="264" height="3" bgcolor="#FFFFFF" align="left" class="default_text">
+          <input type="text" name="title" size="43" value="[var.title]" /></td>
+	</tr>
+	<tr>
+		<td width="135" height="69" bgcolor="#FFFFFF" align="right" class="default_text">
+        <font size="2" color="#333333">[var.lang_description]</font><p>&nbsp;</td>
+		<td width="5" height="69" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;
+        </td>
+		<td width="264" height="69" bgcolor="#FFFFFF" align="left" class="default_text">
+        <textarea rows="3" name="description" cols="26">[var.description;htmlconv=no]</textarea></td>
+	</tr>
+	<tr>
+		<td width="135" height="30" bgcolor="#FFFFFF" align="right" class="default_text">
+        <font size="2" color="#333333">[var.lang_tags]</font></td>
+		<td width="5" height="30" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;
+        </td>
+		<td width="264" height="30" bgcolor="#FFFFFF" align="left" class="default_text">
+        <input type="text" name="tags" size="43" value="[var.tags]" /></td>
+	</tr>
+	<tr>
+		<td width="135" height="30" bgcolor="#FFFFFF" align="right" class="default_text">
+        <font size="2" color="#333333">[var.lang_category]</font></td>
+		<td width="5" height="30" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;
+        </td>
+		<td width="264" height="30" bgcolor="#FFFFFF" align="left" class="default_text">
+        <select size="1" name="channel">
+      										[var.fields_all;htmlconv=no]
+  </select></td>
+	</tr>
+	<tr>
+		<td width="429" height="30" bgcolor="#F5F5F5" align="right" class="default_text" colspan="2">
+        <font size="2" color="#333333">[var.lang_allow_comm]</font></td>
+		<td width="5" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;
+        </td>
+		<td width="264" height="30" bgcolor="#F5F5F5" align="left" class="default_text">
+        <font color="#333333"><select size="1" name="allow_comments">
+    <option value="yes" [var.allow_comments_yes]>[var.lang_yes] </option>
+    <option value="no" [var.allow_comments_no]>[var.lang_no]</option>
+  </select>&nbsp;&nbsp;&nbsp;&nbsp;
+  </font></td>
+	</tr>
+	<tr>
+		<td width="429" height="30" bgcolor="#F5F5F5" align="right" class="default_text" colspan="2">
+  <font size="2" color="#333333">[var.lang_allow_embed]</font><font color="#333333">&nbsp;</font></td>
+		<td width="5" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;
+        </td>
+		<td width="264" height="30" bgcolor="#F5F5F5" align="left" class="default_text">
+        <font color="#333333"><select size="1" name="allow_embedding">
+    <option value="yes" [var.allow_embedding_yes]>[var.lang_yes] </option>
+    <option value="no" [var.allow_embedding_no]>[var.lang_no]</option>
+  </select></font></td>
+	</tr>
+	<tr>
+		<td width="429" height="30" bgcolor="#F5F5F5" align="right" colspan="2">
+        <font size="2" color="#333333">[var.lang_private_pub]</font></td>
+		<td width="5" height="30" bgcolor="#F5F5F5" align="right">&nbsp;
+        </td>
+		<td width="264" height="30" bgcolor="#F5F5F5">
+        <font color="#333333"><select size="1" name="public_private">
+    <option value="public" [var.public_private_public]>[var.lang_public] </option>
+    <option value="private" [var.public_private_private]>[var.lang_private]</option>
+  </select></font></td>
+	</tr>
+	<tr>
+		<td width="294" height="30" bgcolor="#F5F5F5" align="right">&nbsp;
+        </td>
+		<td width="135" height="30" bgcolor="#F5F5F5" align="right">&nbsp;
+        </td>
+		<td width="5" height="30" bgcolor="#F5F5F5" align="right">&nbsp;
+        </td>
+		<td width="264" height="30" bgcolor="#F5F5F5">
+<font color="#333333">
+<input type="hidden" name="submitted" value="yes" />
+<input type="hidden" name="id" value="[var.aid]" />
+          </font><font color="#333333">
+          <input type="submit" value="[var.lang_submit]" name="submit" />
+        </font>
+        </td>
+	</tr>
+	</form>
+</table>
+</body>
+
+</html>

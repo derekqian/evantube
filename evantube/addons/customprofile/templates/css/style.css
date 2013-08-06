@@ -1,0 +1,33 @@
+
+.form1{
+	padding: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+}
+
+
+.box_top{
+	background-image: url(../../member_images/MP_Left_box_1_top.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.box_bottom{
+	background-image: url(../../member_images/MP_Left_box_1_bottom.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.box_background{
+	width: 50px;
+	height: 20px;
+	background-color: #FFFFFF;
+	border: 1px dotted #CCCCCC;
+
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}

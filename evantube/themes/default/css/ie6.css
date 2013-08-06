@@ -1,0 +1,138 @@
+/*
+  =============================================================
+  == PHPmotion V3 Default Template http://phpmotion.com      ==
+  == Template coded by Shawn Padgett  http://shawnshouse.com ==
+  == Get more templates at http://phpmotiontemplates.com     ==
+  =============================================================
+*/
+
+#nav-bar {
+  width: 660px;
+  float: right;
+}
+
+#nav-left {
+  float: right;
+  background: transparent url(../images/nav-right.gif) no-repeat;
+}
+
+#nav-right {
+  float: right;
+  background: transparent url(../images/nav-left.gif) no-repeat;
+}
+
+#nav-main {
+  float: right;
+  background: transparent url(../images/nav-main.gif) repeat-x;
+}
+
+#header-bottom {
+  margin-top: -8px;
+}
+
+#promoted-container {
+  float: left;
+}
+
+.browse-videos ul {
+  clear: none;
+}
+
+.browse-videos li {
+  margin: 5px 22px;
+}
+
+#column-left-1 {
+  margin: 15px 0px 10px 0px;
+}
+
+#column-right-1 {
+  float: right;
+  margin: 15px -20px 10px 0px;
+}
+
+#column-right-1-play {
+  float: right;
+  margin: 15px 0px 10px 0px;
+}
+
+#column-left-2 {
+  margin: 14px 0px 10px 0px;
+}
+
+#column-right-2 {
+  float: right;
+  margin: 14px 0px 10px 0px;
+}
+
+#upload-video {
+ width: 708px;
+ padding: 0px;
+}
+
+.signup-left {
+  margin: 5px 0px;
+}
+
+.signup-right {
+  margin: 5px 0px;
+}
+
+.groups-videos {
+  width: 160px;
+  float: left;
+  display: block;
+}
+
+.albums_view {
+  width: 160px;
+  float: left;
+  display: block;
+}
+
+.member-list {
+  width: 167px;
+  float: left;
+  display: block;
+}
+
+.howlong { margin: 0px 0px 0px 8px; }
+
+.login-button { margin: 0px 0px 0px 8px; }
+
+.container-narrow-top {
+  margin-bottom: -9px;
+}
+
+/*--Pagination--*/
+#pagination {
+    padding: 5px;
+}
+
+.container-wide-player {
+  padding: 2px 0px;
+}
+
+.container-wide-header {
+  margin: 5px 0px -9px 0px;
+}
+
+#member-details {
+  padding: 2px 0px 3px 0px;
+  width: 250px;
+}
+
+#member-status { margin: 5px 0px; }
+
+#member-content {
+  width: 250px;
+}
+
+.li-spacer {
+ line-height: 0;
+}
+
+#header-main-2 {
+  width: 687px;
+  margin-bottom: -2px;
+}

@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Edit Video</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"></script>
+<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"></script>
+</head>
+<body>
+<div align="center" id="EditUserPopup">
+<!-- notification div start -->
+<span>
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td width="92%"><div align="center">[var.message;htmlconv=no;]</div></td>
+  </tr>
+</table>
+<!--[onload_3;block=span;when [var.show_notification]=1;comm]-->
+</span>
+<!-- notification div end -->
+<table border="0" width="700" cellspacing="0" cellpadding="0" height="106" style="border: 1px solid #D1D1D1">
+  <form id="edit_video" name="edit_video" action="editvideo.php" method="post">
+    <tr>
+      <td width="822" height="33" align="center" class="default_text_blue" colspan="4" background="images/background_tables.png"><p align="left"><font size="2" face="Arial">&nbsp; </font> <b> <font face="Arial" color="#0099CC">[var.lang_edit_details_video]</font></b></p></td>
+    </tr>
+    <tr>
+      <td width="250" height="10" bgcolor="#FFFFFF" align="right" class="default_text" rowspan="2" valign="top"><p align="center">
+          <!-- preview player -->
+          <div id="myAlternativeContent"></div>
+          <span>
+          <!--start of PHPmotion Player -->
+          <script type="text/javascript">
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+            flashvars.flvsource = "[var.base_url]/uploads/[var.video_play]";
+			flashvars.autoplay = "false";
+			flashvars.color_nav_bar_top = "0x478dc2";
+			flashvars.color_nav_bar_bottom = "0xE7EBEC";
+			flashvars.ads_background_color = "0x00CCFF";
+			flashvars.ads_border_color = "0xCCCCCC";
+			flashvars.scrubber_position_color = "0x6AA1CE";
+			flashvars.scrubber_load_color = "0x888888";
+			flashvars.scrubber_background_color = "0xBBBBBB";
+			flashvars.volume_bar_color = "0xBBBBBB";
+			flashvars.buffering_time = 1;
+			flashvars.aspect_ratio="stretch";
+			params.allowfullscreen = "true";
+			params.allowscriptaccess = "sameDomain";
+			swfobject.embedSWF("[var.base_url]/player.swf", "myAlternativeContent", "245", "192", "9.0.0", false, flashvars, params, attributes);
+		</script>
+          <!--end of PHPmotion Player -->
+          <!--[onload;block=span;when [var.video_type] != 'embedded';comm]-->
+          </span>
+          <!--start of EmbedVideo Addon Player-->
+          <span>
+          <!--[var.videoembedder_code;htmlconv=no;comm]-->
+          <!--[onload;block=span;when [var.video_type] == 'embedded';comm]-->
+          </span>
+          <!-- end of EmbedVideo Addon Player-->
+          <!-- preview player end -->
+      </td>
+      <td width="118" height="3" bgcolor="#FFFFFF" align="right" class="default_text"><font size="2" color="#333333">[var.lang_title]</font></td>
+      <td width="4" height="3" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+      <td width="326" height="3" bgcolor="#FFFFFF" align="left" class="default_text"><input type="text" name="title" size="36" value="[var.title]" /></td>
+    </tr>
+    <tr>
+      <td width="118" height="3" bgcolor="#FFFFFF" align="right" class="default_text"><font size="2" color="#333333">[var.lang_description]</font>
+        <p>&nbsp;</td>
+      <td width="4" height="3" bgcolor="#FFFFFF" align="right" class="default_text">&nbsp;</td>
+      <td width="326" height="3" bgcolor="#FFFFFF" align="left" class="default_text"><textarea rows="9" name="description" cols="30">[var.description;htmlconv=no]</textarea></td>
+    </tr>
+    <tr>
+      <td width="250" height="60" bgcolor="#F5F5F5" align="right" class="default_text" rowspan="2" valign="top">&nbsp;</td>
+      <td width="118" height="30" bgcolor="#F5F5F5" align="right" class="default_text"><font size="2" color="#333333">[var.lang_tags]</font></td>
+      <td width="4" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;</td>
+      <td width="326" height="30" bgcolor="#F5F5F5" align="left" class="default_text"><input type="text" name="tags" size="36" value="[var.tags]" /></td>
+    </tr>
+    <tr>
+      <td width="118" height="30" bgcolor="#F5F5F5" align="right" class="default_text"><font size="2" color="#333333">[var.lang_category]</font></td>
+      <td width="4" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;</td>
+      <td bgcolor="#FFFFFF" width="326" style="height: 34px"><div align="left"><span style="width:400px; text-align:left;">
+          <select class="upload-video-form-input" style="width:160px;" size="1" name="channel" onChange="javascript:ahahscript.ahah('[var.base_url]/uploader.php?sub_cat='+ document.edit_video.channel.value, 'sub_change', '', 'GET', '', this);">
+            &nbsp;[var.fields_all;htmlconv=no]
+		    
+		    
+          </select>
+          </span>&nbsp;<span class="style12">(select a 
+          category)</span><br>
+          <span style="width:400px; text-align:left;"> <br>
+          <span id="sub_change">
+          <select class="upload-video-form-input" style="width:160px;" size="1" name="sub_cat">
+          </select>
+          </span> &nbsp;<span class="style12">(sub category)</span><br>
+          </span><br>
+        </div></td>
+    </tr>
+    <tr>
+      <td width="368" height="30" bgcolor="#F5F5F5" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_allow_comm]</font></td>
+      <td width="4" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;</td>
+      <td width="326" height="30" bgcolor="#F5F5F5" align="left" class="default_text"><select size="1" name="allow_comments">
+          <option value="yes" [var.allow_comments_yes]>[var.lang_yes] </option>
+          <option value="no" [var.allow_comments_no]>[var.lang_no]</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="368" height="30" bgcolor="#F5F5F5" align="right" class="default_text" colspan="2"><font size="2" color="#333333">[var.lang_allow_embed] </font></td>
+      <td width="4" height="30" bgcolor="#F5F5F5" align="right" class="default_text">&nbsp;</td>
+      <td width="326" height="30" bgcolor="#F5F5F5" align="left" class="default_text"><select size="1" name="allow_embedding">
+          <option value="yes" [var.allow_embedding_yes]>[var.lang_yes] </option>
+          <option value="no" [var.allow_embedding_no]>[var.lang_no]</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td width="368" height="30" bgcolor="#F5F5F5" align="right" colspan="2"><font size="2" color="#333333">[var.lang_private_pub]</font></td>
+      <td width="4" height="30" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+      <td width="326" height="30" bgcolor="#F5F5F5"><select size="1" name="public_private">
+          <option value="public" [var.public_private_public]>[var.lang_public] </option>
+          <option value="private" [var.public_private_private]>[var.lang_private]</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td width="250" height="19" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+      <td width="118" height="19" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+      <td width="4" height="19" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+      <td width="326" height="35" bgcolor="#F5F5F5"><input type="hidden" name="submitted" value="yes" />
+        <input type="hidden" name="id" value="[var.vid]" />
+        <input type="hidden" name="channel_id" value="[var.channel_id]" />
+        <input type="hidden" name="sub_channel_id" value="[var.sub_channel_id]" />
+        <input type="submit" value="[var.lang_submit]" name="submit" />
+      </td>
+    </tr>
+  </form>
+  <!--[onload;block=table;when [var.input_checks]=1;comm]-->
+</table>
+<table>
+  <tr>
+    <td>Close this window and please start over!!</td>
+  </tr>
+  <!--[onload;block=table;when [var.input_checks]=0;comm]-->
+</table>
+</body>
+</html>

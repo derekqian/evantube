@@ -1,0 +1,70 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Groups Menu-->
+  <div class="header-narrow">[var.lang_groups]&nbsp;<!--[var.which_type;comm]--></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="groups">[var.lang_all_groups]</a></li>
+      <li><a href="groups_more.php?type=1">[var.lang_my_groups]</a></li>
+      <li><a href="groups.php?load=featured">[var.lang_featured]</a></li>
+      <li><a href="addgroup.php">[var.lang_create_group]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div><!--End Groups Menu-->
+  <!--Begin What's Showing Menu-->
+  <div class="header-narrow">[var.lang_whats_on]</div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="videos/load/featured">[var.lang_featured]</a></li>
+      <li><a href="videos/load/viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="videos/load/recent">[var.lang_most_recent]</a></li>
+      <li><a href="videos/load/comments">[var.lang_most_comments]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div><!--End What's Showing Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+
+  <div style="height:[var.page_spacer]">&nbsp;</div>
+
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <!--Begin Groups List Container-->
+  <div class="groups-list">
+    <ul class="groups-thumb">
+      <li><a href="group_home.php?gid=[blkfeatured.indexer;block=div]"><img border="0" src="uploads/thumbs/[blkfeatured.video_picture;block=div].jpg" width="120" height="90"></a></li>
+      <li class="font4_12"></li>
+    </ul>
+    <ul class="groups-info">
+      <li><a href="group_home.php?gid=[blkfeatured.indexer;block=div]"><span class="font4_14"><!--[blkfeatured.group_name;block=div;ope=max:150;comm]--></span></a></li>
+      <li><!--[blkfeatured.group_description;block=div;ope=max:150;comm]--></li>
+      <li>
+        <span class="font4_12" style="margin-right:5px;">[var.lang_word_videos]:</span><!--[blkfeatured.group_videos;block=div;ope=max:150;comm]-->&nbsp;&nbsp;
+        <span class="font4_12" style="margin-right:5px;">[var.lang_members]:</span><!--[blkfeatured.group_members;block=div;ope=max:150;comm]-->&nbsp;&nbsp;
+        <span class="font4_12" style="margin-right:5px;">[var.lang_admin]:</span><a href="members/[blkfeatured.admin_username;block=table]"><!--[blkfeatured.admin_username;block=div;ope=max:150;comm]--></a>
+      </li>
+    </ul>
+  </div>
+  <!--End Groups List Container-->
+
+  <div align='center'>
+    <!-- nothing found div -->
+    <div><span class="font4_14">[var.lang_no_groups]</span><!--[onload;block=div;when [var.show_v]=1;comm]--></div>
+    <!-- nothing found end -->
+    <!-- nothing featured -->
+    <div><span class="font4_14">[var.lang_no_groups_featured]</span><!--[onload;block=div;when [var.show_v]=3;comm]--></div>
+    <!-- nothing found end -->
+  </div>
+
+  <!-- Pagination start -->
+  <div>&nbsp;</div>
+  <div id="pagination"><ul>[var.show_pages;htmlconv=no]</ul></div>
+  <!-- Pagination end -->
+
+</div><!--End Right Column-->

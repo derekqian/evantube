@@ -1,0 +1,65 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Email Menu-->
+  <div class="header-narrow"><h3>[var.lang_email_menu]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="emailinbox.php">[var.lang_word_inbox]</a></li>
+      <li><a href="emailsentitems.php">[var.lang_sent]</a></li>
+      <li><a href="emailcompose.php">[var.lang_compose_new]</a></li>
+      <li><a href="inviteread.php">[var.lang_received_invites]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Email Menu-->
+  <!--Begin What's Showing Menu-->
+  <div class="header-narrow">[var.lang_whats_on]</div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="seemore.php?load=featured">[var.lang_featured]</a></li>
+      <li><a href="seemore.php?load=viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="seemore.php?load=recent">[var.lang_most_recent]</a></li>
+      <li><a href="seemore.php?load=comments">[var.lang_most_commented]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End What's Showing Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+<!--End Left Column-->
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <h1>[var.lang_compose_new]</h1>
+
+  <div class="email-list-2">
+    <ul>
+      <form name="email" action="emailcompose.php" method="post">
+        <input type="hidden" name="submitted" value="yes" />
+        <input type="hidden" name="update_token" value="[var.update_token]" />
+        <li><span class="font4_12">[var.lang_to]: ([var.lang_user_name])</span></li>
+        <li><input type="text" name="member_username" size="27" value="[var.member_username]" /></li>
+        <li>&nbsp;</li>
+        <li><span class="font4_12">[var.lang_subject]</span></li>
+        <li><input type="text" name="subject" size="60" value="[var.subject]" /></li>
+        <li>&nbsp;</li>
+        <li><span class="font4_12">[var.lang_message]</span></li>
+        <li> [var.my_edit;htmlconv=no;]</li>
+        <li>&nbsp;</li>
+        <li><input type="submit" class="button-form" value="[var.lang_send_message]" name="send_message" /></li>
+      </form>
+    </ul>
+  </div>
+  <!--[onload_1;block=div;when [var.show_form]=1;comm]-->
+
+</div>
+<!--End Right Column-->

@@ -1,0 +1,239 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>PhpMotion System Manager</title>
+	<link href="[var.base_url]/css/styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script>
+
+//Check all radio/check buttons script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+
+function checkall(thestate){
+var el_collection = document.forms['form_results'].elements['list[]'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+var el_collection = document.forms['form_results'].elements['list[]1'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+}
+
+</script>
+<style type="text/css">
+
+td.off {
+background: #A4A4A4;
+}
+
+</style>
+<!-- addnon - start of thickbox -->
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+<!-- addnon - end of thickbox -->
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+<form id="form_results" action="groups.php" method="post">
+
+	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		<!-- start of search box -->
+	<tr>
+		<!--[onload_8;block=tr;when [var.show_t]=4;comm]-->
+		<td width="99%" height="25" bgcolor="#FFFFFF" align="center" class="default_text_blue">
+        <div align="center">
+          <center>
+          <table border="0" cellpadding="0" cellspacing="0" width="105%">
+            <tr>
+              <td width="102%" colspan="3" bgcolor="#F2F2F2" height="45">
+                <p align="center">&nbsp;</td>
+            </tr>
+          </center>
+          <tr>
+            <td width="46%" bgcolor="#F2F2F2" align="right">&nbsp;[var.lang_group_name]&nbsp;
+              <input type="text" name="group_name" size="28"></td>
+            <td width="17%" bgcolor="#F2F2F2" align="right">[var.lang_group_id]&nbsp;&nbsp;</td>
+            <td width="43%" bgcolor="#F2F2F2" align="left">
+              <input type="text" name="indexer" size="13"></td>
+          </tr>
+          <center>
+          <tr>
+            <td width="46%" bgcolor="#F2F2F2" height="35" align="right">&nbsp;</td>
+            <td width="17%" bgcolor="#F2F2F2" height="35" align="right"><font face="Arial">&nbsp;&nbsp; </font></td>
+            <td width="43%" bgcolor="#F2F2F2" height="35" align="left"><font face="Arial">
+              <input type="submit" value="[var.lang_search]" name="search"> </font></td>
+          </tr>
+          <tr>
+            <td width="46%" bgcolor="#F2F2F2">&nbsp;</td>
+            <td width="62%" bgcolor="#F2F2F2" colspan="2">&nbsp;</td>
+          </tr>
+          </table>
+          </center>
+        </div>
+    </td>
+	</tr>
+	<tr>
+<!-- end of search box -->
+	<tr>
+
+
+	<td bgcolor="#FFFFFF">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" id="table8" height="206">
+
+	<tr>
+	<td style="border-style: solid; border-width: 0px; " bordercolor="#4B87C2" width="97%" bgcolor="#9FBFDF">
+	<table border="0" width="100%" id="table9" cellspacing="0" cellpadding="0">
+	<tr>
+	<td>
+<div align="center">
+<table border="0" width="100%" id="table10" cellspacing="0" cellpadding="0" height="216">
+	<input type ="hidden" name="type" value="[var.show_t]">
+	<input type="hidden" name="submitted" value="yes">
+	<tr>
+	<!--[onload_9;block=tr;when [var.show]=2;comm]-->
+	<td width="83" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+	<!--[var.lang_select;comm]--></td>
+	<td width="327" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+    <a href="groups.php?type=[var.show_t]&action=0&sort=[var.order_by_title]&page=[var.current_page]"><font color="#000000"><!--[var.lang_title;comm]--></font></a></td>
+	<td width="65" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+    <a href="groups.php?type=[var.show_t]&action=0&sort=[var.order_by_views]&page=[var.current_page]"><font color="#000000"><!--[var.lang_views;comm]--></font></a></td>
+	<td width="73" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+    <a href="groups.php?type=[var.show_t]&action=0&sort=[var.order_by_date]&page=[var.current_page]"><font color="#000000">
+	<!--[var.lang_date;comm]--></font></a></td>
+	<td width="65" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+	<!--[var.lang_members;comm]--></td>
+	<td width="55" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+	<!--[var.lang_featured;comm]--></td>
+	<td width="47" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+    <a href="groups.php?type=[var.show_t]&action=0&sort=[var.order_by_flags]&page=[var.current_page]"><font color="#000000">
+	<!--[var.lang_flags;comm]--></font></a>
+	</td>
+	<td width="43" height="33" bgcolor="#BBD7F2" align="center" class="default_text_blue" background="images/background_tables.png">
+    <font color="#000000"><!--[var.lang_action;comm]--></font></td>
+	</tr>
+	<tr>
+	<td width="83" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<font color="#3366CC" face="Arial">
+	<input type="checkbox" name="list[]" value="[blkallgroups.indexer;block=tr]"></font></td>
+	<td width="327" bgcolor="#FFFFFF" height="60" align="center" class="default_text">
+	<!--[blkallgroups.group_name;block=tr;comm]--></td>
+	<td width="65" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<font size="2">
+	<!--[blkallgroups.group_videos;block=tr;comm]--></font></td>
+	<td width="73" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<!--[blkallgroups.todays_date;block=tr;comm]--></td>
+	<td width="65" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<!--[blkallgroups.group_members;block=tr;comm]--></td>
+	<td width="55" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<!--[blkallgroups.featured;block=tr;comm]--></td>
+	<td width="47" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+	<!--[blkallgroups.flag_counter;block=tr;comm]--></td>
+	<td width="43" height="60" bgcolor="#FFFFFF" align="center" class="default_text">
+    <a href="[var.base_url]/edit/editgroup.php?id=[blkallgroups.indexer;block=tr]&keepThis=true&TB_iframe=true&height=500&width=700" class="thickbox"><img border="0" src="images/icon_edit_small.gif" width="17" height="18"></a>&nbsp;
+    <a href="groups.php?type=[var.type]&action=0&sort=[var.order_by]&page=[var.current_page]&delid=[blkallgroups.indexer;block=tr]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img border="0" src="images/icon_delete.gif" width="16" height="14"></a></td>
+	</tr>
+	<tr>
+	<td width="83" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<font color="#3366CC" face="Arial">
+	<input type="checkbox" name="list[]" value="[blkallgroups.indexer;block=tr]"></font></td>
+	<td width="327" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallgroups.group_name;block=tr;comm]--></td>
+	<td width="65" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<font size="2">
+	<!--[blkallgroups.group_videos;block=tr;comm]--></font></td>
+	<td width="73" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallgroups.todays_date;block=tr;comm]--></td>
+	<td width="65" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallgroups.group_members;block=tr;comm]--></td>
+	<td width="55" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallgroups.featured;block=tr;comm]--></td>
+	<td width="47" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+	<!--[blkallgroups.flag_counter;block=tr;comm]--></td>
+	<td width="43" height="60" bgcolor="#F9F9F9" align="center" class="default_text">
+    <a href="editgroup.php?vid=[blkallgroups.indexer;block=tr]&keepThis=true&TB_iframe=true&height=500&width=700" class="thickbox"><img border="0" src="images/icon_edit_small.gif" width="17" height="18"></a>&nbsp;
+    <a href="groups.php?type=[var.type]&action=0&sort=[var.order_by]&page=[var.current_page]&delid=[blkallgroups.indexer;block=tr]" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><img border="0" src="images/icon_delete.gif" width="16" height="14"></a></td>
+	</tr>
+	<tr>
+	<!--[onload_10;block=tr;when [var.show]=2;comm]-->
+	  <td width="410" height="7" bgcolor="#FFFFFF" align="left" colspan="2" class="default_text">
+	    &nbsp;&nbsp; <b><a href="javascript:checkall(true)"><font face="Arial" color="#333333">[var.lang_check_all]</font></a><font face="Arial"><font face="Arial" color="#333333"> | </font>
+        <a href="javascript:checkall(false)"><font color="#333333">[var.lang_uncheck_all]</font></a></font></b>
+	  </td>
+	  <td width="65" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	  <td width="73" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	  <td width="65" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	  <td width="55" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	  <td width="47" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;</td>
+	  <td width="43" height="7" bgcolor="#FFFFFF" align="center" class="default_text">&nbsp;
+	    
+	  </td>
+	</tr>
+
+	<tr>
+	  <td width="758" height="60" bgcolor="#FFFFFF" colspan="8" class="default_menu_blue">
+	  <div id="pagination">
+<ul>
+<b>&nbsp;&nbsp;&nbsp; </b>[var.show_pages;htmlconv=no] <!--[onload_11;block=tr;when [var.show]=2;comm]--><b>
+    &nbsp; </b>
+</ul>
+</div></td>
+	</tr>
+	<tr>
+	<td width="758" height="50" bgcolor="#FFFFFF" colspan="8" valign="bottom" class="default_text">
+	<p align="center">[onload_12;block=tr;when [var.show]=1]<b>
+    [var.lang_no_results_found]&nbsp; </b>
+	<p align="center">&nbsp;</td>
+	</tr>
+	<tr>
+	<td width="758" height="6" colspan="8" class="default_text" bgcolor="#FFFFFF">
+	<p align="left"><font face="Arial">
+	<input type="hidden" name="submitted" value="yes">
+	<input type ="hidden" name="type" value="[var.show_t]">
+    &nbsp;</font><input type="submit" value="[var.lang_delete_general]" name="delete" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #c31c23; border: 1px solid #c31c23; background-color: #FFFFFF" onClick="return(window.confirm('[var.confirm_popup_javascript]'))"><font face="Arial">&nbsp;&nbsp;
+    <input type="submit" value="[var.lang_featured]" name="feature">&nbsp;&nbsp;<input type="submit" value="[var.lang_unfeature]" name="unfeature">
+    </font><!--[onload_22;block=tr;when [var.show]=2;comm]-->&nbsp; <font face="Arial">
+    <input type="submit" value="[var.lang_reset_flags]" name="reset_flags"></font></td>
+	</tr>
+	<tr>
+	<td width="758" height="19" colspan="8" bgcolor="#FFFFFF">&nbsp;
+	</td>
+	</tr>
+	</form>
+</table>
+	</div>
+	</td>
+	</tr>
+</table>
+
+	</tr>
+	</table>
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+	<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

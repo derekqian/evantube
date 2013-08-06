@@ -1,0 +1,14 @@
+# By default, no module files may be accessed
+# directly from a webbrowser.
+Order deny,allow
+Deny from all
+
+# File types for which we make an exception.
+<Files ~ "\.(gif|jpg|jpeg|png|css|js|php)$">
+    Order allow,deny
+    Allow from all
+</Files>
+
+
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php

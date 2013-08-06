@@ -1,0 +1,502 @@
+
+
+<head>
+<title></title>
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" width="758" bgcolor="#FFFFFF" id="table4">
+					<tr>
+						<table border="0" cellpadding="0" cellspacing="0" width="761" bgcolor="#FFFFFF" id="table5">
+						
+							<tr>
+								<td colspan="2" height="32" width="754" background="images/right_table_header.png">
+                                <p align="left"><b><font face="Arial" size="2">&nbsp; <font color="#29537C">[var.stats_title]</font></font></b></td>
+							</tr>
+							<tr>
+								<td width="506" height="27">
+                                  &nbsp;
+ </td>
+								<td width="241" height="27"> &nbsp;</tr>
+							<tr>
+								<td width="506" height="35" bgcolor="#EFEFEF">
+                                <b><font size="2">&nbsp; [var.lang_total] - [var.selectedyear]&nbsp;&nbsp;
+                                ([var.totals])</font></b></td>
+								<td width="241" height="35" bgcolor="#EFEFEF" align="left">
+                                <form method="POST" action="stats.php">
+									<p><select size="1" name="year">
+									<!--[var.yearselect;htmlconv=no;comm]-->
+									</select>
+									<input type="hidden" value="[var.type]" name="type">
+									<input type="submit" value="[var.lang_submit]" name="submit"></p>
+								</form>
+								</tr>
+							<tr>
+								<td width="747" height="35" bgcolor="#EFEFEF" colspan="2">
+                                  <p align="center">
+<!-- start of stats display -->
+<script language="JavaScript" type="text/javascript">
+            <!--[onload_201;block=script;when [var.errors]=0;comm]-->
+<!--
+if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
+	alert("This page requires AC_RunActiveContent.js.");
+} else {
+	var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+	if(hasRightVersion) { 
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,45,0',
+			'width', '760',
+			'height', '300',
+			'scale', 'noscale',
+			'salign', 'TL',
+			'bgcolor', '#ffffff',
+			'wmode', 'opaque',
+			'movie', 'charts',
+			'src', 'charts',
+			'FlashVars', 'library_path=charts_library&xml_source=[var.base_url]/siteadmin/includes/stats_xml.php?feed=1', 
+			'id', 'my_chart',
+			'name', 'my_chart',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'quality', 'high',
+			'align', 'middle',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'play', 'true',
+			'devicefont', 'false'
+			); 
+	} else { 
+		var alternateContent = 'This content requires the Adobe Flash Player. '
+		+ '<u><a href=http://www.macromedia.com/go/getflash/>Get Flash</a></u>.';
+		document.write(alternateContent); 
+	}
+}
+// -->
+</script>
+<noscript>
+	<P>This content requires JavaScript.</P>
+</noscript>
+<!-- end of stats display -->
+                                 
+ </td>
+                            </tr>
+ 							<tr>
+								<td width="747" height="35" bgcolor="#EFEFEF" colspan="2">
+                                  <p align="center">
+<!-- start of stats display -->
+<script language="JavaScript" type="text/javascript">
+            <!--[onload_220;block=script;when [var.errors]=0;comm]-->
+<!--
+if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
+	alert("This page requires AC_RunActiveContent.js.");
+} else {
+	var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+	if(hasRightVersion) { 
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,45,0',
+			'width', '760',
+			'height', '300',
+			'scale', 'noscale',
+			'salign', 'TL',
+			'bgcolor', '#ffffff',
+			'wmode', 'opaque',
+			'movie', 'charts',
+			'src', 'charts',
+			'FlashVars', 'library_path=charts_library&xml_source=[var.base_url]/siteadmin/includes/stats_xml.php?feed=4', 
+			'id', 'my_chart',
+			'name', 'my_chart',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'quality', 'high',
+			'align', 'middle',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'play', 'true',
+			'devicefont', 'false'
+			); 
+	} else { 
+		var alternateContent = 'This content requires the Adobe Flash Player. '
+		+ '<u><a href=http://www.macromedia.com/go/getflash/>Get Flash</a></u>.';
+		document.write(alternateContent); 
+	}
+}
+// -->
+</script>
+<noscript>
+	<P>This content requires JavaScript.</P>
+</noscript>
+<!-- end of stats display -->
+                                 
+ </td>
+                            </tr>
+                            <tr>
+								<td width="506" height="35" bgcolor="#FFFFFF">&nbsp;</td>
+								<td width="241" height="35" bgcolor="#FFFFFF" align="left">
+                                &nbsp;</tr>
+							<tr>
+								<td colspan="2" height="32" width="754" background="images/right_table_header.png">
+                                <p align="left"><b><font face="Arial" size="2">&nbsp;</font></b></td>
+							</tr>
+							<tr>
+								<td height="11" colspan="2" width="761">
+                                <div align="center">
+                                  <center>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td width="55%" bgcolor="#EFEFEF" valign="top">
+                                        <div align="center">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="409">
+											<tr>
+												<td width="100%" height="25">
+												<font face="Arial" size="2" color="#29537C">
+												<b>&nbsp;[var.lang_compare]</b></font></td>
+											</tr>
+											<tr>
+												<td width="100%">
+												<p align="center">
+                                                
+<!-- start of stats display (year before)-->
+<script language="JavaScript" type="text/javascript">
+            <!--[onload_202;block=script;when [var.errors]=0;comm]-->
+<!--
+if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
+	alert("This page requires AC_RunActiveContent.js.");
+} else {
+	var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+	if(hasRightVersion) { 
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,45,0',
+			'width', '408',
+			'height', '220',
+			'scale', 'noscale',
+			'salign', 'TL',
+			'bgcolor', '#ffffff',
+			'wmode', 'opaque',
+			'movie', 'charts',
+			'src', 'charts',
+			'FlashVars', 'library_path=charts_library&xml_source=[var.base_url]/siteadmin/includes/stats_xml.php?feed=3', 
+			'id', 'my_chart',
+			'name', 'my_chart',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'quality', 'high',
+			'align', 'middle',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'play', 'true',
+			'devicefont', 'false'
+			); 
+	} else { 
+		var alternateContent = 'This content requires the Adobe Flash Player. '
+		+ '<u><a href=http://www.macromedia.com/go/getflash/>Get Flash</a></u>.';
+		document.write(alternateContent); 
+	}
+}
+// -->
+</script>
+												<noscript><P>This content requires JavaScript.</P>
+												</noscript>
+<!-- end of stats display (year before)-->
+                                                
+                                                
+                                                </td>
+											</tr>
+											<tr>
+												<td width="100%">&nbsp;</td>
+											</tr>
+										<tr>
+												<td width="100%">
+												<p align="center">
+                                                
+<!-- start of stats display (year before)-->
+<script language="JavaScript" type="text/javascript">
+            <!--[onload_232;block=script;when [var.errors]=0;comm]-->
+<!--
+if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
+	alert("This page requires AC_RunActiveContent.js.");
+} else {
+	var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+	if(hasRightVersion) { 
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,45,0',
+			'width', '408',
+			'height', '220',
+			'scale', 'noscale',
+			'salign', 'TL',
+			'bgcolor', '#ffffff',
+			'wmode', 'opaque',
+			'movie', 'charts',
+			'src', 'charts',
+			'FlashVars', 'library_path=charts_library&xml_source=[var.base_url]/siteadmin/includes/stats_xml.php?feed=5', 
+			'id', 'my_chart',
+			'name', 'my_chart',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'quality', 'high',
+			'align', 'middle',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'play', 'true',
+			'devicefont', 'false'
+			); 
+	} else { 
+		var alternateContent = 'This content requires the Adobe Flash Player. '
+		+ '<u><a href=http://www.macromedia.com/go/getflash/>Get Flash</a></u>.';
+		document.write(alternateContent); 
+	}
+}
+// -->
+</script>
+												<noscript><P>This content requires JavaScript.</P>
+												</noscript>
+<!-- end of stats display (year before)-->
+                                                
+                                                
+                                                </td>
+											</tr>
+											<tr>
+												<td width="100%">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="100%">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="100%"></td>
+											</tr>
+											<tr>
+												<td width="100%">
+                                                </td>
+											</tr>
+										</table>
+                                      	</div>
+                                      </td>
+                                      <td width="45%" bgcolor="#EFEFEF" valign="top">
+                                        <div align="center">
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF" rowspan="2">&nbsp;</td>
+                                              <td width="44%" height="13" colspan="2" bgcolor="#EFEFEF">
+                                              </td>
+                                              <td width="5%" height="13" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="19%" height="13" bgcolor="#EFEFEF">
+                                                &nbsp;</td>
+                                              <td width="25%" height="13" bgcolor="#EFEFEF">
+                                                &nbsp;</td>
+                                              <td width="5%" height="13" bgcolor="#EFEFEF">
+                                                &nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                              <td width="44%" height="12" colspan="2" bgcolor="#EFEFEF">
+                                                <b><font face="Arial" size="2" color="#29537C">&nbsp;[var.lang_added]
+                                                (<!--[var.selectedyear;comm]-->)</font></b></td>
+                                              <td width="5%" height="12" bgcolor="#EFEFEF"><font face="Arial" size="2">&nbsp;</font></td>
+                                              <td width="44%" height="12" bgcolor="#EFEFEF" colspan="2">
+                                                <b>
+                                                <font color="#006600" face="Arial" size="2">&nbsp;[var.lang_viewed]
+                                                (<!--[var.selectedyear;comm]-->)</font></b></td>
+                                              <td width="5%" height="12" bgcolor="#EFEFEF">
+                                                &nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_jan;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.jan]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_jan;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.jan_view]</td>
+                                              <td width="1%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_feb;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.feb]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_feb;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.feb_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_mar;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.mar]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_mar;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.mar_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_apr;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.apr]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_apr;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.apr_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_may;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.may]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_may;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.may_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_jun;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.jun]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_jun;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.jun_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_jul;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.jul]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_jul;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.jul_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_aug;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.aug]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_aug;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.aug_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_sep;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.sep]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_sep;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.sep_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_oct;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.oct]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_oct;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.oct_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_nov;comm]--></td>
+                                              <td width="28%" height="25" bgcolor="#FFFFFF">[var.nov]</td>
+                                              <td width="5%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="25" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_nov;comm]--></td>
+                                              <td width="18%" height="25" bgcolor="#FFFFFF">[var.nov_view]</td>
+                                              <td width="1%" height="25"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="13" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="13" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_dec;comm]--></td>
+                                              <td width="28%" height="13" bgcolor="#FFFFFF">[var.dec]</td>
+                                              <td width="5%" height="13" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="13" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;
+                                                <!--[var.lang_dec;comm]--></td>
+                                              <td width="18%" height="13" bgcolor="#FFFFFF">[var.dec_view]</td>
+                                              <td width="1%" height="25" rowspan="2"></td>
+                                            </tr>
+                                            <tr>
+                                              <td width="4%" height="12" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="16%" height="12" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="28%" height="12" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="5%" height="12" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="17%" height="12" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="18%" height="12" bgcolor="#EFEFEF">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                              <td width="88%" height="12" bgcolor="#EFEFEF" colspan="6">
+                                                <div align="center">
+                                                  <div align="center">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td width="5%" bgcolor="#EFEFEF">
+                                                        </td>
+                                                        <td width="62%" bgcolor="#DDDDDD">
+                                                <b><font face="Arial" color="#29537C" size="2">&nbsp;[var.lang_additional_data]</font></b></td>
+                                                        <td width="33%" bgcolor="#DDDDDD">
+                                                &nbsp;</td>
+                                                      </tr>
+                                                      <tr>
+                                              <td width="1%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="49%" height="25" bgcolor="#DDDDDD">-&nbsp;<!--[var.lang_comments;comm]--></td>
+                                              <td width="22%" height="25" bgcolor="#DDDDDD">&nbsp;<!--[var.comments;comm]--></td>
+                                                      </tr>
+                                                      <tr>
+                                              <td width="1%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="49%" height="25" bgcolor="#DDDDDD">-&nbsp;<!--[var.graph_title;comm]--></td>
+                                              <td width="22%" height="25" bgcolor="#DDDDDD">&nbsp;<!--[var.media_count;comm]--></td>
+                                                      </tr>
+                                                      <tr>
+                                              <td width="1%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="49%" height="25" bgcolor="#DDDDDD">-&nbsp;<!--[var.lang_played_viewed;comm]--></td>
+                                              <td width="22%" height="25" bgcolor="#DDDDDD">&nbsp;<!--[var.media_views;comm]--></td>
+                                                      </tr>
+                                                      <tr>
+                                              <td width="1%" height="25" bgcolor="#EFEFEF">&nbsp;</td>
+                                              <td width="49%" height="25" bgcolor="#DDDDDD">-&nbsp;<!--[var.lang_harddrive_usage;comm]--></td>
+                                              <td width="22%" height="25" bgcolor="#DDDDDD">&nbsp;<!--[var.harddrive;comm]--></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td width="50%" colspan="2"></td>
+                                                        <td width="50%"></td>
+                                                      </tr>
+                                                    </table>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  </center>
+                                </div>
+                                </td>
+							</tr>
+							
+							<tr>
+								<td height="8" width="520">
+								&nbsp;</td>
+								<td height="8" width="241">&nbsp;</td>
+							</tr>
+							
+						</table>
+					</tr>
+				</table></div>

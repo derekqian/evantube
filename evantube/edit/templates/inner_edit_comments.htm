@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Edit Comments</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body topmargin="0">
+  <div align="center" id="EditUserPopup">
+    <!-- notification div start -->
+    <div align="center">
+    <br />
+      <table border="0" cellpadding="0" cellspacing="0" width="550">
+      <!--[onload_3;block=table;when [var.show_notification]=1;comm]-->
+        <tr>
+          <td width="92%">
+            <div id="message_popup">
+              <div align="center"><font face="Arial" size="2">[var.message;htmlconv=no]</font></div>
+            </div>
+          </td>
+       </tr>
+     </table>
+   </div>
+   <!-- notification div end -->
+   <br />
+   <table border="0" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #D1D1D1;">
+     <form id="edit_comments" action="editcomments.php" method="post">
+	 <tr>
+	   <td height="33" align="center" class="default_text_blue" colspan="3" background="images/background_tables.png">
+	     <p align="left">&nbsp;<b><font face="Arial" color="#0099CC">[var.lang_edit]</font></b></p>
+	   </td>
+	 </tr>
+	 <tr>
+	   <td height="8" bgcolor="#F0F0F0" align="right" class="default_text" colspan="3">&nbsp;
+           
+         </td>
+       </tr>
+       <tr>
+         <td height="25" bgcolor="#F0F0F0" align="right" class="default_text" colspan="3">
+           <p align="center"><font color="#333333" face="Arial">[var.my_edit;htmlconv=no;]</font></p>
+         </td>
+       </tr>
+       <tr>
+         <td height="25" bgcolor="#F0F0F0" align="right">&nbsp;</td>
+         <td height="25" bgcolor="#F5F5F5" align="right">&nbsp;</td>
+         <td height="30" bgcolor="#F5F5F5" align="center">
+           <font color="#333333" face="Arial"><input type="submit" value="[var.lang_submit]" name="submit" /></font>
+           <input type="hidden" name="id" value="[var.commentid]" />
+           <input type="hidden" name="type" value="[var.type]" />
+         </td>
+       </tr>
+     </form>
+   </table>
+<p>&nbsp;</p>
+
+</body>
+</html>

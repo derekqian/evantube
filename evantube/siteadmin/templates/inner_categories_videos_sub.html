@@ -1,0 +1,176 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>PhpMotion System Manager</title>
+	<link href="[var.base_url]/css/styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script>
+
+//Check all radio/check buttons script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+
+function checkall(thestate){
+var el_collection = document.forms['form_results'].elements['list[]'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+var el_collection = document.forms['form_results'].elements['list[]1'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+}
+
+</script>
+<style type="text/css">
+
+td.off {
+background: #A4A4A4;
+}
+
+</style>
+<!-- addnon - start of thickbox -->
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+<!-- addnon - end of thickbox -->
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		<!-- start of search box -->
+	<tr>
+<!-- end of search box -->
+	<!-- admin password -->
+	<tr>
+	<td bgcolor="#FFFFFF">
+      <div align="center">
+        <center>
+            <input type="hidden" name="type" value="[var.type]">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" height="170">
+          <tr>
+            <td width="100%" height="32" background="images/right_table_header.png"><font face="Arial" size="2"><b>&nbsp;
+              &nbsp;
+              [var.lang_video_categories]&nbsp; </b><font color="#4B87C2">
+			<a href="categories_videos_transfer.php"><font color="#4B87C2">Move 
+			Videos</font></a></font></font></td>
+          </tr>
+          <tr>
+            <td width="100%" height="21">&nbsp;</td>
+          </tr>
+        </center>
+        </center>
+          <tr>
+          		<!--[onload_8;block=tr;when [var.show_subcategory]=1;comm]-->
+            <td width="100%" height="25">
+              <table border="0" width="100%" id="table4" cellspacing="0" cellpadding="3">
+					<form method="POST" action="categories_videos.php">
+				    <input type="hidden" name="main_category" value="[var.category_id]">
+					              
+				<tr>
+					<td width="98%" colspan="2" height="32">
+					<font face="Arial" size="2" color="#4B87C2"><b>
+					&nbsp;</b><a style="text-decoration: none; font-weight:700" href="categories_videos.php"><font color="#4B87C2">Main 
+					Categories</font></a><b>
+					</b>&gt;&gt; </font>
+					<font face="Arial" size="2" color="#C31C23"> 
+					<a style="text-decoration: none" href="categories_videos.php?id=[var.category_id]&type=2">
+					<font color="#C31C23">[var.channel_display_name]</font></a> 
+					&gt;&gt; [var.lang_sub_categories]</font></td>
+				</tr>
+				<tr>
+					<!--[onload_9;block=tr;when [var.show_has_subcategory]=0;comm]-->
+
+					<td bgcolor="#F0F0F0" colspan="2" height="75" style="line-height: 200%">
+						<p align="center"><font face="Arial" size="2"><u><b>No</b></u> Sub-Categories found 
+						in (<font color="#4B87C2">[var.channel_display_name]</font>)</font><p align="center">
+						<font face="Arial" size="2">You can create some below</font></td>
+				</tr>
+				<tr>
+				          		<!--[onload_10;block=tr;when [var.show_has_subcategory]=1;comm]-->
+					<td bgcolor="#F0F0F0" height="130" colspan="2">
+						<p align="center"><font face="Arial" color="#4B87C2">
+						<select size="7" name="sub_category" style="font-weight: 700">
+						<!--[var.sub_category_list;htmlconv=no;comm]-->
+						</select></font>&nbsp;</p>
+						<p align="center"><font face="Arial" size="2"><b>(x) </b>
+						= [var.lang_total] - [var.lang_word_videos]</font></p>
+					</td>
+				</tr>
+				<tr>
+								          		<!--[onload_11;block=tr;when [var.show_has_subcategory]=1;comm]-->
+					<td bgcolor="#F0F0F0" height="40" colspan="2">
+						<p align="center">
+						<input type="hidden" name="main_category" value="[var.category_id]">
+						
+						<input type="submit" value="[var.lang_edit_sub_category]" name="edit_sub_category">&nbsp;
+						
+						<input type="submit" value="[var.lang_delete_general]" name="delete_sub_category" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #c31c23; border: 1px solid #c31c23; background-color: #FFFFFF" onClick="return(window.confirm('[var.lang_delet_video_subcat_confirm]'))"></td>
+				</tr>
+				<tr>
+					<td align="right" colspan="2" background="images/right_table_header.png" height="32">
+						<p align="left">
+						<font face="Arial" size="2" color="#4B87C2">&nbsp;<a style="text-decoration: none; font-weight:700" href="categories_videos.php"><font color="#4B87C2">[var.lang_main_categories]</font></a> 
+						&gt;&gt; </font>
+						<font face="Arial" size="2" color="#C31C23"> 
+						<a style="text-decoration: none" href="categories_videos.php?id=[var.category_id]&type=2">
+						<font color="#C31C23">[var.channel_display_name]</font></a> 
+						&gt;&gt; [var.current_title2]</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#F0F0F0" align="right">
+						<font face="Arial" size="2">Title</font></td>
+					<td bgcolor="#F0F0F0" width="54%" height="33">
+						<font face="Arial">
+						<input type="text" name="title" size="33" value="[var.title]"></font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#F0F0F0" align="right" height="60">
+						<font face="Arial" size="2">Description</font></td>
+					<td bgcolor="#F0F0F0" width="53%">
+						<font face="Arial">
+						<textarea rows="2" name="description" cols="27">[var.description]</textarea></font></td>
+				</tr>
+								<tr>
+				<!--[onload_17;block=tr;when [var.edit_sub_category]=0;comm]-->
+					<td bgcolor="#F0F0F0" width="46%" height="43">&nbsp;
+						</td>
+					<td bgcolor="#F0F0F0" width="53%">
+						<font face="Arial">
+						<input type="hidden" name="main_category" value="[var.category_id]">
+						<input type="submit" value="[var.lang_new_sub_category]" name="new_sub_category"></font></td>
+				</tr>
+				<tr>				<!--[onload_18;block=tr;when [var.edit_sub_category]=1;comm]-->
+					<td bgcolor="#A4A4A4" width="46%" height="43">
+						<p align="right">&nbsp;</td>
+					<td bgcolor="#A4A4A4" width="53%">
+						<font face="Arial">
+										    <input type="hidden" name="sub_category_on_edit" value="[var.sub_channel_id]">
+						<input type="submit" value="[var.lang_edit_sub_category]" name="actual_edit_sub_category">&nbsp;
+						</font> </td>
+				</tr>
+									</form>
+
+				</table>
+			</td>
+          </tr>
+        </center>
+        </center>
+          </table>
+        </center>
+      </div>
+    </td>
+	</tr>
+	<!-- admin password end -->
+	<!-- other-->
+	<!-- other end-->
+
+	</table>
+</div>
+
+</body>
+
+</html>

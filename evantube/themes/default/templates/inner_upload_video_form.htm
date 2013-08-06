@@ -1,0 +1,110 @@
+<!--Begin Left Column-->
+    <div id="column-left-2">
+    <!--Begin Upload Menu-->
+      <div class="header-narrow"><h3>[var.lang_main_menu]</h3></div>
+      <div class="whats-showing">
+        <ul>
+          <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+              <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	      <li><a href="image_uploader.php">[var.lang_upload_image]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+        </ul>
+      </div>
+     <div class="container-narrow-bottom"></div><!--End Upload Menu-->
+
+   <!--Begin Left Advert-->
+      <div class="container-narrow-top"></div>
+        <div id="advert-left">
+          <!--[var.ads_left;htmlconv=no;comm]-->
+        </div>
+      <div class="container-narrow-bottom"></div><!--End Left Advert-->
+
+    </div><!--End Left Column-->
+
+  <!--Begin Right Column-->
+    <div id="column-right-2">
+
+      <div class="header-wide"><h2>[var.lang_upload_video]</h2></div>
+        <div class="container-wide">
+          <!--BEGIN - Addon Video Grabber Code can be added in this div-->
+          <div>
+
+          </div>
+          <!--END - Addon Video Grabber Code can be added in this div-->
+
+          <!--Begin Upload Video Form-->
+          <form name="form_upload" action="uploader.php" method="post">
+            <div id="upload-video">
+              <ul>
+                <li style="width:240px; text-align:right;"><strong>[var.lang_title]:</strong></li>
+                <li style="width:400px; text-align:left;"><input name="title" type="text" class="upload-video-form-input" value="[var.title]" size="38" />
+                </li>
+
+                <li style="width:240px; text-align:right;"><strong>[var.lang_description]:</strong></li>
+                <li style="width:400px; text-align:left;"><textarea rows="4" name="description" cols="29" class="upload-video-form-input">[var.description]</textarea>
+                </li>
+
+                <li style="width:240px; text-align:right;"><strong>[var.lang_tags]:</strong></li>
+                <li style="width:400px; text-align:left;"><input name="tags" type="text" class="upload-video-form-input" value="[var.tags]" size="38" />
+                </li>
+
+                <li style="width:240px; text-align:right;">&nbsp;</li>
+                <li style="width:300px; text-align:left;" class="upload-video-tags">
+                [var.lang_enter_tags].<br />
+                      [var.lang_enter_tags_description].</li>
+
+                <li style="width:240px; text-align:right;"><strong>[var.lang_select_channel]:</strong></li>
+                <li style="width:400px; text-align:left;">
+                  <select class="upload-video-form-input" style="width:160px;" size="1" name="channel" onchange="javascript:ahahscript.ahah('[var.base_url]/uploader.php?sub_cat='+ document.form_upload.channel.value, 'sub_change', '', 'GET', '', this);">
+                  &nbsp;[var.fields_all;htmlconv=no]</select>&nbsp;([var.lang_select_one])
+                </li>
+
+                <li style="width:240px; text-align:right">&nbsp;</li>
+                <li style="width:380px" class="font5_14"><strong>[var.lang_sub_categories]</strong></li>
+
+                <li style="width:240px; text-align:right"><strong>[var.lang_sub_cat]:&nbsp;</strong></li>
+                <li style="width:400px; text-align:left;" id="sub_change"><select class="upload-video-form-input" style="width:160px;" size="1" name="sub_cat"></select>&nbsp;([var.lang_optional])</li>
+
+                <li style="width:240px; text-align:center">&nbsp;</li>
+                <li class="font5_14" style="width:380px;"><strong>[var.lang_optional_info]</strong></li>
+
+          	    <li style="width:240px; text-align:right"><strong>[var.lang_location_recorded]:</strong></li>
+          	    <li style="width:400px; text-align:left;"><input name="location_recorded" type="text" class="upload-video-form-input" value="[var.location_recorded]" size="25" />
+          	    </li>
+
+          	    <li style="width:240px; text-align:right"><strong>[var.lang_allow_comm]:</strong></li>
+          	    <li style="width:400px; text-align:left;">
+                  <select class="upload-video-form-input" size="1" name="allow_comments">
+                    <option value="yes" selected="selected">[var.lang_yes]</option>
+                    <option value="no">[var.lang_no]</option>
+                  </select>
+                </li>
+
+          	    <li style="width:240px; text-align:right"><strong>[var.lang_allow_embed]:</strong></li>
+          	    <li style="width:400px; text-align:left;">
+                  <select class="upload-video-form-input" size="1" name="allow_embedding">
+                    <option value="yes" selected="selected">[var.lang_yes]</option>
+                    <option value="no">[var.lang_no]</option>
+                  </select>
+                </li>
+
+          	    <li style="width:240px; text-align:right"><strong>[var.lang_private_pub]:</strong></li>
+          	    <li style="width:400px; text-align:left;">
+           	      <select class="upload-video-form-input" size="1" name="public_private">
+           	        <option value="public" selected="selected">[var.lang_public]</option>
+           	        <option value="private">[var.lang_private]</option>
+           	      </select>
+           	    </li>
+
+           	    <li style="width:240px; text-align:right">&nbsp;</li>
+           	    <li style="width:400px; text-align:left;">
+           	      <input class="button-form" type="submit" value="Next &gt;&gt;" name="B3" />
+           	    </li>
+           	  </ul>
+            </div>
+            <input class="upload-video-form-input" type="hidden" name="form_submitted" value="yes" />
+          </form>
+          <div class="clear-fix"></div>
+        </div>
+      <div class="container-wide-footer"></div>
+
+    </div><!--End Right Column-->

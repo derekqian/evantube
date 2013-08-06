@@ -1,0 +1,102 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Upload Menu-->
+  <div class="header-narrow"><span class="font5_12">[var.lang_main_menu]</span></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+      <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	<!--[var.image_inner_upload_form;htmlconv=no;comm]-->
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div><!--End Upload Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+    <div id="advert-left">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div><!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="header-wide"><h2>[var.lang_upload_audio] - [[var.lang_start]]</h2></div>
+  <div class="container-wide" style="width:700px; text-align:left; padding: 5px;">
+
+    <div id="UploadAudio">
+      <table border="0" width="98%" height="400" cellspacing="0">
+        <tr>
+          <td width="100%" height="135" align="right" valign="top">
+            <p align="center">
+              <!-- START OF UPLOADER -->
+              <div align="center">
+                <br />
+                <!-- Start Progress Bar -->
+                <div class="info" id="progress_info"></div>
+                <div id="progress_bar" style="display:none">
+                <div class="bar1" id="upload_status_wrap" align="center">
+                <div class="bar2" id="upload_status"></div>
+              </div>
+              <br />
+              <table cellpadding='3' cellspacing='0' style="border: 1px solid #EBE8E8; " width="353">
+                <tr>
+                  <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_percent_complete]:</font></td>
+                  <td align="center" height="25"><font face="Arial" size="2"><span id="percent">0%</span></font></td>
+                </tr>
+                <tr>
+                  <td height="25"><font face="Arial" size="2">&nbsp;[var.lang_files_uploaded]:</font></td>
+                  <td align="center" height="25"><font face="Arial" size="2"><span id="uploaded_files">0</span> of </font> <span id="total_uploads"></span></td>
+                </tr>
+                <tr>
+                  <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_current_position]:</font></td>
+                  <td align="center" height="25"><font face="Arial" size="2"><span id="current">0</span> / </font><span id="total_kbytes"></span><font face="Arial" size="2">KBytes</font></td>
+                </tr>
+                <tr>
+                  <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_elapsed_time]:</font></td>
+                  <td align="center" height="25"><font face="Arial" size="2"><span id="time">0</span></font></td>
+                </tr>
+                <tr>
+                  <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_est_time_left]:</font></td>
+                  <td align="center" height="25"><font face="Arial" size="2"><span id="remain">0</span></font></td>
+                </tr>
+                <tr>
+                  <td align="left" height="25"><font face="Arial" size="2">&nbsp;[var.lang_est_speed]:</font></td>
+                  <td align="center" height="25"><font face="Arial" size="2"><span id="speed">0</span> KB/s.</font></td>
+                </tr>
+              </table>
+            </div>
+            
+             <!--upload bar chrome fix-->
+             <div id="progress_info_2" style="display:none">
+             <div align="center"><span class="font5_16">[var.lang_please_wait]</span><br /><img src="[var.base_url]/images/upload-loading.gif" width="128" height="15" alt="....loading...." /></div>
+             </div>
+             <!--upload bar chrome fix end-->
+             
+            <div align="center">
+              <div id="upload_div" style="display:none; width:805; height:205; overflow:auto;"><iframe name="upload_iframe" frameborder=0 width="743" height="175"></iframe></div>
+              <br />
+              <!-- Start Upload Form -->
+              <form name="form_upload" method="post" enctype="multipart/form-data"  action="[var.path_to_upload_script]" style="margin: 0px; padding: 0px;">
+                <input type="hidden" name="form_submitted" value="yes" />
+                <br />
+                <font size="1" color="#EE0000">[var.lang_mp3_only].</font>
+                <br />
+                <div id="upload_slots"><input type="file" name="upfile_0" size="55" value="" /></div>
+                <noscript>[var.lang_javascript_enabled].</noscript>
+              </form>
+              <!-- End Upload Form -->
+              <br />
+              <script language="javascript" type="text/javascript">
+                <!--
+                document.writeln('<input type="button" name="reset_button" value="Reset" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2"  onClick="resetForm();">&nbsp;&nbsp;&nbsp;<input type="button" id="upload_button" name="upload_button" value="Upload" style="font-family: Arial; font-size: 10pt; letter-spacing: 1; color: #333333; border: 1px solid #0099FF; background-color: #F2F2F2" onClick="uploadFiles();" />');
+                //-->
+              </script>
+            </div>
+            <br />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="container-wide-footer"></div>
+</div>

@@ -1,0 +1,307 @@
+<body topmargin="0">
+
+<div align="center">
+						<form action="settings_general.php" method="post">
+	<table border="0" cellpadding="0" cellspacing="0" width="758" bgcolor="#FFFFFF" id="table4">
+					<tr>
+						<table border="0" cellpadding="0" cellspacing="0" width="761" bgcolor="#FFFFFF" id="table5">
+							<tr>
+								<td colspan="3" height="32" width="754" background="images/right_table_header.png">
+                                <p align="left"><b><font face="Arial" size="2">
+								&nbsp; <font color="#29537C">[var.lang_general_settings]</font></font></b></td>
+							</tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Site name</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+								  <input type="text" name="site_name" size="45" value="[adminblk.site_name;block=table]">
+						      </div>						  </tr>
+							<tr bgcolor="#EFEFEF">
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Site base url</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+							      <input type="text" name="site_base_url" size="45" value="[adminblk.site_base_url;block=table]">
+							      &nbsp;
+								    <font face="Arial" size="2">no trailing </font>
+						      <font color="#FF4242" size="4" face="Arial"><b>/</b></font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Date format</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+							      <input type="text" name="date_format" size="15" value="[adminblk.date_format;block=table]">
+							      &nbsp;
+						  (<b>d-m-y</b>&nbsp; or <b>m-d-y</b>)</div>
+						  </tr>
+
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Path to ffmpeg</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+							      <input type="text" name="path_to_ffmpeg" size="45" value="[adminblk.path_to_ffmpeg;block=table]">
+							      &nbsp;
+								    <font face="Arial" size="2">no trailing </font>
+						      <font color="#FF4242" size="4" face="Arial"><b>/</b></font></div>						  </tr>
+							<tr bgcolor="#EFEFEF">
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Path to flvtool2</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+							      <input type="text" name="path_to_flvtool2" size="45" value="[adminblk.path_to_flvtool2;block=table]">
+							      &nbsp;
+								    <font face="Arial" size="2">no trailing </font>
+						      <font color="#FF4242" size="4" face="Arial"><b>/</b></font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Path to mencoder</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+							      <input type="text" name="path_to_mencoder" size="45" value="[adminblk.path_to_mencoder;block=table]">
+							      &nbsp;
+								    <font face="Arial" size="2">no trailing </font>
+						      <font color="#FF4242" size="4" face="Arial"><b>/</b></font></div>						  </tr>
+							<tr bgcolor="#EFEFEF">
+								<td width="34%" height="35">
+								<p align="right">Path to php</td>
+								<td width="2%" height="35">&nbsp;								</td>
+								<td width="64%" height="35">
+								  <div align="left">
+								    <input type="text" name="path_to_php" size="45" value="[adminblk.path_to_php;block=table]">
+								    &nbsp;
+								    <font face="Arial" size="2">no trailing </font>
+						      <font color="#FF4242" size="4" face="Arial"><b>/</b></font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">
+								System email address</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"> <div align="left">
+								  <input type="text" name="notifications_from_email" size="30" value="[adminblk.notifications_from_email;block=table]">
+						  </div>						  </tr>
+							<tr bgcolor="#EFEFEF">
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">from system name</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35">
+								  <div align="left">
+								    <input type="text" name="from_system_name" size="45" value="[adminblk.from_system_name;block=table]">
+					            </div>						  </tr>
+							<tr>
+								<td width="34%" height="35" align="right">Enable
+								audio</td>
+								<td width="2%" height="35" align="right">&nbsp;</td>
+								<td width="64%" height="35"><div align="left"><font face="Arial">
+							    <input type="text" name="enable_audio" size="15" value="[adminblk.enable_audio;block=table]">
+							    </font></div>								</tr>
+							<tr>
+								<td width="34%" height="35" align="right" bgcolor="#EFEFEF">
+								Enable converter Logging</td>
+								<td width="2%" height="35" align="right" bgcolor="#EFEFEF">&nbsp;								</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="log_encoder" size="9" value="[adminblk.log_encoder;block=table]">
+					      </font></div>						  </tr>
+							<tr>
+								<td width="34%" height="34" align="right">Debug
+								Mode</td>
+								<td width="2%" height="34" align="right">&nbsp;</td>
+								<td width="64%" height="34"><div align="left"><font face="Arial">
+							    <input type="text" name="debug_mode" size="9" value="[adminblk.debug_mode;block=table]">
+							    </font></div>								</tr>
+							<tr>
+								<td width="34%" height="36" align="right" bgcolor="#EFEFEF">
+								Allow media downloads</td>
+								<td width="2%" height="36" align="right" bgcolor="#EFEFEF">&nbsp;								</td>
+								<td width="64%" height="36" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="allow_download" size="9" value="[adminblk.allow_download;block=table]">
+					      </font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">
+								Allow multiple video comments</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"><div align="left"><font face="Arial">
+							    <input type="text" name="allow_multiple_video_comments" size="15" value="[adminblk.allow_multiple_video_comments;block=table]">
+								  <font size="2">
+						        (yes/no)</font></font></div>								</tr>
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+								<font color="#333333">Auto
+								approve videos</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="auto_approve_videos" size="15" value="[adminblk.auto_approve_videos;block=table]">
+								    <font size="2">
+				          (yes/no)</font></font></div>
+				          </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								  <font color="#333333">Auto play video on play page</font>&nbsp;
+								</td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35">
+								  <div align="left">
+								    <input type="text" name="auto_play" size="15" value="[adminblk.auto_play;block=table]">
+					        <font face="Arial" size="2">(true/false)&nbsp;Lower case only</font></div>
+					        </tr>
+
+					        </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">Auto play video on home page</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35">
+								  <div align="left">
+								    <input type="text" name="auto_play_index" size="15" value="[adminblk.auto_play_index;block=table]">
+					        <font face="Arial" size="2">(true/false)&nbsp;Lower case only</font></div>
+					        </tr>
+
+
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+								<font color="#333333">
+								Delete converted avi video file</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left">
+								    <input type="text" name="delete_avi" size="15" value="[adminblk.delete_avi;block=table]">
+					        <font face="Arial" size="2">(yes/no)</font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">
+								Delete original video file</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"><div align="left"><font face="Arial">
+							    <input type="text" name="delete_original" size="15" value="[adminblk.delete_original;block=table]">
+								  <font size="2">							      </font></font><font face="Arial" size="2">
+						        (yes/no)</font></div>								</tr>
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+								<font color="#333333">Auto
+								approve profile photo</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="auto_approve_profile_photo" size="15" value="[adminblk.auto_approve_profile_photo;block=table]">
+								    <font size="2">&nbsp;							          </font></font><font face="Arial" size="2">
+			              (yes/no)</font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35" align="right">Admin
+								maximum display</td>
+								<td width="2%" height="35" align="right">&nbsp;</td>
+								<td width="64%" height="35"><div align="left"><font face="Arial">
+							    <input type="text" name="admin_maximum_display" size="9" value="[adminblk.admin_maximum_display;block=table]">
+							    </font></div>								</tr>
+							<tr>
+								<td width="34%" height="35" align="right" bgcolor="#EFEFEF">
+								Flagging threshold limits</td>
+								<td width="2%" height="35" align="right" bgcolor="#EFEFEF">&nbsp;								</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="flagging_threshold_limits" size="9" value="[adminblk.flagging_threshold_limits;block=table]">
+					      </font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35" align="right">&quot;See
+								more&quot; limits wide</td>
+								<td width="2%" height="35" align="right">&nbsp;</td>
+								<td width="64%" height="35"><div align="left"><font face="Arial">
+							    <input type="text" name="seemore_limits_wide" size="9" value="[adminblk.seemore_limits_wide;block=table]">
+							    </font></div>								</tr>
+							<tr>
+								<td width="34%" height="35" align="right" bgcolor="#EFEFEF">
+								Recent video title length</td>
+								<td width="2%" height="35" align="right" bgcolor="#EFEFEF">&nbsp;								</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="config_recent_title_length" size="9" value="[adminblk.config_recent_title_length;block=table]">
+					      </font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+								<font color="#333333">
+								Maximum profile picture size</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%" height="35"><div align="left"><font face="Arial">
+							    <input type="text" name="maximum_size" size="15" value="[adminblk.maximum_size;block=table]">
+								  <font size="2">
+						        (in bytes)</font></font></div>								</tr>
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+								<font color="#333333">
+								Maximum picture size</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" height="35" bgcolor="#EFEFEF">
+								  <div align="left"><font face="Arial">
+						          <input type="text" name="maximum_size_human_readale" size="9" value="[adminblk.maximum_size_human_readale;block=table]">
+								    <font size="2">
+							        (Approximate human readable of above value -
+					      e.g. 2MB)</font></font></div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+	<font color="#333333">Search page limits</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%">
+	                              <div align="left">
+	                                <input type="text" name="search_page_limits" size="9" value="[adminblk.search_page_limits;block=table]">
+                                </div>						  </tr>
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+	<font color="#333333">See more limits</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" bgcolor="#EFEFEF">
+	                              <div align="left">
+	                                <input type="text" name="see_more_limits" size="9" value="[adminblk.see_more_limits;block=table]">&nbsp;Multiples of 4 - e.g. 8, 12, 16
+                                </div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+	<font color="#333333">Groups home video limit</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%">
+	                              <div align="left">
+	                                <input type="text" name="groups_home_video_limit" size="9" value="[adminblk.groups_home_video_limit;block=table]">
+                                </div>						  </tr>
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+	<font color="#333333">Groups main limit</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" bgcolor="#EFEFEF">
+	                              <div align="left">
+	                                <input type="text" name="groups_main_limit" size="9" value="[adminblk.groups_main_limit;block=table]">
+                                </div>						  </tr>
+							<tr>
+								<td width="34%" height="35"><p align="right">
+	<font color="#333333">Comment page limits</font>&nbsp; </td>
+								<td width="2%" height="35">&nbsp;</td>
+								<td width="64%">
+	                              <div align="left">
+	                                <input type="text" name="comment_page_limits" size="9" value="[adminblk.comment_page_limits;block=table]">
+                                </div>						  </tr>
+							<tr>
+								<td width="34%" height="35" bgcolor="#EFEFEF"><p align="right">
+	<font color="#333333">Video buffer time</font>&nbsp; </td>
+								<td width="2%" height="35" bgcolor="#EFEFEF">&nbsp;</td>
+								<td width="64%" bgcolor="#EFEFEF">
+	                              <div align="left">
+	                                <input type="text" name="video_buffer_time" size="9" value="[adminblk.video_buffer_time;block=table]">
+                                </div>						  </tr>
+							<tr>
+								<td height="35" colspan="3">
+								<p align="center">
+	<input type ="hidden" name="type" value="[var.show_t]">
+								<input type="submit" value="Update Information" name="update"></td>
+							</tr>
+							<tr>
+								<td height="35" colspan="2">
+								<p align="center">
+			&nbsp;</td>
+								<td height="35">&nbsp;</td>
+							</tr>
+						</table>
+					</form>
+						</td>
+					</tr>
+				</table></div>

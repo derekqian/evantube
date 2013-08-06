@@ -1,0 +1,15 @@
+#message_popup{
+	margin-bottom: 8px;
+	border: 1px solid #0099CC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-image: url(../images/icon_info.gif);
+	background-repeat: no-repeat;
+	height: 24px;
+	line-height: 24px;
+
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}

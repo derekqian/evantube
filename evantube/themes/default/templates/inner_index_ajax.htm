@@ -1,0 +1,54 @@
+<!-- start video ajax -->
+<div class="container-wide-ajax">
+  <div class="browse-videos">
+    <div id="videoajax">
+      <ul>
+ 	  <li>
+ 	    <a href="videos/[blkfeatured_videos.indexer;block=div]/[blkfeatured_videos.title_seo;htmlconv=no;block=div]"><div class="browse-videos-title"><!--[blkfeatured_videos.title;htmlconv=no;block=(div);ope=max:14;maxhtml;comm]--></div></a>
+	    <div class="browse-videos-member">[var.lang_by]:&nbsp;&nbsp;<a href="members/[blkfeatured_videos.uploaded_by;block=(div)]"><b><!--[blkfeatured_videos.uploaded_by;block=(div);ope=max:14;maxhtml;comm]--></b></a></div>
+	    <a href="videos/[blkfeatured_videos.indexer;block=div]/[blkfeatured_videos.title_seo;htmlconv=no;block=div]"><img src="uploads/thumbs/[blkfeatured_videos.video_id;block=div].jpg" title="<!--[blkfeatured_videos.title;htmlconv=no;block=div;comm]-->" alt="video pic" width="[var.theme_thumbnail_width]" height="[var.theme_thumbnail_height]" /></a>
+          <div class="browse-videos-duration"><b><!--[blkfeatured_videos.video_length;block=(div);ope=max:12;comm]--></b></div>
+	    <div class="browse-videos-rating">
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_videos.star1;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_videos.star2;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_videos.star3;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_videos.star4;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_videos.star5;block=(div)]" width="11" height="11" alt="1 Star" />
+	    </div>
+	    <div class="browse-videos-date">Added:&nbsp;<!--[blkfeatured_videos.date_uploaded;block=(div);comm]--></div>
+	  </li>
+	</ul>
+    </div>
+  </div>
+  <!--[onload_1;block=div;when [var.load_block]=videos;comm]-->
+</div>
+<div class="clearfix2"></div>
+<!-- end video ajax -->
+
+<!-- start images ajax -->
+<div class="container-wide-ajax">
+  <div class="browse-videos">
+    <div id="imageajax">
+      <ul>
+        <li>
+          <a href="view-image/[blkfeatured_images.indexer;block=div]/[blkfeatured_images.title_seo;htmlconv=no;block=div]"><div class="browse-videos-title"><!--[blkfeatured_images.title;htmlconv=no;block=(div);ope=max:14;maxhtml;comm]--></div></a>
+	    <div class="browse-videos-member">[var.lang_by]:&nbsp;&nbsp;<a href="members/[blkfeatured_images.uploaded_by;block=(div)]"><b><!--[blkfeatured_images.uploaded_by;block=(div);ope=max:14;maxhtml;comm]--></b></a></div>
+	    <div style="width:120px; height:90px;"><a href="view-image/[blkfeatured_images.indexer;block=(div)]/[blkfeatured_images.title_seo;htmlconv=no]"><img src="addons/albums/thumbs/[blkfeatured_images.image_id;block=div]" alt="album thumbnail" width="[blkfeatured_images.thumb_new_width;block=(div)]" height="[blkfeatured_images.thumb_new_height;block=(div)]" /></a></div>
+	    <div class="browse-videos-duration"><b>[var.lang_rated]:</b></div>
+	    <div class="browse-videos-rating">
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_images.star1;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_images.star2;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_images.star3;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_images.star4;block=(div)]" width="11" height="11" alt="1 Star" />
+	      <img border="0" src="themes/[var.user_theme]/images/[blkfeatured_images.star5;block=(div)]" width="11" height="11" alt="1 Star" />
+	    </div>
+	    <div class="browse-videos-date">[var.lang_added]:&nbsp;<!--[blkfeatured_images.date_uploaded;block=(div);comm]--></div>
+	  </li>
+      </ul>
+    </div>
+  </div>
+  <!--[onload_2;block=div;when [var.load_block]=images;comm]-->
+</div>
+<div class="clearfix2"></div>
+<!-- end images ajax -->
+

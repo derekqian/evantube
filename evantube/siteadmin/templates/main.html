@@ -1,0 +1,1005 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>PHPmotion Site Administration</title>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js" ></script>
+
+<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"></script>
+
+<!--drop down css-->
+
+
+<!-- Display stats -->
+<script src="[var.base_url]/siteadmin/javascripts/AC_RunActiveContent.js" language="javascript"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+var requiredMajorVersion = 9;
+var requiredMinorVersion = 0;
+var requiredRevision = 45;
+-->
+</script>
+<!-- display stats end -->
+
+<script type="text/javascript">
+
+
+
+/***********************************************
+
+* AnyLink Drop Down Menu- © Dynamic Drive (www.dynamicdrive.com)
+
+* This notice MUST stay intact for legal use
+
+* Visit http://www.dynamicdrive.com/ for full source code
+
+***********************************************/
+
+
+
+//Media Menu
+
+var menu1=new Array()
+
+menu1[0]='<a href="videos.php?type=1">[var.lang_word_videos]</a>'
+
+menu1[1]='<a href="audio.php?type=1">[var.lang_word_Audio]</a>'
+
+menu1[2]='<a href="blogs.php?type=1">[var.lang_blogs]</a>'
+
+menu1[3]='<a href="images.php?type=1">[var.lang_pictures]</a>'
+
+
+
+//Settings Menu
+
+var menu2=new Array()
+
+menu2[0]='<a href="settings_general.php">[var.lang_general_settings]</a>'
+
+menu2[1]='<a href="settings_video.php">[var.lang_video_settings]</a>'
+
+menu2[2]='<a href="settings_pictures.php">[var.lang_picture_settings]</a>'
+
+menu2[3]='<a href="settings_features.php">[var.lang_enabled_features]</a>'
+
+
+//memmber menu
+
+var menu3=new Array()
+
+menu3[0]='<a href="members.php?type=1&action=0&sort=">[var.lang_active]</a>'
+menu3[1]='<a href="members.php?type=2&action=0&sort=">[var.lang_pending]</a>'
+menu3[2]='<a href="members.php?type=3&action=0&sort=">[var.lang_suspended]</a>'
+menu3[3]='<a href="members.php?type=4&action=0&sort=">[var.lang_all]</a>'
+menu3[4]='<a href="members.php?type=5&action=0&sort=">[var.lang_moderators]</a>'
+menu3[5]='<a href="members.php?type=6&action=99&sort=">[var.lang_search]</a>'
+
+//management menu
+
+var menu4=new Array()
+
+menu4[0]='<a href="user_permissions.php?type=1">[var.lang_user_permissions]</a>'
+menu4[1]='<a href="admin_settings.php?type=2&action=0&sort=">[var.lang_admin_details]</a>'
+menu4[2]='<a href="categories_videos.php">[var.lang_video_categories]</a>'
+menu4[3]='<a href="groups.php">[var.lang_groups]</a>'
+menu4[4]='<a href="newsletter.php">[var.lang_newsletter]</a>'
+menu4[5]='<a href="news.php">[var.lang_news]</a>'
+menu4[6]='<a href="ads.php">[var.lang_ads]</a>'
+
+//Flagged menu
+
+var menu5=new Array()
+
+menu5[0]='<a href="flagged_comments.php?type=1">[var.lang_video_comments]</a>'
+menu5[1]='<a href="flagged_comments.php?type=2">[var.lang_audio_comments]</a>'
+menu5[2]='<a href="flagged_comments.php?type=3">[var.lang_blog_comments]</a>'
+menu5[3]='<a href="flagged_comments.php?type=4">[var.lang_picture_comments]</a>'
+menu5[4]='<a href="flagged_comments.php?type=5">[var.lang_group_comments]</a>'
+menu5[5]='<a href="flagged_comments.php?type=6">[var.lang_profile_comments]</a>'
+
+
+//Stats menu
+
+var menu6=new Array()
+
+menu6[0]='<a href="stats.php?type=1">[var.lang_word_videos]</a>'
+menu6[1]='<a href="stats.php?type=2">[var.lang_word_Audio]</a>'
+menu6[2]='<a href="stats.php?type=3">[var.lang_blogs]</a>'
+menu6[3]='<a href="stats.php?type=4">[var.lang_pictures]</a>'
+menu6[4]='<a href="stats.php?type=5">[var.lang_members]</a>'
+menu6[5]='<a href="stats_compare.php">[var.lang_compare]</a>'
+
+
+var menuwidth='165px' //default menu width
+
+var menubgcolor='#a8cbee'  //menu bgcolor
+
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+
+
+/////No further editting needed
+
+
+
+var ie4=document.all
+
+var ns6=document.getElementById&&!document.all
+
+
+
+if (ie4||ns6)
+
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+
+
+function getposOffset(what, offsettype){
+
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+
+var parentEl=what.offsetParent;
+
+while (parentEl!=null){
+
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+
+parentEl=parentEl.offsetParent;
+
+}
+
+return totaloffset;
+
+}
+
+
+
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+
+if (ie4||ns6)
+
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+
+if (menuwidth!=""){
+
+dropmenuobj.widthobj=dropmenuobj.style
+
+dropmenuobj.widthobj.width=menuwidth
+
+}
+
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+
+obj.visibility=visible
+
+else if (e.type=="click")
+
+obj.visibility=hidden
+
+}
+
+
+
+function iecompattest(){
+
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+
+}
+
+
+
+function clearbrowseredge(obj, whichedge){
+
+var edgeoffset=0
+
+if (whichedge=="rightedge"){
+
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+
+}
+
+else{
+
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+
+}
+
+}
+
+return edgeoffset
+
+}
+
+
+
+function populatemenu(what){
+
+if (ie4||ns6)
+
+dropmenuobj.innerHTML=what.join("")
+
+}
+
+
+
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+
+if (window.event) event.cancelBubble=true
+
+else if (e.stopPropagation) e.stopPropagation()
+
+clearhidemenu()
+
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+
+populatemenu(menucontents)
+
+
+
+if (ie4||ns6){
+
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+
+
+
+dropmenuobj.x=getposOffset(obj, "left")
+
+dropmenuobj.y=getposOffset(obj, "top")
+
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+
+}
+
+
+
+return clickreturnvalue()
+
+}
+
+
+
+function clickreturnvalue(){
+
+if (ie4||ns6) return false
+
+else return true
+
+}
+
+
+
+function contains_ns6(a, b) {
+
+while (b.parentNode)
+
+if ((b = b.parentNode) == a)
+
+return true;
+
+return false;
+
+}
+
+
+
+function dynamichide(e){
+
+if (ie4&&!dropmenuobj.contains(e.toElement))
+
+delayhidemenu()
+
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+
+delayhidemenu()
+
+}
+
+
+
+function hidemenu(e){
+
+if (typeof dropmenuobj!="undefined"){
+
+if (ie4||ns6)
+
+dropmenuobj.style.visibility="hidden"
+
+}
+
+}
+
+
+
+function delayhidemenu(){
+
+if (ie4||ns6)
+
+delayhide=setTimeout("hidemenu()",disappeardelay)
+
+}
+
+
+
+function clearhidemenu(){
+
+if (typeof delayhide!="undefined")
+
+clearTimeout(delayhide)
+
+}
+
+
+
+if (hidemenu_onclick=="yes")
+
+document.onclick=hidemenu
+
+
+
+</script>
+
+<!--drop down end-->
+
+
+
+<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js" ></script>
+
+<script>
+
+
+
+//Check all radio/check buttons script- by javascriptkit.com
+
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+
+//Credit must stay intact for use
+
+
+
+
+
+function checkall(thestate){
+
+var el_collection = document.forms['form_results'].elements['list[]'];
+
+for (var c=0;c<el_collection.length;c++)
+
+el_collection[c].checked=thestate
+
+var el_collection = document.forms['form_results'].elements['list[]1'];
+
+for (var c=0;c<el_collection.length;c++)
+
+el_collection[c].checked=thestate
+
+}
+
+
+
+</script>
+
+<style type="text/css">
+
+
+
+td.off {
+
+background: #A4A4A4;
+
+}
+
+
+
+</style>
+
+<!-- Grey box --->
+	<script type="text/javascript">
+		var GB_ROOT_DIR = "[var.base_url]/greybox/";
+	</script>
+	<script type="text/javascript" src="[var.base_url]/greybox/AJS.js"></script>
+	<script type="text/javascript" src="[var.base_url]/greybox/AJS_fx.js"></script>
+	<script type="text/javascript" src="[var.base_url]/greybox/gb_scripts.js"></script>
+	<link href="[var.base_url]/greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Grey box end--->
+
+
+<!-- addnon - start of thickbox -->
+
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+
+<!-- addnon - end of thickbox -->
+
+
+
+<style type="text/css">
+<!--
+.style2 {
+	color: #3D7CCB;
+	font-size: 12px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+
+  <div id="MainHeader">
+
+    <div class="HeaderTitle" id="TopHeader">
+      <table width="100%" border="0">
+        <tr>
+          <td width="25%" height="26"><strong> PHPmotion System Manager</strong></td>
+          <td width="23%">&nbsp;</td>
+          <td width="24%">&nbsp;</td>
+          <td width="28%"><div align="right">[var.display_date]</div></td>
+        </tr>
+        <tr>
+          <td colspan="3"><div align="center"> </div></td>
+          <td><div align="right"><a href="logout.php">[var.admin_logout]</a></div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="MenuMain">
+
+      <!--top menu start-->
+
+      <ul>
+
+        <!--[onload_1;block=ul;when [var.show_hide]=1;comm]-->
+
+        <li><a href="index.php">[var.lang_home]</a></li>
+
+        <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu1, '150px')" onmouseout="delayhidemenu()">[var.lang_media]</a></li>
+
+       <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu5, '150px')" onmouseout="delayhidemenu()">[var.lang_flagged]</a></li>
+       <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu6, '150px')" onmouseout="delayhidemenu()">[var.lang_stats]</a></li>
+
+        <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu3, '150px')" onmouseout="delayhidemenu()">[var.lang_members]</a></li>
+
+        <li><a href="settings_themes.php">[var.lang_themes]</a></li>
+
+        <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu2, '150px')" onmouseout="delayhidemenu()">[var.lang_settings]</a></li>
+
+        <li><a href="default.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu4, '150px')" onmouseout="delayhidemenu()">[var.lang_manage]</a></li>
+
+                <li><a href="http://phpmotion.com/content/view/39/183/" target="_blank">[var.lang_powertools]</a></li>
+      </ul>
+
+      <!-- top menu end-->
+
+    </div>
+
+</div>
+
+    <div align="center">
+
+      <center>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="1000" align="left">
+
+          <tr>
+
+            <!--[onload_20;block=tr;when [var.show_hide]=1;comm]-->
+
+            <td width="1000" align="center" valign="top" background="images/left_table_header.png" style="border-right: 1px solid #cccccc"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                <tr>
+
+                  <td height="31" bordercolor="#FF0000"><div align="center" class="BigHeaders  style2">[var.dashboard_header]</div></td>
+              </tr>
+
+                <tr>
+
+                  <td height="10"></td>
+                </tr>
+
+                <tr>
+                  <td>                    <ul class="LeftNavigationMenu1">
+
+<!--[var.submenu_left;htmlconv=no;comm]-->
+                    </ul></td>
+                </tr>
+<tr>
+
+              <td height="10"></td>
+              </tr>
+                <tr>
+                  <td>                    <ul class="LeftNavigationMenu1">
+
+<!--[var.submenu_left2;htmlconv=no;comm]-->
+                    </ul></td>
+                </tr>
+
+                <tr>
+
+                  <td height="10"></td>
+                </tr>
+
+               <tr>
+
+                  <td>
+
+
+                </td>
+                </tr>
+
+                <tr>
+
+                  <td><!-- system info start-->
+
+                    <div align="center">
+
+                      <table width="180" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #98C1EB">
+
+                        <tr>
+
+                          <td bordercolor="#4F96DD" height="25" style="border-bottom: 1px solid #7DB1E6" bgcolor="#BBD7F2" colspan="2">&nbsp;Site Information Summary</td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="112" height="29" bordercolor="#4F96DD" bgcolor="#FFFFFF"><div align="right">Total Members&nbsp;</div></td>
+
+                          <td width="66" height="29" bordercolor="#4F96DD" bgcolor="#FFFFFF" class="Small_blue"><div align="center">
+
+                              <!--[var.members_total;comm]-->
+
+                            </div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="112" height="22" bordercolor="#4F96DD" bgcolor="#F5F5F5"><div align="right">Total Videos&nbsp; </div></td>
+
+                          <td width="66" height="22" bordercolor="#4F96DD" bgcolor="#F5F5F5" class="Small_blue"><div align="center">
+
+                              <!--[var.video_total;comm]-->
+
+                            </div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="112" height="22" bordercolor="#4F96DD" bgcolor="#FFFFFF"><div align="right">Total MP3&nbsp; </div></td>
+
+                          <td width="66" height="22" bordercolor="#4F96DD" bgcolor="#FFFFFF" class="Small_blue"><div align="center">
+
+                              <!--[var.audio_total;comm]-->
+
+                            </div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="112" height="22" bordercolor="#4F96DD" bgcolor="#F5F5F5"><div align="right">Total Pictures&nbsp; </div></td>
+
+                          <td width="66" height="22" bordercolor="#4F96DD" bgcolor="#F5F5F5" class="Small_blue"><div align="center"><!--[var.image_total;comm]--></div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td height="22" bordercolor="#4F96DD" bgcolor="#FFFFFF"><div align="right">Total Blogs&nbsp;</div></td>
+
+                          <td height="22" bordercolor="#4F96DD" bgcolor="#FFFFFF" class="Small_blue"><div align="center"><!--[var.blog_total;comm]--></div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="112" height="22" bordercolor="#4F96DD" bgcolor="#F5F5F5"><div align="right"></div></td>
+
+                          <td width="66" height="22" bordercolor="#4F96DD" bgcolor="#F5F5F5">&nbsp;&nbsp;<a href="stats.php?type=1">See more</a> </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <!-- system info end -->                  </td>
+                </tr>
+
+                <tr>
+
+                  <td bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+
+                <tr>
+
+                  <td></td>
+                </tr>
+
+                <tr>
+
+                  <td><!-- Server Information start-->
+
+                    <div align="center">
+
+                      <table width="180" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #D1D1D1">
+
+                        <tr>
+
+                          <td height="33" colspan="2" background="images/background_tables.png">&nbsp;Hard Drive Usage</td>
+                        </tr>
+
+                        <tr>
+
+                          <td height="23" width="71"><div align="right"> Videos </div></td>
+
+            <td width="107" height="23" class="Small_blue"><div align="center">
+
+                              <!--[var.videos_folder;comm]-->
+
+                          </div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="71" height="23" bordercolor="#4F96DD" bgcolor="#F9F9F9"><div align="right"> Pictures</div></td>
+
+            <td width="107" height="23" bordercolor="#4F96DD" bgcolor="#F9F9F9" class="Small_blue"><div align="center">
+
+                              <!--[var.pictures_folder;comm]-->
+
+                            </div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td bordercolor="#4F96DD" height="23" width="71"><div align="right"> MP3 </div></td>
+
+            <td width="107" height="23" bordercolor="#4F96DD" class="Small_blue"><div align="center">
+
+                              <!--[var.mp3_folder;comm]-->
+
+                            </div></td>
+                        </tr>
+
+                        <tr>
+
+                          <td width="71" height="23" bordercolor="#4F96DD" bgcolor="#F9F9F9"><div align="right">Version</div></td>
+
+                          <td width="107" height="23" bordercolor="#4F96DD" bgcolor="#F9F9F9" class="Small_blue"><div align="center"><strong><!--[var.phpmotion_version;comm]--></strong></div></td>
+                        </tr>
+
+                        <!-- Retrospective - System Information -->
+                      </table>
+                    </div>
+
+                    <!-- Server Information end-->                  </td>
+                </tr>
+
+                <tr>
+
+                  <td bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+
+                <tr>
+
+                  <td><!-- other left box info start-->
+
+                    <!-- other left box info end -->                  </td>
+                </tr>
+
+                <tr>
+
+                  <td></td>
+                </tr>
+
+                <tr>
+
+                  <td bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+
+            </table></td>
+
+            <td width="800" align="center" valign="top" bgcolor="#FFFFFF" style="border-right: 1px solid #cccccc">
+
+            <table width="800" border="0" id="SubMenuTable">
+
+                <tr>
+
+                  <!--[onload_5;block=tr;when [var.show_right_top_menu]=1;comm]-->
+
+                  <td><!-- dynamic right sub menu start-->
+
+                    <div align="right">
+
+                      <ul class="SubNavigationMenu">
+
+                        <li>Sub Menu >></li>
+
+                        <li><a href="gfghf">ff</a></li>
+
+                        <li><a href="hghjgj">uuu</a></li>
+
+                      </ul>
+
+                    </div>
+
+                    <!-- dynamic right sub menu end -->                  </td>
+
+                </tr>
+
+              </table>
+
+              <!-- dynamic middle content container start-->
+
+              <table width="800" border="0" id="MainContentBoxTable">
+
+                <tr>
+
+                  <!--[onload_6;block=tr;when [var.show_news]=1;comm]-->
+
+                  <td><div align="center">
+
+                      <!-- start innner top message table -->
+
+                      <div align="center">
+
+                        <table border="0" width="760" id="table1" style="border: 1px solid #CCCCCC; text-align:left" cellspacing="0" cellpadding="0">
+
+                          <tr>
+
+                            <td background="images/table_top_run.png" height="27">&nbsp;Latest
+
+                              News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td class='rss_scroll'><ul id="ForumRss">
+
+                                [var.rss_output;htmlconv=no]
+
+                              </ul></td>
+
+                          </tr>
+
+                        </table>
+
+                      </div>
+
+                      <!-- end innner top message table -->
+
+                    </div></td>
+
+                </tr>
+
+                <tr>
+
+                  <td></td>
+
+                </tr>
+
+                <tr>
+
+                  <td><!-- start innner top message table -->
+
+                    <div align="center">
+
+                      <table border="0" width="760" cellspacing="0" cellpadding="0" id="ExampleVideosList">
+
+                        <!-- Dynamic contnet box menu sart-->
+
+                        <tr>
+
+                          <td height="21">
+
+                          <!--[onload_7;block=tr;when [var.show_content_menu]=1;comm]-->
+
+                            <!-- Example table List menu sart-->
+
+                            <div align="right">
+
+                              <ul class="ContantBoxNavigationMenu">
+
+[var.submenu_content;htmlconv=no]
+
+                              </ul>
+
+                            </div></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <!-- Dynamic contnet box menu end-->
+
+                          <td style="border: 1px solid #E1E1E1"><p>
+
+                              <!--Load Inner Body -->
+
+                              <!--[onload;file=[var.inner_template1];getbody;comm]-->
+
+                              <!-- end inner body -->
+
+                            </p>
+
+                            <p>&nbsp;</p></td>
+
+                        </tr>
+
+                      </table>
+
+                    </div>
+
+                    <!-- end innner top message table -->                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td><!-- dynamic middle content container3 start-->
+
+                    <!-- dynamic middle content container3 end-->                  </td>
+
+                </tr>
+
+              </table>
+
+              <!-- dynamic content end -->            </td>
+
+          </tr>
+
+          <!--login section -->
+
+          <tr>
+
+            <!--[onload_10;block=tr;when [var.show_hide]=2;comm]-->
+
+            <td width="1000" align="center" valign="top" colspan="2"><p>&nbsp;</p>
+
+              <p>&nbsp;</p>
+
+              <p>&nbsp;</p>
+
+              <p>
+              <!-- Login box/form-->
+              <div align="center">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <!-- notifications div -->
+                      <!--[onload_3;block=tr;when [var.show_notification]=1;comm]-->
+                      <div id="message"><div align="center"><font size="3" color="#EE0000"><b>[var.message]</b></font></div></div>
+                      <!-- notifications end -->
+                    </td>
+                  </tr>
+                </table>
+
+                <table width="327" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #E1E1E1" height="158" id="loginbox">
+
+                  <form name="login" action="index.php" method="POST">
+
+                    <tr>
+
+                      <td bordercolor="#4F96DD" height="25" style="border-bottom: 1px solid #7DB1E6" bgcolor="#E1E1E1" colspan="2" width="325">&nbsp;Welcome - Login</td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td bordercolor="#4F96DD" height="22" width="124">&nbsp;</td>
+
+                      <td bordercolor="#4F96DD" height="22" width="197"></td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td bordercolor="#4F96DD" height="27" width="124" align="right"><p align="right"> &nbsp;Username</p></td>
+
+                      <td bordercolor="#4F96DD" height="27" width="197">&nbsp;<font color="#666666" face="Arial">
+
+                        <input type="text" name="username" size="20" style="border: 1px solid #9DC5EC">
+
+                        </font> </td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td bordercolor="#4F96DD" height="27" width="124" align="right"><p align="right"> &nbsp;Password</p></td>
+
+                      <td bordercolor="#4F96DD" height="27" width="197">&nbsp;<font color="#666666" face="Arial">
+
+                        <input type="password" name="password" size="20" style="border: 1px solid #9DC5EC">
+
+                        <input type="hidden" name="submitted" value="yes">
+
+                        </font> </td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td bordercolor="#4F96DD" height="35" width="124">&nbsp;</td>
+
+                      <td bordercolor="#4F96DD" height="35" width="197"><p align="left"> <font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                          <input type="submit" value="Login" name="logi_n" style="font-size: 10pt; letter-spacing: 1; background-color: #FFFFFF; border: 1px solid #9DC5EC">
+
+                          </font> </p></td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td bordercolor="#4F96DD" height="22" width="124">&nbsp;</td>
+
+                      <td bordercolor="#4F96DD" height="22" width="197"></td>
+
+                    </tr>
+
+                  </form>
+
+                </table>
+
+              </div>
+
+              <!-- Login box/form -->
+
+              </p>
+
+              <p>&nbsp;</p>
+
+              <p>&nbsp;</p>
+
+              <p>&nbsp;</p></td>
+
+          </tr>
+
+          <!-- login section end-->
+
+        </table>
+
+      </center>
+
+    </div>
+
+    <div class="clearfix2"></div>
+
+  <div id="MainFooter"></div>
+
+</body>
+
+</html>
+

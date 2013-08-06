@@ -1,0 +1,175 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+<br />
+  <!--Begin Whats Showing Menu-->
+  <div class="header-narrow"><h3>[var.get_type]</h3></div>
+    <div class="whats-showing">
+      <ul>
+        <li><a href="[var.url_link]/load/featured">[var.lang_featured]</a></li>
+        <li><a href="[var.url_link]/load/viewed">[var.lang_most_viewed]</a></li>
+        <li><a href="[var.url_link]/load/recent">[var.lang_most_recent]</a></li>
+        <li><a href="[var.url_link]/load/comments">[var.lang_most_comments]</a></li>
+      </ul>
+   </div>
+   <div class="container-narrow-bottom"></div><!--End Whats Showing Menu-->
+   <br />
+   <!--Begin Popular Tag Cloud populate from search type ??-->
+   <div class="header-narrow"><h3>[var.lang_Tags_most_popular]</h3></div>
+   <div class="whats-showing"><!--[var.tag_cloud_block;htmlconv=no;comm]--></div>
+   <div class="container-narrow-bottom"></div><!--End Popular Tag Cloud-->
+   <!--Begin Left Advert-->
+   <div class="container-narrow-top"></div>
+   <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+   <div class="container-narrow-bottom"></div><!--End Left Advert-->
+   <div style="height:120px;">&nbsp;</div>
+</div><!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+
+  <!--Begin Video Search List-->
+  <div style="height: 2px;">&nbsp;</div>
+
+  <span style="margin-bottom: 12px;" class="font5_15">
+    "[var.keyword]"&nbsp;&nbsp;[var.get_type_word]&nbsp;[var.lang_search]&nbsp;[var.results_show]&nbsp;-&nbsp;[var.results_of]&nbsp;of&nbsp;[var.total_records]&nbsp;[var.lang_results]
+  </span>
+
+  <div id="content-list">
+    <ul class="content-list-thumb">
+      <li><a href="videos/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><img src="uploads/thumbs/[blkfeatured.video_id;block=div].jpg" alt="video pic" width="120" height="90" border="0" /></a></li>
+    </ul>
+    <ul class="content-list-info">
+      <li><h4>[var.lang_title]:&nbsp;<a href="videos/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:70;comm]--></a></h4></li>
+      <li><b>[var.lang_description]:&nbsp;</b><!--[blkfeatured.description;htmlconv=no;block=div;ope=max:68;comm]--></li>
+      <li><span class="font4_12">[var.lang_rating]&nbsp;&nbsp;</span>
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="18" height="18" alt="1 Star" />
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_views]:&nbsp;</span>(<!--[blkfeatured.number_of_views;block=div;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_duration]:&nbsp;</span>(<!--[blkfeatured.video_length;block=div;ope=max:45;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_uploaded]:&nbsp;</span><!--[blkfeatured.date_uploaded;block=div;comm;frm=mm-dd-yy]-->
+      </li>
+      <li><span class="font4_12">[var.lang_tags]:&nbsp;</span><!--[blkfeatured.tags;block=div;ope=max:80;comm]--></li>
+      <li><b>[var.lang_comments] - [var.lang_responses]:&nbsp;</b>(<!--[blkfeatured.comments;block=div;ope=max:80;comm]-->)</li>
+    </ul>
+    [onload;block=div;when [var.type_videos]=1;]
+  </div>
+  <!--End Video Search-->
+
+  <!--Begin Audio Search List-->
+  <div id="content-list">
+    <ul class="content-list-thumb">
+      <li><a href="audios/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><img src="[blkfeatured.media_image;block=div]" alt="[var.get_type_word] Image" width="120" height="90" border="0" /></a></li>
+    </ul>
+    <ul class="content-list-info">
+      <li><h4>[var.lang_title]:&nbsp;<a href="audio/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:70;comm]--></a></h4></li>
+      <li><b>[var.lang_description]:&nbsp;</b><!--[blkfeatured.description;htmlconv=no;block=div;ope=max:68;comm]--></li>
+      <li><span class="font4_12">[var.lang_rating]&nbsp;&nbsp;</span>
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="18" height="18" alt="1 Star" />
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_played]:&nbsp;</span>(<!--[blkfeatured.number_of_views;block=div;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_duration]:&nbsp;</span>(<!--[blkfeatured.audio_length;block=div;ope=max:45;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_uploaded]:&nbsp;</span><!--[blkfeatured.date_uploaded;block=div;comm;frm=mm-dd-yy]-->
+      </li>
+      <li><span class="font4_12">[var.lang_tags]:&nbsp;</span><!--[blkfeatured.tags;block=div;ope=max:80;comm]--></li>
+      <li><b>[var.lang_comments] - [var.lang_responses]:&nbsp;</b>(<!--[blkfeatured.comments;block=div;ope=max:80;comm]-->)</li>
+    </ul>
+  [onload;block=div;when [var.type_audios]=2;]
+  </div>
+  <!--End Audio Search-->
+
+  <!--Begin Image Search List-->
+  <div id="content-list">
+    <ul class="content-list-thumb">
+      <li><a href="view-image/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><img src="[blkfeatured.media_image;block=div]" alt="[var.get_type_word] Image" width="120" height="90" border="0" /></a></li>
+    </ul>
+    <ul class="content-list-info">
+      <li><h4>[var.lang_title]:&nbsp;<a href="view-image/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:70;comm]--></a></h4></li>
+      <li><b>[var.lang_description]:&nbsp;</b><!--[blkfeatured.description;htmlconv=no;block=div;ope=max:68;comm]--></li>
+      <li><span class="font4_12">[var.lang_rating]&nbsp;&nbsp;</span>
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="18" height="18" alt="1 Star" />
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_views]:&nbsp;</span>(<!--[blkfeatured.number_of_views;block=div;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_uploaded]:&nbsp;</span><!--[blkfeatured.date_uploaded;block=div;comm;frm=mm-dd-yy]-->
+      </li>
+      <li><span class="font4_12">[var.lang_tags]:&nbsp;</span><!--[blkfeatured.tags;block=div;ope=max:80;comm]--></li>
+      <li><b>[var.lang_comments] - [var.lang_responses]:&nbsp;</b>(<!--[blkfeatured.comments;block=div;ope=max:80;comm]-->)</li>
+    </ul>
+  [onload;block=div;when [var.type_images]=3;]
+  </div>
+  <!--End Image Search-->
+
+
+  <!--Begin Group Search List-->
+  <div id="content-list">
+    <ul class="groups-thumb">
+      <li><a href="group_home.php?gid=[blkfeatured.indexer;block=div]"><img border="0" src="uploads/thumbs/[blkfeatured.video_picture;block=div].jpg" width="120" height="90"></a></li>
+      <li class="font4_12"></li>
+    </ul>
+    <ul class="groups-info">
+      <li><a href="group_home.php?gid=[blkfeatured.indexer;block=div]"><span class="font4_14"><!--[blkfeatured.group_name;block=div;ope=max:150;comm]--></span></a></li>
+      <li><!--[blkfeatured.group_description;block=div;ope=max:150;comm]--></li>
+      <li>
+        <span class="font4_12" style="margin-right:5px;">[var.lang_word_videos]:</span><!--[blkfeatured.group_videos;block=div;ope=max:150;comm]-->&nbsp;&nbsp;
+        <span class="font4_12" style="margin-right:5px;">[var.lang_members]:</span><!--[blkfeatured.group_members;block=div;ope=max:150;comm]-->&nbsp;&nbsp;
+        <span class="font4_12" style="margin-right:5px;">[var.lang_admin]:</span><a href="members/[blkfeatured.admin_username;block=table]"><!--[blkfeatured.admin_username;block=div;ope=max:150;comm]--></a>
+      </li>
+    </ul>
+  [onload;block=div;when [var.type_groups]=4;]
+  </div>
+  <!--End Group Search-->
+
+
+  <!--Begin Blog Search List-->
+  <div id="content-list">
+    <ul class="content-list-thumb">
+      <li><a href="read_blog/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><img src="[blkfeatured.media_image;block=div]" alt="[var.get_type_word] Image" width="120" height="90" border="0" /></a></li>
+    </ul>
+    <ul class="content-list-info">
+      <li><h4>[var.lang_title]:&nbsp;<a href="read_blog/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:70;comm]--></a></h4></li>
+      <li><b>[var.lang_description]:&nbsp;</b><!--[blkfeatured.description;htmlconv=no;block=div;ope=max:68;comm]--></li>
+      <li><span class="font4_12">[var.lang_rating]&nbsp;&nbsp;</span>
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="18" height="18" alt="1 Star" />
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_views]:&nbsp;</span>(<!--[blkfeatured.number_of_views;block=div;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_added]:&nbsp;</span><!--[blkfeatured.date_created;block=div;comm;frm=mm-dd-yy]-->
+        &nbsp;&nbsp;
+        <b>[var.lang_replies]:&nbsp;</b>(<!--[blkfeatured.comments;block=div;comm]-->)
+      </li>
+      <li><span class="font4_12">[var.lang_tags]:&nbsp;</span><!--[blkfeatured.tags;block=div;ope=max:80;comm]--></li>
+    </ul>
+  [onload;block=div;when [var.type_blogs]=5;]
+  </div>
+  <!--End Blog Search-->
+
+  <!-- Pagination start -->
+  <div align="center">
+    <div id="pagination">
+      <li>&nbsp;</li>
+      <ul>[var.show_pages;htmlconv=no]</ul>
+    </div>
+  </div>
+  <!-- Pagination end -->
+</div><!--End Right Column-->
+

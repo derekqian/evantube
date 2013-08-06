@@ -1,0 +1,107 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Upload Menu-->
+  <div class="header-narrow"><span class="font5_12">[var.lang_main_menu</span></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="uploader.php">[var.lang_upload_video]</a></li>
+      <!--[var.audio_inner_upload_video_form1;htmlconv=no;comm]-->
+	<!--[var.image_inner_upload_form;htmlconv=no;comm]-->
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Upload Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+    <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div><!--End Left Column-->
+
+<script type="text/javascript">
+<!--
+function setUse(){
+	if (document.album_cover.upload_album_cover[0].checked){
+      	document.album_cover.userfile.disabled = false;
+      	document.album_cover.upload_image.disabled = false;
+      	document.album_cover.cancel.disabled = true;
+      }
+      if (document.album_cover.upload_album_cover[1].checked){
+      	document.album_cover.userfile.disabled = true;
+      	document.album_cover.upload_image.disabled = true;
+      	document.album_cover.cancel.disabled = false;
+      }
+}
+//-->
+</script>
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="header-wide"><h2>[var.lang_upload_audio] - [[var.lang_finish]]</h2></div>
+  <div class="container-wide" style="width:700px; text-align:left; padding: 5px;">
+    <div id="UploadAudio" style="width:680px; height: 68px;">
+      <br />
+      <div align="center">
+        <span class="font5_14">[var.lang_upload_complete].</span>
+        <br />
+        <!-- no need to delete this, its auto set by script -->
+        <span class="font5_14"><b>[var.lang_all_uploads_approval]</b><br /></span>
+        <!--[onload;block=span;when [var.auto_approve]='no';comm]-->
+        <br />
+      </div>
+      [onload;block=div;when [var.show_audio_done]=1;]
+    </div>
+
+    <div id="UploadAudio" style="width:680px;">
+      <!-- Start album cover image upload -->
+      <div align="center">
+        <span class="font5_14">[var.lang_change_album_cover].</span>
+        <br />
+        <br />
+        <form name="album_cover" method="post" enctype="multipart/form-data"  action="audio_uploader_finished.php">
+          <b>[var.lang_upload_album_cover]</b>
+          &nbsp;&nbsp;
+          <input type="radio" name="upload_album_cover" value="yes" onClick="setUse()" /><b>&nbsp;[var.lang_yes]</b>
+          &nbsp;&nbsp;
+          <input type="radio" name="upload_album_cover" value="no" checked="checked" onClick="setUse()" /><b>&nbsp;[var.lang_no]</b>
+          <br />
+          <!--
+          <input type="submit" name="cancel" value="Finish" />
+          //-->
+          <br />
+          <font size="1" color="#EE0000">
+            <b>[var.lang_image_file_types]
+            <br />
+            [var.lang_min_image_size]&nbsp;[var.allowed_min]&nbsp;kb's&nbsp;-&nbsp;[var.lang_max_image_size]&nbsp;[var.allowed_max]&nbsp;kb's
+            <br />
+            [var.lang_minimum_width]&nbsp;[var.upload_minwidth]&nbsp;px&nbsp;[var.lang_minimum_height]&nbsp;[var.upload_minheight]&nbsp;px
+            <br />
+            </b>
+          </font>
+          <br />
+          <input disabled type="file" name="userfile" size="42" />
+          <input type="hidden" name="audio_image_upload" value="yes" />
+          <input type="hidden" name="album_id" value="[var.use_album_id]" />
+          <br />
+          <br />
+          <input type="submit" name="upload_image" value="Finish" />
+        </form>
+        <br />
+      </div>
+      <br />
+      [onload;block=div;when [var.change_album_cover]=1;]
+    </div>
+
+    <div id="UploadAudio" style="width:680px;">
+      <br />
+      <div align="center">
+        <span class="font5_14">[var.album_image_message]</span>
+      </div>
+      <br />
+      <br />
+	<br />
+      [onload;block=div;when [var.show_image_done]=1;]
+    </div>
+
+  <div class="container-wide-footer"></div>
+  <div style="width:680px; height: 244px;">[onload;block=div;when [var.show_image_done]=0;]</div>
+</div><!--End Right Column-->

@@ -1,0 +1,132 @@
+<html>
+
+
+
+<head>
+
+<meta http-equiv="Content-Language" content="en-gb">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title></title>
+
+<link href="edit/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+<!--
+.style1 {
+	color: #006600;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+
+
+<body topmargin="0">
+
+&nbsp;
+
+<p align="center"><b><font face="Arial" color="#FF0000">[var.admin_warning]</font></b></p>
+
+<div align="center" id="EditUserPopup">
+
+<!-- notification div start -->
+<font face="Arial" size="2">
+<!-- notification div end -->
+</font>
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #D1D1D1; ">
+
+  <!--[onload_2;block=table;when [var.show_table] ==1;comm]-->
+
+<form id="closemyaccount" action="closeaccount.php" method="post">
+
+	<tr>
+
+		<td height="33" align="center" class="default_text_blue" background="images/background_tables.png">
+
+        <p align="left"><font size="2" face="Arial">&nbsp; </font><b>
+
+		<font face="Arial" color="#FF0000">[var.lang_close_account]</font></b></p>
+
+      </td>
+
+	</tr>
+
+	<tr>
+
+		<td height="40" bgcolor="#F0F0F0" align="right" class="default_text">
+
+      <p align="center"><b><font face="Arial" size="2" color="#FF0000">[var.confirm_popup_javascript]</font></b></td>
+
+	</tr>
+
+	<tr>
+
+		<td height="25" bgcolor="#F0F0F0" align="right" class="default_text">
+
+        <p align="center"><font color="#333333" face="Arial">
+          <input type="submit" value="[var.lang_submit]" name="close" />
+      </font></td>
+
+	</tr>
+
+	<tr>
+
+		<td height="56" bgcolor="#F0F0F0" align="right">
+
+        <font color="#333333">
+
+		&nbsp;<input type="hidden" name="id" value="[var.contentid]" />
+
+		<input type="hidden" name="type" value="[var.type]" /></font></td>
+
+	</tr>
+
+	</form>
+
+</table>
+
+
+
+<!-- Confirm account closed-->
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #D1D1D1; ">
+  <!--[onload_2;block=table;when [var.show_table] ==2;comm]-->
+
+<form id="closemyaccount" action="closeaccount.php" method="post">
+
+	<tr>
+
+		<td height="33" align="center" background="images/background_tables.png" bgcolor="#FFFFFF" class="default_text_blue">
+
+      <p align="left">&nbsp;</p>      </td>
+	</tr>
+
+	<tr>
+
+		<td height="25" bgcolor="#FFFFFF" align="right" class="default_text">
+
+        <p align="center" class="style1"> <font face="Arial">[var.lang_your_account_closed ]</font></td>
+	</tr>
+
+	<tr>
+
+		<td height="56" bgcolor="#FFFFFF" align="right">
+
+        <font color="#333333">
+
+		&nbsp;<input type="hidden" name="id" value="[var.contentid]" />
+
+		<input type="hidden" name="type" value="[var.type]" /></font></td>
+	</tr>
+  </form>
+</table>
+<!--confirm end-->
+</body>
+
+
+
+</html>

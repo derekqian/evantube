@@ -1,0 +1,98 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Whats Showing Menu-->
+  <div class="header-narrow"><h3><!--[var.see_more_title;comm]-->&nbsp;[var.lang_word_audios]</h3></div>
+    <div class="whats-showing">
+      <ul>
+        <li><a href="audios/load/featured">[var.lang_featured]</a></li>
+        <li><a href="audios/load/viewed">[var.lang_most_played]</a></li>
+        <li><a href="audios/load/recent">[var.lang_most_recent]</a></li>
+        <li><a href="audios/load/comments">[var.lang_most_comments]</a></li>
+      </ul>
+    </div>
+    <div class="container-narrow-bottom"></div><!--End Whats Showing Menu-->
+    <!--Begin Categories Menu-->
+    <div class="header-narrow"><h3>[var.lang_audio_categories]</h3></div>
+    <div class="whats-showing">
+      <ul>
+        <li><a href="genre/[blk1.channel_name;block=li]"><!--[blk1.channel_name;block=li;ope=max:25;comm]--></a>&nbsp;-&nbsp;(<!--[blk1.audio_count;comm]-->)</li>
+      </ul>
+    </div>
+    <div class="container-narrow-bottom"></div><!--End Categories Menu-->
+    <!--Begin Albums Menu-->
+    <div class="header-narrow"><h3>[var.lang_word_albums]</h3></div>
+    <div class="whats-showing">
+      <ul>
+        <li><a href="audio/album/[blk2.album_id]/[blk2.album_name_seo]">[blk2.album_name;block=li]</a></li>
+      </ul>
+    </div>
+    <div class="container-narrow-bottom"></div><!--End Albums Menu-->
+    <!--Begin Popular Videos Tag Cloud-->
+    <div class="header-narrow"><h3>[var.lang_Tags_most_popular]</h3></div>
+      <div class="whats-showing">
+        <!--[var.tag_cloud_block;htmlconv=no;comm]-->
+     </div>
+    <div class="container-narrow-bottom"></div><!--End Popular Videos Tag Cloud-->
+
+    <!--Begin Left Advert-->
+    <div class="container-narrow-top"></div>
+      <div id="advert-left">
+        <!--[var.ads_left;htmlconv=no;comm]-->
+      </div>
+    <div class="container-narrow-bottom"></div><!--End Left Advert-->
+</div><!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <!--Begin Content List-->
+  <div id="content-list">
+
+      <ul class="content-list-thumb">
+        <li><a href="audio/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><img src="addons/audio/images/featured_mp3.png" width="90" height="80" alt="mp3" border="0" class="CategoryVideoDetails_Thumb" /></a></li>
+        <li class="font4_12"></li>
+      </ul>
+      <ul class="content-list-info">
+        <li>
+          <a href="audio/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]">
+          <span class="font4_14">[var.lang_title]:&nbsp;&nbsp;<!--[blkfeatured.title;block=div;ope=max:70;comm]--></span></a>
+        </li>
+        <li>
+          <b>[var.lang_artist]:</b>&nbsp;&nbsp;<!--[blkfeatured.artist;block=div;ope=max:24;comm]-->
+        </li>
+        <li>
+          <b>[var.lang_description]:</b>&nbsp;&nbsp;<!--[blkfeatured.description;block=div;ope=max:200;comm]-->
+        </li>
+        <li><span class="font4_12">[var.lang_tags]:</span>
+          <!--[blkfeatured.tags;block=div;ope=max:80;comm]-->
+        </li>
+        <li>
+          <span class="font4_12">[var.lang_rating]&nbsp;&nbsp;</span>
+          <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="18" height="18" alt="1 Star" />
+          <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="18" height="18" alt="1 Star" />
+          <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="18" height="18" alt="1 Star" />
+          <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="18" height="18" alt="1 Star" />
+          <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="18" height="18" alt="1 Star" />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="font4_12">[var.lang_played]:&nbsp;</span><!--[blkfeatured.number_of_views;block=div;comm]-->
+          &nbsp;&nbsp;&nbsp;
+          <span class="font4_12">[var.lang_duration]:&nbsp;</span><!--[blkfeatured.audio_length;block=div;ope=max:45;comm]-->
+          &nbsp;&nbsp;&nbsp;<span class="font4_12">[var.lang_uploaded]:&nbsp;</span><!--[blkfeatured.date_uploaded;block=div;comm;frm=mm-dd-yy]-->
+        </li>
+        <li>&nbsp;</li>
+      </ul>
+  <div class="clear-fix"></div>
+  </div>
+
+  <!-- nothing found div -->
+  <div>
+    <span class="font4_14">[var.lang_no_audios_uploaded]</span><!--[onload_305;block=div;when [var.show_v]=1;comm]-->
+  </div><!-- nothing found end -->
+
+  <!-- Pagination start -->
+  <div id="pagination">
+    <ul>
+      <li>[var.show_pages;htmlconv=no]</li>
+    </ul>
+  </div><!-- Pagination end -->
+
+</div>

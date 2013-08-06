@@ -1,0 +1,177 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Groups Menu-->
+  <div class="header-narrow">[var.lang_groups]&nbsp;<!--[var.which_type;comm]--></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="groups">[var.lang_all_groups]</a></li>
+      <li><a href="groups_more.php?type=1">[var.lang_my_groups]</a></li>
+      <li><a href="groups.php?load=featured">[var.lang_featured]</a></li>
+      <li><a href="addgroup.php">[var.lang_create_group]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Groups Menu-->
+  <!--Begin What's Showing Menu-->
+  <div class="header-narrow">[var.lang_whats_on]</div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="videos/load/featured">[var.lang_featured]</a></li>
+      <li><a href="videos/load/viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="videos/load/recent">[var.lang_most_recent]</a></li>
+      <li><a href="videos/load/comments">[var.lang_most_comments]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End What's Showing Menu-->
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+
+  <div style="height:[var.page_spacer]">&nbsp;</div>
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <!--Begin Groups List Container-->
+  <div class="groups-list">
+    <ul class="groups-thumb">
+      <li>
+        <a href="videos/[blkfeatured.group_video_id;block=div]/[blkfeatured.group_video_seo;block=div]"><img border="0" src="uploads/thumbs/[blkfeatured.video_picture;block=div].jpg" alt="group video" /></a>
+        <!-- [onload;block=li;when [var.no_video_play]=1] //-->
+      </li>
+      <li>
+        <img border="0" src="uploads/thumbs/[blkfeatured.video_picture;block=div].jpg" alt="group video" />
+        <!-- [onload;block=li;when [var.no_video_play]=0]  //-->
+      </li>
+    </ul>
+    <ul class="groups-info">
+      <li>
+        <span class="font4_12">[var.lang_group_status]</span> - <!--[blkfeatured.public_private;block=div;ope=max:450;comm]-->
+        <span class="font4_12" style="margin-left:18px;">[var.lang_total_videos]:</span> (<!--[blkfeatured.group_videos;block=div;ope=max:150;comm]-->)
+        <span class="font4_12" style="margin-left:18px;">[var.lang_total_comments]:</span> (<!--[var.comments_count;comm]-->)</li>
+      <li>
+        <form action="memberprofile.php" method ="get">
+          <span class="font4_12">[var.lang_members]</span> (<!--[blkfeatured.group_members;block=div;ope=max:150;comm]-->)
+          <select size="1" name="user" style="margin:0px 5px;">
+            [var.member_list2;htmlconv=no]
+          </select>
+          <input type="submit" class="button-form" value="[var.lang_view_profile]" name="submit" />
+        </form>
+      </li>
+      <li>[var.lang_group_home_page]
+        <input type="text" name="group_url" size="60" value="[var.group_url]" style="margin-left:5px;" />
+      </li>
+      <li>
+        <!--[blkfeatured.group_description;block=div;ope=max:40;comm]-->
+      </li>
+      <li><a href="joingroup.php?gid=[var.group_id]">[var.lang_join_group]</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[var.group_id]&flag_type=group_profile', 'abuse_div', '', 'GET', '', this);">[var.lang_report_abuse]</a></li>
+    </ul>
+    <div class="clearfix2"></div>
+  </div>
+  <!--End Groups List Container-->
+  <!--Begin Groups Admin Container-->
+  <div class="groups-list">
+
+    <!--[onload_12;block=div;when [var.admin_mode]=1]-->
+    <h2>[var.lang_you_are_viewing_group_admin]</h2>
+
+    <div>
+      <div style="float:left; margin-left:12px;">
+        <a onclick="javascript:ahahscript.ahah('group_admin.php?action=public&amp;gid=[var.group_id]&amp;action_id=0', 'adminsdiv', '', 'GET', '', this);"><strong>[var.lang_make_group_public]</strong></a>
+        &nbsp;&bull;&nbsp;
+        <a onclick="javascript:ahahscript.ahah('group_admin.php?action=private&amp;gid=[var.group_id]&amp;action_id=0', 'adminsdiv', '', 'GET', '', this);"><strong>[var.lang_make_group_private]</strong></a>
+      </div>
+      <div style="float:right; margin-right:112px;" id="adminsdiv"></div>
+    </div>
+    <br />
+
+    <!-- admin - delete members form -->
+    <form id="delmemberform" action="javascript:ahahscript.likeSubmit('group_admin2.php', 'post', 'delmemberform', 'adminsdiv');">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      [var.lang_existing_member]
+      <select size="1" name="action_id">
+        [var.member_list;htmlconv=no]
+      </select>
+      &nbsp;
+      <input type="hidden" value="[var.group_id]" name="gid" />
+      <input type="hidden" value="del_member" name="action" />
+      <input type="submit" class="button-form" value="[var.lang_del_member]" name="action0"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))" />
+    </form>
+    <!-- admin delete memeber - end -->
+  </div>
+  <!--End Groups Admin Container-->
+  <!--Begin Groups Functions Container-->
+  <div class="groups-list">
+    <!--[onload_13;block=div;when [var.show_v_selector]=1;comm]-->
+    <h2>[var.lang_add_delete_group_videos]</h2>
+    [var.lang_message_group_video_list]
+    <form id="addvideoform" action="javascript:ahahscript.likeSubmit('groups_add_video_ajax.php', 'post', 'addvideoform', 'Ajax-Group');">
+      <strong>[var.lang_my_videos]</strong>&nbsp;
+      <!-- list my videos -->
+      <select size="1" name="vid">
+        [var.my_videos;htmlconv=no]
+      </select>
+      <!--list video end-->
+      <input type="hidden" name="group_id" value="[var.group_id]" />
+      <span>
+      <input type="submit" class="button-form" value="[var.lang_add_video]" name="B9" />
+      <!-- hide add button -->
+      <!--[onload_307;block=span;when [var.add_button]=1]-->
+      </span>
+    </form>
+    <form id="deletevideoform" action="javascript:ahahscript.likeSubmit('groups_remove_video_ajax.php', 'post', 'deletevideoform', 'Ajax-Group');">
+      <b>[var.lang_currently_in_group]</b>&nbsp;
+      <!-- list my videos already added to group-->
+      <select size="1" name="vid">
+        [var.my_videos_already;htmlconv=no]
+      </select>
+      <!--list video end-->
+      <input type="hidden" name="gid" value="[var.group_id]" />
+      <span>
+      <input type="submit" class="button-form" value="[var.lang_remove_video]" name="B10"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))" />
+      <!-- hide delete button -->
+      <!--[onload_308;block=span;when [var.delete_button]=1]-->
+      </span>
+    </form>
+  </div>
+  <!--End Groups Functions Container-->
+  <div id="Ajax-Group"></div>
+  <!--Begin Video List-->
+  <div class="container-wide">
+    <div class="groups-videos">[mp;block=(div);serial]
+      <ul>
+	  <li>
+	    <a href="videos/[mp_1.indexer;block=div]/[mp_1.title_seo;block=div;comm]"><!--[mp_1.title;block=div;ope=max:25;comm]--></a>
+	    <a href="videos/[mp_1.indexer;block=div]/[mp_1.title_seo;block=div;comm]"><img border="0" src="uploads/thumbs/[mp_1.video_id;block=div;ope=max:25;comm].jpg" width="120" height="90" class="thumb" alt="thumb" /></a>
+	    <div class="groups-videos-duration"><span class="font4_12">[var.lang_duration]:</span> <!--[mp_1.video_length;block=div;comm]--></div>
+	    <div class="groups-videos-rating">
+            <img border="0" src="images/[mp_1.star1;block=div]" width="21" height="21" alt="1 Star" />
+            <img border="0" src="images/[mp_1.star2;block=div]" width="21" height="21" />
+            <img border="0" src="images/[mp_1.star3;block=div]" width="21" height="21" />
+            <img border="0" src="images/[mp_1.star4;block=div]" width="21" height="21" />
+            <img border="0" src="images/[mp_1.star5;block=div]" width="21" height="21" />
+	    </div>
+	    <div class="groups-videos-date"><span class="font4_12">[var.lang_added]:</span> <!--[mp_1.date_uploaded;block=div;comm]--></div>
+	  </li>
+      </ul>
+    </div>
+  </div>
+  <!--End Video List-->
+
+  <!--DO NOT DELETE ME-->
+  <div><!--[mp;block=span;serial;comm]--><!--[mp_0;block=div+div;comm]--></div>
+  <!-- DO NOT DELETE ME - end -->
+  <!-- nothing found div -->
+  <div style="clear:both; height:30px; line-height:30px; text-align:center">
+    <span class="font4_14"><a href="seemore.php?load=groupsvideos&amp;gid=[var.group_id]">[var.lang_see_more_videos]</a></span><br /><br /><br />
+    <!--[onload_309;block=div;when [var.show_v]=2;comm]-->
+  </div>
+  <div><span class="font4_14">[var.lang_no_vidoes_added]<br /><br /><br /></span><!--[onload_309;block=div;when [var.show_v]=1;comm]--></div>
+  <!-- nothing found end -->
+
+</div>
+<!--End Right Column-->

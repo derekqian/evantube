@@ -1,0 +1,112 @@
+<body topmargin="0px">
+  <!-- ################################################################### START TEXT COMMENTS ############################################## //-->
+  <div align="center">
+    <div style="width: 700px; border:0px">
+
+      	<!-- begin comments //-->
+           	<br />
+           	<div id="CommentBoxPostNew_2">
+              <div>
+                <div style="margin-left:12px; float:left;">
+                  <a onClick="switchMenu('text_comments_hide'); toggle('toggle_text');" title="Hide"><img src="themes/default/images/icons/open.gif" width="16" height="16" id="text_hide" name="toggle_text" alt="" /></a>
+                </div>
+                <div style="margin-left:6px; float:left;">
+                  <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.page]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.lang_refresh]</a>
+                  <!--[onload;block=div;when [var.refresh]=1;comm]-->
+                </div>
+              </div>
+              <div style="margin-right:22px; float:right;">
+                <span class="font5_14">[var.lang_text] [var.lang_comments]&nbsp;&nbsp;([var.see_limit]&nbsp;of&nbsp;[var.text_comments])</span>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div>
+              <div style="margin-left:12px; float:left;">[var.text_alert_msg]</div>
+            </div>
+
+            <div id="text_comments_hide"><!-- start colapse comments //-->
+              <div id="comment_abuse"></div>
+              <br />
+
+
+              <div id="None_ChatboxMain">
+                <a href="members/<!--[blk3.by_username;block=div;comm]-->"><img src="<!--[blk3.poster_picture;block=div;comm]-->" width="65" height="65" border="0" class="ThumbMembersVideos_Comments" /></a>
+                <div class="CommentsBox">
+                  <span class="CommentBoxList_TopLinks">
+                    <div>
+                      <span class="font5_12">
+                        <div style="margin-left:12px; float:left;">[var.lang_by]:&nbsp;<a href="members/[blk3.by_username]"><!--[blk3.by_username;block=((div));comm]--></a></div>
+                        <div style="margin-left:62px; float:left;">Date:&nbsp;<!--[blk3.todays_date;block=((div));comm;frm=mm-dd-yy]--></div>
+                        <div style="margin-left:82px; float:left;" id="rating_vote_[blk3.indexer]">Rated:&nbsp;<!--[blk3.rating;block=div;comm]--></div>
+
+                        <div><!--// PERMISSIONS CHECK - VIDEO COMMENTS START \\-->
+                          <div style="margin-right:12px; float:right;">
+                            [blk3.video_comment_delete;block=((div));htmlconv=no;]
+                          </div>
+                          <div style="margin-right:12px; float:right;">
+                            [blk3.video_comment_edit;block=((div));htmlconv=no;]
+                          </div>
+                        </div><!--// PERMISSIONS CHECK - VIDEO COMMENTS END \\-->
+                      </span>
+                    </div>
+                  </span>
+                  <br />
+                  <br />
+                  <div style="margin-left:12px; text-align:left;">
+                    <!--[blk3.comments;block=(div);comm;htmlconv=no]-->
+                  </div>
+                  <br />
+                  <hr style="border-top: 1px dashed #C0C0C0; border-bottom: 0px">
+                  <div>
+                    <div style="margin-right:12px; float:right;">
+                      &nbsp;&nbsp;|&nbsp;&nbsp;
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[blk3.indexer;block=((div))]&flag_type=videocomments', 'drop_block_[blk3.indexer]', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">[var.lang_report_abuse]</a>
+                    </div>
+                    <div style="float:right;">
+                      &nbsp;&nbsp;|&nbsp;&nbsp;
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/reply_comments_ajax.php?type=video&amp;media_id=[var.vid]&amp;id=[blk3.indexer;block=((div))]&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">[var.lang_reply]</a>
+                    </div>
+                    <div style="float:right;" id="vote_enabled_[blk3.indexer]">
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/rate_comments_ajax.php?type=video&amp;comment_id=[blk3.indexer;block=((div))]&amp;value=[blk3.rating]&amp;rate=up&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this);
+                      showBlock('drop_block_[blk3.indexer]');
+                      end_vote('vote_enabled_[blk3.indexer]', 'vote_disabled_[blk3.indexer]')"
+                      onMouseOver="over_image_up('rate_up_one_[blk3.indexer]')" onMouseOut="off_image_up('rate_up_one_[blk3.indexer]')"><img name="rate_up_one_[blk3.indexer]" src="themes/default/images/thumbs_up.png" width="15" height="15" border="0" alt="Thumbs Up" title="Good Comment" /></a>
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/rate_comments_ajax.php?type=video&amp;comment_id=[blk3.indexer;block=((div))]&amp;value=[blk3.rating]&amp;rate=down&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this);
+                      showBlock('drop_block_[blk3.indexer]');
+                      end_vote('vote_enabled_[blk3.indexer]', 'vote_disabled_[blk3.indexer]')"
+                      onMouseOver="over_image_down('rate_down_one_[blk3.indexer]')" onMouseOut="off_image_down('rate_down_one_[blk3.indexer]')"><img name="rate_down_one_[blk3.indexer]" src="themes/default/images/thumbs_down.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" name="rate_down_one" /></a>
+                    </div>
+                	  <div style="float:right; display:none;" id="vote_disabled_[blk3.indexer]">
+                	    <img name="rate_up_one_[blk3.indexer]" src="themes/default/images/thumbs_up_voted.png" width="15" height="15" border="0" alt="Thumbs Up" title="Good Comment" /></a>
+                	    <img name="rate_down_one_[blk3.indexer]" src="themes/default/images/thumbs_down_voted.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" name="rate_down_one" /></a>
+                	  </div>
+                	  <div style="display:none; float:right;">
+                	    <img name="rate_up_one_[blk3.indexer]" src="themes/default/images/thumbs_up_voted.png" width="15" height="15" border="0" alt="Thumbs Up" title="Thanks for voting" />
+                	    <img name="rate_down_one_[blk3.indexer]" src="themes/default/images/thumbs_down_voted.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" name="Thanks for voting" />
+                	  </div>
+                  </div>
+                  <br />
+                  [blk3.drop_block;block=((div));htmlconv=no;]
+                  <br />
+                  [blk3.reply_block;block=((div));htmlconv=no;]
+                </div>
+                <div class="clear-fix"></div>
+                <br />
+              </div><!-- end None_ChatboxMain //-->
+
+            </div><!-- end colapse comments //-->
+
+            <div id="pagination"><!-- Pagination start must be in comments ajax div-->
+              <span class="font5_14">
+                <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.pageprev]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.ajax_page_previous;htmlconv=no;]</a>
+                <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.pagenext]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.ajax_page_next;htmlconv=no;]</a>
+              </span>
+            </div><!-- Pagination end -->
+
+    </div><!-- end main width //-->
+  </div><!-- end begin center //-->
+
+</body>
+
+</html>

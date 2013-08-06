@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>PhpMotion System Manager</title>
+	<link href="[var.base_url]/css/styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script>
+
+//Check all radio/check buttons script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+
+function checkall(thestate){
+var el_collection = document.forms['form_results'].elements['list[]'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+var el_collection = document.forms['form_results'].elements['list[]1'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+}
+
+</script>
+<style type="text/css">
+
+td.off {
+background: #A4A4A4;
+}
+
+</style>
+<!-- addnon - start of thickbox -->
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+<!-- addnon - end of thickbox -->
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		<!-- start of search box -->
+	<tr>
+<!-- end of search box -->
+	<!-- admin password -->
+	<tr>
+	<td bgcolor="#FFFFFF">
+      <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" height="170">
+          <tr>
+            <td width="100%" height="32" background="images/right_table_header.png">
+              <p align="left"><font face="Arial" size="2"><b>&nbsp;
+              &nbsp;[var.lang_ads]</b></font></p>
+            </td>
+          </tr>
+        <center>
+          <tr>
+            <td width="100%" height="21"><div align="center">[var.lang_insert_ads_code]</div></td>
+          </tr>
+        </center>
+          <tr>
+            <td width="100%">
+				<div align="center">
+				<table border="0" cellpadding="0" cellspacing="0" width="91%" id="table8" height="127">
+					
+					<tr>
+						<td>
+						<table border="0" width="100%" id="table9" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+<div align="center">
+<table border="0" width="100%" id="table10" cellspacing="0" cellpadding="0" height="93">
+	<tr>
+		<td width="100%" height="93" align="center" bgcolor="#FFFFFF">
+		<div align="center">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table19" height="522">
+			<form id="update_ads" action ="ads.php" method ="post">
+				<tr>
+					<td width="391" height="144" align="right">[var.lang_top_ad]&nbsp;&nbsp;&nbsp; 					</td>
+					<td height="134">
+					<textarea rows="7" name="ads_top" cols="45">[var.ads_top;htmlconv=no]</textarea></td>
+				</tr>
+				<tr>
+					<td width="391" height="144" align="right"> [var.lang_bottom_ad]&nbsp;&nbsp;&nbsp;  </td>
+					<td height="13">
+					<textarea rows="7" name="ads_bottom" cols="45">[var.ads_bottom;htmlconv=no]</textarea></td>
+				</tr>
+				<tr>
+					<td width="391" height="144" align="right">[var.lang_left_ad]&nbsp;&nbsp;&nbsp;  </td>
+					<td height="6">
+					<textarea rows="7" name="ads_left" cols="45">[var.ads_left;htmlconv=no]</textarea></td>
+				</tr>
+				<tr>
+					<td width="391" height="144" align="right"> [var.lang_right_ad]&nbsp;&nbsp;&nbsp;  </td>
+					<td height="5">
+					<textarea rows="7" name="ads_right" cols="45">[var.ads_right;htmlconv=no]</textarea></td>
+				</tr>
+				<tr>
+					<td width="391" height="5" align="right"> </td>
+					<td height="5">					</td>
+				</tr>
+				<tr>
+					<td width="391" height="3" align="right"> </td>
+					<td height="3">					</td>
+				</tr>
+				<tr>
+					<td width="391" height="35">&nbsp;</td>
+					<td height="35">
+							<input type ="hidden" name="type" value="[var.show_t]">
+
+					<input type="submit" value="[var.lang_update]" name="update_ads"></td>
+				</tr>
+				</form>
+			</table>
+		</div>		</td>
+	</tr>
+	</table>
+		</div>
+		</td>
+	</tr>
+</table>
+
+					</tr>
+				</table>
+			</div>
+			</td>
+        <center>
+          </tr>
+        </center>
+          </table>
+      </div>
+    </td>
+	</tr>
+	<!-- admin password end -->
+	<!-- other-->
+	<!-- other end-->
+
+	</table>
+</div>
+
+</body>
+
+</html>

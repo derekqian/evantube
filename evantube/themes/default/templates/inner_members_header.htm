@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>[var.user_name]'s [var.lang_profile] [var.lang_on] [var.site_name]</title>
+
+	<!-- do not delete -->
+	<base href="[var.base_url]/" />
+	<link rel="stylesheet" type="text/css" href="[var.base_url]/themes/[var.user_theme]/css/main.css">
+
+    	<!--[if lte IE 6]>
+	<link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie6.css" type="text/css" />
+	<![endif]-->
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie7.css" type="text/css" />
+	<![endif]-->
+	<!-- do not delete -->
+
+	<link href="[var.members_css]" rel="stylesheet" type="text/css" />
+
+	<!-- thick box -->
+	<link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+	<!-- thick box -->
+
+	<!-- ahah -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"></script>
+	<!-- ahah -->
+
+	<!-- GreyBox -->
+	<script type="text/javascript">
+		var GB_ROOT_DIR = "[var.base_url]/greybox/";
+	</script>
+	<script type="text/javascript" src="greybox/AJS.js"></script>
+	<script type="text/javascript" src="greybox/AJS_fx.js"></script>
+	<script type="text/javascript" src="greybox/gb_scripts.js"></script>
+	<link href="[var.base_url]/greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Greybox -->
+
+	<!-- ajax rating -->
+	<link href="[var.base_url]/css/rating_style.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="[var.base_url]/javascripts/rating_update.js"></script>
+	<!-- end rating -->
+
+</head>
+
+<body class="MP_MainBody">
+
+  <!--Begin Header-->
+    <div id="header" style="margin-bottom:20px;">
+
+    <!--Begin Left Header.  This is where the logo is contained-->
+      <div id="header-left-2">
+
+
+        <!--Begin Logo-->
+          <div id="logo-2">
+            <a href="[var.base_url]"><img src="[var.base_url]/themes/[var.user_theme]/images/logo-main.gif" alt="PHPmotion"></a>
+           </div><!--End Logo-->
+
+         </div><!--End Left Header-->
+
+     <!--Begin main Header.  This is where the main navigation is contained-->
+       <div id="header-main-2">
+
+         <!--Begin Navigation-->
+           <div id="nav-bar-2">
+             <div id="nav-left"></div>
+
+             <!--Main Navigation. Buttons go here-->
+               <div id="nav-main">
+                 <ul>
+                   <li><a href="[var.base_url]">[var.lang_home]</a></li>
+                   <li><a href="[var.base_url]/videos/load/recent">[var.lang_word_videos]</a></li>
+                   <!--[var.audio_main_menu1;htmlconv=no;comm]-->
+                   <!--[var.images_main_menu1;htmlconv=no;comm]-->
+                   <li><a href="[var.base_url]/blogs/load/recent">[var.lang_blogs]</a><!--[onload;block=li;when [var.enable_blogs]=1;comm]--></li>
+                   <li><a href="[var.base_url]/people">[var.lang_people]</a></li>
+                   <li><a href="forum">Forum</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+                   <li><a href="[var.base_url]/upload-media">[var.lang_upload]</a></li>
+                 </ul>
+               </div><!--End Main Navigation-->
+
+             <div id="nav-right"></div>
+           </div><!--End Navigation-->
+       </div><!--End main Header-->
+     <!--Begin Header Bottom.  The only purpose for this is to give the bottom of the header rounded corners-->
+     <div id="header-bottom"></div><!--End Header Bottom-->
+
+      <!--submenu 1-->
+      <div class="sub-nav-links">
+        <div align="right">
+          <a href="myaccount.php">[var.lang_my_account]</a>
+          &nbsp;|&nbsp;
+          <a href="members/[var.viewing_user_name]">[var.lang_my_profile]</a>
+          &nbsp;|&nbsp;
+          <a href="emailinbox.php">[var.lang_word_email] ([var.number_of_emails])</a>
+          <!--[onload;block=span;when [var.show_email_count]=1;comm]-->
+          &nbsp;|&nbsp;
+          <a href="inviteread.php">[var.lang_invites] ([var.number_of_invites])</a>
+          <!--[onload;block=span;when [var.show_invites_count]=1;comm]-->
+          &nbsp;|&nbsp;
+          <a href="groups">[var.lang_groups]</a>
+          &nbsp;|&nbsp;
+          <a href="upload-media">[var.lang_upload_media]</a>
+          &nbsp;|&nbsp;
+          <a href="logout.php">[var.lang_logout_text]</a>
+          <!--[onload;block=div;when [var.loggedin]=1;comm]-->
+        </div>
+      </div>
+
+
+     <div class="warning-message">
+      [var.message_type] - [var.error_message]
+     <!--[onload_103;block=div;when [var.blk_notification]=1;comm]-->
+    </div>
+
+    </div><!--End Header-->
+
+<!--Load Main Members Content-->
+<!--[onload;file=[var.inner_template];getbody;comm]-->
+<!--Load Main Members Content end-->
+
+
+
+</body>
+</html>

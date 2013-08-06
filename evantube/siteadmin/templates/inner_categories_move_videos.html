@@ -1,0 +1,143 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>PhpMotion System Manager</title>
+	<link href="[var.base_url]/css/styles.css" rel="stylesheet" type="text/css" />
+<script language="javascript1.3" src="[var.base_url]/javascripts/ahah.js" ></script>
+<script>
+
+//Check all radio/check buttons script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+
+function checkall(thestate){
+var el_collection = document.forms['form_results'].elements['list[]'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+var el_collection = document.forms['form_results'].elements['list[]1'];
+for (var c=0;c<el_collection.length;c++)
+el_collection[c].checked=thestate
+}
+
+</script>
+<style type="text/css">
+
+td.off {
+background: #A4A4A4;
+}
+
+</style>
+<!-- addnon - start of thickbox -->
+   <link rel="stylesheet" href="[var.base_url]/css/thickbox.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="[var.base_url]/javascripts/jquery.js"></script>
+   <script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"></script>
+<!-- addnon - end of thickbox -->
+</head>
+
+<body topmargin="0">
+
+<div align="center">
+	<table style="border-style: solid; border-width: 0; " bordercolor="#4B87C2" width="758" bgcolor="#FFFFFF" id="table1" cellspacing="0" cellpadding="0">
+		<!-- start of search box -->
+	<tr>
+<!-- end of search box -->
+	<!-- admin password -->
+	<tr>
+	<td bgcolor="#FFFFFF">
+      <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" height="170">
+          <tr>
+            <td width="100%" height="32" background="images/right_table_header.png">
+              <p align="left"><font face="Arial" size="2"><b>&nbsp;
+              &nbsp;
+              [var.lang_video_categories]&nbsp; </b><font color="#4B87C2">
+				<a href="categories_videos_transfer.php"><font color="#4B87C2">[var.lang_move_videos]</font></a></font></font></p>
+            </td>
+          </tr>
+        <center>
+          <tr>
+            <td width="100%" height="21">&nbsp;</td>
+          </tr>
+        </center>
+          <tr>
+            <td width="100%" height="25">
+				<table border="0" width="100%" id="table2" cellspacing="0" cellpadding="3" height="432">
+					<form method="POST" action="categories_videos_transfer.php">
+										    <input type="hidden" name="main_category_on_edit" value="[var.channel_id]">
+						<tr>
+					<td bgcolor="#E8E8E8" height="35" style="line-height: 200%">
+						<p align="left"><b>
+						<font face="Arial" size="2" color="#666666">&nbsp;[var.lang_move_from]</font></b></td>
+				</tr>
+				
+						<tr>
+					<td bgcolor="#F0F0F0" height="174" style="line-height: 200%">
+						<p align="center">
+						<font color="#4B87C2" face="Arial">
+						<select size="7" name="move_from" style="font-weight: 700">
+						<!--[var.category_list;htmlconv=no;comm]-->
+						</select></font></td>
+				</tr>
+				
+				<tr>
+					<td bgcolor="#FFFFFF" height="37" style="line-height: 200%">
+						<table border="0" width="100%" id="table3">
+							<tr>
+								<td>
+								<img border="0" src="images/arrow.png" align="right"></td>
+								<td width="127">
+								<p align="center"><b>
+								<font face="Arial" size="2">[var.lang_move_videos]</font></b></td>
+								<td width="306">
+								<img border="0" src="images/arrow.png" align="left"></td>
+							</tr>
+						</table>
+				</td>
+				</tr>
+				
+				<tr>
+					<td bgcolor="#CEFFB0" height="35" style="line-height: 200%">
+                        <p align="left">
+						<font color="#666666">&nbsp;[var.lang_move_to]</font></p>
+                    </td>
+				</tr>
+				
+				<tr>
+					<td bgcolor="#E3FFD2" height="184" style="line-height: 200%">
+						<p align="center">
+						<font color="#4B87C2" face="Arial">
+						<select size="7" name="move_to" style="font-weight: 700">
+						<!--[var.category_list;htmlconv=no;comm]-->
+						</select></font><p align="center">
+						<font face="Arial" size="2"><b>(x) </b>= [var.lang_total] 
+						- [var.lang_word_videos]</font></td>
+				</tr>
+				<tr>
+					<td bgcolor="#FFFFFF" height="37" style="line-height: 200%">
+						<p align="center">
+						<input type="submit" value="[var.lang_move_videos]" name="move_videos"  onClick="return(window.confirm('[var.confirm_popup_javascript]'))">&nbsp;</td>
+				</tr>
+									</form>
+
+				</table>
+			</td>
+        <center>
+          </tr>
+        </center>
+          </table>
+      </div>
+    </td>
+	</tr>
+	<!-- admin password end -->
+	<!-- other-->
+	<!-- other end-->
+
+	</table>
+</div>
+
+</body>
+
+</html>

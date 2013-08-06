@@ -1,0 +1,390 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Main-Body {
+	background-color: #edf0f4;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+}
+
+#Main-Container{
+	width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#Main-Container-Left{
+	width: 780px;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	float: left;
+	border: 1px solid #c4c4c4;
+}
+
+#Notfications{
+	width: 750px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 15px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	background-color: #FFFF99;
+	border: 1px solid #FF0000;
+	color: #FF0000;
+	text-align: center;
+	font-weight: bold;
+}
+
+#Main-Container-Right{
+	width: 250px;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	float: right;
+	border: 1px solid #c4c4c4;
+}
+
+
+#Main-Title {
+	height: 35px;
+	margin-top: 25px;
+	font-size: 26px;
+	line-height: 35px;
+	font-weight: bold;
+	color: #157DD2;
+	padding-left: 10px;
+	background-image: none;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	background-color: #EDF0F4;
+
+}
+
+.Font-16{
+font-size:16px;
+}
+
+#info {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-top-color: #157DD2;
+	border-bottom-color: #157DD2;
+	background-color: #e6f2fa;
+	padding: 8px;
+	text-align: left;
+}
+
+#info-yellow {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-top-color: #FFCC00;
+	border-bottom-color: #FFCC00;
+	background-color: #FFFF33;
+	padding: 8px;
+	text-align: left;
+}
+
+.Tip-Title{
+	color: #157DD2;
+	font-size: 14px;
+}
+
+.Tip-Title-2{
+	color: #FF0000;
+	font-size: 14px;
+}
+
+#Main-Progress{
+	height: 40px;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	background-color: #F0F0F0;
+}
+
+#Main-Progress ul{
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+#Main-Progress li{
+	list-style-type: none;
+	display: inline-block;
+	width: 100px;
+	float: left;
+	height: 40px;
+	background-color: #F0F0F0;
+	border-left-width: 1px;
+	border-left-style: dashed;
+	border-left-color: #CCCCCC;
+	line-height: 40px;
+	padding-left: 5px;
+	font-size: 14px;
+	color: #333333;
+}
+
+
+.Progressing{
+	font-weight: bold;
+	background-image: url(../images/progress_grad.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.Progress{
+}
+
+.Steps{
+	margin-top: 40px;
+	margin-bottom: 50px;
+	width: 750px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FBFBFB;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+}
+#Step-Title {
+	font-size: 18px;
+	display: block;
+	line-height: 30px;
+	height: 30px;
+	font-weight: bold;
+	color: #333333;
+	background-color: #EDF0F4;
+}
+
+
+#Help-Me{
+	font-size: 14px;
+	background-color: #157DD2;
+	color: #FFFFFF;
+	padding-left: 5px;
+}
+
+#Help-Me a:link, a:visited, a:active {
+}
+
+
+.Var-Check-Pass{
+	background-image: url(../images/tick.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.Var-Check-Fail{
+	background-image: url(../images/cross.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.Var-Check-Unknown{
+	background-image: url(../images/question.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.TD-Underlined{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+
+#Install-Progress{
+	padding: 0px;
+	width: 235px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+}
+
+#Progress-Title {
+	height: 25px;
+	margin-top: 25px;
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #157DD2;
+	padding-left: 10px;
+	background-image: none;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	background-color: #EDF0F4;
+
+}
+
+#Progress-Title-2 {
+	height: 25px;
+	margin-top: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #666666;
+	padding-left: 10px;
+	background-image: none;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	background-color: #E6E6E6;
+
+}
+
+
+#Install-Progress li{
+	list-style-type: none;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C4C4C4;
+}
+
+.Install-Progress-Current{
+	background-color: #e6f2fa;
+	font-weight: bold;
+}
+
+.Install-Progress-Passed{
+	background-image: url(../images/tick.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+
+.Install-Progress-Warning{
+	background-image: url(../images/warning.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+
+#SetupComplete{
+	padding: 20px;
+	background-color: #00CC00;
+}#CompleteTitle {
+	font-size: 26px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#SetupComplete-Delete{
+	background-color: #FFFFFF;
+	padding: 8px;
+	color: #FF0000;
+}
+
+#PostInstall{
+	background-color: #FFFFFF;
+	border: 2px dashed #0099FF;
+	padding-top: 10px;
+}
+
+#PostInstallHeader{
+	font-size: 28px;
+	color: #0066FF;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+#toolTip{
+   border:1px solid #157dd2;
+   background-color:#e6f2fa;
+   width:400px;
+   position:absolute;
+   visibility: hidden;
+   overflow: hidden;
+  	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+   color:#333;
+}
+
+#toolTip h1{
+   display:block;
+  	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+   background-color:#157dd2;
+   border-bottom:1px solid #CCC;  
+   margin:0px;
+   padding:0px 2px;   
+   color:#FFFFFF;
+}
+
+#toolTip p {
+   margin:0px;
+   padding:6px;   
+}
+
+.tool-info{
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.tool-info a{
+ text-decoration: none;
+}
+
+.PHPshieldSolution{
+	color: #157DD2;
+	font-size: 14px;
+}
+
+#PHPshieldList{
+}
+
+#PHPshieldList li{
+	margin-bottom: 18px;
+}
+
+#MoreHelpList{
+}
+
+#MoreHelpList li{
+	margin-bottom: 10px;
+}
+
+#MoreHelpList a{
+text-decoration:none;
+}

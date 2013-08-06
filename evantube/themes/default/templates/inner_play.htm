@@ -1,0 +1,436 @@
+<!--Begin Left Column-->
+<div id="column-left-1">
+  <!--Begin Video Container. This container holds the video player as well as video data (Info, Uploader, etc...)-->
+  <div class="header-wide"><span>[var.lang_now_playing]:</span>&nbsp;<span>[var.title;htmlconv=no;]</span></div>
+  <div class="container-wide-player">
+    <!--Start Player-->
+    <div class="container-player">
+      <iframe src="[var.base_url]/make_player.php?vid=[var.vid]&player_token=[var.player_token]" style="width:560px; height:420px; border:none;" marginheight="0" scrolling="no" name="flvplayer">
+        <!--[onload;block=iframe;when [var.video_type] != 'embedded';comm]-->
+      </iframe>
+      <!--start of EmbedVideo Addon Player-->
+      <span>
+        <!--[var.videoembedder_code;htmlconv=no;comm]-->
+        <!--[onload;block=span;when [var.video_type] == 'embedded';comm]-->
+      </span>
+      <!-- end of EmbedVideo Addon Player-->
+    </div><!--End Player-->
+    <!--Begin Video Info (Description, rating etc...)-->
+    <div id="video-info">
+      <ul class="video-details-list">
+        <li style="border-bottom:1px dashed #dddcdc;"></li>
+        <li><span class="font4_12">[var.lang_description]:&nbsp;&nbsp;</span>[var.description;ope=max:222;htmlconv=no]</li>
+        <li><span class="font4_12">[var.lang_tags]:&nbsp;&nbsp;</span>[var.tags_string;htmlconv=no]</li>
+        <li><span class="font4_12">[var.lang_added]:&nbsp;&nbsp;</span>[var.date_uploaded;frm=mm-dd-yy]</b>&nbsp;&nbsp;<span class="font4_12">[var.lang_views]:&nbsp;&nbsp;</span>([var.number_of_views])</b></li>
+        <li>
+          <div>
+            <div style="margin-left:1px; margin-top:4px; float:left;">
+              <span class="font4_12">[var.ajax_rating;htmlconv=no]</span>
+              <!--[onload_13;block=li;when [var.showdetails]=1;comm]-->
+            </div>
+          </div>
+        </li>
+        <div class="clear-fix"></div>
+        <br />
+
+        <li>
+          <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[var.vid]&flag_type=videos', 'playlist_ajaxdiv', '', 'GET', '', this);"><img src="images/icons_report.png" alt="report" width="25" height="25" border="0" align="absmiddle" />[var.lang_report]</a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/addfavorites_ajax.php?vid=[var.vid]', 'playlist_ajaxdiv', '', 'GET', '', this);"><img src="images/icons_favs.png" alt="favs" width="25" height="26" border="0" align="absmiddle" /></a>
+          <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/addfavorites_ajax.php?vid=[var.vid]', 'playlist_ajaxdiv', '', 'GET', '', this);">[var.lang_word_favorites]</a>
+          &nbsp;&nbsp;&nbsp;
+          <features_download>
+            <a href="[var.base_url]/uploads/[var.video_play]"><img src="images/download.gif" alt="download" width="23" height="24" border="0" align="absmiddle" /></a>
+          	&nbsp;
+          	<a href="[var.base_url]/uploads/[var.video_play]">[var.lang_download]</a>
+          	<!--[onload_318;block=features_download;when [var.allow_download]=1;comm]-->
+          </features_download>
+          <span>
+            <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('videoplaylist_ajax.php?addnew=yes&vid=[var.vid]&none=', 'playlist_ajaxdiv', '', 'GET', '', this);"><img src="images/icon_add_playlist.gif" alt="favs" width="25" height="26" border="0" align="absmiddle" /></a>
+          	<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('videoplaylist_ajax.php?addnew=yes&vid=[var.vid]&none=', 'playlist_ajaxdiv', '', 'GET', '', this);">[var.lang_add_playlist]</a>
+          	&nbsp;&nbsp;&nbsp;
+          	<a href="videoplaylist.php?keepThis=true&amp;TB_iframe=true&amp;height=560&amp;width=700" class="thickbox"><img src="images/icon_new_playlist.gif" alt="favs" width="25" height="26" border="0" align="absmiddle" /></a>
+          	<a href="videoplaylist.php?keepThis=true&amp;TB_iframe=true&amp;height=560&amp;width=700" class="thickbox">[var.lang_new_playlist]</a>
+          </span>
+          &nbsp;
+          <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('tellafriend.php?type=video&amp;vid=[var.vid]&amp;title_seo=[var.title_seo]', 'playlist_ajaxdiv', '', 'GET', '', this);"><img src="images/icon_tell_friend.gif" alt="favs" width="25" height="26" border="0" align="absmiddle" /></a>
+          <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('tellafriend.php?type=video&amp;vid=[var.vid]&amp;title_seo=[var.title_seo]', 'playlist_ajaxdiv', '', 'GET', '', this);">[var.lang_share]</a>
+        </li>
+        <div class="clear-fix"></div>
+
+        <li style="float:left;">
+          <span style="font-size:14px;font-weight:bold;">[var.lang_social_bookmarks]:&nbsp;&nbsp;</span>
+          <!-- start social bookmarks -->
+          <a target="_blank" href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&Description=[var.description]&Url=[var.seo_video_url]&Title=[var.title]&Tag=[var.tags]" target="_blank"><img src="themes/[var.user_theme]/images/icons/Blinklist_32x32.png" alt="blink" width="32" height="32" title="Add to BlinkList" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://digg.com/submit?url=[var.seo_video_url]&amp;Title=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/digg_32x32.png" alt="digg" width="32" height="32" title="Add to Digg" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://www.furl.net/storeIt.jsp?u=[var.seo_video_url]&amp;t=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/Furl_32x32.png" alt="furl" width="32" height="32" title="Add to Furl" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://reddit.com/submit?url=[var.seo_video_url]&title=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/Reddit_32x32.png" alt="furl" width="32" height="32" title="Add to Reddit" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://www.newsvine.com/_wine/save?u=[var.seo_video_url]&h=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/Newsvine_32x32.png" alt="furl" width="32" height="32" title="Add to News Vine" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://del.icio.us/post?url=[var.seo_video_url]"><img src="themes/[var.user_theme]/images/icons/delicious_32x32.png" alt="deli" width="32" height="32" title="Add to del.icio.us" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://blogmarks.net/my/new.php?mini=1&simple=1&url=[var.seo_video_url]&title=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/BlogMarks_32x32.png" alt="BlogMarks" width="32" height="32" title="Add to BlogMarks" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://ma.gnolia.com/bookmarklet/add?url=[var.seo_video_url]&title=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/Magnolia_32x32.png" alt="Magnolia" width="32" height="32" title="Add to Magnolia" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="http://www.stumbleupon.com/submit?url=[var.seo_video_url]&title=[var.title_seo]"><img src="themes/[var.user_theme]/images/icons/StumbleUpon.png" alt="StumbleUpon" width="32" height="32" title="Add to StumbleUpon" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_blank" href="rss.php?video=[var.vid]"><img src="themes/[var.user_theme]/images/icons/Feeds_32x32.png" alt="RSS" width="32" height="32" title="Our RSS Feeds" /></a>
+          <!-- end social bookmarks -->
+        </li>
+
+        <li style="float:left; margin-left: 1px; width: 300px;">
+          <span class="font5_14">[var.lang_manage]:</font><!--[onload;block=span;when [var.edit_video]=1;comm]--></span>&nbsp;&nbsp;<a href="edit/editvideo.php?id=[var.vid]" rel="gb_page_center[720, 500]"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="delete" width="14" height="14" border="0" />
+          &nbsp;&nbsp;[var.lang_edit]
+          <!--[onload_15;block=a;when [var.edit_video]=1;comm]--></a>
+          &nbsp;
+          <a href="edit/delete.php?type=1&id=[var.vid]" rel="gb_page_center[620, 300]"><img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+          &nbsp;&nbsp;[var.lang_delete]
+          <!--[onload_16;block=a;when [var.delete_video]=1;comm]--></a>
+        </li>
+      </ul>
+    </div>
+    <!--End Video Info-->
+    <div class="clear-fix"></div>
+  </div><!--End Video Container-->
+
+  <!-- Ajax Results Box for playlists etc -->
+  <div id='playlist_ajaxdiv'></div><!-- Ajax style end -->
+  <!--Begin Video Responses-->
+  <div class="container-wide-header"></div>
+  <div class="container-wide">
+    <div>
+      <div style="margin-left:12px; float:left;">
+        <a onClick="switchMenu('vid_response_hide'); toggle('toggle_video');" title="Hide"><img src="themes/default/images/icons/open.gif" width="16" height="16" id="video_hide" name="toggle_video" alt="" /></a>
+      </div>
+      <div style="margin-right:22px; float:right;">
+        <span class="font5_14">[var.lang_video_responses]&nbsp;([var.vid_responses])</span>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="vid_response_hide">
+      <div>
+        <div style="margin-left:12px; float:left;">[var.video_alert_msg]</div>
+        <div style="margin-right:22px; float:right;">[var.login_post_msg;htmlconv=no]</div>
+      </div>
+      <br />
+      <br />
+      <script type="text/javascript">
+      	var mycarousel_itemList = [<!--[var.ajax_load;htmlconv=no;comm]-->];
+      		function mycarousel_itemLoadCallback(carousel, state)
+        		{
+        			for (var i = carousel.first; i <= carousel.last; i++) {
+        				if (carousel.has(i)) {
+        					continue;
+        				}
+        				if (i > mycarousel_itemList.length) {
+        					break;
+        				}
+
+        		     		// Create an object from HTML
+        		     		var item = jQuery(mycarousel_getItemHTML(mycarousel_itemList[i-1])).get(0);
+	        		     	carousel.add(i, item);
+        			}
+        		};
+        		function mycarousel_getItemHTML(item)
+        		{
+        			var url_m = 'videos/';
+        			return '<a href="' + url_m + item.title + '"><img src="' + item.url + '" width="120" height="90" border="0" alt="' + item.title + '" /></a>';
+        		};
+        		jQuery(document).ready(function() {
+        			jQuery('#mycarousel').jcarousel({
+        				size: mycarousel_itemList.length,
+        				itemLoadCallback: {onBeforeAnimation: mycarousel_itemLoadCallback}
+        			});
+        		});
+      </script>
+      <div align="center">
+        <div id="wrap">
+          <div id="mycarousel" class="jcarousel-skin-ie7">
+            <ul>
+              <!-- dynamically loaded carousel here -->
+            </ul>
+          </div>
+        </div>
+        <!--[onload;block=div;when [var.response_show]=1;comm]-->
+      </div>
+    </div><!-- end video response colapse //-->
+  </div><!-- end vid response //-->
+  <div class="container-wide-footer"></div>
+
+  <!-- ################################################################### START TEXT COMMENTS ############################################## //-->
+  <features_comments>
+  <div align="center">
+    <div  class="header-wide-comments">
+      <div id="commentajax">
+        <br />
+        <div id="CommentBoxPostNew_2">
+          <div>
+            <div style="margin-left:12px; float:left;">
+              <a onClick="switchMenu('text_comments_hide'); toggle('toggle_text');" title="Hide"><img src="themes/default/images/icons/open.gif" width="16" height="16" id="text_hide" name="toggle_text" alt="" /></a>
+            </div>
+            <div style="margin-left:6px; float:left;">
+              <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.page]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.lang_refresh]</a>
+              <!--[onload;block=div;when [var.refresh]=1;comm]-->
+            </div>
+          </div>
+          <div style="margin-right:22px; float:right;">
+            <span class="font5_14">[var.lang_text_comments]&nbsp;&nbsp;([var.see_limit]&nbsp;[var.lang_of]&nbsp;[var.text_comments])</span>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div>
+          <div style="margin-left:12px; float:left;">[var.text_alert_msg]</div>
+        </div>
+        <div id="text_comments_hide"><!-- start colapse comments //-->
+          <div id="comment_abuse"></div>
+          <br />
+          <div id="None_ChatboxMain">
+                <a href="members/<!--[blk3.by_username;block=div;comm]-->"><img src="<!--[blk3.poster_picture;block=div;comm]-->" width="65" height="65" border="0" class="ThumbMembersVideos_Comments" /></a>
+                <div class="CommentsBox">
+                  <span class="CommentBoxList_TopLinks">
+                    <div>
+                      <span class="font5_12">
+                        <div style="margin-left:12px; float:left;">[var.lang_by]:&nbsp;<a href="members/[blk3.by_username]"><!--[blk3.by_username;block=((div));comm]--></a></div>
+                        <div style="margin-left:62px; float:left;">[var.lang_date]:&nbsp;<!--[blk3.todays_date;block=((div));comm;frm=mm-dd-yy]--></div>
+                        <div style="margin-left:82px; float:left;" id="rating_vote_[blk3.indexer]">[var.lang_rated]:&nbsp;<!--[blk3.rating;block=div;comm]--></div>
+
+                        <div><!--// PERMISSIONS CHECK - VIDEO COMMENTS START \\-->
+                          <div style="margin-right:12px; float:right;">
+                            [blk3.video_comment_delete;block=((div));htmlconv=no;]
+                          </div>
+                          <div style="margin-right:12px; float:right;">
+                            [blk3.video_comment_edit;block=((div));htmlconv=no;]
+                          </div>
+                        </div><!--// PERMISSIONS CHECK - VIDEO COMMENTS END \\-->
+                      </span>
+                    </div>
+                  </span>
+                  <br />
+                  <br />
+                  <div style="margin-left:12px; text-align:left; overflow: hidden; word-wrap: break-word;">
+                    <!--[blk3.comments;block=(div);comm;htmlconv=no]-->
+                  </div>
+                  <br />
+                  <hr style="border-top: 1px dashed #C0C0C0; border-bottom: 0px">
+                  <div>
+                    <div style="margin-right:12px; float:right;">
+                      &nbsp;&nbsp;|&nbsp;&nbsp;
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[blk3.indexer;block=((div))]&flag_type=videocomments', 'drop_block_[blk3.indexer]', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">Report Abuse</a>
+                    </div>
+                    <div style="float:right;">
+                      &nbsp;&nbsp;|&nbsp;&nbsp;
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/reply_comments_ajax.php?type=video&amp;media_id=[var.vid]&amp;id=[blk3.indexer;block=((div))]&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">Reply</a>
+                    </div>
+                    <div style="float:right;" id="vote_enabled_[blk3.indexer]">
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/rate_comments_ajax.php?type=video&amp;comment_id=[blk3.indexer;block=((div))]&amp;value=[blk3.rating]&amp;rate=up&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this);
+                      showBlock('drop_block_[blk3.indexer]');
+                      end_vote('vote_enabled_[blk3.indexer]', 'vote_disabled_[blk3.indexer]')"
+                      onMouseOver="over_image_up('rate_up_one_[blk3.indexer]')" onMouseOut="off_image_up('rate_up_one_[blk3.indexer]')"><img name="rate_up_one_[blk3.indexer]" src="themes/default/images/thumbs_up.png" width="15" height="15" border="0" alt="Thumbs Up" title="Good Comment" /></a>
+                      <a onClick="javascript:ahahscript.ahah('[var.base_url]/rate_comments_ajax.php?type=video&amp;comment_id=[blk3.indexer;block=((div))]&amp;value=[blk3.rating]&amp;rate=down&amp;indexer=[blk3.indexer;block=((div))]', 'drop_block_[blk3.indexer]', '', 'GET', '', this);
+                      showBlock('drop_block_[blk3.indexer]');
+                      end_vote('vote_enabled_[blk3.indexer]', 'vote_disabled_[blk3.indexer]')"
+                      onMouseOver="over_image_down('rate_down_one_[blk3.indexer]')" onMouseOut="off_image_down('rate_down_one_[blk3.indexer]')"><img name="rate_down_one_[blk3.indexer]" src="themes/default/images/thumbs_down.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" /></a>
+                    </div>
+                	  <div style="float:right; display:none;" id="vote_disabled_[blk3.indexer]">
+                	    <img name="rate_up_one_[blk3.indexer]" src="themes/default/images/thumbs_up_voted.png" width="15" height="15" border="0" alt="Thumbs Up" title="Good Comment" /></a>
+                	    <img name="rate_down_one_[blk3.indexer]" src="themes/default/images/thumbs_down_voted.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment"/></a>
+                	  </div>
+                	  <div style="display:none; float:right;">
+                	    <img name="rate_up_one_[blk3.indexer]" src="themes/default/images/thumbs_up_voted.png" width="15" height="15" border="0" alt="Thumbs Up" title="Thanks for voting" />
+                	    <img name="rate_down_one_[blk3.indexer]" src="themes/default/images/thumbs_down_voted.png" width="15" height="15" border="0" alt="Thumbs Down" title="Poor Comment" />
+                	  </div>
+                  </div>
+                  <br />
+                  [blk3.drop_block;block=((div));htmlconv=no;]
+                  <br />
+                  [blk3.reply_block;block=((div));htmlconv=no;]
+                </div>
+                <div class="clear-fix"></div>
+                <br />
+              </div><!-- end None_ChatboxMain //-->
+
+            </div><!-- end colapse comments //-->
+
+            <div id="pagination"><!-- Pagination start must be in comments ajax div-->
+              <span class="font5_14">
+                <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.pageprev]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.ajax_page_previous;htmlconv=no;]</a>
+                <a onClick="javascript:ahahscript.ahah('[var.base_url]/comments_ajax.php?page=[var.pagenext]&amp;vid=[var.vid]', 'commentajax', '', 'GET', '', this);">[var.ajax_page_next;htmlconv=no;]</a>
+              </span>
+            </div><!-- Pagination end -->
+
+      </div><!-- end comments ajax //-->
+    </div><!-- end main width //-->
+  </div><!-- end begin center //-->
+
+  <div align="center">
+    <div style="width: 700px;"><!-- start rich text edit //-->
+      <br />
+      <span class="font5_14">[var.lang_post_new_comment]</span>
+      <br />
+
+      <script type="text/javascript" src="[var.base_url]/fckeditor/fckeditor.js"></script>
+      <form id="commentsform" action="javascript:ahahscript.likeSubmit('comments.php', 'post', 'commentsform', 'commentsdiv');">
+          <script type="text/javascript">
+	      <!--
+	      var sBasePath = '[var.base_url]/fckeditor/';
+	      var oFCKeditor = new FCKeditor('FCKeditor1');
+	      oFCKeditor.BasePath = sBasePath;
+	      oFCKeditor.ToolbarSet = 'Basic';
+	      oFCKeditor.Config['SkinPath'] = sBasePath + 'editor/skins/silver/';
+	      oFCKeditor.Height = 150;
+	      oFCKeditor.Value = '';
+	      oFCKeditor.Create();
+	      //-->
+	    </script>
+	    <br />
+	  <input type="submit" value="[var.lang_post_comment]" name="B3" />
+        <input type="hidden" value="[var.vid]" name="vid" />
+        <br />
+        <br />
+      </form>
+      <div id="commentsdiv"></div>
+    </div>
+  </div><!-- end rich edit //-->
+ <!--[onload;block=features_comments;when [var.show_comments]=1;comm]-->
+</features_comments>
+</div>
+<!-- end left //-->
+<!-- ##################################################################################################################################### //-->
+
+<!--Begin Right Column-->
+<div id="column-right-1-play">
+
+  <!--Begin User Info-->
+  <div class="container-narrow-top"></div>
+
+  <div class="container-narrow">
+    <div class="font5_14" style="border-bottom:1px solid #dddcdc;">
+      [var.lang_connect_with]&nbsp;<!--[var.member_username;ope=max:20;comm]-->
+    </div>
+
+    <div id="member-details">
+      <div id="member-details-thumb">
+        <a href="members/[var.member_username]"><img src="[var.a1_mypicture]" alt="pic" width="100" height="100" border="0" /></a>
+      </div>
+      <div class="member-details-list">
+        <ul>
+          <li><a href="emailcompose.php?uid=[var.member_id]">[var.lang_email_me]</a></li>
+          <li><a href="invite.php?uid=[var.member_id]" rel="gb_page_center[850, 250]">[var.lang_add_friends]</a></li>
+          <li><a href="members/[var.member_username]">[var.lang_view_my_page]</a></li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Member Status (Badge, rating, etc...)-->
+    <div id="member-status">
+      <a href="page.php?page=10&amp;keepThis=true&TB_iframe=true&height=240&width=540" class="thickbox" title="[var.site_name] Site Participation Levels"><img src="themes/[var.user_theme]/images/icons/[var.member_badge]" alt="Badge" title="Click for info"></a>
+      <div class="member-details-list">
+        <ul>
+          <li><strong>[var.lang_online]</strong>&nbsp;<!--[var.online_status;htmlconv=no;comm]--></li>
+          <li><strong>[var.lang_my_rating]:</strong>&nbsp;
+            <img border="0" src="themes/[var.user_theme]/images/[var.star1]" width="15" height="15" alt="1 Star" />
+            <img border="0" src="themes/[var.user_theme]/images/[var.star2]" width="15" height="15" alt="1 Star" />
+            <img border="0" src="themes/[var.user_theme]/images/[var.star3]" width="15" height="15" alt="1 Star" />
+            <img border="0" src="themes/[var.user_theme]/images/[var.star4]" width="15" height="15" alt="1 Star" />
+            <img border="0" src="themes/[var.user_theme]/images/[var.star5]" width="15" height="15" alt="1 Star" />
+          </li>
+          <li><strong>[var.lang_last_active]:&nbsp;</strong>[var.last_seen]</li>
+        </ul>
+      </div>
+    </div><!--End Member Status-->
+    <div class="clear-fix"></div>
+  </div><!--End User Info-->
+  <div class="container-narrow-bottom"></div>
+
+  <!--Begin Link/Embed Video-->
+  <features_embed>
+  <div class="container-narrow-top">
+  </div>
+
+  <div class="container-narrow">
+    <div class="font4_14" style="border-bottom:1px solid #dddcdc;">[var.lang_add_video_to_blog]</div>
+    <form name="code" action="">
+      <ul id="content-list-narrow">
+        <li><strong>[var.lang_direct_link]:</strong></li>
+        <li><input readonly type="text" name="url0" size="38" value="[var.seo_video_url]" onClick="javascript:document.code.url0.focus();document.code.url0.select(); return false;" /></li>
+        <li>&nbsp;</li>
+        <li><strong>[var.lang_embed_code]:</strong><span>&nbsp;<font size="2" color="#EE0000"><b>[var.lang_disabled]</b></font><!--[onload;block=span;when [var.video_type] == 'embedded';comm]--></span>
+        <li>
+          <!--video player embedd code -->
+          <input readonly type="embed" name="embed" size="38" value='<embed src="[var.base_url]/player.swf" width="320" height="256" bgcolor="FFFFFF" allowscriptaccess="always" allowfullscreen="false" flashvars="flvsource=[var.base_url]/uploads/[var.video_play]&preview_image=[var.base_url]/uploads/player_thumbs/[var.video_thumb]&backgcolor=FFFFFF&autoplay=true&url_logo=[var.base_url]/images/playerlogos/logo-player.png&logo=top_right&floating_navbar=false&color_nav_bar_top=0x478dc2&color_nav_bar_bottom=0xE7EBEC&ads_background_color=0x00CCFF&ads_border_color=0xCCCCCC&scrubber_position_color=0x6AA1CE&scrubber_load_color=0x888888&scrubber_background_color=0xBBBBBB&volume_bar_color=0xBBBBBB&aspect_ratio=stretch"></embed>' onClick="javascript:document.code.embed.focus();document.code.embed.select(); return false;" />
+          <!--video player embedd code -->
+          <!--[onload;block=li;when [var.video_type] != 'embedded';comm]-->
+        </li>
+        <li>&nbsp;</li>
+        <li>
+          <strong>[var.lang_Or]:</strong>&nbsp;<a href="[var.base_url]/edit/embed_code.php?vid=[var.vid]" title="Get Embed Code" rel="gb_page_center[700, 340]"><b>[var.lang_get_embed]</b></a>
+          <!--[onload;block=li;when [var.video_type] != 'embedded';comm]-->
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <div class="container-narrow-bottom"></div>
+  <!--[onload;block=features_embed;when [var.show_embed]=1;comm]-->
+  </features_embed>
+
+   <!-- begin others -->
+  <div class="container-narrow-top"></div>
+  <div class="container-narrow">
+    <div id="member-details">
+      <div style="margin-left:10px; float:left;">
+        <a onClick="switchMenu('others'); switchMenu('video_related');" style="font-weight:bold; font-size: 13px; color: #333333;" onMouseOver="this.style.color='#0099FF'" onMouseOut="this.style.color='#333333'">Member&nbsp;[var.lang_videos]</a>
+      </div>
+      <div style="margin-left:20px; float:left;">
+        <a onClick="switchMenu('video_related'); switchMenu('others');" style="font-weight:bold; font-size: 13px; color: #333333;" onMouseOver="this.style.color='#0099FF'" onMouseOut="this.style.color='#333333'">[var.lang_related_videos]</a>
+      </div>
+      <br />
+      <br />
+
+      <div id="others" style="display:block; height: 236px; overflow: auto;">
+        <div style="margin-left:20px; float:left;">
+          <a href="videos/[blk2.indexer;block=div]/[blk2.title_seo;block=div]"><img src="uploads/thumbs/[blk2.video_id;block=div].jpg" title="<!--[blk2.title;block=div;comm]-->" width="80" height="60" border="0" alt="Preview" style="border:2px solid #DDDDDD;" onmouseover="this.style.border='2px solid #0099FF'" onmouseout="this.style.border='2px solid #DDDDDD'" /></a>
+          <br />
+          Views:&nbsp;<!--[blk2.number_of_views;block=div;comm]-->
+          <!--[onload;block=div;when [var.more_user]=1;comm]-->
+        </div>
+        <div style="margin-left:62px; float:left;">
+          <span class="font5_15">[var.lang_nothing_found]</span>
+          <!--[onload;block=div;when [var.more_user]=0;comm]-->
+        </div>
+      </div>
+
+      <div id="video_related" style="display:none; height: 236px; overflow: auto;">
+        <div style="margin-left:20px; float:left;">
+          <a href="videos/[blk1.indexer;block=div]/[blk1.title_seo;block=div]"><img src="uploads/thumbs/[blk1.video_id;block=div].jpg" title="<!--[blk1.title;block=div;comm]-->" width="80" height="60" border="0" alt="Preview" style="border:2px solid #DDDDDD;" onmouseover="this.style.border='2px solid #0099FF'" onmouseout="this.style.border='2px solid #DDDDDD'" /></a>
+          <br />
+          Views:&nbsp;<!--[blk1.number_of_views;block=div;comm]-->
+          <!--[onload;block=div;when [var.more_related]=1;comm]-->
+        </div>
+        <div style="margin-left:62px; float:left;">
+          <span class="font5_15">[var.lang_nothing_found]</span>
+          <!--[onload;block=div;when [var.more_related]=0;comm]-->
+        </div>
+      </div>
+
+      <br />
+    </div>
+    <div class="clear-fix"></div>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <br />
+
+  <!--Begin Right Advert-->
+  <div id="advert-right"><!--[var.ads_right;htmlconv=no;comm]--></div>
+  <!--End Right Advert-->
+</div>
+<!--End Right Column-->
+<div id="none" style="height: [var.error_height]"></div>

@@ -1,0 +1,57 @@
+<div id="column-left-2">
+  <!--Begin Email Menu-->
+  <div class="header-narrow"><h3>[var.lang_email_menu]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="emailinbox.php">[var.lang_word_inbox]</a></li>
+      <li><a href="emailsentitems.php">[var.lang_sent]</a></li>
+      <li><a href="emailcompose.php">[var.lang_compose_new]</a></li>
+      <li><a href="inviteread.php">[var.lang_received_invites]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Email Menu-->
+
+  <!--Begin What's Showing Menu-->
+  <div class="header-narrow">[var.lang_whats_on]</div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="seemore.php?load=featured">[var.lang_featured]</a></li>
+      <li><a href="seemore.php?load=viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="seemore.php?load=recent">[var.lang_most_recent]</a></li>
+      <li><a href="seemore.php?load=comments">[var.lang_most_commented]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End What's Showing Menu-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <div class="email-list">
+    <h1><!--[var.subject;ope=max:250;comm]--></h1>
+    <ul>
+      <li><span class="font4_12"><!--[var.to_or_from;comm]--></span>&nbsp;&nbsp;&nbsp;<!--[var.friends_name;ope=max:100;comm]--></li>
+      <li><span class="font4_12">Subject</span>&nbsp;&nbsp;&nbsp;<!--[var.subject;ope=max:250;comm]--></li>
+      <span style="border:none;"><!--[var.message;htmlconv=no;comm]--></span>
+      <li>&nbsp;</li>
+      <li style="border:none;"><a href="emailcompose.php?uid=[var.friends_id]&id=[var.email_id]">&bull; [var.lang_reply]</a>&nbsp;<!--[onload_312;block=li;when [var.show_reply]=1;comm]--></li>
+    </ul>
+  </div>
+</div>
+<!--End Right Column-->

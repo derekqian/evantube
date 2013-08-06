@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Edit News</title>
+	<link href="[var.base_url]/siteadmin/css/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body topmargin="0">
+
+<div align="center" id="EditUserPopup">
+<!-- notification div start -->
+<div align="center">
+ <table border="0" cellpadding="0" cellspacing="0" width="700">
+  <!--[onload_3;block=table;when [var.show_notification]=1;comm]-->
+    <tr>
+      <td width="92%">
+              <div id="message_popup">
+                <div align="center"><font face="Arial" size="2">[var.message]
+					</font> </div>
+              </div>
+              <font face="Arial" size="2">
+              <!-- notifications end -->
+        		</font>
+        </td>
+    </tr>
+  </table>
+</div>
+<font face="Arial" size="2">
+<!-- notification div end -->
+</font>
+<table border="0" width="700" cellspacing="0" cellpadding="0" height="106" style="border: 1px solid #D1D1D1; ">
+<form id="edit_news" action="editnews.php" method="post">
+	<tr>
+		<td width="822" height="33" align="center" class="default_text_blue" colspan="3" background="images/background_tables.png">
+        <p align="left"><font size="2" face="Arial">&nbsp; </font> <b>
+		<font face="Arial" color="#0099CC">[var.lang_news_article]</font></b></p>
+        </td>
+	</tr>
+	<tr>
+		<td width="691" height="40" bgcolor="#F0F0F0" align="right" class="default_text" colspan="3">
+        <p align="center"><font face="Arial" size="2">[var.lang_headline]&nbsp;
+		</font><font face="Arial"><font size="2">&nbsp;</font><font size="3"><input type="text" name="news_headline" size="48" value="[var.news_headline]"></font></font></td>
+	</tr>
+	<tr>
+		<td width="691" height="25" bgcolor="#F0F0F0" align="right" class="default_text" colspan="3">
+        <p align="center">
+        <font color="#333333" face="Arial">
+ [var.my_edit;htmlconv=no;]
+        </font></td>
+	</tr>
+	<tr>
+		<td width="222" height="25" bgcolor="#F0F0F0" align="right">
+        &nbsp;</td>
+		<td width="8" height="25" bgcolor="#F5F5F5" align="right">
+        &nbsp;</td>
+		<td width="461" height="30" bgcolor="#F5F5F5" align="right">
+        <font color="#333333" face="Arial">
+        <input type="submit" value="[var.lang_submit]" name="submit" /></font><font color="#333333">
+		</font><font color="#333333">
+<input type="hidden" name="newsid" value="[var.newsid]" /></font></td>
+	</tr>
+	</form>
+</table>
+</body>
+
+</html>

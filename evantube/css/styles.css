@@ -1,0 +1,65 @@
+/** style */
+
+.video_box_main { border:0px solid #00FFFF; font-family: Verdana; color: #333333; font-size: 12pt }
+
+.default_text_white { font-family: Arial; font-size: 10pt; color: #FFFFFF }
+
+.default_text_white_11pt { font-family: Arial; font-size: 11pt; color: #FFFFFF; background-image:url('../images/box_blue_middle.jpg'); background-repeat:repeat; height:25; font-weight:bold }
+
+
+.default_text_blue { font-family: Arial; font-size: 10pt; color: #3366CC; text-decoration:none }
+
+.default_menu_blue {font-family: Arial; font-size: 10pt; color:#3366CC ;}
+.default_menu_blue A { text-decoration:none; font-size: 10pt; color:#3366CC ;}
+.default_menu_blue A:visited {font-size: 10pt; color="#3366CC"}
+.default_menu_blue A:hover {font-size: 10pt; color="#3366CC"}
+.default_menu_blue A:active {font-size: 10pt;}
+
+.default_menu_white {font-family: Arial; font-size: 10pt; color:#ffffff ;}
+.default_menu_white A { text-decoration:none; font-size: 10pt; color:#ffffff ;}
+.default_menu_white A:visited {font-size: 10pt; color="#ffffff"}
+.default_menu_white A:hover {font-size: 10pt; color="#ffffff"}
+.default_menu_white A:active {font-size: 10pt;}
+
+.default_menu_gray {font-family: Arial; font-size: 10pt; color:#333333 ;}
+.default_menu_gray A { text-decoration:none; font-size: 10pt; color:#333333 ;}
+.default_menu_gray A:visited {font-size: 10pt; color="#333333"}
+.default_menu_gray A:hover {font-size: 10pt; color="#333333"}
+.default_menu_gray A:active {font-size: 10pt;}
+
+
+.default_menu_gray_12pt {font-family: Arial; font-size: 12pt; color:#333333 ;}
+.default_menu_gray_12pt A { text-decoration:none; font-size: 12pt; color:#333333 ;}
+.default_menu_gray_12pt A:visited {font-size: 12pt; color="#333333"}
+.default_menu_gray_12pt A:hover {font-size: 12pt; color="#333333"}
+.default_menu_gray_12pt A:active {font-size: 12pt;}
+
+
+.default_text_blue_8pt { font-family: Arial; font-size: 8pt; color: #3366CC }
+
+.default_text { font-family: Arial; font-size: 10pt; color: #333333 }
+
+.default_text_9pt { font-family: Arial; font-size: 9pt; color: #333333 }
+
+.default_text_8pt { font-family: Arial; font-size: 8pt; color: #333333 }
+
+.default_text_shaded_gray1_8pt { font-family: Arial; font-size: 8pt; color: #333333; background-color:#F0F1FF }
+
+
+.table_ads_l_b_r_t {border:1px solid #C0CEEF; }
+
+
+.table_border_l_b_r_t {border:1px solid #C0CEEF; }
+.table_border_l {border-left: 1px solid #C0CEEF; }
+.table_border_r {border-right: 1px solid #C0CEEF; }
+.table_border_t {border-top:1px solid #C0CEEF; }
+.table_border_l_r {border-left: 1px solid #C0CEEF; border-right: 1px solid #C0CEEF;}
+.table_border_l_b_r {border-left: 1px solid #C0CEEF; border-right: 1px solid #C0CEEF; border-bottom: 1px solid #C0CEEF}
+.table_border_l_t_r {border-left: 1px solid #C0CEEF; border-right: 1px solid #C0CEEF; border-top: 1px solid #C0CEEF}
+.table_border_t_l_b {border-left: 1px solid #C0CEEF; border-top: 1px solid #C0CEEF; border-bottom: 1px solid #C0CEEF}
+.table_border_t_r_b {border-right: 1px solid #C0CEEF; border-top: 1px solid #C0CEEF; border-bottom: 1px solid #C0CEEF}
+
+
+.warning_box_red {border: 1px solid #FF4242; background-color:#FFDDDD;}
+.warning_box_green {border: 1px solid #87CC33; background-color:#DDEECC;}
+.warning_box_green_white {border: 1px solid #87CC33; background-color:#FFFFFF;}

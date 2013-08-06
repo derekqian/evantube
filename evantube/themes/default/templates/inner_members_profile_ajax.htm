@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- ahah -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"></script>
+<!-- ahah -->
+
+<!-- GreyBox -->
+	<script type="text/javascript">
+		var GB_ROOT_DIR = "[var.base_url]/greybox/";
+	</script>
+	<script type="text/javascript" src="[var.base_url]/greybox/AJS.js"></script>
+	<script type="text/javascript" src="[var.base_url]/greybox/AJS_fx.js"></script>
+	<script type="text/javascript" src="[var.base_url]/greybox/gb_scripts.js"></script>
+	<link href="[var.base_url]/greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Greybox -->
+
+</head>
+
+<body>
+
+<!--NOTES: This is the pagination code for members profile content  -->
+<!--NOTES: code for this section is identical to that found in /inner_member_profile. Copy and Paste  -->
+
+
+
+        <!------------------------------------------------------------------- Start of My Video -->
+        <div class="MyMedia">
+          <!--[onload_801;block=div;when [var.load_media]=1;comm]-->
+          <div class="MyMedia_1">
+            <ul>
+              <li><a href="[var.base_url]/videos/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]" title="[membersmedia.title;block=div]"><img border="0" src="[var.base_url]/uploads/thumbs/[membersmedia.video_id;block=div].jpg" width="85" height="75" alt="thumb" /></a></li>
+              <li>
+               <a href="[var.base_url]/videos/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]"  title="[membersmedia.title;block=div]">
+                <!--[membersmedia.title;block=div;ope=max:10;comm]-->
+                </a></li>
+       <!--//////// PERMISSIONS CHECK - VIDEO START \\\\\\\\-->
+      <li>
+        <a href="edit/editvideo.php?id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('[var.lang_edit]', this.href, 450, 750)" title="[var.lang_edit]">
+       <img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="edit" width="14" height="14" border="0" />
+        <!--[onload_830;block=a;when [var.show_edit]=1;comm]-->
+        </a> &nbsp;
+        <a href="edit/delete.php?type=[var.delete_code]&id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('[var.lang_delete_general]', this.href, 250, 750)" title="[var.lang_delete_general]">
+        <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+        </a><!--[onload_831;block=li;when [var.show_edit_delete]=1;comm]-->
+      </li>
+        <!--//////// PERMISSIONS CHECK - VIDEO END \\\\\\\\-->
+            </ul>
+          </div>
+        </div>
+        <!-- Media Pagination start -->
+        <div class="MP_pagination">
+ 		<!--[onload_802;block=div;when [var.load_media]=1;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+        <!------------------------------------------------------------------- End of My Videos -->
+
+
+
+
+        <!------------------------------------------------------------------- Start of My Images -->
+        <div class="MyMedia">
+          <!--[onload_805;block=div;when [var.load_media]=2;comm]-->
+          <div class="MyMedia_1">
+            <ul>
+              <li><a href="[var.base_url]/view-image/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]"  title="[membersmedia.title;block=div]"><img border="0" src="[var.base_url]/addons/albums/thumbs/[membersmedia.image_id;block=div]" width="[membersmedia.image_width;block=div]" height="[membersmedia.image_height;block=div]" alt="thumb" /></a></li>
+              <li>
+                <a href="[var.base_url]/view-image/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]"  title="[membersmedia.title;block=div]">
+                <!--[membersmedia.title;block=div;ope=max:10;comm]-->
+                </a></li>
+       <!--//////// PERMISSIONS CHECK - VIDEO START \\\\\\\\-->
+      <li>
+        <a href="edit/editimage.php?id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('[var.lang_edit]', this.href, 450, 750)" title="[var.lang_edit]">
+       <img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="edit" width="14" height="14" border="0" />
+        <!--[onload_832;block=a;when [var.show_edit]=1;comm]-->
+        </a> &nbsp;
+        <a href="edit/delete.php?type=[var.delete_code]&id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('var.lang_delete_general', this.href, 250, 750)" title="[var.lang_delete_general]">
+        <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+        </a><!--[onload_833;block=li;when [var.show_edit_delete]=1;comm]-->
+      </li>
+        <!--//////// PERMISSIONS CHECK - VIDEO END \\\\\\\\-->
+            </ul>
+          </div>
+        </div>
+        <!-- Media Pagination start -->
+        <div class="MP_pagination">
+ 		<!--[onload_806;block=div;when [var.load_media]=2;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+        <!------------------------------------------------------------------- End of My Images -->
+
+
+        <!------------------------------------------------------------------- Start of My Blogs-->
+        <div class="MyMedia">
+          <!--[onload_807;block=div;when [var.load_media]=3;comm]-->
+          <div class="MyMedia_2">
+            <ul>
+              <li>
+                <img src="[var.base_url]/themes/[var.user_theme]/images/icons/blog_small.png" width="14" height="19" />
+                   <a href="read_blog/[membersmedia.indexer]/[membersmedia.title_seo;block=div;htmlconv=no]">
+                     <!--[membersmedia.title;block=div;ope=max:36;comm]-->
+                  </a>
+              </li>
+       <!--//////// PERMISSIONS CHECK - VIDEO START \\\\\\\\-->
+      <li>
+        <a href="edit/editblogs.php?id=[membersmedia.indexer;block=div]"  onclick="return parent.GB_show('[var.lang_edit]', this.href, 450, 750)" title="[var.lang_edit]">
+       <img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="edit" width="14" height="14" border="0" />
+        </a> &nbsp;
+        <a href="edit/delete.php?type=[var.delete_code]&id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('var.lang_delete_general', this.href, 250, 750)"  title="[var.lang_delete_general]">
+        <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+        </a><!--[onload_835;block=li;when [var.show_edit_delete]=1;comm]-->
+      </li>
+        <!--//////// PERMISSIONS CHECK - VIDEO END \\\\\\\\-->
+             </ul>
+          </div>
+
+        </div>
+        <!-- Media Pagination start -->
+        <div class="MP_pagination">
+ 		<!--[onload_808;block=div;when [var.load_media]=3;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+        <!------------------------------------------------------------------- End of My Blogs -->
+
+
+
+        <!------------------------------------------------------------------- Start of My Audio-->
+        <div class="MyMedia">
+          <!--[onload_809;block=div;when [var.load_media]=4;comm]-->
+          <div class="MyMedia_2">
+            <ul>
+              <li>
+                <img src="[var.base_url]/themes/[var.user_theme]/images/icons/blog_small.png" width="14" height="19" />
+                   <a href="audio/[membersmedia.indexer]/[membersmedia.title_seo;block=div;htmlconv=no]"  title="[membersmedia.title;block=div]">
+                     <!--[membersmedia.title;block=div;ope=max:36;comm]-->
+                  </a>
+              </li>
+       <!--//////// PERMISSIONS CHECK - VIDEO START \\\\\\\\-->
+      <li>
+        <a href="edit/editaudio.php?id=[membersmedia.indexer;block=div]"  onclick="return parent.GB_show('[var.lang_edit]', this.href, 450, 750)" title="[var.lang_edit]">
+       <img src="[var.base_url]/themes/[var.user_theme]/images/icons/edit_small.png" alt="edit" width="14" height="14" border="0" />
+        <!--[onload_836;block=a;when [var.show_edit]=1;comm]-->
+        </a> &nbsp;
+        <a href="edit/delete.php?type=[var.delete_code]&id=[membersmedia.indexer;block=div]" onclick="return parent.GB_show('var.lang_delete_general', this.href, 250, 750)" title="[var.lang_delete_general]">
+        <img src="[var.base_url]/themes/[var.user_theme]/images/icons/delete_small.png" alt="delete" width="14" height="14" border="0" />
+        </a><!--[onload_837;block=li;when [var.show_edit_delete]=1;comm]-->
+      </li>
+        <!--//////// PERMISSIONS CHECK - VIDEO END \\\\\\\\-->
+            </ul>
+          </div>
+
+        </div>
+        <!-- Media Pagination start -->
+        <div class="MP_pagination">
+ 		<!--[onload_810;block=div;when [var.load_media]=4;comm]-->
+          <ul>
+            <li>[var.show_pages_media;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+        <!------------------------------------------------------------------- End of My Audio-->
+
+
+
+
+
+
+        <!------------------------------------------------------------------- Start of Profile General-->
+      <ul id="AboutMe">
+      <!--[onload_824;block=ul;when [var.type]=8;comm]-->
+      <li><strong>[var.lang_name]</strong> [var.first_name]</li>
+      <li><strong>[var.lang_surname]</strong> [var.last_name]</li>
+      <li><strong>[var.lang_age]</strong> [var.my_age]</li>
+      <li><strong>[var.lang_gender]</strong> [var.gender]</li>
+      <li><strong>[var.lang_relationship_status]</strong> [var.relationship_status]</li>
+      </ul>
+        <!------------------------------------------------------------------- End of Profile General-->
+
+
+        <!------------------------------------------------------------------- Start of Profile General-->
+      <ul id="AboutMe">
+      <!--[onload_825;block=ul;when [var.type]=9;comm]-->
+      <li><strong>[var.lang_home_country]</strong> [var.home_country]</li>
+      <li><strong>[var.lang_current_location]</strong> [var.current_country]</li>
+      <li><strong>[var.lang_current_city]</strong> [var.current_city]</li>
+      <li><strong>[var.lang_high_school]</strong> [var.high_school]</li>
+      <li><strong>[var.lang_college]</strong> [var.college]</li>
+      <li><strong>[var.lang_work_place]</strong> [var.work_places]</li>
+      </ul>
+        <!------------------------------------------------------------------- End of Profile General-->
+
+
+
+        <!------------------------------------------------------------------- Start of Profile General-->
+      <ul id="AboutMe">
+      <!--[onload_826;block=ul;when [var.type]=10;comm]-->
+      <li><strong>[var.lang_about_me]</strong> [var.about_me]</li>
+      <li><strong>[var.lang_interests]</strong> [var.interests]</li>
+      <li><strong>[var.lang_fav_movies]</strong> [var.fav_movies]</li>
+      <li><strong>[var.lang_fav_music]</strong> [var.fav_music]</li>
+      <li><strong>[var.lang_website]</strong> [var.personal_website]</li>
+      </ul>
+        <!------------------------------------------------------------------- End of Profile General-->
+
+</body>

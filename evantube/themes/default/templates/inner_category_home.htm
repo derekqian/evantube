@@ -1,0 +1,99 @@
+<!--Begin Left Column-->
+<div id="column-left-2">
+  <!--Begin Whats Showing Menu-->
+  <div class="header-narrow"><h3><!--[var.see_more_title;comm]-->&nbsp;[var.lang_word_videos]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="videos/load/featured">[var.lang_featured]</a></li>
+      <li><a href="videos/load/viewed">[var.lang_most_viewed]</a></li>
+      <li><a href="videos/load/recent">[var.lang_most_recent]</a></li>
+      <li><a href="videos/load/comments">[var.lang_most_comments]</a></li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Whats Showing Menu-->
+
+  <!--Begin Categories Menu-->
+  <div class="header-narrow"><h3>[var.lang_video_categories]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="category/[blk1.channel_name_seo;block=li]"><!--[blk1.channel_name;block=li;ope=max:25;comm]--></a>&nbsp;-&nbsp;(<!--[blk1.vid_count;comm]-->)</li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Categories Menu-->
+
+  <!--Begin Sub-Categories Menu-->
+  <div class="header-narrow"><h3>[var.lang_sub_categories]</h3></div>
+  <div class="whats-showing">
+    <ul>
+      <li><a href="subcategory/[blk2.sub_channel_id;block=li]/[blk2.sub_channel_name_seo;block=li]"><!--[blk2.sub_channel_name;block=li;ope=max:25;comm]--></a>&nbsp;</li>
+    </ul>
+  </div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Sub-Categories Menu-->
+
+  <!--Begin Popular Videos Tag Cloud-->
+  <div class="header-narrow"><h3>[var.lang_Tags_most_popular]</h3></div>
+  <div class="whats-showing"><!--[var.tag_cloud_block;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Popular Videos Tag Cloud-->
+
+  <!--Begin Left Advert-->
+  <div class="container-narrow-top"></div>
+  <div id="advert-left"><!--[var.ads_left;htmlconv=no;comm]--></div>
+  <div class="container-narrow-bottom"></div>
+  <!--End Left Advert-->
+
+</div>
+<!--End Left Column-->
+
+<!--Begin Right Column-->
+<div id="column-right-2">
+  <!--Begin Content List-->
+  <div id="content-list">
+    <ul class="content-list-thumb">
+      <li><a href="videos/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><img src="uploads/thumbs/[blkfeatured.video_id;block=div].jpg" alt="video pic" width="120" height="90" border="0" /></a></li>
+    </ul>
+    <ul class="content-list-info">
+      <li><h4>[var.lang_title]:&nbsp;</b><a href="videos/[blkfeatured.indexer;block=div]/[blkfeatured.title_seo;block=div]"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:70;comm]--></a></h4></li>
+      <li><b>[var.lang_description]:&nbsp;</b><!--[blkfeatured.description;htmlconv=no;block=div;ope=max:68;comm]--></li>
+      <li>
+        <span class="font4_12">[var.lang_rating]:&nbsp;&nbsp;</span>
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star1;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star2;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star3;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star4;block=div]" width="18" height="18" alt="1 Star" />
+        <img border="0" src="themes/[var.user_theme]/images/[blkfeatured.star5;block=div]" width="18" height="18" alt="1 Star" />
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_views]:&nbsp;</span>(<!--[blkfeatured.number_of_views;block=div;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_duration]:&nbsp;</span>(<!--[blkfeatured.video_length;block=div;ope=max:45;comm]-->)
+        &nbsp;&nbsp;&nbsp;
+        <span class="font4_12">[var.lang_uploaded]:&nbsp;</span><!--[blkfeatured.date_uploaded;block=div;comm;frm=mm-dd-yy]-->
+      </li>
+      <li><span class="font4_12">[var.lang_tags]:&nbsp;</span><!--[blkfeatured.tags;block=div;ope=max:80;comm]--></li>
+      <li><b>[var.lang_comments] - [var.lang_responses]:&nbsp;</b>(<!--[blkfeatured.comments;block=div;ope=max:80;comm]-->)</li>
+    </ul>
+  </div>
+</div>
+<!--End Right Column-->
+
+<!-- nothing found start -->
+<div>
+  <span class="font4_14">[var.lang_no_videos_added]</span><!--[onload_309;block=div;when [var.show_v]=1;comm]-->
+</div>
+<!-- nothing found end -->
+
+
+<!-- Pagination start -->
+<br />
+<br />
+<div align="center">
+  <div id="pagination">
+    <ul>[var.show_pages;htmlconv=no]</ul>
+  </div>
+</div>
+<br />
+<!-- Pagination end -->
+

@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Cache-Control" content="max-age=3600">
+
+	<title>[var.page_title;htmlconv=no;]</title>
+
+	<meta name="Description" content="[var.description;htmlconv=no;]">
+	<meta name="Keywords" content="[var.tags;htmlconv=no;]">
+
+	<base href="[var.base_url]/">
+
+	<link href="[var.base_url]/themes/[var.user_theme]/css/main.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--[if lte IE 6]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie6.css" type="text/css">
+	<![endif]-->
+
+	<!--[if IE 7]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie7.css" type="text/css">
+	<![endif]-->
+
+	<link href="css/rating_style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/thickbox.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all">
+	<link href="javascripts/jquery.jcarousel.css" rel="stylesheet" type="text/css" media="all">
+	<link href="[var.base_url]/themes/[var.user_theme]/thirdparty/jcarousel/skin.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--uploader style -->
+      <style type="text/css">
+        .info {font:18px Arial;}
+        .data {background-color:#1A1A1A; border:1px solid #317db7; width:40%;}
+        .data tr td {background-color:#1A1A1A; font:13px Arial; width:35%;}
+        .bar1 {background-color:#1A1A1A; position:relative; text-align:left; height:20px; width:[var.progress_bar_width]px; border:1px solid #317db7;}
+        .bar2 {background-color:#68a4d2; position:relative; text-align:left; height:20px; width:0%;}
+       </style>
+      <!-- uploader style end-->
+
+	<!-- ajax js in play -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/v3_ajax.js"><!--[onload;block=script;when [var.load_ajax]=1;comm]--></script>
+	<!-- end ajax -->
+
+	<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"><!--[onload;block=script;when [var.ahah]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js"><!--[onload;block=script;when [var.swfobject]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/rating_update.js"><!--[onload;block=script;when [var.rating_update]=1;comm]--></script>
+
+	<script type="text/javascript">var GB_ROOT_DIR = "[var.base_url]/greybox/";</script>
+	<script type="text/javascript" src="greybox/AJS.js"><!--[onload;block=script;when [var.greybox]=1;comm]--></script>
+	<script type="text/javascript" src="greybox/AJS_fx.js"><!--[onload;block=script;when [var.greybox]=1;comm]--></script>
+	<script type="text/javascript" src="greybox/gb_scripts.js"><!--[onload;block=script;when [var.greybox]=1;comm]--></script>
+
+	<!--start of video uploader section -->
+	<script language="javascript" type="text/javascript">
+  		var disallow_extensions = [var.disallow_extensions];
+  		var allow_extensions = [var.allow_extensions];
+  		var path_to_ini_status_script = "[var.path_to_ini_status_script]";
+  		var check_file_name_format = [var.check_file_name_format];
+  		var check_disallow_extensions = [var.check_disallow_extensions];
+  		var check_allow_extensions = [var.check_allow_extensions];
+  		var check_null_file_count = [var.check_null_file_count];
+  		var check_duplicate_file_count = [var.check_duplicate_file_count];
+  		var max_upload_slots = [var.max_upload_slots];
+  		var progress_bar_width = [var.progress_bar_width];
+ 		<!--[onload;block=script;when [var.load_javascript]=1;comm]-->
+	</script>
+	<script type="text/javascript" src="javascripts/uploader_bar.js"><!--[onload;block=script;when [var.load_javascript]=1;comm]--></script>
+	<!-- end of video uploader -->
+
+	<!--start of audio uploader section -->
+	<script language="javascript" type="text/javascript">
+  		var path_to_ini_status_script = "[var.path_to_ini_status_script]";
+  		var check_file_name_format = [var.check_file_name_format];
+  		var check_disallow_extensions = [var.check_disallow_extensions];
+  		var disallow_extensions = [var.disallow_extensions];
+  		var check_allow_extensions = [var.check_allow_extensions];
+  		var check_null_file_count = [var.check_null_file_count];
+  		var check_duplicate_file_count = [var.check_duplicate_file_count];
+  		var max_upload_slots = [var.max_upload_slots];
+  		var cedric_progress_bar = 1;
+  		var progress_bar_width = [var.progress_bar_width];
+  		var show_percent_complete = 1;
+  		var show_files_uploaded = 1;
+  		var show_current_position = 1;
+  		var show_elapsed_time = 1;
+  		var show_est_time_left = 1;
+ 		var show_est_speed = 1;
+  		var allow_extensions = [var.allow_extensions];
+  		<!--[onload;block=script;when [var.load_javascript]=4;comm]-->
+	</script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/uploader_bar.js"><!--[onload;block=script;when [var.load_javascript]=4;comm]--></script>
+	<!-- end of audio uploader -->
+
+	<!-- start of thickbox -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/jquery-1.2.3.pack.js"><!--[onload;block=script;when [var.thickbox]=1;comm]--></script>
+	<script>jQuery.noConflict();<!--[onload;block=script;when [var.thickbox]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/jquery.jcarousel.pack.js"><!--[onload;block=script;when [var.load_carousel]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"><!--[onload;block=script;when [var.thickbox]=1;comm]--></script>
+	<!-- end of thickbox -->
+
+	<!--FCKEDITOR-->
+	<script type="text/javascript" src="[var.base_url]/fckeditor/fckeditor.js"><!--[onload;block=script;when [var.load_fckeditor]=1;comm]--></script>
+	<!--FCKEDITOR-->
+
+	<!-- Audio player - basic setup-->
+	<script type="text/javascript" src="[var.base_url]/javascripts/audioplayer.js"><!--[onload;block=script;when [var.audio_js]=1;comm]--></script>
+	<script type="text/javascript">AudioPlayer.setup("[var.base_url]/mp3player.swf", { width: 600 });<!--[onload;block=script;when [var.audio_js]=1;comm]--></script>
+	<!-- Audio player -->
+
+	<script type="text/javascript">
+		function clickclear(thisfield, defaulttext)
+		{
+			if (thisfield.value == defaulttext) {
+				thisfield.value = '';
+			}
+		}
+		function clickrecall(thisfield, defaulttext) {
+			if (thisfield.value == "") {
+				thisfield.value = defaulttext;
+			}
+		}
+	</script>
+
+	<!-- V3 google suggest scripts -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/search_js/prototype.js"></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/search_js/effects.js"></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/search_js/controls.js"></script>
+	<!-- end V3 google suggest -->
+</head>
+<body>
+  <!--Begin Wrapper.  This is the main container of the template.  It sets the overall width of the tempalate as well as centers it-->
+  <div id="wrapper">
+    <!--Begin Header-->
+    <div id="header">
+      <!--Begin Left Header.  This is where the logo is contained-->
+      <div id="header-left">
+        <!--Begin Greeting. (Welcome message, Login/out links etc...)-->
+        <div id="greeting">
+          Welcome&nbsp;<!--[var.user_name;ope=max:18;comm]-->&nbsp;to&nbsp;[var.site_name]
+          <span style="margin:0px 2px 0px 4px;"><a href="[var.register_menu_link]">[var.lang_register_today]</a><!--[onload;block=span;when [var.show_register]=1;comm]--></span>
+          &nbsp;/&nbsp;<span style="margin:0px 0px 0px 2px;"><a href="[var.login_out_link]">[var.login_out]</a></span>
+        </div>
+        <!--End Greeting-->
+        <!--Begin Logo-->
+        <div id="logo">
+          <a href="[var.base_url]"><img src="[var.base_url]/themes/[var.user_theme]/images/logo-main.gif" alt="PHPmotion" /></a>
+        </div>
+        <!--End Logo-->
+      </div>
+      <!--End Left Header-->
+      <!--Begin main Header.  This is where the main navigation is contained-->
+      <div id="header-main">
+        <!--Begin Search Bar-->
+        <div id="search-bar">
+          <form method="get" action="search.php" autocomplete="off" name="form_search">
+            <select size="1" name="type" style="font-family: verdana; font-weight:bold; font-size: 10pt; width:88px; color:#FFFFFF; border: 1px inset #F5F5F5; background-color: #7AB0D8" />
+        	  <option value="videos">[var.lang_word_videos]</option>
+              <option value="audios">[var.lang_word_audios]<!--[onload;block=option;when [var.enable_audio]=1;comm]--></option>
+              <option value="images">[var.lang_word_images]<!--[onload;block=option;when [var.enable_images]=1;comm]--></option>
+              <option value="groups">[var.lang_groups]</option>
+              <option value="blogs">[var.lang_blogs]<!--[onload;block=option;when [var.enable_blogs]=1;comm]--></option>
+        	</select>
+        	<input autocomplete="off" id="keyword" name="keyword" value="Search [var.site_name]" onclick="clickclear(this, 'Search [var.site_name]')" onblur="clickrecall(this,'Search [var.site_name]')" style="font-family: verdana; font-weight:bold; font-size: 10pt;  height:18px; width:188px; color:#FFFFFF; border: 1px inset #F5F5F5; background-color: #7AB0D8" />
+        	<input type="submit" value="Search" style="font-family: verdana; font-weight:bold; font-size: 10pt; width:88px; color:#FFFFFF; border: 1px; #F5F5F5; background-color: #7AB0D8" />
+        	<div id="searchBoxSuggestions"></div>
+          </form>
+        </div>
+        <!--End Search Bar-->
+
+        <script type="text/javascript">
+
+        	GoogleSuggestAutocompleter = Class.create();
+    		Object.extend(Object.extend(GoogleSuggestAutocompleter.prototype, Autocompleter.Local.prototype), {
+        	cache: {},
+        	getUpdatedChoices: function() {
+            	var tok = this.getToken().toLowerCase();
+            	if (this.cache[tok]) return this.Suggest_apply( null, tok, this.cache[tok] );
+            		var script = document.createElement('script');
+            		script.type = 'text/javascript';
+            		<!--[var.dynamic_search;htmlconv=no;comm]-->+ '&type=' + document.form_search.type.value;
+           		     	document.body.appendChild(script);
+        		},
+        		Suggest_apply: function( meh, tok, list ) {
+            		if (!list) return this.updateChoices( '<ul></ul>' );
+            			if (!this.cache[tok]) this.cache[tok] = list;
+            				var values = [];
+            				for (var i=1; i<list.length; i+=2) {
+                					var v = list[i] + '';
+                					values.push('<b>'+v.slice(0, tok.length)+'</b>'+v.slice(tok.length));
+            				}
+            				this.updateChoices( '<ul><li>' + values.join('</li><li>') + '</li><ul>' );
+        				}
+    				});
+
+    			var frameElement, google = {};
+
+    			Event.observe(window, 'load', function(event) {
+
+        		google.ac = new GoogleSuggestAutocompleter( "keyword", "searchBoxSuggestions", null, {
+            		minChars: 1, frequency: 0.2, autosubmit: true
+        		} );
+
+    		}, 'false');
+        </script>
+
+        <!--Begin Navigation-->
+        <div id="nav-bar">
+          <div id="nav-left"></div>
+          <!--Main Navigation. Buttons go here-->
+          <div id="nav-main">
+            <ul>
+              <li><a href="[var.base_url]">[var.lang_home]</a></li>
+              <li><a href="videos/load/recent">[var.lang_word_videos]</a></li>
+              <li><a href="audios/load/recent">[var.lang_word_audios]</a><!--[onload;block=li;when [var.enable_audio]=1;comm]--></li>
+              <li><a href="albums/load/recent">[var.lang_word_images]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+              <li><a href="blogs/load/recent">[var.lang_blogs]</a><!--[onload;block=li;when [var.enable_blogs]=1;comm]--></li>
+              <li><a href="groups">[var.lang_groups]</a></li>
+              <li><a href="people">[var.lang_people]</a></li>
+              <li><a href="news.php">[var.lang_news]</a><!-- just a space filler in top menu when images are off--><!--[onload;block=li;when [var.enable_images]=0;comm]--></li>
+              <li><a href="forum">Forum</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+              <li><a href="upload-media">[var.lang_upload]</a></li>
+            </ul>
+          </div>
+          <!--End Main Navigation-->
+          <div id="nav-right"></div>
+        </div>
+        <!--End Navigation-->
+      </div>
+      <!--End main Header-->
+      <!--Begin Header Bottom.  The only purpose for this is to give the bottom of the header rounded corners-->
+      <div id="header-bottom"></div>
+      <!--End Header Bottom-->
+      <!--Begin Sub-Navigation.  This only appears when a user is logged in.-->
+      <div class="sub-nav">
+        <!--submenu 1-->
+        <div class="sub-nav-links">
+          <a href="myaccount.php">[var.lang_my_account]</a>
+          &nbsp;|&nbsp;
+          <a href="members/[var.user_name]">[var.lang_my_profile]</a>
+          &nbsp;|&nbsp;
+          <a href="emailinbox.php">[var.lang_word_email]&nbsp;<b>[var.number_of_emails]</b></a><!--[onload;block=span;when [var.show_email_count]=1;comm]-->
+          &nbsp;|&nbsp;
+          <a href="inviteread.php">[var.lang_invites]&nbsp;<b>[var.number_of_invites]</b></a><!--[onload;block=span;when [var.show_invites_count]=1;comm]-->
+          <!--[onload;block=div;when [var.loggedin]=1;comm]-->
+        </div>
+        <!--submenu 2-->
+        <div class="sub-nav-links">
+          <a href="myaccount.php">[var.lang_my_account]</a>
+          &nbsp;|&nbsp;
+          <a href="groups.php?load=featured">[var.lang_featured_groups]</a>
+          &nbsp;|&nbsp;
+          <a href="groups.php">[var.lang_all_groups]</a>
+          &nbsp;|&nbsp;
+          <a href="groups_more.php">[var.lang_my_groups]</a>
+          &nbsp;|&nbsp;
+          <a href="groups_more.php?action=admin">[var.lang_groups_managed_me]</a>
+          &nbsp;|&nbsp;
+          <a href="addgroup.php">[var.lang_create_group]</a>
+          <!--[onload;block=div;when [var.loggedin]=2;comm]-->
+        </div>
+      </div>
+      <!--End Sub-Navigation-->
+    </div>
+    <!--End Header-->
+    <!--Begin Top Advert Space-->
+    <div id="advert-top"><!--[var.ads_top;htmlconv=no;comm]--></div>
+    <!--End Top Advert Space-->
+    <!--Begin Notiications-->
+    <div class="warning-message"><font size="3">[var.message_type] - [var.error_message]</font><br /><!--[onload;block=div;when [var.blk_notification]=1;comm]--></div>
+    <!--End Notiications-->
+    <!--Begin Inner Templates Container.  This is where all of the other template files are displayed.-->
+    <div id="inner-templates-container"><!--[onload;file=[var.inner_template1];getbody;comm]--></div>
+    <!--End Inner Templates Container-->
+    <!--Begin bottom Advert Space-->
+    <div id="advert-bottom" style="clear:both"><!--[var.ads_bottom;htmlconv=no;comm]--></div>
+    <!--End bottom Advert Space-->
+  </div>
+  <!--End Wrapper-->
+  <!--Begin Footer-->
+  <div id="footer">
+    <div id="footer-wrapper">
+      <p>
+        <a href="page.php?page=1">[var.lang_about_us]</a>
+        &nbsp;|&nbsp;
+        <a href="page.php?page=2">[var.lang_contact_us]</a>
+        &nbsp;|&nbsp;
+        <a href="page.php?page=3">[var.lang_terms]</a>
+        &nbsp;|&nbsp;
+        <a href="page.php?page=4">[var.lang_advertise]</a>
+      </p>
+    </div>
+  </div>
+  <!--End Footer-->
+</body>
+</html>

@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body topmargin="5">
+  <div align="center" id="EditUserPopup">
+    <!-- notification div start -->
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" width="655">
+        <!--[onload;block=table;when [var.show_notification]=1;comm]-->
+        <tr>
+          <td>
+            <div id="message_popup" style="width: 673; height: 15">
+              <div align="center"><font face="Arial" size="2">[var.message]</font></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- notification div end -->
+    <table border="0" width="672" cellspacing="0" cellpadding="0" style="border: 1px solid #D1D1D1">
+      <tr>
+        <td height="33" align="center" class="default_text_blue" background="images/background_tables.png" width="671">
+          <p align="left"><font size="2" face="Arial">&nbsp; </font><b><font face="Arial" color="#0099ff">EMBED VIDEO CODE</font></b></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="671" bgcolor="#EFEFEF">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="209">
+	      <form id="embed_code_form" action="embed_code.php" method="post">
+	        <tr>
+	          <td valign="top" width="334" height="158" bgcolor="#FFFFFF">
+	            <table width="335" border="0" cellspacing="0" cellpadding="3" height="197">
+	              <tr>
+	                <td width="131" bgcolor="#FFFFFF" height="29"><div align="right"><font face="Arial" size="2">Embed Player Size:</font></div></td>
+	                <td width="176" bgcolor="#FFFFFF" height="29">
+	                  <select name="size">
+                          <option value="320x256" selected="selected">Small</option>
+                          <option value="480x336">Medium</option>
+                          <option value="592x368">Large</option>
+                          <option value="custom">Custom</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="middle" width="131" bgcolor="#FFFFFF" height="29"><div align="right"><font face="Arial" size="2">Custom Size:</font></div></td>
+                      <td width="176" bgcolor="#FFFFFF" height="29">
+                        <font face="Arial" size="2">
+                          Width:<input name="custom_width" type="text" value="720" size="2" maxlength="4">
+                          Height:<input name="custom_height" type="text" value="480" size="2" maxlength="4">
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="131" bgcolor="#FFFFFF" height="29"><div align="right"><font face="Arial" size="2">WMode:</font></div></td>
+                      <td width="176" bgcolor="#FFFFFF" height="29">
+                        <select name="wmode">
+                          <option value="opaque">Opaque</option>
+                          <option value="transparent" selected="selected">Transparent</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="131" bgcolor="#FFFFFF" height="29"><div align="right"><font face="Arial" size="2">Allow Full Screen:</font></div></td>
+                      <td width="176" bgcolor="#FFFFFF" height="29">
+                        <input type="radio" name="fullscreen" value="true">&nbsp;Yes
+                        <input name="fullscreen" type="radio" value="false" checked>&nbsp;No
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="131" bgcolor="#FFFFFF" height="21"><div align="right"><font face="Arial" size="2"><!--Logo Link:--></font></div></td>
+                      <td width="176" bgcolor="#FFFFFF" height="21"></td>
+                    </tr>
+                    <tr>
+                      <td width="131" bgcolor="#FFFFFF" height="24"><div align="right"><font face="Arial" size="2"><!--Logo Link Target:--></font></div></td>
+                      <td width="176" bgcolor="#FFFFFF" height="24"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="332" height="158" bgcolor="#FFFFFF">
+                  <table width="328" border="0" cellspacing="0" cellpadding="3">
+                    <tr>
+                      <td width="140" bgcolor="#FFFFFF" height="35"><div align="right"><font face="Arial" size="2">Over Stretch Video:</font></div></td>
+                      <td width="160" bgcolor="#FFFFFF" height="35">
+                        <input type="radio" name="overstretch" value="true" checked>&nbsp;Yes
+                        <input type="radio" name="overstretch" value="false">&nbsp;No
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="140" bgcolor="#FFFFFF" height="35"><div align="right"><font face="Arial" size="2">Auto Play:</font></div></td>
+                      <td width="160" bgcolor="#FFFFFF" height="35">
+                        <input type="radio" name="autoplay" value="true">&nbsp;Yes
+                        <input type="radio" name="autoplay" value="false" checked>&nbsp;No
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="140" bgcolor="#FFFFFF" height="35"><div align="right"><font face="Arial" size="2">Background Color:</font></div></td>
+                      <td width="160" bgcolor="#FFFFFF" height="35"><input type="text" name="bgcolor" value="FFFFFF"></td>
+                    </tr>
+                    <tr>
+                      <td width="140" bgcolor="#FFFFFF" height="40"><div align="right"><font face="Arial" size="2"><!--Player Name:--></font></div></td>
+                      <td width="160" bgcolor="#FFFFFF" height="40"><input type="hidden" name="player" value="flvplayer.swf"></td>
+                    </tr>
+                    <tr>
+                      <td width="140" bgcolor="#FFFFFF"><div align="right"><font face="Arial" size="2"><!--Show Logo in Player:--></font></div></td>
+                      <td width="160" bgcolor="#FFFFFF"><input type="hidden" name="showlogo" value="true"></td>
+                    </tr>
+                    <tr>
+                      <td width="140" bgcolor="#FFFFFF"><div align="right"><font face="Arial" size="2"><!--Path to your logo:--></font></div></td>
+                      <td width="160" bgcolor="#FFFFFF"><input type="hidden" name="logopath" value="[var.base_url]/images/playerlogos/logo-player.png"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" width="668" height="27" bgcolor="#FFFFFF">
+                  <div align="center">
+                    <input type="submit" value="Get Embed Code" name="code" />
+                    <input type="hidden" name="vid" value="[var.vid]" />
+                    <input type="hidden" name="submitted" value="yes" />
+                  </div>
+                </td>
+              </tr>
+            </form>
+          </table>
+          <!--[onload;block=tr;when [var.show_form]=1;comm]-->
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" width="671">
+          <div align="center" id="embed_code_div">
+            <form name="form1" method="post" action="">
+              <p>&nbsp;</p>
+              <p>
+              <b>Embed Code:&nbsp;&nbsp;</b><input readonly type="text" size="82" value="[var.embed_code]" onFocus="this.select()" />
+              </p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+            </form>
+          </div>
+        </td>
+        <!--[onload;block=tr;when [var.show_code]=1;comm]-->
+      </tr>
+      <tr>
+        <td>
+          <input type="hidden" name="id" value="[var.contentid]" />
+          <input type="hidden" name="type" value="[var.type]" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
