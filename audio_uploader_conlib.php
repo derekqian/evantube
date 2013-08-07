@@ -23,8 +23,8 @@
 //***************************************************************************************************************
 
 $UBER_VERSION               = "5.3.5";
-$path_to_upload_script      = '/cgi-bin/audio/uu_upload.pl';
-$path_to_ini_status_script  = '/cgi-bin/audio/uu_ini_status.pl';
+$path_to_upload_script      = '/evantube/cgi-bin/audio/uu_upload.pl';
+$path_to_ini_status_script  = '/evantube/cgi-bin/audio/uu_ini_status.pl';
 $default_config_file        = 'uu_default_config';
 $disallow_extensions        = '/(mpg|mpeg|avi|avi|divx|mp4|flv|wmv|rm|mov|moov|asf|swf|vob|jpeg|png|jpg|gif|bmp|sh|php|php3|php4|php5|py|shtml|phtml|cgi|pl|plx|htaccess|htpasswd)$/i';
 $allow_extensions           = '/(mp3)$/i';

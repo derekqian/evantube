@@ -9,10 +9,10 @@ use vars qw($config);
 
 $config = {
 	config_file_name         => 'uu_default_config',
-	temp_dir                 => $ENV{'DOCUMENT_ROOT'} . '/temp/',
-	upload_dir               => $ENV{'DOCUMENT_ROOT'} . '/uploads/audio/',
-	redirect_url             => '/audio_uploader_finished.php',
-	path_to_upload           => '/uploads/audio/',
+	temp_dir                 => $ENV{'DOCUMENT_ROOT'} . '/evantube/temp/',
+	upload_dir               => $ENV{'DOCUMENT_ROOT'} . '/evantube/uploads/audio/',
+	redirect_url             => '/evantube/audio_uploader_finished.php',
+	path_to_upload           => '/evantube/uploads/audio/',
 	unique_upload_dir        => 0,
 	unique_upload_dir_length => 20,
 	unique_file_name         => 1,
