@@ -318,7 +318,18 @@ if ( mysql_real_escape_string($_POST['v3']) == 'upload_pictures') {
 
             		$checked_file_ext 	= strtolower($checked_file_ext);
 
-            		ImageJpeg ($resized_img, "addons/albums/thumbs/$random_new_image.$checked_file_ext");
+            		// ob_start();ImageJpeg($resized_img);$imgvar=ob_get_contents();ob_end_clean();$img64=base64_encode($imgvar);echo('<img src="data:image/x-icon;base64,'.$img64.'"></img>');die();
+            		// ImageJpeg ($resized_img, "addons/albums/thumbs/$random_new_image.$checked_file_ext");
+            		// ImageJpeg, ImagePng, ImageGif
+			if( $img_file_type[$x] == "image/pjpeg" || $img_file_type[$x] == "image/jpeg" ) {
+				ImageJpeg ($resized_img, "addons/albums/thumbs/$random_new_image.$checked_file_ext");
+           		}
+           		elseif( $img_file_type[$x] == "image/x-png" || $img_file_type[$x] == "image/png" ) {
+           			ImagePng ($resized_img, "addons/albums/thumbs/$random_new_image.$checked_file_ext");
+           		}
+           		elseif( $img_file_type[$x] == "image/gif" ) {
+           			ImageGif ($resized_img, "addons/albums/thumbs/$random_new_image.$checked_file_ext");
+           		}
             		ImageDestroy ($resized_img);
             		ImageDestroy ($new_img);
 
@@ -390,7 +401,16 @@ if ( mysql_real_escape_string($_POST['v3']) == 'upload_pictures') {
             		$checked_file_ext 	= strtolower($checked_file_ext);
 
             		// save new full size images
-            		ImageJpeg ($album_resized_img, "addons/albums/images/$random_new_image.$checked_file_ext");
+            		// ImageJpeg ($album_resized_img, "addons/albums/images/$random_new_image.$checked_file_ext");
+			if( $img_file_type[$x] == "image/pjpeg" || $img_file_type[$x] == "image/jpeg" ) {
+				ImageJpeg ($album_resized_img, "addons/albums/images/$random_new_image.$checked_file_ext");
+           		}
+           		elseif( $img_file_type[$x] == "image/x-png" || $img_file_type[$x] == "image/png" ) {
+           			ImagePng ($album_resized_img, "addons/albums/images/$random_new_image.$checked_file_ext");
+           		}
+           		elseif( $img_file_type[$x] == "image/gif" ) {
+           			ImageGif ($album_resized_img, "addons/albums/images/$random_new_image.$checked_file_ext");
+           		}
             		ImageDestroy ($album_resized_img);
             		ImageDestroy ($new_large_img);
 
