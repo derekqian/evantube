@@ -24,8 +24,8 @@
 //***************************************************************************************************************
 include_once ('classes/config.php');
 $UBER_VERSION               = "4.6";
-$path_to_upload_script      = '/cgi-bin/uu_upload.pl';
-$path_to_ini_status_script  = '/cgi-bin/uu_ini_status.pl';
+$path_to_upload_script      = '/evantube/cgi-bin/uu_upload.pl';
+$path_to_ini_status_script  = '/evantube/cgi-bin/uu_ini_status.pl';
 $default_config_file        = 'uu_default_config';
 $disallow_extensions        = '/(3gp|vob|part|swf|mvb|sh|php|php3|php4|php5|py|shtml|phtml|cgi|pl|plx|htaccess|htpasswd|htm|html|doc|txt|xml|js|zip|tar|rar|tgz|bzip|exe|jpg|jpeg|gif|png|bmp|xls|csv|sql|dat)$/i';
 $allow_extensions           = '/(mpg|mpeg|avi|divx|mp4|flv|wmv|rm|mov|moov|asf)$/i';

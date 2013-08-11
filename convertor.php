@@ -64,6 +64,8 @@ if($phpmotion_main_version == 3) {
 $sql = "SELECT video_id FROM videos where approved = 'pending_conversion'";
 $query = @mysql_query($sql);
 
+putenv("LD_LIBRARY_PATH="."/home/derek/software/lamp/lame/lib:".getenv("LD_LIBRARY_PATH"));
+
 while($result = @mysql_fetch_array($query)) {
 
 	$raw_video = $result['video_id'];
