@@ -59,7 +59,7 @@ $config["album_pic_maxwidth"] = "600";
 $config["album_pic_maxheight"] = "600";
 $config["album_pic_minwidth"] = "300";
 $config["album_pic_minheight"] = "300";
-$config["album_pic_maxsize"] = "600000";
+$config["album_pic_maxsize"] = "4000000";
 $config["member_max_albums"] = "6";
 $config["pictures_max_per_album"] = "50";
 
