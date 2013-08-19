@@ -1,0 +1,129 @@
+  <div id="Playlists">
+    <div style="text-align:center; color: #0099FF;">
+     <h2>[var.lang_my_playlists]</h2>
+    </div>
+    <br />
+
+    <!-- Notifications Box -->
+    <div id="PlaylistNotification" style="text-align:center; color: #EE0000; font-size: 12pt; font-weight:bold;">
+        [var.message_type] - [var.error_message]<!--[onload_402;block=div;when [var.blk_notification]=1;comm]-->
+    </div>
+    <!-- Notifications Box End-->
+    <br />
+
+    <!-- create new list -->
+    <div class="Playlistdivs">
+      <div style="text-align:center">
+        <!--[onload_411;block=div;when [var.show_create_new]=1;comm]-->
+        <form name="form1" method="post" action="videoplaylist.php">
+          <label><strong>[var.lang_new_list_name]</strong>
+          <input name="list_name" type="text" id="list_name" size="40" /></label>
+          &nbsp;&nbsp;
+          <input type="submit" name="new_list" value="Create New List" />
+          <input type="hidden" name="submitted_new_list" value="yes" />
+        </form>
+      </div>
+    </div>
+    <!-- create new end -->
+
+    <!-- My existing lists -->
+    <div style="text-align:center;">
+      <div class="Playlistdivs2">
+      <!--[onload_403;block=div;when [var.show_main_list_actions]=1;comm]-->
+        <form name="form2" method="post" action="videoplaylist.php">
+        <ul>
+          <li>[var.lang_my_playlists]:&nbsp;<select name="my_playlists" id="my_playlists"><!--[var.pulldown_list;htmlconv=no;comm]--></select></li>
+          <br />
+          <br />
+          <li>
+            [var.lang_playlist]:&nbsp;<input type="radio" value="play" checked name="selected_box">
+            <strong>&nbsp;|&nbsp;</strong>
+            [var.lang_show_list]:&nbsp;<input type="radio" name="selected_box" value="show" />
+            <strong>&nbsp;|&nbsp;</strong>
+            [var.lang_delete_list]:&nbsp;<input type="radio" name="selected_box" value="delete">
+            <input type="submit" name="playlist_action" value="Submit" id="playlist_action" />
+            <input type="hidden" name="submitted_playlist_action" value="yes" />
+          </li>
+        </ul>
+        </form>
+      </div>
+    </div>
+    <!-- My existing end -->
+
+    <!-- list table start -->
+    <div style="text-align:left">
+    <!--[onload_404;block=div;when [var.show_main_list_table]=1;comm]-->
+    <table width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+      <tr>
+        <!--[onload_406;block=tr;when [var.show_title]=1;comm]-->
+        <td colspan="4" class="font5_14"><span class="font4_14">[var.lang_playlist]:</span> [var.shortened_name]</td>
+      </tr>
+      <tr>
+        <!--[onload_407;block=tr;when [var.show]=1;comm]-->
+        <td width="84">&nbsp;</td>
+        <td width="180">&nbsp;</td>
+        <td width="67"><div align="center">[var.lang_position]</div></td>
+        <td width="130"><div align="center">[var.lang_delete] ([var.lang_from_list])</div></td>
+      </tr>
+      <tr>
+        <td width="84" bgcolor="#E9E9E9"><img src="uploads/thumbs/[blk1.video_file_name;block=tr;ope=max:35].jpg" alt="video pic" width="80" height="60" border="0" /></td>
+        <td width="180" bgcolor="#E9E9E9">[blk1.title;block=tr;ope=max:70]</td>
+        <td width="67" bgcolor="#E9E9E9">&nbsp;</td>
+        <td width="130" bgcolor="#E9E9E9"><div align="center"><a href="videoplaylist.php?id=[var.playlists_id]&amp;vid=[blk1.video_id;block=tr]&amp;act=del" onclick="return confirm('[var.confirm_popup_javascript]')"><strong>X</strong></a></div></td>
+      </tr>
+      <tr>
+        <td width="84"><img src="uploads/thumbs/[blk1.video_file_name;block=tr;ope=max:35].jpg" alt="video pic" width="80" height="60" border="0" /></td>
+        <td width="180">[blk1.title;block=tr;ope=max:70]</td>
+        <td width="67">&nbsp;</td>
+        <td width="130"><div align="center"><a href="videoplaylist.php?id=[var.playlists_id]&amp;vid=[blk1.video_id;block=tr]&amp;act=del" onclick="return confirm('[var.confirm_popup_javascript]')"><strong>X</strong></a></div></td>
+      </tr>
+      <tr>
+        <!--[onload_408;block=tr;when [var.show]=2;comm]-->
+        <td colspan="4" class="font5_14"><div align="center"><span class="font4_14">[var.lang_no_videos_added]</span></div></td>
+      </tr>
+    </table>
+  </div>
+  <!-- list table end -->
+  <!-- start of video play box -->
+  <div style="text-align:left">
+    <!--[onload_408;block=div;when [var.show_player]=1;comm]-->
+    <table width="100%" height="27" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <!--[onload_409;block=tr;when [var.show_title]=2;comm]-->
+        <td class="font5_14"><span class="font4_14">        [var.lang_playlist]:</span> [var.shortened_name] - (<span class="font4_12"> Videos - [var.count_videos]&nbsp;</span>)
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#000000"><div align="center">
+        <!-- player start-->
+        <embed src="[var.base_url]/flvplayer.swf"
+        	width="592" height="368" type="application/x-shockwave-flash"
+		pluginspage="http://www.macromedia.com/go/getflashplayer" bgcolor="#FFFFFF"
+		name="theMediaPlayer"
+		allowfullscreen="true"
+		flashvars="file=myplaylist.php?id=[var.playlists_id]&width=592&height=368&displaywidth=592&displayheight=368&overstretch=true&autostart=[var.auto_play]&showfsbutton=false&logo=[var.base_url]/image_s/playerlogo.png&link=[var.base_url]&linktarget=_blank&backcolor=0xFFFFFF&thumbsinplaylist=false&repeat=list"></embed>
+        <!--player end -->
+        </div></td>
+      </tr>
+      <!--bottom ads start-->
+      <tr>
+        <!--[onload_410;block=tr;when [var.play_list_bottom_ad]=1;comm]-->
+        <td><div align="center">
+            <!--[var.ads_bottom;htmlconv=no;comm]-->
+          </div></td>
+      </tr>
+      <!--bottom ads end-->
+    </table>
+  </div>
+  <!-- end of video play box -->
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</div>
+</body>
+</html>

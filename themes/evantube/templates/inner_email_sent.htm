@@ -1,0 +1,101 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<!--Begin Browse Videos-->
+  	  <div class="title_wide">
+  	  	<h1>[var.lang_sent_messages]
+  	  		
+  	  		<span>
+  	  			<a href="emailinbox.php">[var.lang_word_inbox]</a>&nbsp;|&nbsp;
+                <a href="emailsentitems.php">[var.lang_sent]</a>&nbsp;|&nbsp;
+                <a href="emailcompose.php">[var.lang_compose_new]</a>&nbsp;|&nbsp;
+                <a href="inviteread.php">[var.lang_received_invites]</a>
+            </span>
+  	  		
+  	  		</h1></div>
+  	  		
+  	  <div class="browse_media">
+        
+        <form name="reply" action="emailinbox.php" method="post" class="FormGeneric">
+    <input type="hidden" name="submitted" value="yes" />
+    <table style="float: right;" cellpadding="0" cellspacing="0">
+      <tr style="background:#e5e4e4; border-bottom:1px solid #666666; height:20px; text-align:center;">
+        <td style="width:7%; border-right:1px inset #666666">[var.lang_select]</td>
+        <td style="width:14%; border-right:1px inset #666666">[var.lang_from]</td>
+        <td style="width:63%; border-right:1px inset #666666"><p align="center">[var.lang_subject]</p></td>
+        <td style="width:16%;">[var.lang_date_sent]</td>
+      </tr>
+      <tr style="height:20px; background:#f2f2f2; text-algin:center;">
+        <td align="center" style="width:7%;"><input type="checkbox" name="list[]1" value="[blk1.indexer;block=tr]" /></td>
+        <td align="center" style="width:14%;"><!--[blk1.from_username;block=tr;ope=max:10;comm]--></td>
+        <td align="center" style="width:63%;"><a href="emailread.php?msg=[blk1.indexer;block=tr]&amp;type=1" style="font-weight:[blk1.font_style;block=tr]">[blk1.subject;block=tr;ope=max:35]</a></td>
+        <td align="center" style="width:16%;"> [blk1.todays_date;block=tr]</td>
+      </tr>
+      <tr style="height:30px; text-align:center;">
+        <td align="center" style="width:7%;"><input type="checkbox" name="list[]" value="[blk1.indexer;block=tr]" /></td>
+        <td align="center" style="width:14%;"><!--[blk1.from_username;block=tr;ope=max:10;comm]--></td>
+        <td align="center" style="width:63%;"><a href="emailread.php?msg=[blk1.indexer;block=tr]&amp;type=1" style="font-weight:[blk1.font_style;block=tr]">[blk1.subject;block=tr;ope=max:35]</a></td>
+        <td align="center" style="width:16%;"> [blk1.todays_date;block=tr]</td>
+      </tr>
+      <tr style="height: 7px; text-align:center;">
+        <td style="width:7%;">&nbsp;</td>
+        <td style="width:14%;">&nbsp;</td>
+        <td style="width:63%;">&nbsp;</td>
+        <td style="width:16%;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="100%" height="22" colspan="4">
+          <p style="text-align:left; margin:0px 0px 0px 10px;">
+            <input type="submit" class="button-form" value="Delete Selected" name="invite_fr" />
+            <!--[onload_1;block=tr;when [var.show]=2;comm]-->
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="7" colspan="4">
+          <!-- Pagination start -->
+          <div id="pagination">
+            <ul>[var.show_pages;htmlconv=no]</ul>
+          </div>
+          <!-- Pagination end -->
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="50" colspan="4" valign="bottom">
+          <p align="center" class="font4_18"><!--[onload_1;block=tr;when [var.show]=1;comm]--><span class="font4_16">[var.lang_no_messages]</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="22" colspan="4">&nbsp;</td>
+      </tr>
+    </table>
+  </form>
+  <!-- End of email table -->
+        
+      </div>
+  </div><!--End Left column-->
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+    
+    
+    <div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->
+
+  </div><!--End Right Column-->

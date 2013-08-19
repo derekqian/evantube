@@ -1,0 +1,436 @@
+<!-- ================== PHPmotionWiz - Begin Spotlight Video ================== -->
+<div id="sv_container">
+
+<div id="sv_info">
+    <div id="sv_info_title">
+      <span class="highlight">[var.lang_spotlight]</span> [var.lang_video]</div>
+
+    <div id="sv_video_title"><a href="[var.base_url]/videos/[var.video_id]/[var.video_title_link]">[var.video_title;ope=max:18]</a></div>
+
+	<div id="sv_video_description">
+      [var.video_description;ope=max:630;htmlconv=no]
+	</div>
+
+	<div id="sv_watch_now"><a href="[var.base_url]/videos/[var.video_id]/[var.video_title_link]"></a></div>
+
+</div>
+
+<!-- Begin Player-->
+<div id="sv_player">
+		<div id="play">[onload;block=div;when [var.eclipse_player]!='flowplayer']
+			<a href="http://adobe.com/go/getflashplayer">
+				<img src="http://adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Flash" width="116" height="33" />
+			</a>
+		</div>
+		<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js">
+			[onload;block=script;when [var.eclipse_player]='pmplayer']
+		</script>
+		<script type="text/javascript">[onload;block=script;when [var.eclipse_player]='pmplayer']
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+			flashvars.player_mode = "playlist";
+			flashvars.playlist = "no";
+			flashvars.logo = "top_right";
+			flashvars.floating_navbar = "false";
+			flashvars.color_nav_bar_top = "0x478dc2";
+			flashvars.color_nav_bar_bottom = "0xE7EBEC";
+			flashvars.ads_background_color = "0x00CCFF";
+			flashvars.ads_border_color = "0xCCCCCC";
+			flashvars.scrubber_position_color = "0x6AA1CE";
+			flashvars.scrubber_load_color = "0x888888";
+			flashvars.scrubber_background_color = "0xBBBBBB";
+			flashvars.volume_bar_color = "0xBBBBBB";
+			flashvars.aspect_ratio="stretch";
+			params.allowfullscreen = "true";
+			params.allowscriptaccess = "sameDomain";
+			params.wmode = "transparent";
+			flashvars.flvsource = "[var.base_url]/uploads/[var.video_play]";
+			flashvars.preview_image = "[var.base_url]/uploads/player_thumbs/[var.video_thumb]";
+			flashvars.url_logo = "[var.base_url]/addons/mw_eclipse/logos/logo_player.png";
+			flashvars.buffering_time = '3';
+			flashvars.autoplay = "[var.auto_play_index]";
+			flashvars.display_ads = "no";
+			swfobject.embedSWF("[var.base_url]/addons/mw_eclipse/players/pmplayer/player.swf","play","600","360","9.0.0",false,flashvars,params,attributes);
+		</script>
+		
+		<div>[onload;block=div;when [var.eclipse_player]='jwplayer']
+			<h2>Invalid player selection.</h2>
+		</div>
+		
+		
+		<div>[onload;block=div;when [var.eclipse_player]='flowplayer']
+			<h2>Invalid player selection.</h2>
+		</div>
+</div><!--End Player-->
+<div id="sv_container-bg">
+  <a href="[var.base_url]/videos/[var.video_id]/[var.video_title_link]"><div id="sv_bg-overlay"></div></a>
+    <a href="[var.base_url]/videos/[var.video_id]/[var.video_title_link]">
+        <img style="position:absolute;top:-100px;" src="[var.base_url]/uploads/player_thumbs/[var.video_thumb]" alt="" /></a></div>
+</div><!-- ================== PHPmotionWiz - End Spotlight Video ================== -->
+
+<!--Begin Promoted Videos-->
+  <div id="promoted">
+    <div class="title_wide2"><h1>[var.lang_promoted_videos]</h1></div>
+    <div class="browse_promoted">
+       <ul>
+         <li>
+        <ul>
+          <li class="thumb">
+          <a href="videos/[mp.indexer;block=((li))]/[mp.title_seo;htmlconv=no;block=((li))]">
+            
+          <!--Thumb Overlay Title-->
+            <div class="browse_media_title"><!--[mp.title;htmlconv=no;block=((div));ope=max:20;maxhtml;comm]--></div>
+            <div class="v_title2"><!--[mp.title;htmlconv=no;block=((div));ope=max:20;maxhtml;comm]--></div>
+
+          <!--Thumb Overlay Duration-->
+            <div class="browse_media_duration">[mp.video_length;block=span;com]</div>
+
+                <img  alt="<!--[mp.title;htmlconv=no;block=((div));ope=max:20;maxhtml;comm]-->" src="uploads/thumbs/[mp.video_id;block=((li))].jpg" /></a>
+             </li>
+             
+        </ul>
+       </li>
+      </ul>
+
+<div class="clear-fix"></div>
+    </div>
+    
+    </div><!--End Promoted Videos-->
+    
+ <!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+               
+<div id="match-container">
+    
+
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">        
+
+    <!--Begin Browse Videos-->
+  	  <div class="title_wide">
+  	  	<h1>[var.lang_videos]
+  	  		
+  	  		<span class="button_generic browse_button"><a href="[var.base_url]/videos/load/recent">See All</a></span>
+  	  		<span class="float_right">
+  	  			
+  	  			<a onclick="javascript:ahahscript.ahah('index_ajax.php?type=video&load=featured', 'videos-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_featured]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=video&load=viewed', 'videos-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_most_viewed]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=video&load=recent', 'videos-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_most_recent]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=video&load=rated', 'videos-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_highest_rated]</a>
+            </span>
+            
+  	  		
+  	  		</h1></div>
+  	  		
+    <div class="browse_media">
+            <div id="videos-ajax">
+        <div id="videoajax">
+        <ul>
+          <li>
+        <ul>
+          <li class="thumb">
+          <a class="popup-info" href="videos/[blkfeatured_videos.indexer;block=div]/[blkfeatured_videos.title_seo;htmlconv=no;block=div]">
+
+          <!--Thumb Overlay Title-->
+            <div class="browse_media_title fvideo_title"><!--[blkfeatured_videos.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]--></div>
+
+          <!--Thumb Overlay Duration-->
+            <div class="browse_media_duration">[blkfeatured_videos.video_length;block=span;com]</div>
+
+          <!--Begin Popup-Info-->
+            <span>
+               
+               <div class="popup-info_tmb">
+                 <img alt="<!--[blkfeatured_videos.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="uploads/thumbs/[blkfeatured_videos.video_id;block=div].jpg" style="width: 93px; height: 70px;" />
+               </div>
+               
+               <div class="popup-info_title"><!--[blkfeatured_videos.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]--></div>
+               
+               <div class="popup-info_stats">
+                 <strong>[var.lang_category]:</strong> [blkfeatured_videos.channel;block=span;ope=max:20;com]<br />
+               </div>
+
+			   <div class="popup-info_rating">
+			    <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_videos.star1;block=div]" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_videos.star2;block=div]" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_videos.star3;block=div]" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_videos.star4;block=div]" alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_videos.star5;block=div]" alt="1 Star" />
+			   </div>
+
+			   <div class="popup-info_description">[blkfeatured_videos.description;htmlconv=no;block=span;ope=max:520;comm]</div>
+            </span>
+             <img alt="<!--[blkfeatured_videos.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="uploads/thumbs/[blkfeatured_videos.video_id;block=div].jpg" /></a></li>
+             
+             <li class="v_display">
+
+             	<div class="v_title">
+             		<a href="videos/[blkfeatured_videos.indexer;block=li]/[blkfeatured_videos.title_seo;htmlconv=no;block=li]"><!--[blkfeatured_videos.title;htmlconv=no;ope=max:40;maxhtml;block=div;comm]--></a>
+             	</div>
+             	
+             	<div class="v_description">[blkfeatured_videos.description;htmlconv=no;block=span;ope=max:250;comm]</div>
+             	<div class="v_cat"><strong>[var.lang_category]:</strong> [blkfeatured_videos.channel;block=span;ope=max:20;com]</div>            	
+
+             	</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div><div class="clear-fix"></div><!--End Browse Videos-->
+  
+  
+  <!--Begin Browse Audio-->
+  <features_audio>
+    <div class="title_wide">
+  	  	<h1>[var.lang_word_audios]
+  	  		
+  	  		<span class="button_generic browse_button"><a href="[var.base_url]/audios/load/recent">See All</a></span>
+  	  		<span class="float_right">
+  	  			
+  	  			<a onclick="javascript:ahahscript.ahah('index_ajax.php?type=audio&load=featured', 'audios-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_featured]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=audio&load=viewed', 'audios-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_most_viewed]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=audio&load=recent', 'audios-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_most_recent]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=audio&load=rated', 'audios-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_highest_rated]</a>
+            </span>
+  	  		
+  	  		</h1></div>
+  	  		
+    <div class="browse_media">
+        <div id="audios-ajax">
+        <div id="audioajax">
+     <ul><li>   
+     <ul>
+      <li class="thumb">
+	  <a class="popup-info" href="audio/[blkfeatured_audios.indexer;block=div]/[blkfeatured_audios.title_seo;htmlconv=no;block=div]">
+	  	
+	  	<!--Thumb Overlay Title-->
+           <div class="browse_media_title faudio_title"><!--[blkfeatured_audios.title;htmlconv=no;block=div;ope=max:20;maxhtml;comm]--></div>
+
+        <!--Thumb Overlay Duration-->
+           <div class="browse_media_duration">[blkfeatured_audios.audio_length;block=span;com]</div>
+           
+           <span>
+           	
+           	             <div class="popup-info_tmb">
+                         	<img alt="<!--[blkfeatured_audios.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="[blkfeatured_audios.album_pic]" style="width: 93px; height: 70px;" />
+                         </div>
+                         
+                         <div class="popup-info_title"><!--[blkfeatured_audios.title;htmlconv=no;block=div;ope=max:20;maxhtml;comm]--></div>
+                         
+                         <div class="popup-info_stats">
+                           <strong>[var.lang_category]:</strong> [blkfeatured_audios.channel;block=span;ope=max:20;com]<br />
+                         </div>
+
+
+                         <div class="popup-info_rating">
+			               <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_audios.star1;block=div]" alt="1 Star" />
+	                       <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_audios.star2;block=div]" alt="1 Star" />
+	                       <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_audios.star3;block=div]" alt="1 Star" />
+	                       <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_audios.star4;block=div]" alt="1 Star" />
+	                       <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_audios.star5;block=div]" alt="1 Star" />
+			             </div>
+
+                         <div class="popup-info_description">
+                           [blkfeatured_audios.description;htmlconv=no;block=span;ope=max:520;comm]
+                         </div>
+
+                       </span>
+	  	
+	  	
+	  	<img alt="<!--[blkfeatured_audios.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="[blkfeatured_audios.album_pic]"  /></a>
+	  </li>
+	  
+	  <li class="v_display">
+
+             	<div class="v_title">
+             		<a href="audio/[blkfeatured_audios.indexer;block=li]/[blkfeatured_audios.title_seo;htmlconv=no;block=li]"><!--[blkfeatured_audios.title;htmlconv=no;block=div;ope=max:40;maxhtml;comm]--></a>
+             	</div>
+             	
+             	<div class="v_description">[blkfeatured_audios.description;htmlconv=no;block=span;ope=max:250;comm]</div>
+             	<div class="v_cat"><strong>[var.lang_genre]:</strong> [blkfeatured_audios.channel;block=span;ope=max:20;com]</div>            	
+
+             	</li>
+	  
+    </ul>
+    </li></ul>
+    </div>
+</div>
+
+  </div>
+  <!--[onload;block=features_audio;when [var.enable_audio]=1;comm]-->
+  </features_audio><div class="clear-fix"></div><!--End Browse Audio-->
+
+
+  <!--Begin Browse Images-->
+  <features_images>
+    <div class="title_wide">
+  	  	<h1>[var.lang_word_images]
+  	  		
+  	  		<span class="button_generic browse_button"><a href="[var.base_url]/albums/load/recent">See All</a></span>
+  	  		<span class="float_right">
+  	  			
+  	  			<a onclick="javascript:ahahscript.ahah('index_ajax.php?type=image&load=featured', 'images-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_featured]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=image&load=viewed', 'images-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_most_viewed]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=image&load=recent', 'images-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_most_recent]</a>&nbsp;|&nbsp;
+                <a onclick="javascript:ahahscript.ahah('index_ajax.php?type=image&load=rated', 'images-ajax', '', 'GET', '', this);" style="cursor:pointer;">[var.lang_highest_rated]</a>
+            </span>
+  	  		
+  	  		</h1></div>
+  	  		
+    <div class="browse_media">
+
+      <div id="images-ajax">
+        <div id="imageajax">
+        <ul>
+          <li>
+        <ul>
+          <li class="thumb">
+          <a class="popup-info" href="view-image/[blkfeatured_images.indexer;block=div]/[blkfeatured_images.title_seo;htmlconv=no]">
+
+          <!--Thumb Overlay Title-->
+            <div class="browse_media_title fpic_title"><!--[blkfeatured_images.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]--></div>
+
+          <!--Begin Popup-Info-->
+            <span>
+            	
+               <div class="popup-info_tmb">
+                 <img alt="<!--[blkfeatured_images.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="addons/albums/thumbs/[blkfeatured_images.image_id;block=div]" style="width: 93px; height: 70px;" />
+               </div>
+               	
+               <div class="popup-info_title"><!--[blkfeatured_images.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]--></div>
+               
+               <div class="popup-info_stats">
+                 <strong>[var.lang_uploaded]:</strong> [blkfeatured_images.date_uploaded;block=span;com]
+               </div>
+
+			   <div class="popup-info_rating">
+			    <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_images.star1;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_images.star2;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_images.star3;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_images.star4;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured_images.star5;block=div]"  alt="1 Star" />
+			   </div>
+
+			   <div class="popup-info_description">[blkfeatured_images.description;htmlconv=no;block=span;ope=max:520;comm]</div>
+            </span>
+             <img alt="<!--[blkfeatured_images.title;htmlconv=no;ope=max:20;maxhtml;block=div;comm]-->" src="addons/albums/thumbs/[blkfeatured_images.image_id;block=div]"  /></a></li>
+             
+             <li class="v_display">
+
+             	<div class="v_title">
+             		<a href="view-image/[blkfeatured_images.indexer;block=div]/[blkfeatured_images.title_seo;htmlconv=no]"><!--[blkfeatured_images.title;htmlconv=no;block=div;ope=max:40;maxhtml;comm]--></a>
+             	</div>
+             	
+             	<div class="v_description">[blkfeatured_images.description;htmlconv=no;block=span;ope=max:250;comm]</div>
+             	</li>
+             
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--[onload;block=features_images;when [var.enable_images]=1;comm]-->
+  </features_images><!--End Browse Images-->
+  
+</div><!--End Left Column-->
+  
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+    
+    <!--Begin Latest News-->
+      <div class="title_narrow"><h5>[var.lang_latest_news]</h5></div>
+        <div class="block_narrow">
+        	<ul>
+        		<!--[var.newsflash;htmlconv=no;comm]-->
+        	</ul>        
+        </div><!--End Latest News-->
+    
+    <!--Begin Video Categories-->
+      <div class="title_narrow"><h5>[var.lang_video_categories]</h5></div>
+        <div class="block_narrow">
+        	<ul>
+              <li><!--[var.popular_categories;htmlconv=no;comm]--></li>
+            </ul>        
+        </div><!--End Video Categories-->
+        
+    <!--Begin Popular Tags-->
+      <div class="title_narrow"><h5>[var.lang_Tags_most_popular]</h5></div>
+        <div class="block_narrow">
+        	<!--[var.tag_cloud_block;htmlconv=no;comm]-->
+        </div><!--End Popular Tags-->
+        
+    <!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+    
+    <!--Begin Site Stats-->
+      <features_stats> 
+        <div class="title_narrow"><h5>[var.lang_stats]</h5></div>
+          <div class="block_narrow">
+          	<ul class="site_stats">
+          		<li>
+          			<img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/display_small.png" alt="watched" class="stats-thumb" />
+          			<span class="stats-label">[var.lang_videos_watched]:</span> <span class="stats-value"><!--[var.total_watched;comm]--></span>
+          		</li>
+          		
+          		<features_audio>
+                  <li>
+                    <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/audio_video_small.png" alt="watched" class="stats-thumb">
+                    <span class="stats-label">[var.lang_audios_played]:</span><span class="stats-value"><!--[var.total_played;comm]--></span>
+                  </li>
+                 <!--[onload;block=features_audio;when [var.enable_audio]=1]-->
+                </features_audio>
+                
+                <features_images>
+                  <li>
+                   <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/image.png" alt="watched" class="stats-thumb">
+                    <span class="stats-label">[var.lang_images_viewed]:</span><span class="stats-value"><!--[var.images_viewed;comm]--></span>
+                  </li>
+                  <!--[onload;block=features_images;when [var.enable_images]=1]-->
+                 </features_images>
+      
+                  <li>
+                    <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/members.png" alt="members" width="22" height="22" align="absmiddle" class="stats-thumb" />
+	                <span class="stats-label">[var.lang_total_members]:</span> <span class="stats-value"><!--[var.members_total;comm]--></span>
+	              </li>
+	
+	              <li>
+	                <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/members.png" alt="members" class="stats-thumb">
+	                <span class="stats-label">[var.lang_newest_member]:</span><span class="stats-value"><!--[var.newest_user_name;comm]--></span>
+	              </li>
+       
+                  <li>
+                    <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/members.png" alt="members" class="stats-thumb">
+                    <span class="stats-label">[var.lang_viewers_online]:</span><span class="stats-value"><!--[var.count_online_users;comm]--></span>
+                  </li>
+                  
+                  <li>
+                    <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/members.png" alt="members" class="stats-thumb">
+                    <span class="stats-label">[var.lang_members_online]:</span><!--[var.show_online_users;htmlconv=no;comm]-->
+                  </li>        
+          	</ul>        
+          </div>
+        <!--[onload;block=features_stats;when [var.show_stats]=yes;comm]-->  
+      </features_stats><!--End Site Stats-->
+           	
+  </div><!--End Right Column-->
+  
+  
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->
+  

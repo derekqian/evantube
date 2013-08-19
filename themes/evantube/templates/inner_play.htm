@@ -1,0 +1,367 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="bymember"><h2>
+	<div class="member-button">
+		<a href="members/[var.member_username]">
+		<div class="avatar_sm">
+	  <img src="[var.a1_mypicture]" alt="pic" />
+	</div>	
+	  [var.member_username]</a></div>
+	  
+	  <div class="member-button more-button">
+	<span id="userpanel"><a style="cursor:pointer;" onClick="user_panel()">more by this member <img src="[var.base_url]/addons/mw_eclipse/skin/images/bullet_6.png" alt="" /></a></span>
+	</div>
+	</h2></div>
+	
+<!--Begin User Panel-->
+  <div id="user_panel">
+
+  <div id="member_info">
+      <ul id="now_playing">
+      	<li class="now_playing_thumb">
+      	<span class="members_title">Playing: &nbsp;[var.title;ope=max:16;]</span><img src="[var.base_url]/uploads/thumbs/[var.video_thumb]" alt="[var.title;htmlconv=no;ope=max:43]" /></li></ul>
+
+  </div>
+
+  <div id="member_media">
+    <!--[blk2;block=begin]-->
+    <ul>
+      <li class="member_media_thumb">
+        <a class="popup-info_flipped" href="videos/[blk2.indexer;]/[blk2.title_seo;]">
+        	
+        	<div class="members_title"><!--[blk2.title;comm;ope=max:25;comm]--></div>
+        	
+        	<div class="browse_media_duration member_media_duration"><!--[blk2.video_length;comm;ope=max:25;comm]--></div>
+
+        <!--Begin Popup-Info-->
+          <span>
+          	<div class="popup-info_flipped_tmb">
+              <img src="uploads/thumbs/[blk2.video_id;].jpg" alt="<!--[blk2.title;comm]-->" style="width: 93px; height: 70px;" />
+            </div>
+            
+            <div class="popup-info_flipped_title"><!--[blk2.title;comm;ope=max:20;comm]--></div>
+            
+            <div class="popup-info_stats">
+              <strong>[var.lang_category]:</strong> [blk2.channel;block=span;ope=max:20;com]<br />
+            </div>
+            
+            <div class="popup-info_flipped_rating">[var.lang_more_from] <!--[var.member_username;ope=max:25;comm]--></div>
+
+
+            <div class="popup-info_flipped_description"><!--[blk2.description;block=((li));ope=max:520;comm]--></div>
+
+          </span>
+          <img src="uploads/thumbs/[blk2.video_id;].jpg" alt="<!--[blk2.title;comm;ope=max:14;comm]-->" /></a>
+      </li>
+	  <!--[onload;block=ul;when [var.more_user]=1;comm]-->
+    </ul>
+    <!--[blk2;block=end]-->
+  </div>
+
+  </div><!--End User Panel-->
+  
+  <div id="hide_user_panel">&nbsp;</div>
+
+
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_2">
+    
+    <!--Begin Player-->
+      <div id="player">
+      	
+        <iframe src="[var.base_url]/make_player.php?vid=[var.vid]&player_token=[var.player_token]" frameborder="0" style="width:100%; height:100%; border:none;" marginheight="0" scrolling="no" name="flvplayer">
+                <!--[onload;block=iframe;when [var.video_type] != 'embedded';comm]-->
+              </iframe>
+
+          <!--start of EmbedVideo Addon Player-->
+            <span>
+              <!--[var.videoembedder_code;htmlconv=no;comm]-->
+              <!--[onload;block=span;when [var.video_type] == 'embedded';comm]-->
+            </span>
+            <!-- end of EmbedVideo Addon Player-->
+
+      </div><!--End Player-->
+
+
+    <!--Begin Video Info-->
+      <div class="media_info">
+      	
+      <div id="media_tmb">
+	     <img src="[var.base_url]/uploads/thumbs/[var.video_thumb]" alt="[var.title;htmlconv=no;ope=max:43]" /></div>
+     <div id="media_title">
+    		
+    		<h1>[var.title;ope=max:42;]
+    			<span>
+        		<a href="edit/editvideo.php?id=[var.vid]" rel="gb_page_center[720, 500]">[var.lang_edit]
+                  <!--[onload_15;block=a;when [var.edit_video]=1;comm]-->&nbsp;|&nbsp;</a>
+                  <a href="edit/delete.php?type=1&id=[var.vid]" rel="gb_page_center[620, 300]">[var.lang_delete]
+                  <!--[onload_16;block=a;when [var.delete_video]=1;comm]--></a>
+		          <!--[onload_17;block=li;when [var.edit_video]=1;comm]-->
+        	    </span>
+        	</h1>
+     </div>
+      	
+      	<!--Begin Media Buttons-->
+		  <div id="media_buttons">
+		  	<div class="media_button">
+
+		  		<ul>
+		  		  <!--Begin Share/Embed Button-->
+		  	      <features_embed>
+		  	        <li>
+		  	        	<div id="embed">
+		  	        	  <a style="cursor:pointer;" onClick="showembed()">
+		  	        	  <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_share.png" alt="favs" width="25" height="25" border="0" align="absmiddle" />&nbsp;Share / Embed</a></div>
+		  	        </li>
+		  	      </features_embed><!--End Link/Embed Button-->
+
+		  		  <!--Begin Add to (Favs/Playlist) Button-->
+		  			<li>
+		  				<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/addfavorites_ajax.php?vid=[var.vid]', 'playlist_ajaxdiv', '', 'GET', '', this);">
+                        <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_favs.png" alt="favs" width="25" height="25" border="0" align="absmiddle" />&nbsp;Add to <img src="addons/mw_eclipse/skin/images/bullet_6.png" alt="" /></a>
+		  			</li><!--End Add to (Favs/Playlist) Button-->
+		  			
+
+		  		  <!--Begin Download Button-->
+		  		    <features_download>
+		  			<li>
+                          <a href="[var.base_url]/uploads/[var.video_play]">
+                          <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_download.png" alt="download" width="23" height="25" border="0" align="absmiddle" />&nbsp;[var.lang_download]</a>
+                          <!--[onload_318;block=features_download;when [var.allow_download]=1;comm]-->
+		  			</li></features_download><!--End Download Button-->
+
+
+		  			<!--Begin Flag Button-->
+		  			<li>
+		  				<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?abuse=[var.vid]&flag_type=videos', 'playlist_ajaxdiv', '', 'GET', '', this);">
+                        <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_report.png" alt="report" width="25" height="25" border="0" align="absmiddle" /></a>
+		  			</li><!--End Flag Button-->
+		  		</ul>
+
+		  	</div>
+		  </div><!--End Media Buttons-->
+      	
+      	<div id="info_container">
+		  
+		  <!-- Ajax Results Box for playlists etc -->
+       <span id='playlist_ajaxdiv'></span><!-- Ajax style end -->
+
+		  <div id="showembed">
+		  <form name="code" action="">
+		  	<ul>
+		  		
+		  		<li>
+		  			<!-- AddThis Button BEGIN -->
+                      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                        <a class="addthis_button_preferred_1"></a>
+                        <a class="addthis_button_preferred_2"></a>
+                        <a class="addthis_button_preferred_15"></a>
+                        <a class="addthis_button_preferred_10"></a>
+                        <a class="addthis_button_preferred_11"></a>
+                        <a class="addthis_button_preferred_14"></a>
+                        <a class="addthis_button_preferred_3"></a>
+                        <a class="addthis_button_compact"></a>
+                        <a class="addthis_counter addthis_bubble_style"></a>
+                      </div>
+                      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4e4ea25a125c9f17"></script>
+                    <!-- AddThis Button END --></li>
+		  	<li>
+		  		<strong>[var.lang_bbc_link]:</strong>
+		  		<input class="embed-field" name="forum" type="text" value='[url=[var.video_url]][img][var.base_url]/uploads/thumbs/[var.video_thumb][/img]  Watch "[var.title]" on [var.site_name][/url]' onClick="javascript:document.code.forum.focus();document.code.forum.select();" readonly />
+		  	</li>
+
+		  	<features_embed>
+		  	<li>
+		  		<strong>[var.lang_embed_code]:<span style="font-color:#ee0000">[var.lang_disabled]<!--[onload;block=span;when [var.video_type] == 'embedded';comm]--></span></strong>
+		  	    <textarea readonly type="embed" name="embed" class="embed-field" onClick="javascript:document.code.embed.focus();document.code.embed.select(); return false;" /><embed src="[var.base_url]/addons/mw_eclipse/players/pmplayer/player.swf" width="320" height="256" bgcolor="FFFFFF" allowscriptaccess="always" allowfullscreen="false" flashvars="flvsource=[var.base_url]/uploads/[var.video_play]&preview_image=[var.base_url]/uploads/player_thumbs/[var.video_thumb]&backgcolor=FFFFFF&autoplay=true&url_logo=[var.base_url]/images/playerlogos/logo-player.png&logo=top_right&floating_navbar=false&color_nav_bar_top=0x478dc2&color_nav_bar_bottom=0xE7EBEC&ads_background_color=0x00CCFF&ads_border_color=0xCCCCCC&scrubber_position_color=0x6AA1CE&scrubber_load_color=0x888888&scrubber_background_color=0xBBBBBB&volume_bar_color=0xBBBBBB&aspect_ratio=stretch"></embed></textarea>
+		  	  <!--[onload;block=li;when [var.video_type] != 'embedded';comm]-->
+		  	</li>
+		  	<!--[onload;block=features_embed;when [var.show_embed]=1;comm]-->
+		  	</features_embed>
+		  </ul>
+		</form>
+		</div>
+		  <div id="hideembed">&nbsp;</div>
+
+        <div id="media_details">
+        	<ul>
+          <li style="border: none;"><strong>[var.lang_category]:</strong>
+                <a href="category_home.php?cid=[var.channel;block=div]" class="channel-link">[var.channel;block=div;ope=max:20;com]</a></li>                
+
+		          <li><strong>[var.lang_uploaded_by] <a href="members/[var.member_username]"><!--[var.member_username;ope=max:20;comm]--></a>
+		          [var.lang_on]:</strong> [var.date_uploaded;block=div;com]</li>
+		        </ul>
+		</div><!--End Video Details-->
+
+        <!--Begin Rating-->
+            <div id="rating">
+              <span>[var.ajax_rating;htmlconv=no]</span>
+              <!--[onload_13;block=div;when [var.showdetails]=1;comm]-->
+          </div><!--End Rating-->
+
+        <!--Begin Media Description-->
+          <div id="media_description">
+      	    <div id="shortdesc">[var.description;ope=max:200;htmlconv=no]</div>
+			<div id="longdesc">[var.description;ope=max:5000;htmlconv=yes]
+			<div id="media_tags">
+			   <strong>[var.lang_tags]:</strong>&nbsp;&nbsp;<span class="tags">[var.tags_string;htmlconv=no]</span></div>
+			</div>
+			<div id="showlink"><a style="cursor:pointer;" onClick="show()">Show More <img src="addons/mw_eclipse/skin/images/bullet_6.png" alt="" /></a></div>
+          </div><!--End Media Description-->
+          
+          </div>
+          
+          <div class="social">
+       	<ul>
+       	  <li><span>[var.number_of_views;block=div;com]</span> [var.lang_views]</li>
+       
+		<!--Begin Facebook Like Button-->
+		  <li>
+          <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=106004822826605&amp;xfbml=1"></script>
+            <fb:like href="" send="false" layout="box_count" style="width:50px;" show_faces="false" action="like" font=""></fb:like>
+          </li><!--End Facebook Like Button-->
+         
+          
+        <!--Begin Google +1 Button-->
+          <li>
+          	<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="tall"></g:plusone>
+
+<!--  Place this tag after the last plusone tag -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+          </li>
+          
+          
+        </ul>  
+        </div>
+
+      </div><!--End Video Info-->
+
+
+      <!-- ========================================= Begin Comments and Video Responces ========================================= -->
+      <features_comments>
+        <!--Begin Comments Ajax-->
+        <div id="commentajax">
+
+        <!--Begin Comments and Responces-->
+        <div id="responces">
+        	
+        	<div id="responces_title">Comments</div>
+        	
+        	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '[var.dq_shortname]'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        var disqus_identifier = '[var.title]';
+        var disqus_url = '[var.video_url]';
+        
+        // Uncomment the following line if you are installing on a password protected domain
+         var disqus_developer = 1; // developer mode is on
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div><!--End Comments and Responces-->
+
+
+        </div><!--End Comments Ajax-->
+      </features_comments>
+      <!-- ========================================= End Comments and Video Responces ========================================= -->
+
+  </div><!--End Left Column-->
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_2">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+
+    <!--Begin Related Videos-->
+    <div class="title_narrow"><h1>[var.lang_related_videos]</h1></div>
+      <div class="related_media">
+      	
+      	 <div id="nothing_found">
+        	[var.lang_nothing_found]
+        	<!--[onload;block=div;when [var.more_related]=0;comm]-->
+         </div>
+
+        <!--[blk1;block=begin]-->
+      	<ul>
+              <li class="related_media_thumb">
+                  <a class="popup-info_flipped" href="videos/[blk1.indexer;]/[blk1.title_seo;]">
+
+                  <!--Thumb Overlay Title-->
+                    <div class="related_media_title"><!--[blk1.title;htmlconv=no;block=((div));ope=max:20;maxhtml;comm]--></div>
+
+                  <!--Thumb Overlay Duration-->
+                    <div class="related_media_duration">[blk1.video_length;block=span;com]</div>
+
+                    <span>
+                    	<div class="popup-info_flipped_tmb">
+                          <img src="uploads/thumbs/[blk1.video_id;].jpg" title="<!--[blk1.title;comm]-->" style="width: 93px; height: 70px;" />
+                        </div>
+                        
+                        <div class="popup-info_flipped_title"><!--[blk1.title;comm;ope=max:20;comm]--></div>
+                        
+                        <div class="popup-info_stats">
+                          <strong>[var.lang_category]:</strong> [blk1.channel;block=span;ope=max:20;com]<br />
+                        </div>
+                        
+                        <div class="popup-info_flipped_rating">[var.lang_related_video]</div>
+
+						<div class="popup-info_flipped_description"><!--[blk1.description;block=((li));ope=max:520;comm]--></div>
+
+                    </span>
+                     <img src="uploads/thumbs/[blk1.video_id;].jpg" />            
+                     
+               <div class="related_description">
+               	    <div class="related_view_count"><!--[blk1.number_of_views;comm]--> Views</div>               	   
+               	    
+               	<!--[blk1.description;block=((div));ope=max:100;htmlconv=no;comm]-->
+               </div></a>
+               
+               </li>
+                     
+	              <!--[onload;block=ul;when [var.more_related]=1;comm]-->
+	  </ul>
+	 
+	<!--[blk1;block=end]-->
+
+      </div><!--End Related Videos-->
+      
+      <!--Begin Right Ad Spot-->
+      <div id="ad_right_2">
+        <!--[var.ads_right;htmlconv=no;comm]-->
+      </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+
+
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

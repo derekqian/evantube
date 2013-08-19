@@ -1,0 +1,213 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	
+  	<!-- ============ Begin Nothing Found ============ -->
+   	  <div class="form">
+  	  	
+        <span class="font4_14">
+      [var.lang_have_no_blog_record],
+      <br />[var.lang_number_allowed_blogs]&nbsp;[var.blog_max_limits]&nbsp;[var.lang_blogs]
+      <br />[var.lang_create_blog_question]?
+      <br />
+      <a href="blogs.php?action=write"><b>[var.lang_yes]</b></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="blogs/load/recent">[var.lang_no_thanks]</a>
+    </span>
+    <!--[onload_305;block=div;when [var.show_m]=0;comm]-->
+      </div><!--End Nothing Found-->
+  	
+  	<!-- ============ Begin Browse Blogs ============ -->
+  	<div class="title_wide">
+  	  	<h1>[var.lang_browse_blogs]
+  	  		
+  	  		<span>
+  	  			<a href="blogs/load/featured">[var.lang_featured]</a>&nbsp;|&nbsp;
+                <a href="blogs/load/viewed">[var.lang_most_viewed]</a>&nbsp;|&nbsp;
+                <a href="blogs/load/recent">[var.lang_most_recent]</a>
+            </span>
+  	  		
+  	  		</h1></div>
+  	  <div class="browse_media">
+        
+        <div id="videos-ajax">
+        <div id="videoajax">
+        <ul>
+          <li>
+        <ul>
+          <li class="thumb">
+          <a class="popup-info" href="read_blog/[blkfeatured.indexer]/[blkfeatured.title_seo;block=div;htmlconv=no]">
+
+          <!--Thumb Overlay Title-->
+            <div class="browse_media_title"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:20;maxhtml;comm]--></div>
+
+          <!--Begin Popup-Info-->
+            <span>
+               <div class="popup-info_tmb">
+                 <img alt="Blog" src="<!--[blkfeatured.poster_picture;block=div;comm]-->" style="width: 93px; height: 70px;" />
+               </div>
+               
+               <div class="popup-info_title"><!--[blkfeatured.title;htmlconv=no;block=div;ope=max:20;maxhtml;comm]--></div>
+               
+               <div class="popup-info_stats">
+                 <strong>[var.lang_category]:</strong> <!--[blkfeatured.category;block=div;ope=max:20;maxhtml;comm]--><br />
+               </div>
+
+			   <div class="popup-info_rating">
+			    <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured.star1;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured.star2;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured.star3;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured.star4;block=div]"  alt="1 Star" />
+	            <img style="width:12px; height:12px; border:none; box-shadow: none; -moz-box-shadow: none; background: transparent;" src="addons/mw_eclipse/popup-info/images/[blkfeatured.star5;block=div]"  alt="1 Star" />
+			   </div>
+
+			   <div class="popup-info_description">[blkfeatured.description;htmlconv=no;block=span;ope=max:120;comm]</div>
+            </span>
+             <img alt="Blog" src="<!--[blkfeatured.poster_picture;block=div;comm]-->" /></a></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  	  	
+  	  	<!-- Pagination start -->
+          <div id="pagination">
+          	<ul>[var.show_pages;htmlconv=no]</ul>
+          </div>
+        <!-- Pagination end -->
+        
+        <!--[onload;block=div;when [var.show_block]=1;comm]-->
+      </div><!--End Browse Blogs-->
+      
+      <div class="form">[var.error_message;htmlconv=no]<!--[onload;block=div;when [var.blog_errors]=1;comm]--></div>
+      
+      
+    <!-- ============ Begin Create Blog ============ -->
+   	  <div class="form">
+  	  	
+        <h1>[var.lang_create_blog]&nbsp;&nbsp;[var.member_blog_total]&nbsp;of&nbsp;[var.blog_max_limits]</h1>
+         
+         	<script type="text/javascript" src="[var.base_url]/fckeditor/fckeditor.js"></script>
+         	
+         	<form method="post" name="blog_form" id="blog_form" action="blogs.php?action=write">
+         
+         <ul>
+         	<li><strong>[var.lang_title]:</strong><br />
+         		<input class="input" type="text" name="title" value="[var.form_title]" /></li>
+         	
+         	<li><strong>[var.lang_description]:</strong><br />
+         		<input class="input" type="text" name="description" value="[var.form_description]" /></li>
+            
+            <li><strong>[var.lang_tags]:</strong><br />
+            	<input class="input" type="text" name="tags" value="[var.form_tags]" />
+            	<div class="upload-video-tags">[var.lang_enter_tags].<br />
+                [var.lang_enter_tags_description].</div></li>
+            	
+            <li><strong>[var.lang_category]:</strong><br />
+            	<select class="input" name="category">[var.fields_all;htmlconv=no]</select></li>
+            	
+            <li><strong>[var.lang_allow_replies]:</strong><br />
+            	<select class="input" name="allow_replies">
+            		<option value="no">[var.lang_no]</option>
+                    <option value="yes" selected="selected">[var.lang_yes]</option>
+                </select></li>
+                
+            <li><strong>[var.lang_allow_ratings]:</strong><br />
+            	<select class="input" name="allow_rating">
+            		<option value="no">[var.lang_no]</option>
+                    <option value="yes" selected="selected">[var.lang_yes]</option>
+                </select></li>
+                
+            <li><strong>[var.lang_private_pub]:</strong><br />
+            	<select class="input" name="private_pub">
+            		<option value="private">[var.lang_private]</option>
+                    <option value="public" selected="selected">[var.lang_public]</option>
+                </select></li>
+                
+            <li>[var.my_edit;htmlconv=no;]</li>
+                
+            <li>
+            	<!--
+            	  <script type="text/javascript">
+	                  var sBasePath = '[var.base_url]/fckeditor/';
+	                  var oFCKeditor = new FCKeditor('FCKeditor1');
+	                  oFCKeditor.BasePath = sBasePath;
+	                  oFCKeditor.ToolbarSet = 'Basic';
+	                  oFCKeditor.Config['SkinPath'] = sBasePath + 'editor/skins/silver/';
+	                  oFCKeditor.Height = 300;
+	                  oFCKeditor.Value = '[var.blog_story]';
+	                  oFCKeditor.Create();
+
+	               </script>
+	             --></li>
+	             
+	         <li>
+               <input type="submit" class="button-form" value="Submit Article" name="B3" />
+               <input type="hidden" value="yes" name="article_submit" />
+             </li>
+           	
+         </ul>
+         </form>
+         
+        
+        <!--[onload;block=div;when [var.show_block]=2;comm]-->
+      </div><!--End Create Blog-->
+      
+      
+  	  <div class="form">
+  	  	
+  	  	<ul>
+  	  		<li>[var.lang_you_have]&nbsp;[var.member_blog_total]&nbsp;of&nbsp;[var.blog_max_limits]&nbsp;[var.lang_allowed_blogs]</li>
+  	  		<li>[var.lang_you_must_delete_blogs].....</li>
+  	  	</ul>  	  	             
+      
+        <!--[onload;block=div;when [var.show_block]=3;comm]-->
+      </div>
+      
+  </div><!--End Left Column-->
+
+
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	<!--Begin Browse Menu-->
+  	 <div class="title_narrow"><h1>[var.lang_blog_menu]</h1></div>
+  	  <div class="block_narrow">
+
+    <ul class="block_menu">
+      <li><a href="blogs/load/myblogs">[var.lang_my_blogs]</a></li>
+      <li><a href="blogs.php?action=write">[var.lang_create_blog]</a></li>
+    </ul>
+  	  </div><!--End Browse Menu-->
+  	
+  	<!--Begin Category Menu-->
+  	 <div class="title_narrow"><h1>[var.lang_view_blog_category]</h1></div>
+  	  <div class="block_narrow">  	  	
+  	  	<ul class="block_menu">
+        <li><a href="blogs/category/[blk1.category_id]/[blk1.category_name_seo;block=li]"><!--[blk1.category_name;block=li;ope=max:25;maxhtml;comm]-->&nbsp;-&nbsp;(<!--[blk1.category_count;block=tr;comm]-->)</a></li>
+      </ul>
+      
+  	  </div><!--End Category Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+
+<div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

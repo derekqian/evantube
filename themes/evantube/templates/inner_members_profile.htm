@@ -1,0 +1,344 @@
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="margin_top"></div>
+<!--Begin User Panel-->
+  <div id="user_panel2">
+
+  <div id="member_info_profile">
+  	  <div id="member_thumb"><a href="members/[var.user_name]"><img src="[var.result1_mypicture]" alt="pic" width="100" height="100" border="0" /></a></div>
+  	<ul>
+      <li id="member_name2"><a href="members/[var.user_name]">[var.first_name] [var.last_name]</a></li>
+      <li><strong>[var.lang_user]:</strong> [var.user_name;ope=max:27]</li>
+      <li><img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/[var.member_badge]" alt="Badge" /></li>
+    </ul>
+  </div>
+
+  <div id="member_media_profile">
+  	
+  <!--Begin User Panel Stats-->	
+  	<ul>
+  		<li><strong>[var.lang_word_videos]:</strong><!--[var.my_video_total;comm]--></li>
+  		<li><strong>[var.lang_word_audios]:</strong><!--[var.my_audio_total;comm]--><!--[onload;block=li;when [var.enable_audio]=1]--></li>
+  		<li><strong>[var.lang_blogs]:</strong><!--[var.my_blog_total;comm]--><!--[onload;block=li;when [var.enable_blogs]=1]--></li>
+  		<li><strong>[var.lang_pictures]:</strong><!--[var.my_image_total;comm]--><!--[onload;block=li;when [var.enable_images]=1]--></li>
+  		<li><strong>[var.lang_friends]:</strong><!--[var.my_friends_total;comm]--></li>
+  		<li><strong>[var.lang_profile_views]:</strong><!--[var.number_of_views;comm]--></li>
+  	</ul><!--End User Panel Stats-->
+  	
+  <!--Begin Profile Menu-->
+    <ul id="profile_menu" class="account-menu">
+    	<li><!--[onload_828;block=li;when [var.profile_menu]=2;comm]-->
+    		<a href="[var.base_url]/emailcompose.php?uid=[var.member_id]">[var.lang_email_me]</a></li>
+    		
+        <li><!--[onload_829;block=li;when [var.profile_menu]=2;comm]-->
+        	<a href="[var.base_url]/invite.php?type=1&uid=[var.member_id]" rel="gb_page_center[850, 250]">[var.lang_add_friends]</a></li>
+        	
+        <li style="border-right: none;"><!--[onload_830;block=li;when [var.profile_menu]=2;comm]-->
+        	<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?flag_type=member_profile&abuse=[var.member_id]', 'Ajax-General-Messages', '', 'GET', '', this);">[var.lang_flag_profile]</a></li>
+
+        <li><!--[onload_827;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="members/[var.user_name]">[var.lang_my_profile]
+        		<img src="[var.base_url]/themes/[var.user_theme]/images/bullet_6.png" style="box-shadow:none; -moz-box-shadow:none; border:none;" /></a>
+      <ul>
+      	<li style="margin:2px 0;"><!--[onload_834;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="[var.base_url]/edit/editprofile.php?id=[var.member_id]"  rel="gb_page_center[870, 450]">[var.lang_edit_profile]</a></li>
+        		
+        <li style="margin:2px 0;"><!--[onload_828;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="[var.base_url]/edit/editprivacy.php"  rel="gb_page_center[870, 450]">[var.lang_privacy_settings]</a></li>
+        	
+        <li style="margin:2px 0;"><!--[onload_833;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="myaccount.php" rel="gb_page_center[870, 450]">Account Settings</a></li>
+      </ul>
+       </li>
+        	
+        <li><!--[onload_831;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="[var.base_url]/emailinbox.php">[var.lang_my_email]</a></li>
+        	
+        <li><!--[onload_830;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="videoplaylist.php?keepThis=true&amp;TB_iframe=true&amp;height=580&amp;width=830" class="thickbox">[var.lang_word_my_playlists]</a></li>
+       
+        <li><!--[onload_832;block=li;when [var.profile_menu]=1;comm]-->
+        	<a href="groups_more.php?type=1">[var.lang_my_groups]</a></li>
+        	
+        <li style="border-right: none;"><!--[onload_835;block=li;when [var.profile_menu]=1;comm]--><!--[onload;block=li;when [var.enable_blogs]=1;comm]-->
+        	<a href="blogs/load/myblogs">[var.lang_my_blogs]</a></li>
+        	
+    </ul><!--End Profile Menu-->
+    
+    <div id="profile_rating">
+        [var.ajax_rating;htmlconv=no]
+    </div>
+    
+  </div>
+
+  </div><!--End User Panel-->
+  
+
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_2">
+      
+      <!--Begin Player-->
+      <div id="player">
+        <div id="play">[onload;block=div;when [var.eclipse_player]!='flowplayer']
+			<a href="http://adobe.com/go/getflashplayer">
+				<img src="http://adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Flash" width="116" height="33" />
+			</a>
+		</div>
+		<script type="text/javascript" src="[var.base_url]/javascripts/swfobject.js">
+			[onload;block=script;when [var.eclipse_player]='pmplayer']
+		</script>
+		<script type="text/javascript">[onload;block=script;when [var.eclipse_player]='pmplayer']
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+			flashvars.player_mode = "playlist";
+			flashvars.playlist = "no";
+			flashvars.logo = "top_right";
+			flashvars.floating_navbar = "false";
+			flashvars.color_nav_bar_top = "0x478dc2";
+			flashvars.color_nav_bar_bottom = "0xE7EBEC";
+			flashvars.ads_background_color = "0x00CCFF";
+			flashvars.ads_border_color = "0xCCCCCC";
+			flashvars.scrubber_position_color = "0x6AA1CE";
+			flashvars.scrubber_load_color = "0x888888";
+			flashvars.scrubber_background_color = "0xBBBBBB";
+			flashvars.volume_bar_color = "0xBBBBBB";
+			flashvars.aspect_ratio="stretch";
+			params.allowfullscreen = "true";
+			params.allowscriptaccess = "sameDomain";
+			params.wmode = "transparent";
+			flashvars.flvsource = "[var.base_url]/uploads/[var.video_play]";
+			flashvars.preview_image = "[var.base_url]/uploads/player_thumbs/[var.video_thumb]";
+			flashvars.url_logo = "[var.base_url]/addons/mw_eclipse/logos/logo_player.png";
+			flashvars.buffering_time = '3';
+			flashvars.autoplay = "[var.auto_play_index]";
+			flashvars.display_ads = "no";
+			swfobject.embedSWF("[var.base_url]/addons/mw_eclipse/players/pmplayer/player.swf","play","640","384","9.0.0",false,flashvars,params,attributes);
+		</script>
+		
+		<div>[onload;block=div;when [var.eclipse_player]='jwplayer']
+			<h2>Invalid player selection.</h2>
+		</div>
+		
+		
+		<div>[onload;block=div;when [var.eclipse_player]='flowplayer']
+			<h2>Invalid player selection.</h2>
+		</div>
+         <!--[onload;block=div;when [var.membersmedia]=1;comm]-->
+      </div><!--End Player-->
+      
+      <!--Begin Random Video-->
+       <div class="media_info">
+          <h1 style="width:98%; margin: 5px 0;">[var.title;htmlconv=no;ope=max:43] <span>Random Video from [var.user_name]</span></h1>
+          
+          <div class="view_more">
+            <a href="[var.base_url]/videos/[var.indexer]/[var.title_seo]">[var.lang_view_comments_etc]</a>
+          </div>
+          <!--[onload;block=div;when [var.membersmedia]=1;comm]-->
+       </div><!--End Random Video-->
+     
+     <!--Begin More About Member-->
+       <div class="member_info">
+       	  <h1>[var.lang_more_about] [var.user_name]</h1>
+       	 
+       	<div id="Ajax-Aboutme">  
+       	  <ul>
+       	  	<li><strong>[var.lang_name]:</strong> <span>[var.first_name] [var.last_name]</span></li>
+       	  	<li><strong>[var.lang_age]:</strong> <span>[var.my_age]</span></li>
+       	  	<li><strong>[var.lang_gender]:</strong> <span>[var.gender]</span></li>
+       	  	<li><strong>[var.lang_relationship_status]:</strong> <span>[var.relationship_status]</span></li>
+       	  </ul>
+       	  
+       	  <ul style="border-right: none;">
+       	  	<li><strong>[var.lang_home_country]:</strong> <span>[var.home_country]</span></li>
+       	  	<li><strong>[var.lang_current_location]:</strong> <span>[var.current_country]</span></li>
+       	  	<li><strong>[var.lang_current_city]:</strong> <span>[var.current_city]</span></li>
+       	  	<li><strong>[var.lang_work_place]:</strong> <span>[var.work_places]</span></li>
+       	  </ul>
+       	</div>
+       	
+       	<div style="float:right;">
+		  <div id="embed">
+		  	 <a style="cursor:pointer;" onClick="moreinfo()">More Info</a>
+		  </div>
+        </div>
+       	
+       	<div id="moreinfo">
+		  <ul id="social">
+            <li><strong>[var.lang_about_me]:</strong> [var.about_me]</li>
+            <li><strong>[var.lang_interests]:</strong> [var.interests]</li>
+            <li><strong>[var.lang_fav_movies]:</strong> [var.fav_movies]</li>
+            <li><strong>[var.lang_fav_music]:</strong> [var.fav_music]</li>
+            <li><strong>[var.lang_website]:</strong> [var.personal_website]</li>
+          </ul>
+		</div>
+		  <div id="lessinfo">&nbsp;</div>
+       	
+       </div><!--End More About Member-->
+       
+       
+       <!-- ========================================= Begin Profile Comments ========================================= -->
+        <features_comments>
+        <!--Begin Comments Ajax-->
+        <div id="commentajax">
+
+        <!--Begin Comments and Responces-->
+        <div id="responces">
+        	
+        	<div id="responces_title">Comments</div>
+        	
+        	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '[var.dq_shortname]'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        var disqus_identifier = '[var.user_name]';
+        var disqus_url = '[var.base_url]/members/[var.user_name]';
+        
+        // Uncomment the following line if you are installing on a password protected domain
+        // var disqus_developer = 1; // developer mode is on
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div><!--End Comments and Responces-->
+
+
+        </div><!--End Comments Ajax-->
+      </features_comments>
+      <!-- ========================================= End Profile Comments ========================================= -->
+      
+  </div><!--End Left Column-->
+  
+  
+  <!-- ================== Begin Right Column ================== -->
+  <div id="right_2">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	<!--Begin Members Videos, Audios, etc...-->
+      <div class="title_narrow"><h1>[var.lang_uploads]
+      	<span>
+        	<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=1&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_word_videos]</a>&nbsp;|&nbsp;
+        	<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=6&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_word_audios]</a>&nbsp;|&nbsp;
+              <!--[onload;block=li;when [var.enable_audio]=1]-->
+            <a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/memberprofile_ajax.php?type=3&uid=[var.member_id]&page=1', 'Ajax-Media', '', 'GET', '', this);">[var.lang_pictures]</a>
+              <!--[onload;block=li;when [var.enable_images]=1]-->
+        </span></h1>
+      </div>
+      
+         
+      <div class="related_media">
+      	
+      	<div id="nothing_found">
+        	[var.lang_member] [var.lang_no_videos]
+        	<!--[onload;block=div;when [var.membersmedia]=0;comm]-->
+         </div>
+
+       <div id="Ajax-Media">
+        <div style="float:left;">
+          <!--[onload_801;block=div;when [var.load_media]=1;comm]-->
+      	<ul>
+              <li class="related_media_thumb">
+                  <a class="popup-info_flipped" href="[var.base_url]/videos/[membersmedia.indexer;block=div]/[membersmedia.title_seo;block=div]">
+
+                  <!--Thumb Overlay Title-->
+                    <div class="related_media_title"><!--[membersmedia.title;block=div;ope=max:20;comm]--></div>
+
+                  <!--Thumb Overlay Duration-->
+                    <div class="related_media_duration">[membersmedia.video_length;block=span;com]</div>
+
+                    <span>
+                    	<div class="popup-info_flipped_tmb">
+                          <img src="[var.base_url]/uploads/thumbs/[membersmedia.video_id;block=div].jpg" title="<!--[blk1.title;comm]-->" style="width:93px;height:70px;" />
+                        </div>
+                        
+                        <div class="popup-info_flipped_title"><!--[membersmedia.title;comm;ope=max:20;comm]--></div>
+                        
+                        <div class="popup-info_stats">
+                          <strong>[var.lang_category]:</strong> [membersmedia.channel;block=span;ope=max:20;com]<br />
+                        </div>
+                        
+                        <div class="popup-info_flipped_rating">[var.lang_more_from] [var.user_name;ope=max:10]</div>
+
+						<div class="popup-info_flipped_description"><!--[membersmedia.description;block=((li));htmlconv=no;ope=max:520;comm]--></div>
+
+                    </span>
+                     <img src="[var.base_url]/uploads/thumbs/[membersmedia.video_id;block=div].jpg" />
+                     
+                     <div class="related_description">
+               	    <div class="related_view_count"><!--[membersmedia.number_of_views;comm]--> Views</div>               	   
+               	    
+               	<!--[membersmedia.description;block=((div));ope=max:100;htmlconv=no;comm]-->
+               </div></a>
+             </li>
+	  </ul>
+	 </div>
+	 <!-- Media Pagination start -->
+        <div id="pagination_2">
+ 		<!--[onload_802;block=div;when [var.load_media]=1;comm]-->
+          <ul>
+            <li>[var.show_pages_vids;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+       </div>
+      
+       <div class="clear-fix"></div>
+
+    </div><!--End Members Videos, Audios, etc...-->    
+    
+    
+    <!--Begin Members Friends-->
+      <div class="title_narrow"><h1>[var.lang_my_friends]</h1></div>
+      <div class="related_media_2">
+        
+        <div class="MyFriends" style="float:left;">
+          <!--[onload_803;block=div;when [var.load_friends]=1;comm]-->
+      	<ul>
+              <li class="related_media_thumb">
+                  <a class="popup-info" href="[var.base_url]/members/[membersfriends.user_name;block=div]">
+
+                  <!--Thumb Overlay Title-->
+                    <div class="related_media_title" style="width:115px;"><!--[membersfriends.user_name;block=div;ope=max:10;comm]--></div>
+                     <img src="[membersfriends.friends_picture;block=li]" style="width:120px;" /></a>
+             </li>
+	  </ul>
+	 </div>
+	 
+	 <!-- Media Pagination start -->
+        <div id="pagination_2">
+ 		<!--[onload_802;block=div;when [var.load_media]=1;comm]-->
+          <ul>
+            <li>[var.show_pages_vids;htmlconv=no]</li>
+          </ul>
+        </div>
+        <!-- Media Pagination end -->
+    </div><!--End Members Friends-->
+    
+    
+    
+
+      <!--Begin Right Ad Spot-->
+      <div id="ad_right_2">
+        <!--[var.ads_right;htmlconv=no;comm]-->
+      </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+
+  
+  <div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->

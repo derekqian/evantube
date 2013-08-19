@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Cache-Control" content="max-age=3600">
+	
+	<meta property="og:title" content="[var.title]"/>
+	<meta property="og:type" content="Video"/>
+	<meta property="og:url" content="[var.video_url]"/>
+	<meta property="og:image" content="[var.base_url]/uploads/thumbs/[var.video_thumb]"/>
+	<meta property="og:site_name" content="[var.site_name]"/>
+	<meta property="og:description"
+          content="[var.description;ope=max:300;htmlconv=no]"/>
+
+	<title>[var.page_title;htmlconv=no;]</title>
+
+	<link rel="icon" type="image/png" href="[var.base_url]/addons/mw_eclipse/skin/images/icons/favicon.png">
+
+	<meta name="Description" content="[var.description;htmlconv=no;]">
+	<meta name="Keywords" content="[var.tags;htmlconv=no;]">
+
+	<base href="[var.base_url]/">
+	
+	<!-- PHPmotionWiz..com - Eclipse Skin CSS File -->
+	  <link href="[var.base_url]/addons/mw_eclipse/skin/css/[var.eclipse_skin].css" rel="stylesheet" type="text/css" media="all">
+	<!-- End Eclipse Skin -->
+
+	<!-- PHPmotionWiz.com - Spotlight Video CSS -->
+	 <link href="[var.base_url]/addons/mw_eclipse/spotlight/css/spotlight_video.css" rel="stylesheet" type="text/css" media="all">
+    <!-- End Spotlight Video CSS -->
+
+    <!-- PHPmotionWiz.com - Popup-Info CSS -->
+	 <link href="[var.base_url]/addons/mw_eclipse/popup-info/css/popup_info.css" rel="stylesheet" type="text/css" media="all">
+	 
+	 <!--[if IE 7]>
+	 <link href="[var.base_url]/addons/mw_eclipse/popup-info/css/popup_info_ie7.css" rel="stylesheet" type="text/css" media="all">
+	 <![endif]-->
+    <!-- End FlowPlayer Integration CSS -->
+    
+    <!-- PHPmotionWiz.com - Suckerfish CSS -->
+	 <link href="[var.base_url]/addons/mw_eclipse/skin/css/suckerfish.css" rel="stylesheet" type="text/css" media="all">
+    <!-- End Suckerfish CSS -->
+
+	<link href="[var.base_url]/themes/[var.user_theme]/css/main.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--[if lte IE 6]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie6.css" type="text/css">
+	<![endif]-->
+
+	<!--[if IE 7]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie7.css" type="text/css">
+	<![endif]-->
+	
+	<!--[if IE 8]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie8.css" type="text/css">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+      <link rel="stylesheet" href="[var.base_url]/themes/[var.user_theme]/css/ie9.css" type="text/css">
+	<![endif]-->
+
+	<link href="css/rating_style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/thickbox.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="greybox/gb_styles.css" rel="stylesheet" type="text/css" media="all">
+	<link href="javascripts/jquery.jcarousel.css" rel="stylesheet" type="text/css" media="all">
+	<link href="[var.base_url]/themes/[var.user_theme]/thirdparty/jcarousel/skin.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--uploader style -->
+      <style type="text/css">
+        .info {font:18px Arial;}
+        .data {background-color:#1A1A1A; border:1px solid #317db7; width:40%;}
+        .data tr td {background-color:#1A1A1A; font:13px Arial; width:35%;}
+        .bar1 {background-color:#1A1A1A; position:relative; text-align:left; height:20px; width:[var.progress_bar_width]px; border:1px solid #317db7;}
+        .bar2 {background-color:#68a4d2; position:relative; text-align:left; height:20px; width:0%;}
+       </style>
+      <!-- uploader style end-->
+
+	<!-- ajax js in play -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/v3_ajax.js"><!--[onload;block=script;when [var.load_ajax]=1;comm]--></script>
+	<!-- end ajax -->
+
+	<script type="text/javascript" src="[var.base_url]/javascripts/ahah.js"><!--[onload;block=script;when [var.ahah]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/rating_update.js"><!--[onload;block=script;when [var.rating_update]=1;comm]--></script>
+	<!--[if IE 7]><script type="text/javascript" src="[var.base_url]/addons/mw_eclipse/js/suckerfish.js"></script><![endif]-->
+
+	<script type="text/javascript">var GB_ROOT_DIR = "[var.base_url]/greybox/";</script>
+	<script type="text/javascript" src="greybox/AJS.js"><!--[onload;block=script;when [var.greybox]=1;comm]--></script>
+	<script type="text/javascript" src="greybox/AJS_fx.js"><!--[onload;block=script;when [var.greybox]=1;comm]--></script>
+	<script type="text/javascript" src="greybox/gb_scripts.js"><!--[onload;block=script;when [var.greybox]=1;comm]--></script>
+
+	<!--start of video uploader section -->
+	<script language="javascript" type="text/javascript">
+  		var disallow_extensions = [var.disallow_extensions];
+  		var allow_extensions = [var.allow_extensions];
+  		var path_to_ini_status_script = "[var.path_to_ini_status_script]";
+  		var check_file_name_format = [var.check_file_name_format];
+  		var check_disallow_extensions = [var.check_disallow_extensions];
+  		var check_allow_extensions = [var.check_allow_extensions];
+  		var check_null_file_count = [var.check_null_file_count];
+  		var check_duplicate_file_count = [var.check_duplicate_file_count];
+  		var max_upload_slots = [var.max_upload_slots];
+  		var progress_bar_width = [var.progress_bar_width];
+ 		<!--[onload;block=script;when [var.load_javascript]=1;comm]-->
+	</script>
+	<script type="text/javascript" src="javascripts/uploader_bar.js"><!--[onload;block=script;when [var.load_javascript]=1;comm]--></script>
+	<!-- end of video uploader -->
+
+	<!--start of audio uploader section -->
+	<script language="javascript" type="text/javascript">
+  		var path_to_ini_status_script = "[var.path_to_ini_status_script]";
+  		var check_file_name_format = [var.check_file_name_format];
+  		var check_disallow_extensions = [var.check_disallow_extensions];
+  		var disallow_extensions = [var.disallow_extensions];
+  		var check_allow_extensions = [var.check_allow_extensions];
+  		var check_null_file_count = [var.check_null_file_count];
+  		var check_duplicate_file_count = [var.check_duplicate_file_count];
+  		var max_upload_slots = [var.max_upload_slots];
+  		var cedric_progress_bar = 1;
+  		var progress_bar_width = [var.progress_bar_width];
+  		var show_percent_complete = 1;
+  		var show_files_uploaded = 1;
+  		var show_current_position = 1;
+  		var show_elapsed_time = 1;
+  		var show_est_time_left = 1;
+ 		var show_est_speed = 1;
+  		var allow_extensions = [var.allow_extensions];
+  		<!--[onload;block=script;when [var.load_javascript]=4;comm]-->
+	</script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/uploader_bar.js"><!--[onload;block=script;when [var.load_javascript]=4;comm]--></script>
+	<!-- end of audio uploader -->
+
+	<!-- start of thickbox -->
+	<script type="text/javascript" src="[var.base_url]/javascripts/jquery-1.2.3.pack.js"><!--[onload;block=script;when [var.thickbox]=1;comm]--></script>
+	<script>jQuery.noConflict();<!--[onload;block=script;when [var.thickbox]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/jquery.jcarousel.pack.js"><!--[onload;block=script;when [var.load_carousel]=1;comm]--></script>
+	<script type="text/javascript" src="[var.base_url]/javascripts/thickbox.js"><!--[onload;block=script;when [var.thickbox]=1;comm]--></script>
+	<!-- end of thickbox -->
+
+	<!-- Audio player - basic setup-->
+	<script type="text/javascript" src="[var.base_url]/javascripts/audioplayer.js"><!--[onload;block=script;when [var.audio_js]=1;comm]--></script>
+	<script type="text/javascript">AudioPlayer.setup("[var.base_url]/mp3player.swf", { width: 600 });<!--[onload;block=script;when [var.audio_js]=1;comm]--></script>
+	<!-- Audio player -->
+
+	<script type="text/javascript">
+		function clickclear(thisfield, defaulttext)
+		{
+			if (thisfield.value == defaulttext) {
+				thisfield.value = '';
+			}
+		}
+		function clickrecall(thisfield, defaulttext) {
+			if (thisfield.value == "") {
+				thisfield.value = defaulttext;
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+
+    <!--Begin eBar-->
+        <div id="ebar">
+
+        <!--Begin eBar Wrap-->
+            <div id="ebar_wrap">
+
+        <!--Begin logo-->
+            <div id="ebar_logo">
+              <a href="[var.base_url]">
+                <img src="addons/mw_eclipse/logos/logo_main.png" title="[var.lang_home]" alt="[var.site_name]" />
+              </a>
+            </div><!--End Logo-->
+            
+         <!--eBar Navigation-->
+           <div id="ebar_nav">
+
+            <ul id="mynav" class="ebar_nav">
+              <li><a class="ebar_browse" href="[var.base_url]">browse &nbsp;</a>
+                  <ul>              
+                    <li><a href="videos/load/recent">[var.lang_word_videos]</a></li>
+                    <li><a href="audios/load/recent">[var.lang_word_audios]</a><!--[onload;block=li;when [var.enable_audio]=1;comm]--></li>
+                    <li><a href="albums/load/recent">[var.lang_word_images]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+                    <li><a href="blogs/load/recent">[var.lang_blogs]</a><!--[onload;block=li;when [var.enable_blogs]=1;comm]--></li>
+                    <li><a href="groups">[var.lang_groups]</a></li>
+                    <li><a href="people">[var.lang_members]</a></li>
+                    <li><a href="news.php">[var.lang_news]</a><!-- just a space filler in top menu when images are off--><!--[onload;block=li;when [var.enable_images]=0;comm]--></li>
+                 </ul>
+              
+              <li class="ebar_button"><a href="forum">[var.lang_forum]</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+              
+              </li> 
+            </ul>
+
+           </div><!--End eBar Navigation-->
+           
+         <!--eBar Search-->
+            <div id="ebar_search">
+
+              <form method="get" action="search.php" autocomplete="off" name="form_search">
+
+            <div class="ebar_select_button">
+                <select id="ebar_search-select" name="type" />
+              <option value="videos">[var.lang_word_videos]</option>
+              <option value="audios">[var.lang_word_audios]<!--[onload;block=option;when [var.enable_audio]=1;comm]--></option>
+              <option value="images">[var.lang_word_images]<!--[onload;block=option;when [var.enable_images]=1;comm]--></option>
+              <option value="groups">[var.lang_groups]</option>
+              <option value="blogs">[var.lang_blogs]<!--[onload;block=option;when [var.enable_blogs]=1;comm]--></option>
+            </select>
+            </div>
+
+            <input id="ebar_search-field" autocomplete="off" id="keyword" name="keyword" value="Search [var.site_name]" onclick="clickclear(this, 'Search [var.site_name]')" onblur="clickrecall(this,'Search [var.site_name]')" />
+            <input id="ebar_search-button" type="submit" value="" />
+            <div id="searchBoxSuggestions"></div>
+          </form>
+
+            </div><!--End eBar SearchSearch-->
+            
+        <!--Upload Button-->
+                 <div id="ebar_upload">
+                    <a href="[var.base_url]/uploader.php">[var.lang_upload]</a>
+                 </div><!--End Upload Button-->            
+
+        <!--eBar Member Panel-->
+            <div id="ebar_mp">
+                <div id="ebar_mm">
+                	<ul id="mynav" class="ebar_mm">
+                		<li><a href="members/[var.user_name]"><span><!--[var.welcome_avatar;htmlconv=no;comm]--></span>
+                		    
+                			<span id="ebar_user"><!--[var.user_name;ope=max:18;comm]--></span>
+
+				              <ul>
+                                <li><a href="members/[var.user_name]">[var.lang_my_profile]</a></li>
+                                <li><a href="emailinbox.php">[var.lang_word_email]&nbsp;<b>[var.number_of_emails]</b></a>
+                            	    <!--[onload;block=li;when [var.show_email_count]=1;comm]--></li>
+                                <li><a href="inviteread.php">[var.lang_invites]&nbsp;<b>[var.number_of_invites]</b></a>
+                                    <!--[onload;block=span;when [var.show_invites_count]=1;comm]--></li>
+					          </ul>
+					      <!--[onload;block=li;when [var.loggedin]=1;comm]-->
+					    </li>
+					    
+					    <li><div class="reg"><a href="[var.register_menu_link]">[var.lang_register_today]</a></div>
+                            <!--[onload;block=li;when [var.show_register]=1;comm]--></li>
+                        
+                        <li><div class="loginout"><a href="[var.login_out_link]">[var.login_out]</a></div></li>
+					</ul>
+				</div>
+
+            </div><!--End eBar Member Panel-->
+            
+            
+            
+          <!--eBar Social-->
+              <div id="ebar_soc">
+                  
+                  <div id="ebar_fb">
+                      <a href="http://facebook.com/[var.soc_fburl]" target="_blank" title="Like [var.site_name]"></a></div>
+                          
+                  <div id="ebar_tw">
+                      <a href="http://twitter.com/[var.soc_twurl]" target="_blank" title="Follow [var.site_name]"></a></div>
+                      
+                  <div id="ebar_gp">
+                      <a href="http://plus.google.com/communities/[var.soc_gpurl]" target="_blank" title="Join the [var.site_name] G+ Community"></a></div>
+              
+              </div><!--End eBar Social-->
+            
+            </div><!--End eBar Wrap-->
+        </div><!--End eBar-->
+        
+      <!--Begin Sub Header -->
+           <div id="sub_header">
+               <div id="sub_header_wrap"></div>
+           </div><!--End Sub Header-->
+
+        <!--Begin Notiications-->
+          <div class="notification-message">[var.message_type] - [var.error_message]<!--[onload;block=div;when [var.blk_notification]=1;comm]--></div>
+        <!--End Notiications-->
+        
+        <!--Begin IE7 and Older Compatibility Warning-->
+          <!--[if lte IE 7]>
+          	<div class="notification-message">
+          		Your browser is not supported.  Many of this site's features may not work or display properly on older browsers.<br /> Please upgrade to one of the following modern browsers.
+          		
+          		<p>
+          			<a href="http://getfirefox.com" target="_blank">Mozilla Firefox</a> &nbsp;|&nbsp; <a href="http://chrome.google.com" target="_blank">Google Chrome</a>
+          			&nbsp;|&nbsp <a href="http://opera.com" target="_blank">Opera</a> &nbsp;|&nbsp;
+          			<a href="http://www.discover.msn.com/get/download-ie8-optimized-for-bing-and-msn-3/?form=MFEHPG&publ=MSCOM&crea=STND_MFEHPG_OIE8_mscom_wohp_1x1" target="_blank">Internet Explorer 8 (or newer)</a>
+          		</p>
+          	</div>
+        	
+          <![endif]-->
+        <!--End IE7 and Older Compatibility Warning-->
+
+
+         <!--Begin Inner Templates Container.  This is where all of the other template files are displayed.-->
+          <div id="inner-templates-container">
+            <!--[onload;file=[var.inner_template1];getbody;comm]-->
+          </div><!--End Inner Templates Container-->
+
+
+       <!--Begin Bottom Ad Spot-->
+         <div id="ad_bottom">
+            <!--[var.ads_bottom;htmlconv=no;comm]-->
+         </div><!--End Bottom Ad Spot-->
+
+
+    <!--Begin Footer-->
+        <div id="footer">
+
+        <!--Begin Footer Wrap-->
+          <div id="footer-wrap">
+
+          <!--Begin Site Info Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_site]</span> [var.lang_info]</div>
+
+                <ul>
+                   <li><a href="page.php?page=1#about">[var.lang_about_us]</a></li>
+                   <li><a href="news.php">[var.lang_site_news]</a></li>
+                   <li><a href="page.php?page=11#faq">[var.lang_faq]</a></li>
+                   <li><a href="page.php?page=2#contact">[var.lang_contact_us]</a></li>
+			       <li><a href="page.php?page=4#advertise">[var.lang_advertise]</a></li>
+			    </ul>
+            </div><!--End Site Info Menu-->
+
+          <!--Begin Legal Info Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_legal]</span> [var.lang_stuff]</div>
+
+                <ul>
+                   <li><a href="page.php?page=3#terms">[var.lang_terms] of Use</a></li>
+                   <li><a href="page.php?page=12#privacy">[var.lang_privacy_policy]</a></li>
+		           <li><a href="page.php?page=13#copyright">[var.lang_copyright_info]</a></li>
+			    </ul>
+            </div><!--End Legal Info Menu-->
+
+          <!--Begin Help Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_help]</span> [var.lang_info]</div>
+
+                <ul>
+                   <li><a href="forum">[var.lang_support_forum]</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+                   <li><a href="page.php?page=11#faq">[var.lang_faq]</a></li>
+                   <li><a href="page.php?page=2#contact">[var.lang_contact_us]</a></li>
+			    </ul>
+            </div><!--End Help Menu-->
+
+          <!--Begin Community Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_comm]</span>[var.lang_unity]</div>
+
+                <ul>
+                   <li><a href="people">[var.lang_member_list]</a></li>
+                   <li><a href="forum">[var.lang_community_forum]</a><!--[onload;block=li;when [var.enable_forum]=1;comm]--></li>
+                   <li><a href="videos/load/recent">[var.lang_watch_videos]</a></li>
+                   <li><a href="audios/load/recent">[var.lang_listen_audios]</a><!--[onload;block=li;when [var.enable_audio]=1;comm]--></li>
+                   <li><a href="albums/load/recent">[var.lang_view_images]</a><!--[onload;block=li;when [var.enable_images]=1;comm]--></li>
+                   <li><a href="blogs/load/recent">[var.lang_read_blogs]</a><!--[onload;block=li;when [var.enable_blogs]=1;comm]--></li>
+			    </ul>
+            </div><!--End Community Menu-->
+
+          <!--Begin Social Menu-->
+            <div class="footer-menu">
+              <div class="footer-menu_title"><span class="highlight">[var.lang_soc]</span>[var.lang_ial]</div>
+
+                <ul>
+                   <li id="footer_fb"><a href="http://facebook.com" title="Follow [var.site_name] on Facebook" target="_blank">Facebook</a></li>
+                   <li id="footer_twitter"><a href="http://twitter.com" title="Follow [var.site_name] on Twitter" target="_blank">Twitter</a></li>
+                   <li id="footer_rss"><a href="rss.php" title="RSS FEED" target="_blank">RSS Feed</a></li>
+			    </ul>
+            </div><!--End Social Menu-->
+
+
+
+
+
+          </div><!--End Footer Wrap-->
+        </div><!--End Footer-->
+
+    <script type="text/javascript" src="[var.base_url]/addons/mw_eclipse/js/showdesc.js" ></script>
+  </body>
+</html>

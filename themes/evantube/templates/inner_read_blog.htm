@@ -1,0 +1,179 @@
+<!--Begin Top Ad Spot-->
+         <div id="ad_top">
+            <!--[var.ads_top;htmlconv=no;comm]-->
+         </div><!--End Top Ad Spot-->
+<!--Begin Wrapper-->
+         <div id="wrapper">
+           <div id="wrap_back">
+
+<div id="bymember"></div>
+<!-- ================== Begin Left Column ================== -->
+  <div id="left_1">
+  	
+  	<div id="title_wide">    		
+    		<h1>[var.title]
+    			<span>
+        		[var.lang_added]:&nbsp;<!--[blk3.todays_date;block=((div));comm;frm=mm-dd-yy]-->
+        	    </span>
+        	</h1>
+    </div>
+  	
+    <!--Begin Media Info-->  
+      <div class="media_info">
+        	
+        	<!--Begin Blog Body-->
+        	<div id="blog_body">
+        		<!--[blk3.comments;block=(div);comm;htmlconv=no]-->
+        		
+        		
+        		<div style="width:400px; float:left;"><!--[var.ajax_rating;htmlconv=no;comm]--></div>
+        		<div style="width:110px; float:right; margin-bottom:5px;">
+        			<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=106004822826605&amp;xfbml=1"></script><fb:like href="" send="true" layout="button_count" width="450" show_faces="false" font=""></fb:like>
+        		</div>
+        		
+        		<div style="height:1px; border-bottom: 1px solid #ccc; clear:both;"></div>
+        		
+        		<img class="avatar" src="<!--[blk3.poster_picture;block=div;comm]-->" alt="avatar" />&nbsp;&nbsp;
+        		  [var.lang_by]:&nbsp;<a href="members/[blk3.by_username]"><!--[blk3.by_username;block=((div));comm]--></a>
+        		  
+        		  <div style="float:right; margin-top:2px;">
+        		  	<a href="edit/editblogs.php?id=[blk3.indexer]" rel="gb_page_center[720, 500]">[var.lang_edit]
+                  <!--[onload_15;block=a;when [var.edit_blog]=1;comm]-->&nbsp;|&nbsp;</a>
+                  <a href="edit/delete.php?type=3&amp;id=[blk3.indexer]" rel="gb_page_center[620, 300]">[var.lang_delete]
+                  <!--[onload_16;block=a;when [var.delete_blog]=1;comm]--></a>
+		          <!--[onload_17;block=li;when [var.edit_blog]=1;comm]--></div>
+        		  
+        		<div style="height:1px; margin-top:5px; border-bottom: 1px solid #ccc;"></div>
+        		
+        		
+        		<!--Begin Media Buttons-->
+		  <div id="media_buttons" style="width:600px;">
+		  	<div class="media_button">
+
+		  		<ul>
+		  		  <!--Begin Share Button-->
+		  			<li>
+		  			  <!--Social Twist Button Begin-->
+			            <script type="text/javascript" src="http://cdn.socialtwist.com/2009031612748-2/script.js"></script>
+				        <div onclick="return false;"><a class="st-taf" href="http://tellafriend.socialtwist.com:80">
+				        <img src="[var.bas_url]/addons/mw_eclipse/skin/images/blank.png" style="width:80px;height:25px; position: absolute;" onmouseout="STTAFFUNC.hideHoverMap(this)" onmouseover="STTAFFUNC.showHoverMap(this, '2009031612748-2', window.location, document.title)" onclick="STTAFFUNC.cw(this, {id:'2009031612748-1', link: window.location, title: document.title });" />
+					    <img alt="Share" align="absmiddle" src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_share.png" width="25" height="25"/>&nbsp;Share</a></div><!--Social Twist Button End-->
+		  			</li><!--End Share Button-->
+		  			
+		  			<!--Begin Add to Playlist Button-->
+		  			<li>
+		  				<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/blog_reply_ajax.php?type=blog&amp;id=[blk3.indexer;block=((div))]&amp;indexer=[blk3.indexer;block=((div))]', 'blog-ajax', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">
+		  				<img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_add_playlist.png" alt="favs" width="25" height="25" border="0" align="absmiddle" />&nbsp;Comment</a>
+		  			</li><!--End Add to Playlist Button-->
+
+		  			<!--Begin Flag Button-->
+		  			<li style="border-right: none;">
+		  				<a href="javascript:void(0)" onClick="javascript:ahahscript.ahah('[var.base_url]/flag_ajax.php?flag_type=blogs&amp;abuse=[blk3.indexer;block=((div))]', 'blog-ajax', '', 'GET', '', this); showBlock('drop_block_[blk3.indexer]');">
+                        <img src="[var.base_url]/addons/mw_eclipse/skin/images/icons/icon_report.png" alt="report" width="25" height="25" border="0" align="absmiddle" />&nbsp;[var.lang_report]</a>
+		  			</li><!--End Flag Button-->
+		  		</ul>
+
+		  	</div>
+		  </div><!--End Media Buttons-->
+		  
+		  <div id="blog-ajax"></div>
+
+           <div class="blog_reply">
+           	  <div style="margin: 5px;">[blk3.drop_block;block=((div));htmlconv=no;]</div>
+              <div style="margin: 5px;">[blk3.reply_block;block=((div));htmlconv=no;]</div>
+              
+              <div class="clear-fix"></div>
+           </div>
+        		  
+            </div><!--End Blog Body-->
+        	
+      </div><!--End Media Info-->
+      
+      <!-- ========================================= Begin Comments and Video Responces ========================================= -->
+      <features_comments>
+        <!--Begin Comments Ajax-->
+        <div id="commentajax">
+
+        <!--Begin Comments and Responces-->
+        <div id="responces">
+        	
+        	<div id="responces_title">Comments</div>
+        	
+        	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '[var.dq_shortname]'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        var disqus_identifier = '[var.title]';
+        var disqus_url = '[var.blog_url]';
+        
+        // Uncomment the following line if you are installing on a password protected domain
+        // var disqus_developer = 1; // developer mode is on
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div><!--End Comments and Responces-->
+
+
+        </div><!--End Comments Ajax-->
+      </features_comments>
+      <!-- ========================================= End Comments and Video Responces ========================================= -->
+      
+  </div><!--End Left Column-->
+  
+  
+<!-- ================== Begin Right Column ================== -->
+  <div id="right_1">
+  	
+  	<!--Begin Right Ad Spot-->
+    <span id="ad_right_1">
+      <!--[var.ads_left;htmlconv=no;comm]-->
+    </span><!--End Right Ad Spot-->
+  	
+  	<!--Begin Browse Menu-->
+  	<!--Begin Related Videos-->
+    <div class="title_narrow"><h1>[var.lang_blogs]</h1></div>
+  	  <div class="block_narrow">
+  	  	
+  	  	<ul class="block_menu">
+        <li><a href="blogs/load/featured">[var.lang_featured]</a></li>
+        <li><a href="blogs/load/viewed">[var.lang_most_viewed]</a></li>
+        <li><a href="blogs/load/recent">[var.lang_most_recent]</a></li>
+        <li><a href="blogs/load/comments">[var.lang_most_comments]</a></li>
+      </ul>
+      
+      <p><span>&nbsp;[var.lang_blog_menu]:</span></p>
+    <ul class="block_menu">
+      <li><a href="blogs/load/myblogs">[var.lang_my_blogs]</a></li>
+      <li><a href="blogs.php?action=write">[var.lang_create_blog]</a></li>
+    </ul>
+  	  </div><!--End Browse Menu-->
+  	
+  	<!--Begin Category Menu-->
+  	<div class="title_narrow"><h1>[var.lang_view_blog_category]</h1></div>
+  	  <div class="block_narrow">
+  	  	  	  	
+  	  	<ul class="block_menu">
+        <li><a href="blogs/category/[blk1.category_id]/[blk1.category_name_seo;block=li]"><!--[blk1.category_name;block=li;ope=max:25;maxhtml;comm]-->&nbsp;-&nbsp;(<!--[blk1.category_count;block=tr;comm]-->)</a></li>
+      </ul>
+      
+  	  </div><!--End Category Menu-->
+  	
+  	<!--Begin Right Ad Spot-->
+    <div id="ad_right_2">
+      <!--[var.ads_right;htmlconv=no;comm]-->
+    </div><!--End Right Ad Spot-->
+
+  </div><!--End Right Column-->
+  
+  <div class="clear-fix"></div>
+     </div>
+</div><!--End Wrapper-->
